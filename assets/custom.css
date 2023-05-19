@@ -1,0 +1,42 @@
+/* .header-wrapper {
+  background: none !important;
+}
+.scrolled-past-header .header-wrapper {
+  background: #fff !important;
+} */
+.header.header--middle-left {
+  padding-top: 0;
+  padding-bottom: 0;
+}
+.custom-mega-menu-wrap {
+  display: flex;
+  padding: 0 64px;
+}
+.collection-image-wrap {
+  width: 300px;
+}
+.collection-image-wrap a {
+  position: relative;
+  padding: 0;
+}
+.collection-image-wrap .collection-image-info {
+  position: absolute;
+  bottom: 50px;
+  left: 40px;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+}
+.custom-mega-menu-wrap .mega-menu__list {
+  display: block;
+  flex: 1;
+  column-count: 4;
+}
+.custom-mega-menu-wrap .mega-menu__list > li {
+  display: inline-block;
+  margin: 0 0 30px;
+  -webkit-column-break-inside: avoid;
+  page-break-inside: avoid;
+  break-inside: avoid;
+  width: 100%;
+}
