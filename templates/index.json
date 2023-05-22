@@ -49,6 +49,61 @@
         "show_text_below": false
       }
     },
+    "09647700-28fe-4bf7-8bff-03ccf5e819ef": {
+      "type": "slideshow",
+      "blocks": {
+        "template--19084117279011__09647700-28fe-4bf7-8bff-03ccf5e819ef-168474142702930d46-0": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Screenshot_2023-05-07_at_11.54_1.png",
+            "heading": "<em>This is Jolen<\/em>",
+            "heading_size": "h0",
+            "subheading": "<em>By Ruchi <\/em>",
+            "button_label": "DISCOVER",
+            "link": "",
+            "button_style_secondary": false,
+            "box_align": "bottom-left",
+            "show_text_box": false,
+            "text_alignment": "left",
+            "image_overlay_opacity": 0,
+            "color_scheme": "",
+            "text_alignment_mobile": "center"
+          }
+        },
+        "template--19084117279011__09647700-28fe-4bf7-8bff-03ccf5e819ef-168474142702930d46-1": {
+          "type": "slide",
+          "disabled": true,
+          "settings": {
+            "heading": "Image slide",
+            "heading_size": "h1",
+            "subheading": "Tell your brand's story through images",
+            "button_label": "Button label",
+            "link": "",
+            "button_style_secondary": false,
+            "box_align": "middle-center",
+            "show_text_box": true,
+            "text_alignment": "center",
+            "image_overlay_opacity": 0,
+            "color_scheme": "",
+            "text_alignment_mobile": "center"
+          }
+        }
+      },
+      "block_order": [
+        "template--19084117279011__09647700-28fe-4bf7-8bff-03ccf5e819ef-168474142702930d46-0",
+        "template--19084117279011__09647700-28fe-4bf7-8bff-03ccf5e819ef-168474142702930d46-1"
+      ],
+      "settings": {
+        "layout": "full_bleed",
+        "slide_height": "adapt_image",
+        "slider_visual": "counter",
+        "auto_rotate": true,
+        "change_slides_speed": 3,
+        "image_behavior": "ambient",
+        "show_text_below": true,
+        "accessibility_info": "Slideshow about our brand"
+      }
+    },
     "f9b8f082-68bd-4b80-9d3b-1b540f4f3094": {
       "type": "collection-list",
       "blocks": {
@@ -106,6 +161,7 @@
   },
   "order": [
     "image_banner",
+    "09647700-28fe-4bf7-8bff-03ccf5e819ef",
     "f9b8f082-68bd-4b80-9d3b-1b540f4f3094"
   ]
 }
