@@ -38,7 +38,7 @@
         "image": "shopify:\/\/shop_images\/4733_1_1.jpg",
         "image_3": "shopify:\/\/shop_images\/1615222078-1615212535436924-dior-fall-winter-2021-fairy-tales_1.png",
         "image_overlay_opacity": 40,
-        "image_height": "large",
+        "image_height": "adapt",
         "desktop_content_position": "bottom-left",
         "show_text_box": false,
         "desktop_content_alignment": "left",
