@@ -50,7 +50,7 @@ html {
   width: 100%;
 }
 .js .mega-menu__content {
-    transform: translateY(-1.4rem) !IMPORTANT;
+    transform: translateY(-1rem) !IMPORTANT;
     z-index: 999 !important;
 }
 /* Header CSS */
