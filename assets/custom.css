@@ -304,6 +304,11 @@ svg.modal__toggle-open.icon.icon-sear path {
     max-width: 66.44%;
 }
 }
+@media only screen and (max-width:1151px) and (min-width:992px){
+  .grid--3-col-desktop .grid__item:first-child {
+    max-width: 66.4%;
+}
+}
 @media only screen and (max-width:991px) and (min-width:768px){
   .grid--3-col-desktop .grid__item:first-child {
     max-width: 100% !important;
