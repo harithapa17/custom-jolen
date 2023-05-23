@@ -17,7 +17,13 @@
 }
 .collection-image-wrap a {
   position: relative;
-  padding: 0;
+  padding: 0 !important;
+}
+.collection-image-info span {
+  color: #fff !important;
+}
+.collection-image-wrap a span {
+  padding: 0 !important;
 }
 .collection-image-wrap .collection-image-info {
   position: absolute;
@@ -39,4 +45,249 @@
   page-break-inside: avoid;
   break-inside: avoid;
   width: 100%;
+}
+
+/* Header CSS */
+
+.header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+
+nav.header__inline-menu ul li a {
+  padding-left: 0px;
+}
+
+nav.header__inline-menu ul li .header__menu-item {
+  padding: 12px 20px;
+}
+
+nav.header__inline-menu ul li .header__menu-item span {
+  color: #f3f4f7;
+  padding: 0px 0px;
+}
+.mega-menu .mega-menu__list li a {
+  padding-bottom: 0.6rem;
+  padding-top: 0.6rem;
+  padding-left: 0px;
+  padding-right: 0px;
+  color: #090e22;
+}
+.header__icons {
+  gap: 11px;
+}
+.header__icons a {
+  color: #f3f4f7;
+  text-decoration: none;
+}
+.header__search svg use {
+  color: #f3f4f7;
+}
+.scrolled-past-header .header__icons a {
+  color: #090e22;
+  text-decoration: none !important;
+}
+.scrolled-past-header .header__search svg use {
+  color: #090e22;
+}
+
+.scrolled-past-header .header {
+  background: #fff;
+}
+.scrolled-past-header nav.header__inline-menu ul li a {
+  color: #090e22;
+}
+.scrolled-past-header nav.header__inline-menu ul li .header__menu-item span {
+  color: #090e22;
+}
+/* Header CSS */
+
+/* Slideshow CSS */
+
+.slider-button {
+  width: 32px !important;
+  height: 32px !important;
+  background: #f3f4f7 !important;
+  border-radius: 32px !important;
+  border: 0 !important;
+}
+.slider-buttons {
+  position: absolute !important;
+  top: 50% !important;
+  transform: translateY(-50%) !important;
+  justify-content: space-between !important;
+  width: 100% !important;
+  border: 0 !important;
+  padding: 0 30px !important;
+  z-index: 9999 !important;
+}
+.slider-button .icon {
+  height: 9px !important;
+}
+.slider-button .icon path {
+  fill: #000 !important;
+}
+.slider-counter--counter,
+.slideshow__autoplay {
+  display: none !important;
+}
+.grid--3-col-desktop .grid__item:first-child {
+  width: 100%;
+  max-width: 66.53%;
+}
+.collection-list-wrapper{
+  max-width: 100% !important;
+}
+.card.card--standard.card--media {
+  position: relative;
+  cursor: pointer;
+}
+.card__information {
+  position: absolute;
+  bottom: 30px;
+  padding: 0;
+  left: 30px;
+  padding: 0px !important;
+}
+.card__information h3 {
+  font-size: 36px;
+  color: #f3f4f7;
+  font-style: italic;
+  line-height: 42px;
+  letter-spacing: -0.04em;
+  margin-bottom: 20px !important;
+}
+.card__information .btn {
+  background: transparent;
+  box-shadow: none !important;
+  outline: none !important;
+  border: 0px;
+  padding: 0px !important;
+}
+
+.card.card--standard.card--media:hover .icon-wrap{
+  display: inline !important;
+}
+.card__information .icon-wrap {
+  margin-left: 6px !important;
+  display: none;
+}
+.card__information .btn a.full-unstyled-link {
+  font-size: 14px;
+  line-height: 15px;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: #ffffff;
+}
+.collection-list-wrapper{
+  padding: 0px !important;
+  margin: 0px !important;
+}
+/* Slideshow CSS Ends */
+
+
+/* Footer CSS */
+
+.footer {
+  margin-top: 0px !important;
+  padding-top: 55px !important;
+}
+.footer__content-top{
+  padding-bottom: 32px !important;
+}
+.footer__blocks-wrapper{
+  margin-top:48px !important
+}
+.footer-block h2.footer-block__heading.inline-richtext {
+  color: #000000 !important;
+  font-size: 16px;
+  margin-bottom: 16px;
+}
+.footer-block__details-content p a {
+  font-weight: 300 !important;
+  font-size: 14px !important;
+  line-height: 14px !important;
+  letter-spacing: -0.04em !important;
+  text-transform: capitalize !important;
+  text-decoration: none !important;
+  color: #090E22 !important;
+}
+.footer-block--newsletter{
+  display: none !important;
+}
+.footer-block__details-content p {
+  margin-bottom: 12px !important;
+  margin-top: 0px !important;
+  line-height: 14px;
+}
+.footer-block__details-content p:last-child {
+  margin-bottom: 0px !important;
+}
+/* Footer CSS */
+
+@media only screen and (max-width:767px){
+  .grid--3-col-desktop .grid__item:first-child {
+    width: 100%;
+    max-width: 100%;
+}
+.collection-list{
+  padding: 0px !important;
+}
+.card__information h3 {
+  font-size: 20px;
+  line-height: 12px;
+  margin-bottom: 8px !important;
+}
+.card__information .btn a.full-unstyled-link {
+  font-size: 12px;
+  line-height: 12px;
+}
+.card__information {
+  bottom: 16px;
+  left: 16px;
+}
+.card__information .icon-wrap {
+  margin-left: 4px !important;
+  display: inline;
+}
+.card__inner{
+  height: 372px;
+}
+.mobile_home_banner {
+  position: absolute;
+  bottom: 16px;
+  left: 16px;
+}
+.menu-drawer__account {
+  padding: 0px;
+  position: relative;                                           
+  width: 100%;
+}
+.mobile_home_banner h2 {
+  font-style: italic;
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 41px;
+  letter-spacing: -0.04em;
+  color: #F3F4F7;
+}
+.banner__text p {
+  font-size: 20px !important;
+  line-height: 23px !important;
+}
+.mobile_home_banner .banner__buttons {
+  margin-top: 24px !important;
+}
+.menu-drawer__account img{
+  width: 100%;
+  height: 100%;
+}
+.header svg path {
+  fill: #fff;
+}
+.scrolled-past-header .header svg path {
+  fill: #090E22 !important;
+}
 }
