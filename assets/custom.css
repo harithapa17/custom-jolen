@@ -4,9 +4,12 @@
 .scrolled-past-header .header-wrapper {
   background: #fff !important;
 } */
+html {
+  scroll-behavior: smooth;
+}
 .header.header--middle-left {
-  padding-top: 0;
-  padding-bottom: 0;
+  padding-top: 7px;
+  padding-bottom: 7px;
 }
 .custom-mega-menu-wrap {
   display: flex;
@@ -54,6 +57,7 @@
   top: 0;
   left: 0;
   width: 100%;
+  max-width: 100%;
 }
 
 nav.header__inline-menu ul li a {
@@ -102,6 +106,9 @@ nav.header__inline-menu ul li .header__menu-item span {
 .scrolled-past-header nav.header__inline-menu ul li .header__menu-item span {
   color: #090e22;
 }
+svg.icon-header-right.icon-cart-empty path {
+  fill: #f3f4f7;
+}
 /* Header CSS */
 
 /* Slideshow CSS */
@@ -130,14 +137,15 @@ nav.header__inline-menu ul li .header__menu-item span {
   fill: #000 !important;
 }
 .slider-counter--counter,
-.slideshow__autoplay {
+.slideshow__autoplay,
+.slider-counter--dots {
   display: none !important;
 }
 .grid--3-col-desktop .grid__item:first-child {
   width: 100%;
   max-width: 66.53%;
 }
-.collection-list-wrapper{
+.collection-list-wrapper {
   max-width: 100% !important;
 }
 .card.card--standard.card--media {
@@ -167,7 +175,7 @@ nav.header__inline-menu ul li .header__menu-item span {
   padding: 0px !important;
 }
 
-.card.card--standard.card--media:hover .icon-wrap{
+.card.card--standard.card--media:hover .icon-wrap {
   display: inline !important;
 }
 .card__information .icon-wrap {
@@ -181,12 +189,24 @@ nav.header__inline-menu ul li .header__menu-item span {
   text-transform: uppercase;
   color: #ffffff;
 }
-.collection-list-wrapper{
+.collection-list-wrapper {
   padding: 0px !important;
   margin: 0px !important;
 }
+.slideshow__control-wrapper .dot {
+  width: 6px;
+  height: 6px;
+  background: #f3f4f7;
+  border: 0px !important;
+  margin: 0px 4px !important;
+}
+.slider-counter__link--active .dot {
+  background: transparent !important;
+  border: 2px solid #fff !important;
+  width: 12px !important;
+  height: 12px !important;
+}
 /* Slideshow CSS Ends */
-
 
 /* Footer CSS */
 
@@ -194,16 +214,27 @@ nav.header__inline-menu ul li .header__menu-item span {
   margin-top: 0px !important;
   padding-top: 55px !important;
 }
-.footer__content-top{
+.footer__content-top {
   padding-bottom: 32px !important;
 }
-.footer__blocks-wrapper{
-  margin-top:48px !important
+.footer__blocks-wrapper {
+  margin-top: 48px !important;
 }
 .footer-block h2.footer-block__heading.inline-richtext {
   color: #000000 !important;
   font-size: 16px;
   margin-bottom: 16px;
+}
+.footer__copyright a {
+  color: #090e22;
+  text-decoration: none;
+}
+
+.footer__copyright {
+  text-align: center;
+  margin-top: 1.5rem;
+  font-size: 12px;
+  color: #090e22;
 }
 .footer-block__details-content p a {
   font-weight: 300 !important;
@@ -212,9 +243,9 @@ nav.header__inline-menu ul li .header__menu-item span {
   letter-spacing: -0.04em !important;
   text-transform: capitalize !important;
   text-decoration: none !important;
-  color: #090E22 !important;
+  color: #090e22 !important;
 }
-.footer-block--newsletter{
+.footer-block--newsletter {
   display: none !important;
 }
 .footer-block__details-content p {
@@ -226,68 +257,176 @@ nav.header__inline-menu ul li .header__menu-item span {
   margin-bottom: 0px !important;
 }
 /* Footer CSS */
-
-@media only screen and (max-width:767px){
+.scrolled-past-header .header__icons svg path {
+  fill: #090e22 !important;
+}
+.header__search .search-modal__content svg use {
+  color: #090e22;
+}
+.header__icon,
+.header__icon--cart .icon {
+  height: 4rem !important;
+  width: 4rem !important;
+}
+svg.modal__toggle-open.icon.icon-search {
+  height: auto;
+  width: auto;
+}
+svg.modal__toggle-open.icon.icon-sear path {
+  fill: #f3f4f7 !important;
+}
+.back-to-top {
+  display: none;
+}
+@media only screen and (max-width: 767px) {
   .grid--3-col-desktop .grid__item:first-child {
     width: 100%;
     max-width: 100%;
-}
-.collection-list{
-  padding: 0px !important;
-}
-.card__information h3 {
-  font-size: 20px;
-  line-height: 12px;
-  margin-bottom: 8px !important;
-}
-.card__information .btn a.full-unstyled-link {
-  font-size: 12px;
-  line-height: 12px;
-}
-.card__information {
-  bottom: 16px;
-  left: 16px;
-}
-.card__information .icon-wrap {
-  margin-left: 4px !important;
-  display: inline;
-}
-.card__inner{
-  height: 372px;
-}
-.mobile_home_banner {
-  position: absolute;
-  bottom: 16px;
-  left: 16px;
-}
-.menu-drawer__account {
-  padding: 0px;
-  position: relative;                                           
-  width: 100%;
-}
-.mobile_home_banner h2 {
-  font-style: italic;
-  font-weight: 400;
-  font-size: 36px;
-  line-height: 41px;
-  letter-spacing: -0.04em;
-  color: #F3F4F7;
-}
-.banner__text p {
-  font-size: 20px !important;
-  line-height: 23px !important;
-}
-.mobile_home_banner .banner__buttons {
-  margin-top: 24px !important;
-}
-.menu-drawer__account img{
-  width: 100%;
-  height: 100%;
-}
-.header svg path {
-  fill: #fff;
-}
-.scrolled-past-header .header svg path {
-  fill: #090E22 !important;
-}
+  }
+  .collection-list {
+    padding: 0px !important;
+  }
+  .card__information h3 {
+    font-size: 20px;
+    line-height: 12px;
+    margin-bottom: 8px !important;
+  }
+  .card__information .btn a.full-unstyled-link {
+    font-size: 12px;
+    line-height: 12px;
+  }
+  .card__information {
+    bottom: 16px;
+    left: 16px;
+  }
+  .card__information .icon-wrap {
+    margin-left: 4px !important;
+    display: inline;
+  }
+  .card__inner {
+    height: 372px;
+  }
+  .mobile_home_banner {
+    position: absolute;
+    bottom: 16px;
+    left: 16px;
+  }
+  .menu-drawer__account {
+    padding: 0px;
+    position: relative;
+    width: 100%;
+  }
+  .mobile_home_banner h2 {
+    font-style: italic;
+    font-weight: 400;
+    font-size: 36px;
+    line-height: 41px;
+    letter-spacing: -0.04em;
+    color: #f3f4f7;
+  }
+  .banner__text p {
+    font-size: 20px !important;
+    line-height: 23px !important;
+  }
+  .banner .banner__buttons {
+    margin-top: 24px !important;
+  }
+  .menu-drawer__account img {
+    width: 100%;
+    height: 100%;
+  }
+  .header svg path {
+    fill: #fff;
+  }
+  .scrolled-past-header .header svg path {
+    fill: #090e22 !important;
+  }
+  .slider-button--next,
+  .slider-button--prev {
+    display: none !important;
+  }
+  .slider-buttons {
+    top: inherit !important;
+    transform: translateY(0%) !important;
+    justify-content: center !important;
+    bottom: 20px;
+  }
+  .slider-counter--dots {
+    display: block !important;
+  }
+  .banner {
+    display: none !important;
+  }
+  .slideshow.banner {
+    display: flex !important;
+    height: 480px;
+  }
+  .banner h2 {
+    font-style: italic;
+    font-weight: 400;
+    font-size: 36px;
+    line-height: 41px !important;
+    letter-spacing: -0.04em;
+    color: #f3f4f7;
+  }
+  .footer__list-social,
+  .ft-logo {
+    display: none !important;
+  }
+  .footer {
+    padding: 0px !important;
+  }
+  .back-to-top {
+    background: #090e22;
+    padding: 14px 10px;
+    display: block;
+  }
+  .back-to-top span a {
+    color: #fff;
+    text-decoration: none;
+  }
+  .back-to-top span {
+    display: flex;
+    justify-content: center;
+    color: #fff;
+    align-items: center;
+    font-size: 12px;
+    line-height: 12px;
+    letter-spacing: 0.04em;
+    text-transform: capitalize;
+    color: #f3f4f7;
+  }
+  .back-to-top span svg {
+    margin-right: 10px;
+  }
+  svg.icon.icon-arrow path {
+    fill: #000 !important;
+  }
+  .menu-drawer__navigation-container {
+    height: calc(100vh - 60px) !important;
+  }
+  .menu-drawer__utility-links {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: transparent;
+    padding: 5px 15px;
+    border-top: 0.6px solid #090e22;
+  }
+  .menu-drawer__utility-links a {
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 14px;
+    letter-spacing: -0.04em;
+    text-transform: uppercase;
+    color: #090e22;
+    text-decoration: none;
+  }
+  .menu-drawer__utility-links .menu-drawer__account {
+    width: auto;
+    margin-bottom: 0px;
+  }
+  .menu-drawer__utility-links .menu-drawer__account svg {
+    display: none;
+  }
 }

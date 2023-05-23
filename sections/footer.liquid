@@ -51,6 +51,12 @@
     or section.settings.enable_follow_on_shop
   -%}
     {%- unless only_empty_brand -%}
+      <div class="back-to-top">
+        <span><svg width="11" height="7" viewBox="0 0 11 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M10.339 5.16018L5.96403 0.78518C5.90306 0.724 5.83062 0.675457 5.75085 0.642335C5.67108 0.609213 5.58556 0.592162 5.49919 0.592162C5.41281 0.592162 5.32729 0.609213 5.24752 0.642335C5.16775 0.675457 5.09531 0.724 5.03434 0.78518L0.659342 5.16018C0.536057 5.28346 0.466797 5.45067 0.466797 5.62502C0.466797 5.79937 0.536057 5.96658 0.659342 6.08987C0.782626 6.21315 0.949835 6.28241 1.12419 6.28241C1.29854 6.28241 1.46574 6.21315 1.58903 6.08987L5.49973 2.17916L9.41043 6.09041C9.53372 6.2137 9.70093 6.28296 9.87528 6.28296C10.0496 6.28296 10.2168 6.2137 10.3401 6.09041C10.4634 5.96713 10.5327 5.79992 10.5327 5.62557C10.5327 5.45122 10.4634 5.28401 10.3401 5.16073L10.339 5.16018Z" fill="#F3F4F7"/>
+          </svg>
+           <a href="#">Back to Top</a></span>
+      </div>
       <div class="footer__content-top page-width">
         {%- if section.blocks.size > 0 -%}
           {%- liquid
@@ -64,7 +70,7 @@
           -%}
           <div>
             {%- if request.page_type == 'index' -%}
-        <h1 class="header__heading">
+        <h1 class="header__heading ft-logo">
       {%- endif -%}
           <a href="{{ routes.root_url }}" class="header__heading-link link link--text focus-inset">
             {%- if settings.logo != blank -%}
