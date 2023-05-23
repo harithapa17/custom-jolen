@@ -148,7 +148,7 @@ img.header__heading-logo.motion-reduce {
   fill: #000 !important;
 }
 .slider-counter--counter,
-.slideshow__autoplay,
+.slideshow__autoplay, 
 .slider-counter--dots {
   display: none !important;
 }
