@@ -371,6 +371,14 @@
       {%- if request.page_type == 'index' -%}
         <h1 class="header__heading">
       {%- endif -%}
+      
+      {% liquid 
+      if settings.logo1 != blank and section.settings.logo_color_change == true
+      assign class_logo = 'hedsf'
+       else
+       assign class_logo = 'header__heading-logo motion-reduce'
+       endif
+       %}
           <a href="{{ routes.root_url }}" class="header__heading-link link link--text focus-inset">
             {%- if settings.logo != blank -%}
               <div class="header__heading-logo-wrapper">
@@ -378,8 +386,9 @@
                 {%- assign logo_height = settings.logo_width | divided_by: settings.logo.aspect_ratio -%}
                 {% capture sizes %}(max-width: {{ settings.logo_width | times: 2 }}px) 50vw, {{ settings.logo_width }}px{% endcapture %}
                 {% capture widths %}{{ settings.logo_width }}, {{ settings.logo_width | times: 1.5 | round }}, {{ settings.logo_width | times: 2 }}{% endcapture %}
-                {{ settings.logo | image_url: width: 600 | image_tag:
-                  class: 'header__heading-logo motion-reduce',
+              {% if class_logo != 'header__heading-logo motion-reduce' %}
+                  {{ settings.logo1 | image_url: width: 600 | image_tag:
+                  class: class_logo,
                   widths: widths,
                   height: logo_height,
                   width: settings.logo_width,
@@ -387,6 +396,17 @@
                   sizes: sizes,
                   preload: true
                 }}
+                {% else %}
+                {{ settings.logo | image_url: width: 600 | image_tag:
+                class: class_logo,
+                widths: widths,
+                height: logo_height,
+                width: settings.logo_width,
+                alt: logo_alt,
+                sizes: sizes,
+                preload: true
+              }}
+                {% endif %}
               </div>
             {%- else -%}
               <span class="h2">{{ shop.name }}</span>
@@ -909,6 +929,12 @@
       "default": "middle-left",
       "label": "t:sections.header.settings.logo_position.label",
       "info": "t:sections.header.settings.logo_help.content"
+    },
+    {
+      "type": "checkbox",
+      "id": "logo_color_change",
+      "default": true,
+      "label": "Change Logo"
     },
     {
       "type": "link_list",
