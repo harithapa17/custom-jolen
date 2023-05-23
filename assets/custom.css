@@ -63,7 +63,7 @@ html {
 nav.header__inline-menu ul li a {
   padding-left: 0px;
 }
-.ft-logo img {
+.ft-logo img.header__heading-logo.motion-reduce {
     filter: brightness(0.5) !important;
 }
 nav.header__inline-menu ul li .header__menu-item {
