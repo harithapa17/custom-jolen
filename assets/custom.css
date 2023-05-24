@@ -483,4 +483,13 @@ svg.modal__toggle-open.icon.icon-sear path {
   svg.icon-right-mobile-menu path {
     fill: #000;
 }
+  button.menu-drawer__close-button {
+    font-size: 24px;
+    line-height: 28px;
+    letter-spacing: -0.04em;
+    color: #090E22;
+    font-weight: 400;
+    font-style: italic;
+    padding-bottom: 22px;
+}
 }
