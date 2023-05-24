@@ -103,10 +103,65 @@
         "show_text_below": true,
         "accessibility_info": "Slideshow about our brand"
       }
+    },
+    "331b59d3-164a-4664-8656-4ce5c3bcbf91": {
+      "type": "collection-list",
+      "blocks": {
+        "template--19104329662755__331b59d3-164a-4664-8656-4ce5c3bcbf91-16849147999a0b6756-0": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "editorial-collection"
+          }
+        },
+        "template--19104329662755__331b59d3-164a-4664-8656-4ce5c3bcbf91-16849147999a0b6756-1": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "lounge-wear"
+          }
+        },
+        "template--19104329662755__331b59d3-164a-4664-8656-4ce5c3bcbf91-16849147999a0b6756-2": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "office-wear"
+          }
+        },
+        "3f2cd189-2fed-4ac3-b6ec-462019ae873a": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "vacation-wear"
+          }
+        },
+        "895a5140-294b-4bef-a18a-d619117aa63e": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "special-occasion"
+          }
+        }
+      },
+      "block_order": [
+        "template--19104329662755__331b59d3-164a-4664-8656-4ce5c3bcbf91-16849147999a0b6756-0",
+        "template--19104329662755__331b59d3-164a-4664-8656-4ce5c3bcbf91-16849147999a0b6756-1",
+        "template--19104329662755__331b59d3-164a-4664-8656-4ce5c3bcbf91-16849147999a0b6756-2",
+        "3f2cd189-2fed-4ac3-b6ec-462019ae873a",
+        "895a5140-294b-4bef-a18a-d619117aa63e"
+      ],
+      "settings": {
+        "title": "Collections",
+        "heading_size": "h1",
+        "image_ratio": "square",
+        "columns_desktop": 3,
+        "color_scheme": "",
+        "show_view_all": false,
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
     }
   },
   "order": [
     "image_banner",
-    "2d948dbd-3882-49ab-91f4-5703b547355d"
+    "2d948dbd-3882-49ab-91f4-5703b547355d",
+    "331b59d3-164a-4664-8656-4ce5c3bcbf91"
   ]
 }
