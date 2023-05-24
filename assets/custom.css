@@ -467,5 +467,6 @@ svg.modal__toggle-open.icon.icon-sear path {
   }
   .header__icon--menu[aria-expanded='true']::before {
     background: transparent !important;
+    display: none;
 }
 }
