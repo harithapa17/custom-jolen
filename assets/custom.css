@@ -482,6 +482,7 @@ svg.modal__toggle-open.icon.icon-sear path {
 }
   svg.icon-right-mobile-menu path {
     fill: #000;
+    right:7px !important;
 }
   button.menu-drawer__close-button {
     font-size: 24px;
