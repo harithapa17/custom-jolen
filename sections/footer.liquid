@@ -91,12 +91,6 @@
               </div>
             {%- else -%}
               <span class="h2">{{ shop.name }}</span>
-              {% if request.mobile %}
-                {{ shop.name }}
-           {% else %}
-              {{ shop.domain }}
-         {% endif %}
-
             {%- endif -%}
           </a>
       {%- if request.page_type == 'index' -%}
