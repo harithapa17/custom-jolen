@@ -84,6 +84,9 @@ ul.mega-menu__list.page-width li > span {
   width: 100%;
   max-width: 100%;
 }
+.section-header.shopify-section-group-header-group {
+  z-index: 999999 !important;
+}
 .mega-menu__content {
   padding-bottom: 33px !important;
   padding-top: 33px !important;
@@ -196,7 +199,7 @@ img.header__heading-logo.motion-reduce {
   width: 100% !important;
   border: 0 !important;
   padding: 0 30px !important;
-  z-index: 9999 !important;
+  z-index: 9;
 }
 .slider-button .icon {
   height: 9px !important;
@@ -284,9 +287,21 @@ img.header__heading-logo.motion-reduce {
 }
 .footer__content-top {
   padding-bottom: 32px !important;
+  border: 0px !important;
 }
 .footer__blocks-wrapper {
   margin-top: 48px !important;
+}
+.footer__blocks-wrapper .footer-block {
+  margin: 0px 0 !important;
+}
+.footer__blocks-wrapper .footer-block__details-content p {
+  margin-bottom: 0px !important;
+  margin-top: 0px !important;
+  padding: 9px 0;
+}
+.footer-block__details-content {
+  margin-bottom: 0px !important;
 }
 .footer-block h2.footer-block__heading.inline-richtext {
   color: #000000 !important;
@@ -340,11 +355,29 @@ svg.modal__toggle-open.icon.icon-search {
   height: auto;
   width: auto;
 }
+.header__heading-logo-wrapper {
+  width: 70% !important;
+}
+.footer__content-bottom{
+  opacity: 1 !important;
+  transform: translateY(0rem) !important;
+}
+.cyp-block {
+  border-top: 1px solid #090E22;
+  margin-top: -2px;
+}
+a#cart-icon-bubble {
+  margin: 0px -15px;
+}
 svg.modal__toggle-open.icon.icon-sear path {
   fill: #f3f4f7 !important;
 }
 .back-to-top {
   display: none;
+}
+.desktop-footer {
+  display: flex;
+  width: 100%;
 }
 @media only screen and (max-width: 1400px) and (min-width: 1320px) {
   .grid--3-col-desktop .grid__item:first-child {
@@ -381,6 +414,9 @@ ul.mega-menu__list.page-width {
   .grid--3-col-desktop .grid__item:first-child {
     max-width: 100% !important;
   }
+  .list-social__link {
+    padding: 1.2rem !important;
+}
   svg.icon.icon-hamburger path {
     fill: #fff;
 }
@@ -392,14 +428,82 @@ ul.mega-menu__list.page-width {
     display: none;
   }
 }
+@media only screen and (min-width:768px){
+  .mobile-footer {
+    display: none;
+}
+}
 @media only screen and (max-width: 767px) {
   .grid--3-col-desktop .grid__item:first-child {
     width: 100%;
     max-width: 100%;
+    margin-top: 4px;
   }
+  .mobile-footer {
+    width: 100%;
+}
+  .desktop-footer {
+    display: none;
+}
+.footer-heading_icon.opened svg {
+  transform: rotateZ(180deg) !important;
+  top: 35%;
+}
+.footer-heading_icon.closed svg {
+  transform: rotateZ(0deg) !important;
+}
+  .footer__content-top {
+    padding: 0px 16px !important;
+}
+.footer__content-top .footer__blocks-wrapper {
+  margin: 0px !IMPORTANT;
+}
   .collection-list {
     padding: 0px !important;
   }
+  .footer-heading_icon.opened {
+    border: 0px !IMPORTANT;
+}
+  .footer__content-top h2.footer-block__heading {
+    padding: 16px 0 !important;
+    margin: 0px !IMPORTANT;
+    font-style: italic;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 18px;
+    letter-spacing: -0.04em;
+    color: #000000;
+    width: 100%;
+}
+.footer-heading_icon svg{
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 0;
+  z-index: -9;
+  width: 12px;
+  height: 12px;
+}
+.footer-heading_icon {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 0.6px solid rgba(9, 14, 34, 0.3);
+  position: relative;
+}
+h2.footer_mobile_social_icons {
+  font-style: italic;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 18px;
+  letter-spacing: -0.04em;
+  color: #000000;
+  width: 100%;
+}
+  .slideshow__text-wrapper.banner__content {
+    align-items: flex-end !important;
+    margin-bottom: 74px !important;
+}
   .card__information h3 {
     font-size: 20px;
     line-height: 12px;
@@ -483,13 +587,18 @@ ul.mega-menu__list.page-width {
     letter-spacing: -0.04em;
     color: #f3f4f7;
   }
-  .footer__list-social,
-  .ft-logo {
+  
+.ft-logo {
     display: none !important;
   }
   .footer {
     padding: 0px !important;
+    background: #F5F5F5;
+    padding-bottom: 16px !IMPORTANT;
   }
+  .footer__localization:empty + .footer__column {
+    padding-top: 0 !important;
+}
   .back-to-top {
     background: #090e22;
     padding: 14px 10px;
