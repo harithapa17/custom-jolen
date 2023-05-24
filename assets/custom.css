@@ -491,6 +491,7 @@ svg.modal__toggle-open.icon.icon-sear path {
     font-weight: 400;
     font-style: italic;
     padding-bottom: 22px;
-        padding-left: 13px;
+    padding-left: 13px;
+    background:transparent !important;
 }
 }
