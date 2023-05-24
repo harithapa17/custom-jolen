@@ -480,4 +480,7 @@ svg.modal__toggle-open.icon.icon-sear path {
     color: #090E22 !IMPORTANT;
     letter-spacing: -0.04em;
 }
+  svg.icon-right-mobile-menu path {
+    fill: #000;
+}
 }
