@@ -469,4 +469,7 @@ svg.modal__toggle-open.icon.icon-sear path {
     background: transparent !important;
     display: none;
 }
+  slideshow-component .slideshow.banner {
+    margin-top: -20px;
+}
 }
