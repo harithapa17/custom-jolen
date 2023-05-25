@@ -152,12 +152,19 @@ nav.header__inline-menu ul li .header__menu-item {
 .header__icons {
   gap: 11px;
 }
-.header__icons a {
+.home-header .header__icons a {
   color: #f3f4f7;
   text-decoration: none;
 }
-.header__search svg use {
+.header .header__icons a {
+    color: #090E22;
+    text-decoration: none;
+}
+.home-header .header__search svg use {
   color: #f3f4f7;
+}
+.header .header__search svg use {
+  color: #090E22;
 }
 .scrolled-past-header .header__icons a {
   color: #090e22;
