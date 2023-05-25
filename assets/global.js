@@ -5,7 +5,12 @@ function getFocusableElements(container) {
     )
   );
 }
-
+var currentURL = window.location.href;
+var inputValue = document.querySelector('#inputUrl').value;
+if (currentURL === '{{ shop.url }}' || currentURL === '{{ shop.url }}') {
+  var header = document.querySelector('.header'); 
+  header.classList.add('home-header');
+}
 var mega_menus = document.querySelectorAll('.mega-menu');
 mega_menus.forEach((mega_menu) => {
   mega_menu.addEventListener('mouseover', (event) => {
