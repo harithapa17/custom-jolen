@@ -117,7 +117,7 @@ ul.mega-menu__list.page-width li > span {
 .collection-image-wrap .header__menu-item {
   position: relative;
 }
-.header svg path {
+.home-header svg path {
   fill: #f3f4f7 !important;
 }
 
