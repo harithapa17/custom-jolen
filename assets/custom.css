@@ -184,8 +184,11 @@ nav.header__inline-menu ul li .header__menu-item {
 .scrolled-past-header nav.header__inline-menu ul li .header__menu-item span {
   color: #090e22;
 }
-svg.icon-header-right.icon-cart-empty path {
-  fill: #f3f4f7;
+.header svg.icon-header-right.icon-cart-empty path {
+  fill: #090E22;
+}
+.home-header svg.icon-header-right.icon-cart-empty path {
+    fill: #f3f4f7;
 }
 .header img.header__heading-logo.motion-reduce {
     filter: brightness(0.5);
