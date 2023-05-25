@@ -15,7 +15,9 @@ html {
   display: flex;
   padding: 0 64px;
 }
-
+.link, .customer a{
+  text-decoration: none !important;
+}
 .collection-image-wrap {
   width: 300px;
   margin-left: 51px !important;
@@ -431,6 +433,15 @@ ul.mega-menu__list.page-width {
 @media only screen and (min-width:768px){
   .mobile-footer {
     display: none;
+}
+.cyp-block {
+  padding-top: 20px;
+}
+.footer__column.footer__column--info {
+  display: none;
+}
+.footer__content-bottom {
+  padding: 0px !important;
 }
 }
 @media only screen and (max-width: 767px) {

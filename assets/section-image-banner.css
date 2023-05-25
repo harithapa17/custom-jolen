@@ -349,13 +349,15 @@
 .banner__buttons a {
   background: #A60017;
   padding: 10px 28px !important;
-  min-width: 122px !important;
+  min-width: auto !important;
   font-size: 12px;
   line-height: 12px;
   text-transform: uppercase;
   letter-spacing: 0.04em;
   color: #fff;
   opacity: 1 !important;
+  height: 30px !important;
+  min-height: 37px;
 }
 .banner__buttons a:after, .banner__buttons a:before {
   display: none;

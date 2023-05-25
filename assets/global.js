@@ -5,6 +5,7 @@ function getFocusableElements(container) {
     )
   );
 }
+
 var mega_menus = document.querySelectorAll('.mega-menu');
 mega_menus.forEach((mega_menu) => {
   mega_menu.addEventListener('mouseover', (event) => {

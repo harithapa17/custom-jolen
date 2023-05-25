@@ -131,6 +131,7 @@
           </div>
           <div class="mobile-footer">
             {%- for block in section.blocks -%}
+              <div class="footer-block-desk">
               <div class="footer-heading_icon"  onclick="toggleContent('{{ block.id }}')">
               {%- if block.settings.heading != blank -%}
                 <h2 class="footer-block__heading inline-richtext">{{- block.settings.heading -}}</h2> <svg width="12" height="7" viewBox="0 0 12 7" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -154,7 +155,9 @@
                     </div>
                 {%- endcase -%}
               </div>
+            </div>
             {%- endfor -%}
+          
             <div class="footer-heading_icon">
               <h2 class="footer_mobile_social_icons" onclick="renderDiv()">
                 Follow Us
