@@ -7,10 +7,8 @@ function getFocusableElements(container) {
 }
 var currentURL = window.location.href;
 var inputValue = document.querySelector('#inputUrl').value;
-console.log(currentURL);
-console.log(inputValue);
 if (currentURL === '{{ shop.url }}' || currentURL === '{{ shop.url }}') {
-  
+  conosle.log(currentURL);
   var header = document.querySelector('.header'); 
   header.classList.add('home-header');
 }
