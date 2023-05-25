@@ -7,7 +7,7 @@ function getFocusableElements(container) {
 }
 var currentURL = window.location.href;
 var inputValue = document.querySelector('#inputUrl').value;
-if (currentURL === '{{ shop.url }}' || currentURL === '{{ shop.url }}') {
+if (currentURL == '{{ shop.url }}' || currentURL == '{{ shop.url }}') {
   console.log(currentURL);
   var header = document.querySelector('.header'); 
   header.classList.add('home-header');
