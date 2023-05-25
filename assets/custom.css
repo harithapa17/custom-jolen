@@ -120,7 +120,9 @@ ul.mega-menu__list.page-width li > span {
 .home-header svg path {
   fill: #f3f4f7 !important;
 }
-
+.header__icons svg path {
+    fill: #090e22;
+}
 .home-header img.header__heading-logo.motion-reduce {
   filter: brightness(40.5) !important;
 }
