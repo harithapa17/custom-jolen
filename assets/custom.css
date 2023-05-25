@@ -134,7 +134,11 @@ nav.header__inline-menu ul li a {
 nav.header__inline-menu ul li .header__menu-item {
   padding: 12px 20px;
 }
-nav.header__inline-menu ul li .header__menu-item span {
+.header nav.header__inline-menu ul li .header__menu-item span {
+  color: #090E22;
+  padding: 0;
+}
+.home-header nav.header__inline-menu ul li .header__menu-item span {
   color: #f3f4f7;
   padding: 0px 0px;
 }
