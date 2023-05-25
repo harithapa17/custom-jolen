@@ -63,7 +63,6 @@ html {
 /* Header CSS */
 
 .header {
-  position: absolute;
   top: 0;
   left: 0;
   width: 100%;
@@ -118,14 +117,18 @@ ul.mega-menu__list.page-width li > span {
 .collection-image-wrap .header__menu-item {
   position: relative;
 }
-.header.home-header svg path {
-  fill: #090e22 !important;
+.home-header svg path {
+  fill: #f3f4f7 !important;
 }
-
-.header.home-header img.header__heading-logo.motion-reduce {
-  filter: brightness(0.5) !important;
+.header__icons svg path {
+    fill: #090e22;
 }
-
+.home-header img.header__heading-logo.motion-reduce {
+  filter: brightness(40.5) !important;
+}
+.home-header .home-header svg path {
+    fill: #090e22!important;
+}
 nav.header__inline-menu ul li a {
   padding-left: 0px;
 }
@@ -135,7 +138,11 @@ nav.header__inline-menu ul li a {
 nav.header__inline-menu ul li .header__menu-item {
   padding: 12px 20px;
 }
-nav.header__inline-menu ul li .header__menu-item span {
+.header nav.header__inline-menu ul li .header__menu-item span {
+  color: #090E22;
+  padding: 0;
+}
+.home-header nav.header__inline-menu ul li .header__menu-item span {
   color: #f3f4f7;
   padding: 0px 0px;
 }
@@ -149,16 +156,33 @@ nav.header__inline-menu ul li .header__menu-item span {
 .header__icons {
   gap: 11px;
 }
-.header__icons a {
+.home-header .header__icons a {
   color: #f3f4f7;
   text-decoration: none;
+}
+.home-header .header__icons a {
+    color: #f3f4f7;
+    text-decoration: none;
 }
 .header__search svg use {
   color: #f3f4f7;
 }
-.scrolled-past-header .header__icons a {
+ .header__icons a {
   color: #090e22;
   text-decoration: none !important;
+}
+.home-header .header__icons a {
+    color: #f3f4f7 !important;
+    text-decoration: none;
+}
+.header {
+    border-bottom: 1px solid rgba(166, 0, 23, 0.15);
+}
+ .home-header {
+    border-bottom: 0px solid rgba(166, 0, 23, 0.15);
+}
+.scrolled-past-header .home-header .header__icons a {
+    color: #090e22 !important;
 }
 .scrolled-past-header .header__search svg use {
   color: #090e22;
@@ -173,11 +197,14 @@ nav.header__inline-menu ul li .header__menu-item span {
 .scrolled-past-header nav.header__inline-menu ul li .header__menu-item span {
   color: #090e22;
 }
-svg.icon-header-right.icon-cart-empty path {
-  fill: #f3f4f7;
+.header svg.icon-header-right.icon-cart-empty path {
+  fill: #090E22;
 }
-img.header__heading-logo.motion-reduce {
-  filter: brightness(40.5);
+.home-header svg.icon-header-right.icon-cart-empty path {
+    fill: #f3f4f7;
+}
+.header img.header__heading-logo.motion-reduce {
+    filter: brightness(0.5);
 }
 .scrolled-past-header img.header__heading-logo.motion-reduce {
   filter: brightness(0.5) !important;
