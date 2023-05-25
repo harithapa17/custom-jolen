@@ -9,7 +9,7 @@ var currentURL = window.location.href;
 var inputValue = document.querySelector('#inputUrl').value;
 if (currentURL == '{{ shop.url }}' || currentURL == '{{ shop.url }}') {
   console.log(currentURL);
-  var header = document.querySelector('.header'); 
+  var header = document.querySelector('.header--has-menu'); 
   header.classList.add('home-header');
 }
 var mega_menus = document.querySelectorAll('.mega-menu');
