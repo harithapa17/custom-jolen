@@ -171,6 +171,13 @@ nav.header__inline-menu ul li .header__menu-item {
   color: #090e22;
   text-decoration: none !important;
 }
+.home-header .header__icons a {
+    color: #f3f4f7 !important;
+    text-decoration: none;
+}
+.scrolled-past-header .home-header .header__icons a {
+    color: #090e22 !important;
+}
 .scrolled-past-header .header__search svg use {
   color: #090e22;
 }
