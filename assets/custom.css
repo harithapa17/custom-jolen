@@ -122,7 +122,7 @@ ul.mega-menu__list.page-width li > span {
 }
 
 .home-header img.header__heading-logo.motion-reduce {
-  filter: brightness(0.5) !important;
+  filter: brightness(40.5) !important;
 }
 .home-header .home-header svg path {
     fill: #090e22!important;
