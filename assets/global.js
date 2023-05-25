@@ -5,13 +5,7 @@ function getFocusableElements(container) {
     )
   );
 }
-var currentURL = window.location.href;
-var inputValue = document.querySelector('#inputUrl').value;
-if (currentURL === inputValue) {
-  console.log(currentURL);
-  var header = document.querySelector('.header--has-menu'); 
-  header.classList.add('home-header');
-}
+
 var mega_menus = document.querySelectorAll('.mega-menu');
 mega_menus.forEach((mega_menu) => {
   mega_menu.addEventListener('mouseover', (event) => {
