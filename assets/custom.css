@@ -175,8 +175,8 @@ nav.header__inline-menu ul li .header__menu-item span {
 svg.icon-header-right.icon-cart-empty path {
   fill: #f3f4f7;
 }
-img.header__heading-logo.motion-reduce {
-  filter: brightness(40.5);
+.header img.header__heading-logo.motion-reduce {
+    filter: brightness(0.5);
 }
 .scrolled-past-header img.header__heading-logo.motion-reduce {
   filter: brightness(0.5) !important;
