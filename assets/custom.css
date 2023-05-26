@@ -440,7 +440,7 @@ svg.modal__toggle-open.icon.icon-sear path {
 }
 @media only screen and (max-width:1200px) and (min-width:992px){
   nav.header__inline-menu ul li .header__menu-item {
-    padding: 12px 19px;
+    padding: 12px 14px;
 }
 .custom-mega-menu-wrap {
   padding: 0 0px !important;
