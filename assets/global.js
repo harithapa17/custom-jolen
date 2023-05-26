@@ -5,6 +5,8 @@ function getFocusableElements(container) {
     )
   );
 }
+
+
 var currentURL = window.location.href;
 var inputValue = document.querySelector('#inputUrl').value;
 if (currentURL === inputValue) {
