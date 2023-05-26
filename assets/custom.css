@@ -147,6 +147,9 @@ nav.header__inline-menu ul li .header__menu-item {
   color: #f3f4f7;
   padding: 0px 0px;
 }
+.header.home-header  nav.header__inline-menu ul li .header__menu-item span {
+    text-decoration-color: #fff!important;
+}
 .mega-menu .mega-menu__list li a {
   padding-bottom: 0.6rem;
   padding-top: 0.6rem;
