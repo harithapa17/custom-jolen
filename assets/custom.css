@@ -390,6 +390,9 @@ svg.modal__toggle-open.icon.icon-search {
   overflow: visible;
 }
 .home-header span.search-text {
+  color: #f3f4f7;
+}
+.home-header span.search-text {
   display: flex;
   margin-right: 10px;
   margin-left: 10px;
