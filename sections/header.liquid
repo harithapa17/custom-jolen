@@ -609,7 +609,7 @@
         {%- endif -%}
       </div>
       {%- if section.settings.menu_type_desktop != "drawer" -%}
-      <div class="header__icon header__icon--account link focus-inset{% if section.settings.menu != blank %} small-hide{% endif %}">
+      <div class="header__icon header__icon--account blog_icon link focus-inset{% if section.settings.menu != blank %} small-hide{% endif %}">
           {%- for block in section.blocks -%}
             {% if block.settings.blogs %}
               <p>{{ block.settings.blogs }}</p> 
