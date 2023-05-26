@@ -141,6 +141,7 @@ nav.header__inline-menu ul li .header__menu-item {
 .header nav.header__inline-menu ul li .header__menu-item span {
   color: #090E22;
   padding: 0;
+   text-decoration-color: #A60017 !important;
 }
 .home-header nav.header__inline-menu ul li .header__menu-item span {
   color: #f3f4f7;
