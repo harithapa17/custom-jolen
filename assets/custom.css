@@ -392,7 +392,7 @@ svg.modal__toggle-open.icon.icon-search {
 .home-header span.search-text {
   color: #f3f4f7;
 }
-.home span.search-text {
+.header span.search-text {
   display: flex;
   margin-right: 10px;
   margin-left: 10px;
