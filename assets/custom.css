@@ -194,10 +194,6 @@ nav.header__inline-menu ul li .header__menu-item {
 .scrolled-past-header .header {
   background: #fff;
 }
-.header .blog_icon p a {
-    text-decoration: underline !IMPORTANT;
-    text-decoration-color: #A60017 !IMPORTANT;
-}
 .scrolled-past-header nav.header__inline-menu ul li a {
   color: #090e22;
 }
