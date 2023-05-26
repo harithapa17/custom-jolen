@@ -195,7 +195,8 @@ nav.header__inline-menu ul li .header__menu-item {
   color: #090e22;
 }
 .scrolled-past-header nav.header__inline-menu ul li .header__menu-item span {
-  color: #090e22;
+    color: #090e22;
+    text-decoration-color: #A60017 !important;
 }
 .header svg.icon-header-right.icon-cart-empty path {
   fill: #090E22;
