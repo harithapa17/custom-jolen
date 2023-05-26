@@ -501,7 +501,7 @@ ul.mega-menu__list.page-width {
     width: 100%;
 }
 span.search-text {
-  display: none;
+  display: none !important;
 }
   .desktop-footer {
     display: none;
