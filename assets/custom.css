@@ -498,6 +498,9 @@ ul.mega-menu__list.page-width {
     max-width: 100%;
     margin-top: 4px;
   }
+  .footer__content-top .header__heading-logo-wrapper {
+    display: none;
+}
   .mobile-footer {
     width: 100%;
 }
