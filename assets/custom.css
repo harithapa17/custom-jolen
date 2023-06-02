@@ -808,4 +808,7 @@ svg.modal__toggle-open.icon.icon-sear path {
   .collection ul#product-grid .product-card-wrapper {
     margin-bottom: 24px;
   }
+  .collection #product-grid .card__information {
+    height: 24px !important;
+  }
 }
