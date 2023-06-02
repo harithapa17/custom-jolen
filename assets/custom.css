@@ -790,6 +790,14 @@ svg.modal__toggle-open.icon.icon-sear path {
 .collection ul#product-grid .grid__item {
   width: calc(33.33% - 30px) !important;
 }
+@media (max-width: 991px) and (min-width: 768px) {
+  .collection ul#product-grid {
+    gap: 20px;
+  }
+  .collection #product-grid .card__information h3 {
+    margin-top: 13px;
+  }
+}
 @media (max-width: 767px) {
   .collection ul#product-grid {
     gap: 16px;
