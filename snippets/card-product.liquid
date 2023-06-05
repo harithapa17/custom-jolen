@@ -201,6 +201,9 @@
             {% render 'price', product: card_product, price_class: '' %}
           </div>
         </div>
+
+        {% render 'collection-varient', product: card_product %}
+
         {%- if show_quick_add -%}
           <div class="quick-add no-js-hidden">
             {%- liquid
