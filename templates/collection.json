@@ -1,5 +1,54 @@
 {
   "sections": {
+    "45351def-b80e-41f6-a5f2-ee98536b23b9": {
+      "type": "image-banner",
+      "blocks": {
+        "template--19084118065443__45351def-b80e-41f6-a5f2-ee98536b23b9-1686035080e8e3c65a-0": {
+          "type": "heading",
+          "settings": {
+            "heading": "<em>Editorial Collection<\/em>",
+            "heading_size": "h1"
+          }
+        },
+        "template--19084118065443__45351def-b80e-41f6-a5f2-ee98536b23b9-1686035080e8e3c65a-1": {
+          "type": "text",
+          "settings": {
+            "text": "Office wear captures the essence of modern elegance, comprising tailored suits, crisp shirts, refined blouses, sleek skirts, trousers, and statement dresses, all meticulously designed to exude confidence and make a statement in the corporate world.",
+            "text_style": "body"
+          }
+        },
+        "template--19084118065443__45351def-b80e-41f6-a5f2-ee98536b23b9-1686035080e8e3c65a-2": {
+          "type": "buttons",
+          "settings": {
+            "button_label_1": "",
+            "button_link_1": "",
+            "button_style_secondary_1": false,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_secondary_2": false
+          }
+        }
+      },
+      "block_order": [
+        "template--19084118065443__45351def-b80e-41f6-a5f2-ee98536b23b9-1686035080e8e3c65a-0",
+        "template--19084118065443__45351def-b80e-41f6-a5f2-ee98536b23b9-1686035080e8e3c65a-1",
+        "template--19084118065443__45351def-b80e-41f6-a5f2-ee98536b23b9-1686035080e8e3c65a-2"
+      ],
+      "settings": {
+        "image": "shopify:\/\/shop_images\/030523-WWLP-1_1.png",
+        "image_3": "shopify:\/\/shop_images\/030523-WWLP-1_1.png",
+        "image_overlay_opacity": 0,
+        "image_height": "adapt",
+        "desktop_content_position": "bottom-left",
+        "show_text_box": false,
+        "desktop_content_alignment": "center",
+        "color_scheme": "",
+        "image_behavior": "none",
+        "mobile_content_alignment": "center",
+        "stack_images_on_mobile": true,
+        "show_text_below": true
+      }
+    },
     "banner": {
       "type": "main-collection-banner",
       "settings": {
@@ -29,6 +78,7 @@
     }
   },
   "order": [
+    "45351def-b80e-41f6-a5f2-ee98536b23b9",
     "banner",
     "product-grid"
   ]
