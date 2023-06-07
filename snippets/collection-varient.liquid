@@ -14,8 +14,8 @@
     cursor: not-allowed;
   }
 </style>
-<div>
-  <form action="/cart/add" method="post" enctype="multipart/form-data">
+<div class="collection_size_variant">
+  <form action="/cart/add" method="post" enctype="multipart/form-data" class="collection-flex-size">
     {% for variant in product.variants %}
       {% if product.variants.size > 1 %}
         <div class="variant-option{% if variant == product.selected_or_first_available_variant %} selected{% endif %}{% if variant.available == false %} disabled{% endif %}">
