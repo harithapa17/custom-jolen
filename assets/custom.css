@@ -499,6 +499,9 @@ svg.modal__toggle-open.icon.icon-sear path {
     max-width: 100%;
     margin-top: 4px;
   }
+  .hide-mobile-footer {
+    display: none;
+  }
   .mobile-footer {
     width: 100%;
   }
@@ -749,6 +752,8 @@ svg.modal__toggle-open.icon.icon-sear path {
   }
 }
 
+/* Collection Page Starts */
+
 .collection #product-grid .card__information {
   position: relative;
   bottom: 0;
@@ -986,3 +991,5 @@ aside#main-collection-filters {
     transform: rotateZ(138deg);
   }
 }
+
+/* Collection Page Ends */
