@@ -6,12 +6,11 @@ function getFocusableElements(container) {
   );
 }
 
-
 var currentURL = window.location.href;
 var inputValue = document.querySelector('#inputUrl').value;
 if (currentURL === inputValue) {
   console.log(currentURL);
-  var header = document.querySelector('.header--has-menu'); 
+  var header = document.querySelector('.header--has-menu');
   header.classList.add('home-header');
 }
 var mega_menus = document.querySelectorAll('.mega-menu');
@@ -1181,5 +1180,19 @@ class ProductRecommendations extends HTMLElement {
     new IntersectionObserver(handleIntersection.bind(this), { rootMargin: '0px 0px 400px 0px' }).observe(this);
   }
 }
+
+$(document).ready(function () {
+  $('#sort-dropdown').click(function () {
+    $('.sort-by-items').slideToggle();
+  });
+
+  $('.sort-by-items ul li').click(function () {
+    // Remove active class from all li elements
+    $('.sort-by-items ul li').removeClass('sort-by-selected');
+
+    // Add active class to the clicked li element
+    $(this).addClass('sort-by-selected');
+  });
+});
 
 customElements.define('product-recommendations', ProductRecommendations);

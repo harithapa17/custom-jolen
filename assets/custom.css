@@ -483,6 +483,15 @@ svg.modal__toggle-open.icon.icon-sear path {
   .mobile-footer {
     display: none;
   }
+  aside#main-collection-filters .facets-container-drawer {
+    align-items: flex-start;
+  }
+  aside#main-collection-filters {
+    margin-bottom: 20px !important;
+  }
+  aside#main-collection-filters .facets-container-drawer span.mobile-facets__open {
+    padding: 0px !important;
+  }
   .cyp-block {
     padding-top: 20px;
   }
@@ -788,6 +797,7 @@ svg.modal__toggle-open.icon.icon-sear path {
 }
 .collection ul#product-grid {
   gap: 40px;
+  margin-top: 0px;
 }
 .collection .grid--1-col-desktop .grid__item {
   width: calc(100% - 0px) !important;
@@ -993,3 +1003,66 @@ aside#main-collection-filters {
 }
 
 /* Collection Page Ends */
+
+/* Filter Block */
+
+#sort-dropdown,
+#sort-dropdown h2 label {
+  cursor: pointer;
+}
+#sort-dropdown {
+  margin-bottom: 14px;
+}
+.sorting.filter-sort-by .facet-filters__field h2 {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 16px;
+  display: flex;
+  align-items: center;
+  text-align: right;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: #090e22;
+  margin-left: 11px;
+  margin-right: 0px;
+}
+.sort-by-prd-count {
+  display: none;
+}
+.sort-by-items {
+  display: none;
+}
+.sort-by-items ul li {
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 14px;
+  letter-spacing: -0.04em;
+  text-transform: capitalize;
+  color: #090e22;
+  text-align: right;
+  list-style: none;
+  margin-bottom: 14px;
+  font-family: sans-serif;
+  cursor: pointer;
+}
+.sort-by-items ul li.sort-by-selected {
+  font-weight: 400;
+}
+.sort-by-items ul li.sort-by-selected span {
+  position: relative;
+}
+.sort-by-items ul li.sort-by-selected span:before {
+  content: '';
+  position: absolute;
+  left: -21px;
+  top: 3px;
+  width: 13px;
+  height: 10px;
+  background: url(https://cdn.shopify.com/s/files/1/0761/2707/6643/files/check-img.svg?v=1686132436);
+  background-size: 13px;
+}
+.sort-by-items ul {
+  padding: 0;
+  margin: 0;
+}
+/* // Filter Block // */
