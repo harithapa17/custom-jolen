@@ -1,0 +1,110 @@
+<div class="collection-category-block page-width">
+  {% for product in collection.products %}
+    {% assign remainder = forloop.index0 | modulo: 9 %}
+    {% if remainder == 0 %}
+      <div class="collection-list-single">
+        <div class="collection-list-single-bg">
+          {%- for block in section.blocks -%}
+            {% if block.settings.section_image %}
+              <img src="{{ block.settings.section_image | image_url: width: 500 }}" alt="Section Image">
+            {% endif %}
+          {% endfor %}
+        </div>
+        <div class="collection-single-list-products">
+          {% for block in section.blocks %}
+            {% for i in (1..8) %}
+              <div class="collection-list-prd">
+                <div class="collection-list-prd-img">
+                  {% assign product_key = 'product' | append: i %}
+                  {% if block.settings[product_key] %}
+                    {% assign alt_text = block.settings[product_key] %}
+                    {% if alt_text != 'Section Image' %}
+                      <img src="{{ block.settings[product_key] | image_url: width: 500 }}" alt="{{ alt_text }}">
+                    {% endif %}
+                  {% endif %}
+                </div>
+                <div class="collection-list-prd-data">
+                  <h3>{{ block.settings[product_key].title }}</h3>
+                  <h4>{{ block.settings[product_key].price }}</h4>
+                </div>
+              </div>
+            {% endfor %}
+          {% endfor %}
+        </div>
+      </div>
+    {% endif %}
+    <div class="collection-category-prd">
+      <div class="collection-single-list-products">
+        <div class="collection-list-prd">
+          <div class="collection-list-prd-img">
+            <img src="{{ product.featured_image | image_url: width: 500 }}" alt="Product Image">
+          </div>
+          <div class="collection-list-prd-data">
+            <h3>{{ product.title | escape }}</h3>
+            <h4>{{ product.price | escape }}</h4>
+          </div>
+        </div>
+      </div>
+    </div>
+  {% endfor %}
+</div>
+
+{% schema %}
+{
+  "name": "inner-product",
+  "class": "section",
+  "blocks": [
+    {
+      "type": "text",
+      "name": "Add Category Product",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "section_image",
+          "label": "Main Product Image"
+        },
+        {
+          "type": "product",
+          "id": "product1",
+          "label": "Select Products"
+        },
+        {
+          "type": "product",
+          "id": "product2",
+          "label": "Select Products"
+        },
+        {
+          "type": "product",
+          "id": "product3",
+          "label": "Select Products"
+        },
+        {
+          "type": "product",
+          "id": "product4",
+          "label": "Select Products"
+        },
+        {
+          "type": "product",
+          "id": "product5",
+          "label": "Select Products"
+        },
+        {
+          "type": "product",
+          "id": "product6",
+          "label": "Select Products"
+        },
+        {
+          "type": "product",
+          "id": "product7",
+          "label": "Select Products"
+        },
+        {
+          "type": "product",
+          "id": "product8",
+          "label": "Select Products"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}
