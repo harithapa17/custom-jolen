@@ -1003,6 +1003,7 @@ aside#main-collection-filters {
 }
 .collection-list-prd-img img {
   width: 100%;
+  display: block;
 }
 .collection-list-prd {
   min-width: 23%;
@@ -1034,7 +1035,10 @@ aside#main-collection-filters {
 .collection-category-block {
   grid-column: 1 / -1;
 }
-
+.collection__product_lists .product-link-cart,
+.collection-single-list-products a {
+  text-decoration: none !important;
+}
 @media (min-width: 992px) {
   .collection-single-list-products.grid-2-column,
   .collection-single-list-products.grid-1-column {

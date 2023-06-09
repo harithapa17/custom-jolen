@@ -15,92 +15,140 @@
               </div>
               <div class="collection-single-list-products">
                 {% if block.settings.product1 != blank %}
-                  <div class="collection-list-prd">
-                    <div class="collection-list-prd-img">
-                      <img src="{{ block.settings.product1 | image_url: width: 300 }}" alt="Section Image">
+                  <a
+                    class="product-link-cart"
+                    href="{{ block.settings.product1.url }}"
+                    id="StandardCardNoMediaLink-{{ section_id }}-{{ product.id }}"
+                  >
+                    <div class="collection-list-prd">
+                      <div class="collection-list-prd-img">
+                        <img src="{{ block.settings.product1 | image_url: width: 300 }}" alt="Section Image">
+                      </div>
+                      <div class="collection-list-prd-data">
+                        <h3>{{ block.settings.product1.title }}</h3>
+                        <h4>{{ block.settings.product1.price }}</h4>
+                      </div>
                     </div>
-                    <div class="collection-list-prd-data">
-                      <h3>{{ block.settings.product1.title }}</h3>
-                      <h4>{{ block.settings.product1.price }}</h4>
-                    </div>
-                  </div>
+                  </a>
                 {% endif %}
                 {% if block.settings.product2 != blank %}
-                  <div class="collection-list-prd">
-                    <div class="collection-list-prd-img">
-                      <img src="{{ block.settings.product2 | image_url: width: 300 }}" alt="Section Image">
+                  <a
+                    class="product-link-cart"
+                    href="{{ block.settings.product2.url }}"
+                    id="StandardCardNoMediaLink-{{ section_id }}-{{ product.id }}"
+                  >
+                    <div class="collection-list-prd">
+                      <div class="collection-list-prd-img">
+                        <img src="{{ block.settings.product2 | image_url: width: 300 }}" alt="Section Image">
+                      </div>
+                      <div class="collection-list-prd-data">
+                        <h3>{{ block.settings.product2.title }}</h3>
+                        <h4>{{ block.settings.product2.price }}</h4>
+                      </div>
                     </div>
-                    <div class="collection-list-prd-data">
-                      <h3>{{ block.settings.product2.title }}</h3>
-                      <h4>{{ block.settings.product2.price }}</h4>
-                    </div>
-                  </div>
+                  </a>
                 {% endif %}
                 {% if block.settings.product3 != blank %}
-                  <div class="collection-list-prd">
-                    <div class="collection-list-prd-img">
-                      <img src="{{ block.settings.product3 | image_url: width: 300 }}" alt="Section Image">
+                  <a
+                    class="product-link-cart"
+                    href="{{ block.settings.product3.url }}"
+                    id="StandardCardNoMediaLink-{{ section_id }}-{{ product.id }}"
+                  >
+                    <div class="collection-list-prd">
+                      <div class="collection-list-prd-img">
+                        <img src="{{ block.settings.product3 | image_url: width: 300 }}" alt="Section Image">
+                      </div>
+                      <div class="collection-list-prd-data">
+                        <h3>{{ block.settings.product3.title }}</h3>
+                        <h4>{{ block.settings.product3.price }}</h4>
+                      </div>
                     </div>
-                    <div class="collection-list-prd-data">
-                      <h3>{{ block.settings.product3.title }}</h3>
-                      <h4>{{ block.settings.product3.price }}</h4>
-                    </div>
-                  </div>
+                  </a>
                 {% endif %}
                 {% if block.settings.product4 != blank %}
-                  <div class="collection-list-prd">
-                    <div class="collection-list-prd-img">
-                      <img src="{{ block.settings.product4 | image_url: width: 300 }}" alt="Section Image">
+                  <a
+                    class="product-link-cart"
+                    href="{{ block.settings.product4.url }}"
+                    id="StandardCardNoMediaLink-{{ section_id }}-{{ product.id }}"
+                  >
+                    <div class="collection-list-prd">
+                      <div class="collection-list-prd-img">
+                        <img src="{{ block.settings.product4 | image_url: width: 300 }}" alt="Section Image">
+                      </div>
+                      <div class="collection-list-prd-data">
+                        <h3>{{ block.settings.product4.title }}</h3>
+                        <h4>{{ block.settings.product4.price }}</h4>
+                      </div>
                     </div>
-                    <div class="collection-list-prd-data">
-                      <h3>{{ block.settings.product4.title }}</h3>
-                      <h4>{{ block.settings.product4.price }}</h4>
-                    </div>
-                  </div>
-                {% endif %}
+                  </a>
+                {%- endif %}
                 {% if block.settings.product5 != blank %}
-                  <div class="collection-list-prd">
-                    <div class="collection-list-prd-img">
-                      <img src="{{ block.settings.product5 | image_url: width: 300 }}" alt="Section Image">
+                  <a
+                    class="product-link-cart"
+                    href="{{ block.settings.product5.url }}"
+                    id="StandardCardNoMediaLink-{{ section_id }}-{{ product.id }}"
+                  >
+                    <div class="collection-list-prd">
+                      <div class="collection-list-prd-img">
+                        <img src="{{ block.settings.product5 | image_url: width: 300 }}" alt="Section Image">
+                      </div>
+                      <div class="collection-list-prd-data">
+                        <h3>{{ block.settings.product5.title }}</h3>
+                        <h4>{{ block.settings.product5.price }}</h4>
+                      </div>
                     </div>
-                    <div class="collection-list-prd-data">
-                      <h3>{{ block.settings.product5.title }}</h3>
-                      <h4>{{ block.settings.product5.price }}</h4>
-                    </div>
-                  </div>
-                {% endif %}
+                  </a>
+                {%- endif %}
                 {% if block.settings.product6 != blank %}
-                  <div class="collection-list-prd">
-                    <div class="collection-list-prd-img">
-                      <img src="{{ block.settings.product6 | image_url: width: 300 }}" alt="Section Image">
+                  <a
+                    class="product-link-cart"
+                    href="{{ block.settings.product6.url }}"
+                    id="StandardCardNoMediaLink-{{ section_id }}-{{ product.id }}"
+                  >
+                    <div class="collection-list-prd">
+                      <div class="collection-list-prd-img">
+                        <img src="{{ block.settings.product6 | image_url: width: 300 }}" alt="Section Image">
+                      </div>
+                      <div class="collection-list-prd-data">
+                        <h3>{{ block.settings.product6.title }}</h3>
+                        <h4>{{ block.settings.product6.price }}</h4>
+                      </div>
                     </div>
-                    <div class="collection-list-prd-data">
-                      <h3>{{ block.settings.product6.title }}</h3>
-                      <h4>{{ block.settings.product6.price }}</h4>
-                    </div>
-                  </div>
-                {% endif %}
+                  </a>
+                {%- endif %}
                 {% if block.settings.product7 != blank %}
-                  <div class="collection-list-prd">
-                    <div class="collection-list-prd-img">
-                      <img src="{{ block.settings.product7 | image_url: width: 300 }}" alt="Section Image">
+                  <a
+                    class="product-link-cart"
+                    href="{{ block.settings.product7.url }}"
+                    id="StandardCardNoMediaLink-{{ section_id }}-{{ product.id }}"
+                  >
+                    <div class="collection-list-prd">
+                      <div class="collection-list-prd-img">
+                        <img src="{{ block.settings.product7 | image_url: width: 300 }}" alt="Section Image">
+                      </div>
+                      <div class="collection-list-prd-data">
+                        <h3>{{ block.settings.product7.title }}</h3>
+                        <h4>{{ block.settings.product7.price }}</h4>
+                      </div>
                     </div>
-                    <div class="collection-list-prd-data">
-                      <h3>{{ block.settings.product7.title }}</h3>
-                      <h4>{{ block.settings.product7.price }}</h4>
-                    </div>
-                  </div>
+                  </a>
                 {% endif %}
                 {% if block.settings.product8 != blank %}
-                  <div class="collection-list-prd">
-                    <div class="collection-list-prd-img">
-                      <img src="{{ block.settings.product8 | image_url: width: 300 }}" alt="Section Image">
+                  <a
+                    class="product-link-cart"
+                    href="{{ block.settings.product8.url }}"
+                    id="StandardCardNoMediaLink-{{ section_id }}-{{ product.id }}"
+                  >
+                    <div class="collection-list-prd">
+                      <div class="collection-list-prd-img">
+                        <img src="{{ block.settings.product8 | image_url: width: 300 }}" alt="Section Image">
+                      </div>
+                      <div class="collection-list-prd-data">
+                        <h3>{{ block.settings.product8.title }}</h3>
+                        <h4>{{ block.settings.product8.price }}</h4>
+                      </div>
                     </div>
-                    <div class="collection-list-prd-data">
-                      <h3>{{ block.settings.product8.title }}</h3>
-                      <h4>{{ block.settings.product8.price }}</h4>
-                    </div>
-                  </div>
+                  </a>
                 {% endif %}
               </div>
             </div>
@@ -111,17 +159,23 @@
       {% assign i = i | plus: 1 %}
     {% endif %}
     <div class="collection__product_lists">
-      <div class="collection-list-prd">
-        <div class="collection-list-prd-img">
-          {% if product.featured_image != blank %}
-            <img src="{{ product.featured_image | img_url: '500x' }}" alt="{{ product.title }}">
-          {% endif %}
+      <a
+        class="product-link-cart"
+        href="{{ product.url }}"
+        id="StandardCardNoMediaLink-{{ section_id }}-{{ product.id }}"
+      >
+        <div class="collection-list-prd">
+          <div class="collection-list-prd-img">
+            {% if product.featured_image != blank %}
+              <img src="{{ product.featured_image | img_url: '500x' }}" alt="{{ product.title }}">
+            {% endif %}
+          </div>
+          <div class="collection-list-prd-data">
+            <h3>{{ product.title }}</h3>
+            <h4>{{ product.price }}</h4>
+          </div>
         </div>
-        <div class="collection-list-prd-data">
-          <h3>{{ product.title }}</h3>
-          <h4>{{ product.price }}</h4>
-        </div>
-      </div>
+      </a>
     </div>
   {% endfor %}
   <div class="collection-category-block ">
@@ -137,90 +191,138 @@
           <div class="collection-single-list-products">
             {% if block.settings.product1 != blank %}
               <div class="collection-list-prd">
-                <div class="collection-list-prd-img">
-                  <img src="{{ block.settings.product1 | image_url: width: 300 }}" alt="Section Image">
-                </div>
-                <div class="collection-list-prd-data">
-                  <h3>{{ block.settings.product1.title }}</h3>
-                  <h4>{{ block.settings.product1.price }}</h4>
-                </div>
+                <a
+                  class="product-link-cart"
+                  href="{{ block.settings.product1.url }}"
+                  id="StandardCardNoMediaLink-{{ section_id }}-{{ product.id }}"
+                >
+                  <div class="collection-list-prd-img">
+                    <img src="{{ block.settings.product1 | image_url: width: 300 }}" alt="Section Image">
+                  </div>
+                  <div class="collection-list-prd-data">
+                    <h3>{{ block.settings.product1.title }}</h3>
+                    <h4>{{ block.settings.product1.price }}</h4>
+                  </div>
+                </a>
               </div>
-            {% endif %}
+            {%- endif %}
             {% if block.settings.product2 != blank %}
               <div class="collection-list-prd">
-                <div class="collection-list-prd-img">
-                  <img src="{{ block.settings.product2 | image_url: width: 300 }}" alt="Section Image">
-                </div>
-                <div class="collection-list-prd-data">
-                  <h3>{{ block.settings.product2.title }}</h3>
-                  <h4>{{ block.settings.product2.price }}</h4>
-                </div>
+                <a
+                  class="product-link-cart"
+                  href="{{ block.settings.product2.url }}"
+                  id="StandardCardNoMediaLink-{{ section_id }}-{{ product.id }}"
+                >
+                  <div class="collection-list-prd-img">
+                    <img src="{{ block.settings.product2 | image_url: width: 300 }}" alt="Section Image">
+                  </div>
+                  <div class="collection-list-prd-data">
+                    <h3>{{ block.settings.product2.title }}</h3>
+                    <h4>{{ block.settings.product2.price }}</h4>
+                  </div>
+                </a>
               </div>
-            {% endif %}
+            {%- endif %}
             {% if block.settings.product3 != blank %}
               <div class="collection-list-prd">
-                <div class="collection-list-prd-img">
-                  <img src="{{ block.settings.product3 | image_url: width: 300 }}" alt="Section Image">
-                </div>
-                <div class="collection-list-prd-data">
-                  <h3>{{ block.settings.product3.title }}</h3>
-                  <h4>{{ block.settings.product3.price }}</h4>
-                </div>
+                <a
+                  class="product-link-cart"
+                  href="{{ block.settings.product3.url }}"
+                  id="StandardCardNoMediaLink-{{ section_id }}-{{ product.id }}"
+                >
+                  <div class="collection-list-prd-img">
+                    <img src="{{ block.settings.product3 | image_url: width: 300 }}" alt="Section Image">
+                  </div>
+                  <div class="collection-list-prd-data">
+                    <h3>{{ block.settings.product3.title }}</h3>
+                    <h4>{{ block.settings.product3.price }}</h4>
+                  </div>
+                </a>
               </div>
-            {% endif %}
+            {%- endif %}
             {% if block.settings.product4 != blank %}
               <div class="collection-list-prd">
-                <div class="collection-list-prd-img">
-                  <img src="{{ block.settings.product4 | image_url: width: 300 }}" alt="Section Image">
-                </div>
-                <div class="collection-list-prd-data">
-                  <h3>{{ block.settings.product4.title }}</h3>
-                  <h4>{{ block.settings.product4.price }}</h4>
-                </div>
+                <a
+                  class="product-link-cart"
+                  href="{{ block.settings.product4.url }}"
+                  id="StandardCardNoMediaLink-{{ section_id }}-{{ product.id }}"
+                >
+                  <div class="collection-list-prd-img">
+                    <img src="{{ block.settings.product4 | image_url: width: 300 }}" alt="Section Image">
+                  </div>
+                  <div class="collection-list-prd-data">
+                    <h3>{{ block.settings.product4.title }}</h3>
+                    <h4>{{ block.settings.product4.price }}</h4>
+                  </div>
+                </a>
               </div>
-            {% endif %}
+            {%- endif %}
             {% if block.settings.product5 != blank %}
               <div class="collection-list-prd">
-                <div class="collection-list-prd-img">
-                  <img src="{{ block.settings.product5 | image_url: width: 300 }}" alt="Section Image">
-                </div>
-                <div class="collection-list-prd-data">
-                  <h3>{{ block.settings.product5.title }}</h3>
-                  <h4>{{ block.settings.product5.price }}</h4>
-                </div>
+                <a
+                  class="product-link-cart"
+                  href="{{ block.settings.product5.url }}"
+                  id="StandardCardNoMediaLink-{{ section_id }}-{{ product.id }}"
+                >
+                  <div class="collection-list-prd-img">
+                    <img src="{{ block.settings.product5 | image_url: width: 300 }}" alt="Section Image">
+                  </div>
+                  <div class="collection-list-prd-data">
+                    <h3>{{ block.settings.product5.title }}</h3>
+                    <h4>{{ block.settings.product5.price }}</h4>
+                  </div>
+                </a>
               </div>
-            {% endif %}
+            {%- endif %}
             {% if block.settings.product6 != blank %}
               <div class="collection-list-prd">
-                <div class="collection-list-prd-img">
-                  <img src="{{ block.settings.product6 | image_url: width: 300 }}" alt="Section Image">
-                </div>
-                <div class="collection-list-prd-data">
-                  <h3>{{ block.settings.product6.title }}</h3>
-                  <h4>{{ block.settings.product6.price }}</h4>
-                </div>
+                <a
+                  class="product-link-cart"
+                  href="{{ block.settings.product6.url }}"
+                  id="StandardCardNoMediaLink-{{ section_id }}-{{ product.id }}"
+                >
+                  <div class="collection-list-prd-img">
+                    <img src="{{ block.settings.product6 | image_url: width: 300 }}" alt="Section Image">
+                  </div>
+                  <div class="collection-list-prd-data">
+                    <h3>{{ block.settings.product6.title }}</h3>
+                    <h4>{{ block.settings.product6.price }}</h4>
+                  </div>
+                </a>
               </div>
-            {% endif %}
+            {%- endif %}
             {% if block.settings.product7 != blank %}
               <div class="collection-list-prd">
-                <div class="collection-list-prd-img">
-                  <img src="{{ block.settings.product7 | image_url: width: 300 }}" alt="Section Image">
-                </div>
-                <div class="collection-list-prd-data">
-                  <h3>{{ block.settings.product7.title }}</h3>
-                  <h4>{{ block.settings.product7.price }}</h4>
-                </div>
+                <a
+                  class="product-link-cart"
+                  href="{{ block.settings.product7.url }}"
+                  id="StandardCardNoMediaLink-{{ section_id }}-{{ product.id }}"
+                >
+                  <div class="collection-list-prd-img">
+                    <img src="{{ block.settings.product7 | image_url: width: 300 }}" alt="Section Image">
+                  </div>
+                  <div class="collection-list-prd-data">
+                    <h3>{{ block.settings.product7.title }}</h3>
+                    <h4>{{ block.settings.product7.price }}</h4>
+                  </div>
+                </a>
               </div>
-            {% endif %}
+            {%- endif %}
             {% if block.settings.product8 != blank %}
               <div class="collection-list-prd">
-                <div class="collection-list-prd-img">
-                  <img src="{{ block.settings.product8 | image_url: width: 300 }}" alt="Section Image">
-                </div>
-                <div class="collection-list-prd-data">
-                  <h3>{{ block.settings.product8.title }}</h3>
-                  <h4>{{ block.settings.product8.price }}</h4>
-                </div>
+                <a
+                  class="product-link-cart"
+                  href="{{ block.settings.product8.url }}"
+                  id="StandardCardNoMediaLink-{{ section_id }}-{{ product.id }}"
+                >
+                  <div class="collection-list-prd-img">
+                    <img src="{{ block.settings.product8 | image_url: width: 300 }}" alt="Section Image">
+                  </div>
+                  <div class="collection-list-prd-data">
+                    <h3>{{ block.settings.product8.title }}</h3>
+                    <h4>{{ block.settings.product8.price }}</h4>
+                  </div>
+                </a>
               </div>
             {% endif %}
           </div>
@@ -248,92 +350,140 @@
               </div>
               <div class="collection-single-list-products">
                 {% if block.settings.product1 != blank %}
-                  <div class="collection-list-prd">
-                    <div class="collection-list-prd-img">
-                      <img src="{{ block.settings.product1 | image_url: width: 300 }}" alt="Section Image">
+                  <a
+                    class="product-link-cart"
+                    href="{{block.settings.product1.url }}"
+                    id="StandardCardNoMediaLink-{{ section_id }}-{{ product.id }}"
+                  >
+                    <div class="collection-list-prd">
+                      <div class="collection-list-prd-img">
+                        <img src="{{ block.settings.product1 | image_url: width: 300 }}" alt="Section Image">
+                      </div>
+                      <div class="collection-list-prd-data">
+                        <h3>{{ block.settings.product1.title }}</h3>
+                        <h4>{{ block.settings.product1.price }}</h4>
+                      </div>
                     </div>
-                    <div class="collection-list-prd-data">
-                      <h3>{{ block.settings.product1.title }}</h3>
-                      <h4>{{ block.settings.product1.price }}</h4>
-                    </div>
-                  </div>
+                  </a>
                 {% endif %}
                 {% if block.settings.product2 != blank %}
-                  <div class="collection-list-prd">
-                    <div class="collection-list-prd-img">
-                      <img src="{{ block.settings.product2 | image_url: width: 300 }}" alt="Section Image">
+                  <a
+                    class="product-link-cart"
+                    href="{{block.settings.product2.url }}"
+                    id="StandardCardNoMediaLink-{{ section_id }}-{{ product.id }}"
+                  >
+                    <div class="collection-list-prd">
+                      <div class="collection-list-prd-img">
+                        <img src="{{ block.settings.product2 | image_url: width: 300 }}" alt="Section Image">
+                      </div>
+                      <div class="collection-list-prd-data">
+                        <h3>{{ block.settings.product2.title }}</h3>
+                        <h4>{{ block.settings.product2.price }}</h4>
+                      </div>
                     </div>
-                    <div class="collection-list-prd-data">
-                      <h3>{{ block.settings.product2.title }}</h3>
-                      <h4>{{ block.settings.product2.price }}</h4>
-                    </div>
-                  </div>
+                  </a>
                 {% endif %}
                 {% if block.settings.product3 != blank %}
-                  <div class="collection-list-prd">
-                    <div class="collection-list-prd-img">
-                      <img src="{{ block.settings.product3 | image_url: width: 300 }}" alt="Section Image">
+                  <a
+                    class="product-link-cart"
+                    href="{{block.settings.product3.url }}"
+                    id="StandardCardNoMediaLink-{{ section_id }}-{{ product.id }}"
+                  >
+                    <div class="collection-list-prd">
+                      <div class="collection-list-prd-img">
+                        <img src="{{ block.settings.product3 | image_url: width: 300 }}" alt="Section Image">
+                      </div>
+                      <div class="collection-list-prd-data">
+                        <h3>{{ block.settings.product3.title }}</h3>
+                        <h4>{{ block.settings.product3.price }}</h4>
+                      </div>
                     </div>
-                    <div class="collection-list-prd-data">
-                      <h3>{{ block.settings.product3.title }}</h3>
-                      <h4>{{ block.settings.product3.price }}</h4>
-                    </div>
-                  </div>
+                  </a>
                 {% endif %}
                 {% if block.settings.product4 != blank %}
-                  <div class="collection-list-prd">
-                    <div class="collection-list-prd-img">
-                      <img src="{{ block.settings.product4 | image_url: width: 300 }}" alt="Section Image">
+                  <a
+                    class="product-link-cart"
+                    href="{{block.settings.product4.url }}"
+                    id="StandardCardNoMediaLink-{{ section_id }}-{{ product.id }}"
+                  >
+                    <div class="collection-list-prd">
+                      <div class="collection-list-prd-img">
+                        <img src="{{ block.settings.product4 | image_url: width: 300 }}" alt="Section Image">
+                      </div>
+                      <div class="collection-list-prd-data">
+                        <h3>{{ block.settings.product4.title }}</h3>
+                        <h4>{{ block.settings.product4.price }}</h4>
+                      </div>
                     </div>
-                    <div class="collection-list-prd-data">
-                      <h3>{{ block.settings.product4.title }}</h3>
-                      <h4>{{ block.settings.product4.price }}</h4>
-                    </div>
-                  </div>
+                  </a>
                 {% endif %}
                 {% if block.settings.product5 != blank %}
-                  <div class="collection-list-prd">
-                    <div class="collection-list-prd-img">
-                      <img src="{{ block.settings.product5 | image_url: width: 300 }}" alt="Section Image">
+                  <a
+                    class="product-link-cart"
+                    href="{{block.settings.product5.url }}"
+                    id="StandardCardNoMediaLink-{{ section_id }}-{{ product.id }}"
+                  >
+                    <div class="collection-list-prd">
+                      <div class="collection-list-prd-img">
+                        <img src="{{ block.settings.product5 | image_url: width: 300 }}" alt="Section Image">
+                      </div>
+                      <div class="collection-list-prd-data">
+                        <h3>{{ block.settings.product5.title }}</h3>
+                        <h4>{{ block.settings.product5.price }}</h4>
+                      </div>
                     </div>
-                    <div class="collection-list-prd-data">
-                      <h3>{{ block.settings.product5.title }}</h3>
-                      <h4>{{ block.settings.product5.price }}</h4>
-                    </div>
-                  </div>
+                  </a>
                 {% endif %}
                 {% if block.settings.product6 != blank %}
-                  <div class="collection-list-prd">
-                    <div class="collection-list-prd-img">
-                      <img src="{{ block.settings.product6 | image_url: width: 300 }}" alt="Section Image">
+                  <a
+                    class="product-link-cart"
+                    href="{{block.settings.product6.url }}"
+                    id="StandardCardNoMediaLink-{{ section_id }}-{{ product.id }}"
+                  >
+                    <div class="collection-list-prd">
+                      <div class="collection-list-prd-img">
+                        <img src="{{ block.settings.product6 | image_url: width: 300 }}" alt="Section Image">
+                      </div>
+                      <div class="collection-list-prd-data">
+                        <h3>{{ block.settings.product6.title }}</h3>
+                        <h4>{{ block.settings.product6.price }}</h4>
+                      </div>
                     </div>
-                    <div class="collection-list-prd-data">
-                      <h3>{{ block.settings.product6.title }}</h3>
-                      <h4>{{ block.settings.product6.price }}</h4>
-                    </div>
-                  </div>
-                {% endif %}
+                  </a>
+                {%- endif %}
                 {% if block.settings.product7 != blank %}
-                  <div class="collection-list-prd">
-                    <div class="collection-list-prd-img">
-                      <img src="{{ block.settings.product7 | image_url: width: 300 }}" alt="Section Image">
+                  <a
+                    class="product-link-cart"
+                    href="{{block.settings.product7.url }}"
+                    id="StandardCardNoMediaLink-{{ section_id }}-{{ product.id }}"
+                  >
+                    <div class="collection-list-prd">
+                      <div class="collection-list-prd-img">
+                        <img src="{{ block.settings.product7 | image_url: width: 300 }}" alt="Section Image">
+                      </div>
+                      <div class="collection-list-prd-data">
+                        <h3>{{ block.settings.product7.title }}</h3>
+                        <h4>{{ block.settings.product7.price }}</h4>
+                      </div>
                     </div>
-                    <div class="collection-list-prd-data">
-                      <h3>{{ block.settings.product7.title }}</h3>
-                      <h4>{{ block.settings.product7.price }}</h4>
-                    </div>
-                  </div>
+                  </a>
                 {% endif %}
                 {% if block.settings.product8 != blank %}
-                  <div class="collection-list-prd">
-                    <div class="collection-list-prd-img">
-                      <img src="{{ block.settings.product8 | image_url: width: 300 }}" alt="Section Image">
+                  <a
+                    class="product-link-cart"
+                    href="{{block.settings.product8.url }}"
+                    id="StandardCardNoMediaLink-{{ section_id }}-{{ product.id }}"
+                  >
+                    <div class="collection-list-prd">
+                      <div class="collection-list-prd-img">
+                        <img src="{{ block.settings.product8 | image_url: width: 300 }}" alt="Section Image">
+                      </div>
+                      <div class="collection-list-prd-data">
+                        <h3>{{ block.settings.product8.title }}</h3>
+                        <h4>{{ block.settings.product8.price }}</h4>
+                      </div>
                     </div>
-                    <div class="collection-list-prd-data">
-                      <h3>{{ block.settings.product8.title }}</h3>
-                      <h4>{{ block.settings.product8.price }}</h4>
-                    </div>
-                  </div>
+                  </a>
                 {% endif %}
               </div>
             </div>
@@ -344,17 +494,23 @@
       {% assign i = i | plus: 1 %}
     {% endif %}
     <div class="collection__product_lists">
-      <div class="collection-list-prd">
-        <div class="collection-list-prd-img">
-          {% if product.featured_image != blank %}
-            <img src="{{ product.featured_image | img_url: '500x' }}" alt="{{ product.title }}">
-          {% endif %}
+      <a
+        class="product-link-cart"
+        href="{{ product.url }}"
+        id="StandardCardNoMediaLink-{{ section_id }}-{{ product.id }}"
+      >
+        <div class="collection-list-prd">
+          <div class="collection-list-prd-img">
+            {% if product.featured_image != blank %}
+              <img src="{{ product.featured_image | img_url: '500x' }}" alt="{{ product.title }}">
+            {% endif %}
+          </div>
+          <div class="collection-list-prd-data">
+            <h3>{{ product.title }}</h3>
+            <h4>{{ product.price }}</h4>
+          </div>
         </div>
-        <div class="collection-list-prd-data">
-          <h3>{{ product.title }}</h3>
-          <h4>{{ product.price }}</h4>
-        </div>
-      </div>
+      </a>
     </div>
   {% endfor %}
   <div class="collection-category-block ">
@@ -370,90 +526,138 @@
           <div class="collection-single-list-products">
             {% if block.settings.product1 != blank %}
               <div class="collection-list-prd">
-                <div class="collection-list-prd-img">
-                  <img src="{{ block.settings.product1 | image_url: width: 300 }}" alt="Section Image">
-                </div>
-                <div class="collection-list-prd-data">
-                  <h3>{{ block.settings.product1.title }}</h3>
-                  <h4>{{ block.settings.product1.price }}</h4>
-                </div>
+                <a
+                  class="product-link-cart"
+                  href="{{block.settings.product1.url }}"
+                  id="StandardCardNoMediaLink-{{ section_id }}-{{ product.id }}"
+                >
+                  <div class="collection-list-prd-img">
+                    <img src="{{ block.settings.product1 | image_url: width: 300 }}" alt="Section Image">
+                  </div>
+                  <div class="collection-list-prd-data">
+                    <h3>{{ block.settings.product1.title }}</h3>
+                    <h4>{{ block.settings.product1.price }}</h4>
+                  </div>
+                </a>
               </div>
             {% endif %}
             {% if block.settings.product2 != blank %}
               <div class="collection-list-prd">
-                <div class="collection-list-prd-img">
-                  <img src="{{ block.settings.product2 | image_url: width: 300 }}" alt="Section Image">
-                </div>
-                <div class="collection-list-prd-data">
-                  <h3>{{ block.settings.product2.title }}</h3>
-                  <h4>{{ block.settings.product2.price }}</h4>
-                </div>
+                <a
+                  class="product-link-cart"
+                  href="{{block.settings.product2.url }}"
+                  id="StandardCardNoMediaLink-{{ section_id }}-{{ product.id }}"
+                >
+                  <div class="collection-list-prd-img">
+                    <img src="{{ block.settings.product2 | image_url: width: 300 }}" alt="Section Image">
+                  </div>
+                  <div class="collection-list-prd-data">
+                    <h3>{{ block.settings.product2.title }}</h3>
+                    <h4>{{ block.settings.product2.price }}</h4>
+                  </div>
+                </a>
               </div>
             {% endif %}
             {% if block.settings.product3 != blank %}
               <div class="collection-list-prd">
-                <div class="collection-list-prd-img">
-                  <img src="{{ block.settings.product3 | image_url: width: 300 }}" alt="Section Image">
-                </div>
-                <div class="collection-list-prd-data">
-                  <h3>{{ block.settings.product3.title }}</h3>
-                  <h4>{{ block.settings.product3.price }}</h4>
-                </div>
+                <a
+                  class="product-link-cart"
+                  href="{{block.settings.product3.url }}"
+                  id="StandardCardNoMediaLink-{{ section_id }}-{{ product.id }}"
+                >
+                  <div class="collection-list-prd-img">
+                    <img src="{{ block.settings.product3 | image_url: width: 300 }}" alt="Section Image">
+                  </div>
+                  <div class="collection-list-prd-data">
+                    <h3>{{ block.settings.product3.title }}</h3>
+                    <h4>{{ block.settings.product3.price }}</h4>
+                  </div>
+                </a>
               </div>
             {% endif %}
             {% if block.settings.product4 != blank %}
               <div class="collection-list-prd">
-                <div class="collection-list-prd-img">
-                  <img src="{{ block.settings.product4 | image_url: width: 300 }}" alt="Section Image">
-                </div>
-                <div class="collection-list-prd-data">
-                  <h3>{{ block.settings.product4.title }}</h3>
-                  <h4>{{ block.settings.product4.price }}</h4>
-                </div>
+                <a
+                  class="product-link-cart"
+                  href="{{block.settings.product4.url }}"
+                  id="StandardCardNoMediaLink-{{ section_id }}-{{ product.id }}"
+                >
+                  <div class="collection-list-prd-img">
+                    <img src="{{ block.settings.product4 | image_url: width: 300 }}" alt="Section Image">
+                  </div>
+                  <div class="collection-list-prd-data">
+                    <h3>{{ block.settings.product4.title }}</h3>
+                    <h4>{{ block.settings.product4.price }}</h4>
+                  </div>
+                </a>
               </div>
             {% endif %}
             {% if block.settings.product5 != blank %}
               <div class="collection-list-prd">
-                <div class="collection-list-prd-img">
-                  <img src="{{ block.settings.product5 | image_url: width: 300 }}" alt="Section Image">
-                </div>
-                <div class="collection-list-prd-data">
-                  <h3>{{ block.settings.product5.title }}</h3>
-                  <h4>{{ block.settings.product5.price }}</h4>
-                </div>
+                <a
+                  class="product-link-cart"
+                  href="{{block.settings.product5.url }}"
+                  id="StandardCardNoMediaLink-{{ section_id }}-{{ product.id }}"
+                >
+                  <div class="collection-list-prd-img">
+                    <img src="{{ block.settings.product5 | image_url: width: 300 }}" alt="Section Image">
+                  </div>
+                  <div class="collection-list-prd-data">
+                    <h3>{{ block.settings.product5.title }}</h3>
+                    <h4>{{ block.settings.product5.price }}</h4>
+                  </div>
+                </a>
               </div>
             {% endif %}
             {% if block.settings.product6 != blank %}
               <div class="collection-list-prd">
-                <div class="collection-list-prd-img">
-                  <img src="{{ block.settings.product6 | image_url: width: 300 }}" alt="Section Image">
-                </div>
-                <div class="collection-list-prd-data">
-                  <h3>{{ block.settings.product6.title }}</h3>
-                  <h4>{{ block.settings.product6.price }}</h4>
-                </div>
+                <a
+                  class="product-link-cart"
+                  href="{{block.settings.product6.url }}"
+                  id="StandardCardNoMediaLink-{{ section_id }}-{{ product.id }}"
+                >
+                  <div class="collection-list-prd-img">
+                    <img src="{{ block.settings.product6 | image_url: width: 300 }}" alt="Section Image">
+                  </div>
+                  <div class="collection-list-prd-data">
+                    <h3>{{ block.settings.product6.title }}</h3>
+                    <h4>{{ block.settings.product6.price }}</h4>
+                  </div>
+                </a>
               </div>
             {% endif %}
             {% if block.settings.product7 != blank %}
               <div class="collection-list-prd">
-                <div class="collection-list-prd-img">
-                  <img src="{{ block.settings.product7 | image_url: width: 300 }}" alt="Section Image">
-                </div>
-                <div class="collection-list-prd-data">
-                  <h3>{{ block.settings.product7.title }}</h3>
-                  <h4>{{ block.settings.product7.price }}</h4>
-                </div>
+                <a
+                  class="product-link-cart"
+                  href="{{block.settings.product7.url }}"
+                  id="StandardCardNoMediaLink-{{ section_id }}-{{ product.id }}"
+                >
+                  <div class="collection-list-prd-img">
+                    <img src="{{ block.settings.product7 | image_url: width: 300 }}" alt="Section Image">
+                  </div>
+                  <div class="collection-list-prd-data">
+                    <h3>{{ block.settings.product7.title }}</h3>
+                    <h4>{{ block.settings.product7.price }}</h4>
+                  </div>
+                </a>
               </div>
             {% endif %}
             {% if block.settings.product8 != blank %}
               <div class="collection-list-prd">
-                <div class="collection-list-prd-img">
-                  <img src="{{ block.settings.product8 | image_url: width: 300 }}" alt="Section Image">
-                </div>
-                <div class="collection-list-prd-data">
-                  <h3>{{ block.settings.product8.title }}</h3>
-                  <h4>{{ block.settings.product8.price }}</h4>
-                </div>
+                <a
+                  class="product-link-cart"
+                  href="{{block.settings.product8.url }}"
+                  id="StandardCardNoMediaLink-{{ section_id }}-{{ product.id }}"
+                >
+                  <div class="collection-list-prd-img">
+                    <img src="{{ block.settings.product8 | image_url: width: 300 }}" alt="Section Image">
+                  </div>
+                  <div class="collection-list-prd-data">
+                    <h3>{{ block.settings.product8.title }}</h3>
+                    <h4>{{ block.settings.product8.price }}</h4>
+                  </div>
+                </a>
               </div>
             {% endif %}
           </div>
