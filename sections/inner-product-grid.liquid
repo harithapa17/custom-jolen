@@ -117,7 +117,6 @@
             <img src="{{ product.featured_image | img_url: '500x' }}" alt="{{ product.title }}">
           {% endif %}
         </div>
-
         <div class="collection-list-prd-data">
           <h3>{{ product.title }}</h3>
           <h4>{{ product.price }}</h4>
@@ -125,6 +124,111 @@
       </div>
     </div>
   {% endfor %}
+  <div class="collection-category-block ">
+    {% for i in (i..section.blocks.size) %}
+      {% assign block = section.blocks[i] %}
+      {% if block.settings.section_image != blank %}
+        <div class="collection-list-single">
+          <div class="collection_list_wrapper">
+            <div class="collection-list-single-bg">
+              <img src="{{ block.settings.section_image | image_url: width: 500 }}" alt="Section Image">
+            </div>
+          </div>
+          <div class="collection-single-list-products">
+            {% if block.settings.product1 != blank %}
+              <div class="collection-list-prd">
+                <div class="collection-list-prd-img">
+                  <img src="{{ block.settings.product1 | image_url: width: 300 }}" alt="Section Image">
+                </div>
+                <div class="collection-list-prd-data">
+                  <h3>{{ block.settings.product1.title }}</h3>
+                  <h4>{{ block.settings.product1.price }}</h4>
+                </div>
+              </div>
+            {% endif %}
+            {% if block.settings.product2 != blank %}
+              <div class="collection-list-prd">
+                <div class="collection-list-prd-img">
+                  <img src="{{ block.settings.product2 | image_url: width: 300 }}" alt="Section Image">
+                </div>
+                <div class="collection-list-prd-data">
+                  <h3>{{ block.settings.product2.title }}</h3>
+                  <h4>{{ block.settings.product2.price }}</h4>
+                </div>
+              </div>
+            {% endif %}
+            {% if block.settings.product3 != blank %}
+              <div class="collection-list-prd">
+                <div class="collection-list-prd-img">
+                  <img src="{{ block.settings.product3 | image_url: width: 300 }}" alt="Section Image">
+                </div>
+                <div class="collection-list-prd-data">
+                  <h3>{{ block.settings.product3.title }}</h3>
+                  <h4>{{ block.settings.product3.price }}</h4>
+                </div>
+              </div>
+            {% endif %}
+            {% if block.settings.product4 != blank %}
+              <div class="collection-list-prd">
+                <div class="collection-list-prd-img">
+                  <img src="{{ block.settings.product4 | image_url: width: 300 }}" alt="Section Image">
+                </div>
+                <div class="collection-list-prd-data">
+                  <h3>{{ block.settings.product4.title }}</h3>
+                  <h4>{{ block.settings.product4.price }}</h4>
+                </div>
+              </div>
+            {% endif %}
+            {% if block.settings.product5 != blank %}
+              <div class="collection-list-prd">
+                <div class="collection-list-prd-img">
+                  <img src="{{ block.settings.product5 | image_url: width: 300 }}" alt="Section Image">
+                </div>
+                <div class="collection-list-prd-data">
+                  <h3>{{ block.settings.product5.title }}</h3>
+                  <h4>{{ block.settings.product5.price }}</h4>
+                </div>
+              </div>
+            {% endif %}
+            {% if block.settings.product6 != blank %}
+              <div class="collection-list-prd">
+                <div class="collection-list-prd-img">
+                  <img src="{{ block.settings.product6 | image_url: width: 300 }}" alt="Section Image">
+                </div>
+                <div class="collection-list-prd-data">
+                  <h3>{{ block.settings.product6.title }}</h3>
+                  <h4>{{ block.settings.product6.price }}</h4>
+                </div>
+              </div>
+            {% endif %}
+            {% if block.settings.product7 != blank %}
+              <div class="collection-list-prd">
+                <div class="collection-list-prd-img">
+                  <img src="{{ block.settings.product7 | image_url: width: 300 }}" alt="Section Image">
+                </div>
+                <div class="collection-list-prd-data">
+                  <h3>{{ block.settings.product7.title }}</h3>
+                  <h4>{{ block.settings.product7.price }}</h4>
+                </div>
+              </div>
+            {% endif %}
+            {% if block.settings.product8 != blank %}
+              <div class="collection-list-prd">
+                <div class="collection-list-prd-img">
+                  <img src="{{ block.settings.product8 | image_url: width: 300 }}" alt="Section Image">
+                </div>
+                <div class="collection-list-prd-data">
+                  <h3>{{ block.settings.product8.title }}</h3>
+                  <h4>{{ block.settings.product8.price }}</h4>
+                </div>
+              </div>
+            {% endif %}
+          </div>
+        </div>
+      {% endif %}
+    {% endfor %}
+  </div>
+  {% assign i = i | plus: 1 %}
 </div>
 
 {% comment %}
