@@ -11,6 +11,25 @@
     },
     "product-grid": {
       "type": "inner-product-grid",
+      "blocks": {
+        "2ee749af-6f7b-4e7b-a125-a67051b37461": {
+          "type": "text",
+          "settings": {
+            "section_image": "shopify:\/\/shop_images\/1667303670-A03610_XS22_21_P_L_1.png",
+            "product1": "garment-name",
+            "product2": "garment-name-6",
+            "product3": "garment-name-9",
+            "product4": "garment-name-7",
+            "product5": "",
+            "product6": "",
+            "product7": "",
+            "product8": ""
+          }
+        }
+      },
+      "block_order": [
+        "2ee749af-6f7b-4e7b-a125-a67051b37461"
+      ],
       "settings": {
       }
     }
