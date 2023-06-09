@@ -1095,7 +1095,7 @@ aside#main-collection-filters {
     display: none !important;
   }
   .home .banner.slideshow {
-    display: block !important;
+    display: flex !important;
   }
   .window-banner-content h1 {
     font-size: 20px;
