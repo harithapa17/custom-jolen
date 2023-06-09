@@ -496,6 +496,9 @@ svg.modal__toggle-open.icon.icon-sear path {
   .page-width {
     padding: 0 3rem !important;
   }
+  .hide-wrapper-on-desktop {
+    display: none !important;
+  }
   aside#main-collection-filters .facets-container {
     padding-top: 40px;
   }
@@ -1119,6 +1122,9 @@ aside#main-collection-filters {
     border-style: solid;
     border-color: rgba(9, 14, 34, 0.12);
     padding-bottom: 10px;
+  }
+  .hide-wrapper-on-mobile {
+    display: none !important;
   }
   .product-block-wrapper {
     display: grid;
