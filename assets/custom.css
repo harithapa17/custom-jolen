@@ -493,6 +493,9 @@ svg.modal__toggle-open.icon.icon-sear path {
   .mobile-footer {
     display: none;
   }
+  .page-width {
+    padding: 0 3rem !important;
+  }
   aside#main-collection-filters .facets-container {
     padding-top: 40px;
   }
@@ -1073,7 +1076,7 @@ aside#main-collection-filters {
 }
 @media (min-width: 750px) {
   .collection_banner {
-    padding-top: 30px;
+    padding-top: 30px !important;
   }
 }
 @media (max-width: 749px) {
@@ -1095,7 +1098,7 @@ aside#main-collection-filters {
     display: none !important;
   }
   .home .banner.slideshow {
-    display: block !important;
+    display: flex !important;
   }
   .window-banner-content h1 {
     font-size: 20px;
