@@ -1039,6 +1039,13 @@ aside#main-collection-filters {
 .collection-single-list-products a {
   text-decoration: none !important;
 }
+.collection_banner .banner__media.media,
+.collection_banner .banner__media.media img {
+  position: relative;
+}
+.collection_banner .banner--medium:not(.banner--adapt) {
+  min-height: inherit !important;
+}
 @media (min-width: 992px) {
   .collection-single-list-products.grid-2-column,
   .collection-single-list-products.grid-1-column {
@@ -1058,6 +1065,12 @@ aside#main-collection-filters {
   }
   .collection-category-block {
     margin-top: 42px;
+  }
+}
+@media only screen and (max-width: 991px) and (min-width: 750px) {
+  .window-banner-content {
+    bottom: 0px;
+    left: 15px;
   }
 }
 @media (max-width: 991px) and (min-width: 768px) {
