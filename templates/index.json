@@ -74,44 +74,25 @@
         "template--19104329662755__2d948dbd-3882-49ab-91f4-5703b547355d-1684914657634372f1-1": {
           "type": "slide",
           "settings": {
-            "image": "shopify:\/\/shop_images\/7484031711_2_3_1_6f665ae5-b509-4002-821e-ae27647a6e44.png",
-            "heading": "Image slide",
+            "image": "shopify:\/\/shop_images\/Screenshot_2023-05-07_at_11.54_1.png",
+            "heading": "<em>This is Jolen<\/em>",
             "heading_size": "h1",
-            "subheading": "Tell your brand's story through images",
-            "button_label": "Button label",
+            "subheading": "<em>By Ruchi<\/em>",
+            "button_label": "Discover",
             "link": "",
             "button_style_secondary": false,
-            "box_align": "middle-center",
-            "show_text_box": true,
-            "text_alignment": "center",
+            "box_align": "bottom-left",
+            "show_text_box": false,
+            "text_alignment": "left",
             "image_overlay_opacity": 0,
             "color_scheme": "",
-            "text_alignment_mobile": "center"
-          }
-        },
-        "1eba3817-7f9b-438f-a83d-0ef3e9a9cf6a": {
-          "type": "slide",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/0222548631_9_1_1_1.png",
-            "heading": "Image slide",
-            "heading_size": "h1",
-            "subheading": "Tell your brand's story through images",
-            "button_label": "Button label",
-            "link": "",
-            "button_style_secondary": false,
-            "box_align": "middle-center",
-            "show_text_box": true,
-            "text_alignment": "center",
-            "image_overlay_opacity": 0,
-            "color_scheme": "background-1",
             "text_alignment_mobile": "center"
           }
         }
       },
       "block_order": [
         "template--19104329662755__2d948dbd-3882-49ab-91f4-5703b547355d-1684914657634372f1-0",
-        "template--19104329662755__2d948dbd-3882-49ab-91f4-5703b547355d-1684914657634372f1-1",
-        "1eba3817-7f9b-438f-a83d-0ef3e9a9cf6a"
+        "template--19104329662755__2d948dbd-3882-49ab-91f4-5703b547355d-1684914657634372f1-1"
       ],
       "settings": {
         "layout": "full_bleed",
