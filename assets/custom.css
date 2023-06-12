@@ -1105,6 +1105,21 @@ aside#main-collection-filters {
 .home .banner--large:not(.banner--adapt) {
   min-height: calc(100vh - 56px);
 }
+.card__content form {
+  display: none !important;
+  position: absolute;
+  justify-content: center;
+  width: 100%;
+  display: flex;
+  gap: 7px;
+  top: 19px;
+}
+.card-wrapper.product-card-wrapper:hover .card .card__content form {
+  display: flex !important;
+}
+.collection-hero__image-container.media.gradient {
+  display: none;
+}
 @media (min-width: 1500px) {
   .home .grid--3-col-desktop .grid__item:first-child {
     max-width: calc(66.73vw - var(--grid-desktop-horizontal-spacing) / 2);
