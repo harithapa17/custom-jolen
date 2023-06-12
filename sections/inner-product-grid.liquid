@@ -1,5 +1,5 @@
 {% assign i = 0 %}
-<div class="product-block-wrapper hide-wrapper-on-mobile page-width">
+<div class="product-block-wrapper page-width">
   {% for product in collection.products %}
     {% assign remainder = forloop.index0 | modulo: 9 %}
     {% if remainder == 0 %}
@@ -24,11 +24,21 @@
                       <div class="collection-list-prd-img">
                         <img src="{{ block.settings.product1 | image_url }}" alt="Section Image">
                       </div>
-                      <div class="collection-list-prd-data">
+                      {% if block.settings.product1.media[1] %}
+                        <div class="collection-list-prd-img-hover">
+                          <img src="{{ block.settings.product1.media[1] | image_url }}" alt="Section Image">
+                        </div>
+                      {% endif %}
+                    </a>
+                    <div class="collection-list-prd-data">
+                      <div class="collection-list-prd-data-before">
                         <h3>{{ block.settings.product1.title }}</h3>
                         <h4>{{ block.settings.product1.price }}</h4>
                       </div>
-                    </a>
+                      <div class="collection-list-prd-data-hover">
+                        {% render 'collection-varient', product: block.settings.product1 %}
+                      </div>
+                    </div>
                   </div>
                 {% endif %}
                 {% if block.settings.product2 != blank %}
@@ -41,11 +51,21 @@
                       <div class="collection-list-prd-img">
                         <img src="{{ block.settings.product2 | image_url }}" alt="Section Image">
                       </div>
-                      <div class="collection-list-prd-data">
+                      {% if block.settings.product2.media[1] %}
+                        <div class="collection-list-prd-img-hover">
+                          <img src="{{ block.settings.product2.media[1] | image_url }}" alt="Section Image">
+                        </div>
+                      {% endif %}
+                    </a>
+                    <div class="collection-list-prd-data">
+                      <div class="collection-list-prd-data-before">
                         <h3>{{ block.settings.product2.title }}</h3>
                         <h4>{{ block.settings.product2.price }}</h4>
                       </div>
-                    </a>
+                      <div class="collection-list-prd-data-hover">
+                        {% render 'collection-varient', product: block.settings.product2 %}
+                      </div>
+                    </div>
                   </div>
                 {% endif %}
                 {% if block.settings.product3 != blank %}
@@ -58,11 +78,21 @@
                       <div class="collection-list-prd-img">
                         <img src="{{ block.settings.product3 | image_url }}" alt="Section Image">
                       </div>
-                      <div class="collection-list-prd-data">
+                      {% if block.settings.product3.media[1] %}
+                        <div class="collection-list-prd-img-hover">
+                          <img src="{{ block.settings.product3.media[1] | image_url }}" alt="Section Image">
+                        </div>
+                      {% endif %}
+                    </a>
+                    <div class="collection-list-prd-data">
+                      <div class="collection-list-prd-data-before">
                         <h3>{{ block.settings.product3.title }}</h3>
                         <h4>{{ block.settings.product3.price }}</h4>
                       </div>
-                    </a>
+                      <div class="collection-list-prd-data-hover">
+                        {% render 'collection-varient', product: block.settings.product3 %}
+                      </div>
+                    </div>
                   </div>
                 {% endif %}
                 {% if block.settings.product4 != blank %}
@@ -75,11 +105,21 @@
                       <div class="collection-list-prd-img">
                         <img src="{{ block.settings.product4 | image_url }}" alt="Section Image">
                       </div>
-                      <div class="collection-list-prd-data">
+                      {% if block.settings.product4.media[1] %}
+                        <div class="collection-list-prd-img-hover">
+                          <img src="{{ block.settings.product4.media[1] | image_url }}" alt="Section Image">
+                        </div>
+                      {% endif %}
+                    </a>
+                    <div class="collection-list-prd-data">
+                      <div class="collection-list-prd-data-before">
                         <h3>{{ block.settings.product4.title }}</h3>
                         <h4>{{ block.settings.product4.price }}</h4>
                       </div>
-                    </a>
+                      <div class="collection-list-prd-data-hover">
+                        {% render 'collection-varient', product: block.settings.product4 %}
+                      </div>
+                    </div>
                   </div>
                 {%- endif %}
                 {% if block.settings.product5 != blank %}
@@ -92,11 +132,21 @@
                       <div class="collection-list-prd-img">
                         <img src="{{ block.settings.product5 | image_url }}" alt="Section Image">
                       </div>
-                      <div class="collection-list-prd-data">
+                      {% if block.settings.product5.media[1] %}
+                        <div class="collection-list-prd-img-hover">
+                          <img src="{{ block.settings.product5.media[1] | image_url }}" alt="Section Image">
+                        </div>
+                      {% endif %}
+                    </a>
+                    <div class="collection-list-prd-data">
+                      <div class="collection-list-prd-data-before">
                         <h3>{{ block.settings.product5.title }}</h3>
                         <h4>{{ block.settings.product5.price }}</h4>
                       </div>
-                    </a>
+                      <div class="collection-list-prd-data-hover">
+                        {% render 'collection-varient', product: block.settings.product5 %}
+                      </div>
+                    </div>
                   </div>
                 {%- endif %}
                 {% if block.settings.product6 != blank %}
@@ -109,11 +159,21 @@
                       <div class="collection-list-prd-img">
                         <img src="{{ block.settings.product6 | image_url }}" alt="Section Image">
                       </div>
-                      <div class="collection-list-prd-data">
+                      {% if block.settings.product6.media[1] %}
+                        <div class="collection-list-prd-img-hover">
+                          <img src="{{ block.settings.product6.media[1] | image_url }}" alt="Section Image">
+                        </div>
+                      {% endif %}
+                    </a>
+                    <div class="collection-list-prd-data">
+                      <div class="collection-list-prd-data-before">
                         <h3>{{ block.settings.product6.title }}</h3>
                         <h4>{{ block.settings.product6.price }}</h4>
                       </div>
-                    </a>
+                      <div class="collection-list-prd-data-hover">
+                        {% render 'collection-varient', product: block.settings.product6 %}
+                      </div>
+                    </div>
                   </div>
                 {%- endif %}
                 {% if block.settings.product7 != blank %}
@@ -126,11 +186,21 @@
                       <div class="collection-list-prd-img">
                         <img src="{{ block.settings.product7 | image_url }}" alt="Section Image">
                       </div>
-                      <div class="collection-list-prd-data">
+                      {% if block.settings.product7.media[1] %}
+                        <div class="collection-list-prd-img-hover">
+                          <img src="{{ block.settings.product7.media[1] | image_url }}" alt="Section Image">
+                        </div>
+                      {% endif %}
+                    </a>
+                    <div class="collection-list-prd-data">
+                      <div class="collection-list-prd-data-before">
                         <h3>{{ block.settings.product7.title }}</h3>
                         <h4>{{ block.settings.product7.price }}</h4>
                       </div>
-                    </a>
+                      <div class="collection-list-prd-data-hover">
+                        {% render 'collection-varient', product: block.settings.product7 %}
+                      </div>
+                    </div>
                   </div>
                 {% endif %}
                 {% if block.settings.product8 != blank %}
@@ -143,11 +213,21 @@
                       <div class="collection-list-prd-img">
                         <img src="{{ block.settings.product8 | image_url }}" alt="Section Image">
                       </div>
-                      <div class="collection-list-prd-data">
+                      {% if block.settings.product8.media[1] %}
+                        <div class="collection-list-prd-img-hover">
+                          <img src="{{ block.settings.product8.media[1] | image_url }}" alt="Section Image">
+                        </div>
+                      {% endif %}
+                    </a>
+                    <div class="collection-list-prd-data">
+                      <div class="collection-list-prd-data-before">
                         <h3>{{ block.settings.product8.title }}</h3>
                         <h4>{{ block.settings.product8.price }}</h4>
                       </div>
-                    </a>
+                      <div class="collection-list-prd-data-hover">
+                        {% render 'collection-varient', product: block.settings.product8 %}
+                      </div>
+                    </div>
                   </div>
                 {% endif %}
               </div>
@@ -167,14 +247,30 @@
         >
           <div class="collection-list-prd-img">
             {% if product.featured_image != blank %}
-              <img src="{{ product.featured_image | img_url: '500x' }}" alt="{{ product.title }}">
+              <div class="product-info-before">
+                <img src="{{ product.featured_image | img_url: '500x' }}" alt="{{ product.title }}">
+              </div>
+
+              {%- if product.media[1] != blank -%}
+                <div class="product-info-after">
+                  <img
+                    src="{{ product.media[1] | image_url }}"
+                    alt="{{ product.title }}"
+                  >
+                </div>
+              {%- endif -%}
             {% endif %}
           </div>
-          <div class="collection-list-prd-data">
+        </a>
+        <div class="collection-list-prd-data">
+          <div class="product-data-text">
             <h3>{{ product.title }}</h3>
             <h4>{{ product.price }}</h4>
           </div>
-        </a>
+          <div class="product-data-size">
+            {% render 'collection-varient', product: product %}
+          </div>
+        </div>
       </div>
     </div>
   {% endfor %}
@@ -199,11 +295,21 @@
                   <div class="collection-list-prd-img">
                     <img src="{{ block.settings.product1 | image_url }}" alt="Section Image">
                   </div>
-                  <div class="collection-list-prd-data">
+                  {% if block.settings.product1.media[1] %}
+                    <div class="collection-list-prd-img-hover">
+                      <img src="{{ block.settings.product1.media[1] | image_url }}" alt="Section Image">
+                    </div>
+                  {% endif %}
+                </a>
+                <div class="collection-list-prd-data">
+                  <div class="collection-list-prd-data-before">
                     <h3>{{ block.settings.product1.title }}</h3>
                     <h4>{{ block.settings.product1.price }}</h4>
                   </div>
-                </a>
+                  <div class="collection-list-prd-data-hover">
+                    {% render 'collection-varient', product: block.settings.product1 %}
+                  </div>
+                </div>
               </div>
             {%- endif %}
             {% if block.settings.product2 != blank %}
@@ -216,11 +322,21 @@
                   <div class="collection-list-prd-img">
                     <img src="{{ block.settings.product2 | image_url }}" alt="Section Image">
                   </div>
-                  <div class="collection-list-prd-data">
+                  {% if block.settings.product2.media[1] %}
+                    <div class="collection-list-prd-img-hover">
+                      <img src="{{ block.settings.product2.media[1] | image_url }}" alt="Section Image">
+                    </div>
+                  {% endif %}
+                </a>
+                <div class="collection-list-prd-data">
+                  <div class="collection-list-prd-data-before">
                     <h3>{{ block.settings.product2.title }}</h3>
                     <h4>{{ block.settings.product2.price }}</h4>
                   </div>
-                </a>
+                  <div class="collection-list-prd-data-hover">
+                    {% render 'collection-varient', product: block.settings.product2 %}
+                  </div>
+                </div>
               </div>
             {%- endif %}
             {% if block.settings.product3 != blank %}
@@ -233,11 +349,21 @@
                   <div class="collection-list-prd-img">
                     <img src="{{ block.settings.product3 | image_url }}" alt="Section Image">
                   </div>
-                  <div class="collection-list-prd-data">
+                  {% if block.settings.product3.media[1] %}
+                    <div class="collection-list-prd-img-hover">
+                      <img src="{{ block.settings.product3.media[1] | image_url }}" alt="Section Image">
+                    </div>
+                  {% endif %}
+                </a>
+                <div class="collection-list-prd-data">
+                  <div class="collection-list-prd-data-before">
                     <h3>{{ block.settings.product3.title }}</h3>
                     <h4>{{ block.settings.product3.price }}</h4>
                   </div>
-                </a>
+                  <div class="collection-list-prd-data-hover">
+                    {% render 'collection-varient', product: block.settings.product3 %}
+                  </div>
+                </div>
               </div>
             {%- endif %}
             {% if block.settings.product4 != blank %}
@@ -250,11 +376,21 @@
                   <div class="collection-list-prd-img">
                     <img src="{{ block.settings.product4 | image_url }}" alt="Section Image">
                   </div>
-                  <div class="collection-list-prd-data">
+                  {% if block.settings.product4.media[1] %}
+                    <div class="collection-list-prd-img-hover">
+                      <img src="{{ block.settings.product4.media[1] | image_url }}" alt="Section Image">
+                    </div>
+                  {% endif %}
+                </a>
+                <div class="collection-list-prd-data">
+                  <div class="collection-list-prd-data-before">
                     <h3>{{ block.settings.product4.title }}</h3>
                     <h4>{{ block.settings.product4.price }}</h4>
                   </div>
-                </a>
+                  <div class="collection-list-prd-data-hover">
+                    {% render 'collection-varient', product: block.settings.product4 %}
+                  </div>
+                </div>
               </div>
             {%- endif %}
             {% if block.settings.product5 != blank %}
@@ -267,11 +403,21 @@
                   <div class="collection-list-prd-img">
                     <img src="{{ block.settings.product5 | image_url }}" alt="Section Image">
                   </div>
-                  <div class="collection-list-prd-data">
+                  {% if block.settings.product5.media[1] %}
+                    <div class="collection-list-prd-img-hover">
+                      <img src="{{ block.settings.product5.media[1] | image_url }}" alt="Section Image">
+                    </div>
+                  {% endif %}
+                </a>
+                <div class="collection-list-prd-data">
+                  <div class="collection-list-prd-data-before">
                     <h3>{{ block.settings.product5.title }}</h3>
                     <h4>{{ block.settings.product5.price }}</h4>
                   </div>
-                </a>
+                  <div class="collection-list-prd-data-hover">
+                    {% render 'collection-varient', product: block.settings.product5 %}
+                  </div>
+                </div>
               </div>
             {%- endif %}
             {% if block.settings.product6 != blank %}
@@ -284,11 +430,21 @@
                   <div class="collection-list-prd-img">
                     <img src="{{ block.settings.product6 | image_url }}" alt="Section Image">
                   </div>
-                  <div class="collection-list-prd-data">
+                  {% if block.settings.product6.media[1] %}
+                    <div class="collection-list-prd-img-hover">
+                      <img src="{{ block.settings.product6.media[1] | image_url }}" alt="Section Image">
+                    </div>
+                  {% endif %}
+                </a>
+                <div class="collection-list-prd-data">
+                  <div class="collection-list-prd-data-before">
                     <h3>{{ block.settings.product6.title }}</h3>
                     <h4>{{ block.settings.product6.price }}</h4>
                   </div>
-                </a>
+                  <div class="collection-list-prd-data-hover">
+                    {% render 'collection-varient', product: block.settings.product6 %}
+                  </div>
+                </div>
               </div>
             {%- endif %}
             {% if block.settings.product7 != blank %}
@@ -301,11 +457,21 @@
                   <div class="collection-list-prd-img">
                     <img src="{{ block.settings.product7 | image_url }}" alt="Section Image">
                   </div>
-                  <div class="collection-list-prd-data">
+                  {% if block.settings.product7.media[1] %}
+                    <div class="collection-list-prd-img-hover">
+                      <img src="{{ block.settings.product7.media[1] | image_url }}" alt="Section Image">
+                    </div>
+                  {% endif %}
+                </a>
+                <div class="collection-list-prd-data">
+                  <div class="collection-list-prd-data-before">
                     <h3>{{ block.settings.product7.title }}</h3>
                     <h4>{{ block.settings.product7.price }}</h4>
                   </div>
-                </a>
+                  <div class="collection-list-prd-data-hover">
+                    {% render 'collection-varient', product: block.settings.product7 %}
+                  </div>
+                </div>
               </div>
             {%- endif %}
             {% if block.settings.product8 != blank %}
@@ -318,346 +484,21 @@
                   <div class="collection-list-prd-img">
                     <img src="{{ block.settings.product8 | image_url }}" alt="Section Image">
                   </div>
-                  <div class="collection-list-prd-data">
+                  {% if block.settings.product8.media[1] %}
+                    <div class="collection-list-prd-img-hover">
+                      <img src="{{ block.settings.product8.media[1] | image_url }}" alt="Section Image">
+                    </div>
+                  {% endif %}
+                </a>
+                <div class="collection-list-prd-data">
+                  <div class="collection-list-prd-data-before">
                     <h3>{{ block.settings.product8.title }}</h3>
                     <h4>{{ block.settings.product8.price }}</h4>
                   </div>
-                </a>
-              </div>
-            {% endif %}
-          </div>
-        </div>
-      {% endif %}
-    {% endfor %}
-  </div>
-  {% assign i = i | plus: 1 %}
-</div>
-
-{% assign i = 0 %}
-<div class="product-block-wrapper hide-wrapper-on-desktop page-width">
-  {% for product in collection.products %}
-    {% assign remainder = forloop.index0 | modulo: 8 %}
-    {% if remainder == 0 %}
-      <div class="collection-category-block ">
-        {% for i in (i..section.blocks.size) %}
-          {% assign block = section.blocks[i] %}
-          {% if block.settings.section_image != blank %}
-            <div class="collection-list-single">
-              <div class="collection_list_wrapper">
-                <div class="collection-list-single-bg">
-                  <img src="{{ block.settings.section_image | image_url }}" alt="Section Image">
+                  <div class="collection-list-prd-data-hover">
+                    {% render 'collection-varient', product: block.settings.product8 %}
+                  </div>
                 </div>
-              </div>
-              <div class="collection-single-list-products">
-                {% if block.settings.product1 != blank %}
-                  <div class="collection-list-prd">
-                    <a
-                      class="product-link-cart"
-                      href="{{block.settings.product1.url }}"
-                      id="StandardCardNoMediaLink-{{ section_id }}-{{ product.id }}"
-                    >
-                      <div class="collection-list-prd-img">
-                        <img src="{{ block.settings.product1 | image_url }}" alt="Section Image">
-                      </div>
-                      <div class="collection-list-prd-data">
-                        <h3>{{ block.settings.product1.title }}</h3>
-                        <h4>{{ block.settings.product1.price }}</h4>
-                      </div>
-                    </a>
-                  </div>
-                {% endif %}
-                {% if block.settings.product2 != blank %}
-                  <div class="collection-list-prd">
-                    <a
-                      class="product-link-cart"
-                      href="{{block.settings.product2.url }}"
-                      id="StandardCardNoMediaLink-{{ section_id }}-{{ product.id }}"
-                    >
-                      <div class="collection-list-prd-img">
-                        <img src="{{ block.settings.product2 | image_url }}" alt="Section Image">
-                      </div>
-                      <div class="collection-list-prd-data">
-                        <h3>{{ block.settings.product2.title }}</h3>
-                        <h4>{{ block.settings.product2.price }}</h4>
-                      </div>
-                    </a>
-                  </div>
-                {% endif %}
-                {% if block.settings.product3 != blank %}
-                  <div class="collection-list-prd">
-                    <a
-                      class="product-link-cart"
-                      href="{{block.settings.product3.url }}"
-                      id="StandardCardNoMediaLink-{{ section_id }}-{{ product.id }}"
-                    >
-                      <div class="collection-list-prd-img">
-                        <img src="{{ block.settings.product3 | image_url }}" alt="Section Image">
-                      </div>
-                      <div class="collection-list-prd-data">
-                        <h3>{{ block.settings.product3.title }}</h3>
-                        <h4>{{ block.settings.product3.price }}</h4>
-                      </div>
-                    </a>
-                  </div>
-                {% endif %}
-                {% if block.settings.product4 != blank %}
-                  <div class="collection-list-prd">
-                    <a
-                      class="product-link-cart"
-                      href="{{block.settings.product4.url }}"
-                      id="StandardCardNoMediaLink-{{ section_id }}-{{ product.id }}"
-                    >
-                      <div class="collection-list-prd-img">
-                        <img src="{{ block.settings.product4 | image_url }}" alt="Section Image">
-                      </div>
-                      <div class="collection-list-prd-data">
-                        <h3>{{ block.settings.product4.title }}</h3>
-                        <h4>{{ block.settings.product4.price }}</h4>
-                      </div>
-                    </a>
-                  </div>
-                {% endif %}
-                {% if block.settings.product5 != blank %}
-                  <div class="collection-list-prd">
-                    <a
-                      class="product-link-cart"
-                      href="{{block.settings.product5.url }}"
-                      id="StandardCardNoMediaLink-{{ section_id }}-{{ product.id }}"
-                    >
-                      <div class="collection-list-prd-img">
-                        <img src="{{ block.settings.product5 | image_url }}" alt="Section Image">
-                      </div>
-                      <div class="collection-list-prd-data">
-                        <h3>{{ block.settings.product5.title }}</h3>
-                        <h4>{{ block.settings.product5.price }}</h4>
-                      </div>
-                    </a>
-                  </div>
-                {% endif %}
-                {% if block.settings.product6 != blank %}
-                  <div class="collection-list-prd">
-                    <a
-                      class="product-link-cart"
-                      href="{{block.settings.product6.url }}"
-                      id="StandardCardNoMediaLink-{{ section_id }}-{{ product.id }}"
-                    >
-                      <div class="collection-list-prd-img">
-                        <img src="{{ block.settings.product6 | image_url }}" alt="Section Image">
-                      </div>
-                      <div class="collection-list-prd-data">
-                        <h3>{{ block.settings.product6.title }}</h3>
-                        <h4>{{ block.settings.product6.price }}</h4>
-                      </div>
-                    </a>
-                  </div>
-                {%- endif %}
-                {% if block.settings.product7 != blank %}
-                  <div class="collection-list-prd">
-                    <a
-                      class="product-link-cart"
-                      href="{{block.settings.product7.url }}"
-                      id="StandardCardNoMediaLink-{{ section_id }}-{{ product.id }}"
-                    >
-                      <div class="collection-list-prd-img">
-                        <img src="{{ block.settings.product7 | image_url }}" alt="Section Image">
-                      </div>
-                      <div class="collection-list-prd-data">
-                        <h3>{{ block.settings.product7.title }}</h3>
-                        <h4>{{ block.settings.product7.price }}</h4>
-                      </div>
-                    </a>
-                  </div>
-                {% endif %}
-                {% if block.settings.product8 != blank %}
-                  <div class="collection-list-prd">
-                    <a
-                      class="product-link-cart"
-                      href="{{block.settings.product8.url }}"
-                      id="StandardCardNoMediaLink-{{ section_id }}-{{ product.id }}"
-                    >
-                      <div class="collection-list-prd-img">
-                        <img src="{{ block.settings.product8 | image_url }}" alt="Section Image">
-                      </div>
-                      <div class="collection-list-prd-data">
-                        <h3>{{ block.settings.product8.title }}</h3>
-                        <h4>{{ block.settings.product8.price }}</h4>
-                      </div>
-                    </a>
-                  </div>
-                {% endif %}
-              </div>
-            </div>
-          {% endif %}
-          {% break %}
-        {% endfor %}
-      </div>
-      {% assign i = i | plus: 1 %}
-    {% endif %}
-    <div class="collection__product_lists">
-      <div class="collection-list-prd">
-        <a
-          class="product-link-cart"
-          href="{{ product.url }}"
-          id="StandardCardNoMediaLink-{{ section_id }}-{{ product.id }}"
-        >
-          <div class="collection-list-prd-img">
-            {% if product.featured_image != blank %}
-              <img src="{{ product.featured_image | img_url: '500x' }}" alt="{{ product.title }}">
-            {% endif %}
-          </div>
-          <div class="collection-list-prd-data">
-            <h3>{{ product.title }}</h3>
-            <h4>{{ product.price }}</h4>
-          </div>
-        </a>
-      </div>
-    </div>
-  {% endfor %}
-  <div class="collection-category-block ">
-    {% for i in (i..section.blocks.size) %}
-      {% assign block = section.blocks[i] %}
-      {% if block.settings.section_image != blank %}
-        <div class="collection-list-single">
-          <div class="collection_list_wrapper">
-            <div class="collection-list-single-bg">
-              <img src="{{ block.settings.section_image | image_url }}" alt="Section Image">
-            </div>
-          </div>
-          <div class="collection-single-list-products">
-            {% if block.settings.product1 != blank %}
-              <div class="collection-list-prd">
-                <a
-                  class="product-link-cart"
-                  href="{{block.settings.product1.url }}"
-                  id="StandardCardNoMediaLink-{{ section_id }}-{{ product.id }}"
-                >
-                  <div class="collection-list-prd-img">
-                    <img src="{{ block.settings.product1 | image_url }}" alt="Section Image">
-                  </div>
-                  <div class="collection-list-prd-data">
-                    <h3>{{ block.settings.product1.title }}</h3>
-                    <h4>{{ block.settings.product1.price }}</h4>
-                  </div>
-                </a>
-              </div>
-            {% endif %}
-            {% if block.settings.product2 != blank %}
-              <div class="collection-list-prd">
-                <a
-                  class="product-link-cart"
-                  href="{{block.settings.product2.url }}"
-                  id="StandardCardNoMediaLink-{{ section_id }}-{{ product.id }}"
-                >
-                  <div class="collection-list-prd-img">
-                    <img src="{{ block.settings.product2 | image_url }}" alt="Section Image">
-                  </div>
-                  <div class="collection-list-prd-data">
-                    <h3>{{ block.settings.product2.title }}</h3>
-                    <h4>{{ block.settings.product2.price }}</h4>
-                  </div>
-                </a>
-              </div>
-            {% endif %}
-            {% if block.settings.product3 != blank %}
-              <div class="collection-list-prd">
-                <a
-                  class="product-link-cart"
-                  href="{{block.settings.product3.url }}"
-                  id="StandardCardNoMediaLink-{{ section_id }}-{{ product.id }}"
-                >
-                  <div class="collection-list-prd-img">
-                    <img src="{{ block.settings.product3 | image_url }}" alt="Section Image">
-                  </div>
-                  <div class="collection-list-prd-data">
-                    <h3>{{ block.settings.product3.title }}</h3>
-                    <h4>{{ block.settings.product3.price }}</h4>
-                  </div>
-                </a>
-              </div>
-            {% endif %}
-            {% if block.settings.product4 != blank %}
-              <div class="collection-list-prd">
-                <a
-                  class="product-link-cart"
-                  href="{{block.settings.product4.url }}"
-                  id="StandardCardNoMediaLink-{{ section_id }}-{{ product.id }}"
-                >
-                  <div class="collection-list-prd-img">
-                    <img src="{{ block.settings.product4 | image_url }}" alt="Section Image">
-                  </div>
-                  <div class="collection-list-prd-data">
-                    <h3>{{ block.settings.product4.title }}</h3>
-                    <h4>{{ block.settings.product4.price }}</h4>
-                  </div>
-                </a>
-              </div>
-            {% endif %}
-            {% if block.settings.product5 != blank %}
-              <div class="collection-list-prd">
-                <a
-                  class="product-link-cart"
-                  href="{{block.settings.product5.url }}"
-                  id="StandardCardNoMediaLink-{{ section_id }}-{{ product.id }}"
-                >
-                  <div class="collection-list-prd-img">
-                    <img src="{{ block.settings.product5 | image_url }}" alt="Section Image">
-                  </div>
-                  <div class="collection-list-prd-data">
-                    <h3>{{ block.settings.product5.title }}</h3>
-                    <h4>{{ block.settings.product5.price }}</h4>
-                  </div>
-                </a>
-              </div>
-            {% endif %}
-            {% if block.settings.product6 != blank %}
-              <div class="collection-list-prd">
-                <a
-                  class="product-link-cart"
-                  href="{{block.settings.product6.url }}"
-                  id="StandardCardNoMediaLink-{{ section_id }}-{{ product.id }}"
-                >
-                  <div class="collection-list-prd-img">
-                    <img src="{{ block.settings.product6 | image_url }}" alt="Section Image">
-                  </div>
-                  <div class="collection-list-prd-data">
-                    <h3>{{ block.settings.product6.title }}</h3>
-                    <h4>{{ block.settings.product6.price }}</h4>
-                  </div>
-                </a>
-              </div>
-            {% endif %}
-            {% if block.settings.product7 != blank %}
-              <div class="collection-list-prd">
-                <a
-                  class="product-link-cart"
-                  href="{{block.settings.product7.url }}"
-                  id="StandardCardNoMediaLink-{{ section_id }}-{{ product.id }}"
-                >
-                  <div class="collection-list-prd-img">
-                    <img src="{{ block.settings.product7 | image_url }}" alt="Section Image">
-                  </div>
-                  <div class="collection-list-prd-data">
-                    <h3>{{ block.settings.product7.title }}</h3>
-                    <h4>{{ block.settings.product7.price }}</h4>
-                  </div>
-                </a>
-              </div>
-            {% endif %}
-            {% if block.settings.product8 != blank %}
-              <div class="collection-list-prd">
-                <a
-                  class="product-link-cart"
-                  href="{{block.settings.product8.url }}"
-                  id="StandardCardNoMediaLink-{{ section_id }}-{{ product.id }}"
-                >
-                  <div class="collection-list-prd-img">
-                    <img src="{{ block.settings.product8 | image_url }}" alt="Section Image">
-                  </div>
-                  <div class="collection-list-prd-data">
-                    <h3>{{ block.settings.product8.title }}</h3>
-                    <h4>{{ block.settings.product8.price }}</h4>
-                  </div>
-                </a>
               </div>
             {% endif %}
           </div>
@@ -677,7 +518,6 @@
         element.classList.add('grid-2-column');
       } else if (element.children.length === 1) {
         element.classList.add('grid-1-column');
-      } else {
       }
     });
   });
