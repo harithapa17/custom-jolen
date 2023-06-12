@@ -18,7 +18,13 @@
   <form action="/cart/add" method="post" enctype="multipart/form-data">
     {% for variant in product.variants %}
       {% if product.variants.size > 1 %}
-        <div class="variant-option{% if variant == product.selected_or_first_available_variant %} selected{% endif %}{% if variant.available == false %} disabled{% endif %}">
+        <div
+          class="
+            variant-option
+            {% comment %} {% if variant == product.selected_or_first_available_variant %} selected{% endif %} {% endcomment %}
+            {% if variant.available == false %} disabled{% endif %}
+          "
+        >
           <input
             type="radio"
             name="id"
