@@ -1365,7 +1365,7 @@ aside#main-collection-filters {
   }
   .collection-list-prd-data-hover form,
   .product-data-size {
-    bottom: -5px;
+    bottom: -0px;
   }
   .hide-wrapper-on-mobile {
     display: none !important;
