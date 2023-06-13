@@ -30,9 +30,7 @@
             name="id"
             id="variant_{{ variant.id }}"
             value="{{ variant.id }}"
-            {% if variant == product.selected_or_first_available_variant %}
-              checked
-            {% endif %}
+
             {% if variant.available == false %}
               disabled
             {% endif %}

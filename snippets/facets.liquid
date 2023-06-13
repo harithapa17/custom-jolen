@@ -974,8 +974,8 @@
   </div>
   {% comment %} Sort, product count and filter pills at the end when filter is type of Drawer for the correct tabbing order {% endcomment %}
   {%- if enable_sorting and filter_type == 'drawer' -%}
-    <facet-filters-form class="facets small-hide">
-      <form id="FacetSortDrawerForm" class="facets__form">
+    <facet-filters-form class="mobile_flex_row">
+      <form id="FacetSortDrawerForm" class="facets__form mobile_sortDropdown">
         <div class="facet-filters sorting filter-sort-by caption">
           <div class="facet-filters__field" id="sort-dropdown">
             <svg
@@ -1024,13 +1024,23 @@
           </noscript>
         </div>
         <div class="sort-by-items">
-          <ul>
-            <li class="sort-by-selected"><span>New Arrivals</span></li>
-            <li><span>Best Sellers</span></li>
-            <li><span>Discount</span></li>
-            <li><span>Price Low to High</span></li>
-            <li><span>Price Hight to low</span></li>
-          </ul>
+          <div class="sort_items_inner">
+            <div class="filter_mobile_heading">
+              <h2 class="hide-on-desktop">Sort</h2>
+              <div class="close_filter">
+                <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M13.0675 12.1827C13.1256 12.2407 13.1717 12.3097 13.2031 12.3855C13.2345 12.4614 13.2507 12.5427 13.2507 12.6249C13.2507 12.707 13.2345 12.7883 13.2031 12.8642C13.1717 12.94 13.1256 13.009 13.0675 13.067C13.0095 13.1251 12.9405 13.1712 12.8647 13.2026C12.7888 13.234 12.7075 13.2502 12.6253 13.2502C12.5432 13.2502 12.4619 13.234 12.386 13.2026C12.3102 13.1712 12.2412 13.1251 12.1832 13.067L7.00035 7.88345L1.81753 13.067C1.70026 13.1843 1.5412 13.2502 1.37535 13.2502C1.2095 13.2502 1.05044 13.1843 0.93316 13.067C0.815885 12.9498 0.75 12.7907 0.75 12.6249C0.75 12.459 0.815885 12.2999 0.93316 12.1827L6.11675 6.99986L0.93316 1.81705C0.815885 1.69977 0.75 1.54071 0.75 1.37486C0.75 1.20901 0.815885 1.04995 0.93316 0.932672C1.05044 0.815396 1.2095 0.749512 1.37535 0.749512C1.5412 0.749512 1.70026 0.815396 1.81753 0.932672L7.00035 6.11627L12.1832 0.932672C12.3004 0.815396 12.4595 0.749512 12.6253 0.749512C12.7912 0.749512 12.9503 0.815396 13.0675 0.932672C13.1848 1.04995 13.2507 1.20901 13.2507 1.37486C13.2507 1.54071 13.1848 1.69977 13.0675 1.81705L7.88394 6.99986L13.0675 12.1827Z" fill="black"/>
+                </svg>
+              </div>
+            </div>
+            <ul>
+              <li class="sort-by-selected"><span>New Arrivals</span></li>
+              <li><span>Best Sellers</span></li>
+              <li><span>Discount</span></li>
+              <li><span>Price Low to High</span></li>
+              <li><span>Price Hight to low</span></li>
+            </ul>
+          </div>
         </div>
         {% if results.current_vendor or results.current_type %}
           <input type="hidden" name="q" value="{{ results.current_vendor }}{{ results.current_type }}">

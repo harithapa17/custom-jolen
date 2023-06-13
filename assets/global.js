@@ -1184,6 +1184,7 @@ class ProductRecommendations extends HTMLElement {
 $(document).ready(function () {
   $('#sort-dropdown').click(function () {
     $('.sort-by-items').slideToggle();
+    $('body').addClass('showAnimate');
   });
 
   $('.sort-by-items ul li').click(function () {
@@ -1192,6 +1193,11 @@ $(document).ready(function () {
 
     // Add active class to the clicked li element
     $(this).addClass('sort-by-selected');
+  });
+
+  $('.close_filter').click(function () {
+    $('.sort-by-items').hide();
+    $('body').removeClass('showAnimate');
   });
 });
 
