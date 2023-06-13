@@ -501,7 +501,9 @@ svg.modal__toggle-open.icon.icon-sear path {
   /* .mobile-footer {
     display: none;
   } */
-
+  .product-media-modal .global-media-settings {
+    max-width: 80%;
+  }
   .filter_mobile_heading {
     display: none;
   }
@@ -858,7 +860,8 @@ svg.modal__toggle-open.icon.icon-sear path {
 .sort-by-items {
   margin-top: 15px;
 }
-/* Collection Page Starts */
+
+/* /////////////////////////////////////////////////////////////// Collection Page CSS Starts ///////////////////////////////////////////////////////////////////*/
 
 .collection #product-grid .card__information {
   position: relative;
@@ -915,7 +918,7 @@ svg.modal__toggle-open.icon.icon-sear path {
   width: 100%;
 }
 
-/* Collection Page Sizee */
+/* ------------------------------- Collection Size Chart CSS Starts --------------------------- */
 
 .collection-list-prd-img-hover,
 .product-info-after {
@@ -1022,7 +1025,8 @@ svg.modal__toggle-open.icon.icon-sear path {
   opacity: 0;
   transform: translateY(-20px);
 }
-/* Collection Page Sizee */
+
+/* ------------------------------- Collection Size Chart CSS Ends --------------------------- */
 
 .collection ul#product-grid .grid__item .product-card-wrapper .card__content .variant-option {
   width: 30px;
@@ -1265,7 +1269,7 @@ aside#main-collection-filters {
   width: calc(33.33vw - var(--grid-desktop-horizontal-spacing) / 2) !important;
 }
 
-/* Filter Block */
+/* ------------------------------- Filter Block CSS Starts --------------------------- */
 
 #sort-dropdown,
 #sort-dropdown h2 label {
@@ -1326,29 +1330,8 @@ aside#main-collection-filters {
   padding: 0;
   margin: 0;
 }
-/* // Filter Block // */
 
-/* Product Page CSS */
-
-.product__info-wrapper .product__title h1 {
-  font-style: italic;
-  font-weight: 400;
-  font-size: 26px;
-  line-height: 32px;
-  letter-spacing: -0.04em;
-  color: #090e22;
-  margin-bottom: 4px;
-}
-.product__info-wrapper .price {
-  font-weight: 400;
-  font-size: 18px;
-  line-height: 24px;
-  display: flex;
-  align-items: center;
-  letter-spacing: -0.04em;
-  color: #090e22;
-}
-/* Product Page CSS */
+/* ------------------------------- Filter Block CSS Ends --------------------------- */
 
 @media (max-width: 1500px) and (min-width: 992px) {
   .home .grid--3-col-desktop .grid__item:first-child {
@@ -1399,6 +1382,9 @@ aside#main-collection-filters {
 @media (max-width: 991px) and (min-width: 768px) {
   .collection ul#product-grid {
     gap: 20px;
+  }
+  .filter_collection_list aside#main-collection-filters {
+    top: 47px;
   }
   .product-block-wrapper {
     grid-template-columns: repeat(2, 1fr) !important;
@@ -1635,4 +1621,100 @@ aside#main-collection-filters {
   }
 }
 
-/* Collection Page Ends */
+/* /////////////////////////////////////////////////////////////// Collection Page CSS Ends //////////////////////////////////////////////////////////////////*/
+
+/* /////////////////////////////////////////////////////////////// Product Page CSS Starts ///////////////////////////////////////////////////////////////////*/
+
+.product__info-wrapper .product__title h1 {
+  font-style: italic;
+  font-weight: 400;
+  font-size: 26px;
+  line-height: 32px;
+  letter-spacing: -0.04em;
+  color: #090e22;
+  margin-bottom: 4px;
+}
+.product__info-wrapper .price {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 24px;
+  display: flex;
+  align-items: center;
+  letter-spacing: -0.04em;
+  color: #090e22;
+}
+
+/* ------------------------------- Related Product CSS Starts --------------------------- */
+
+.related-products ul#product-grid {
+  gap: 20px;
+}
+.related-products ul#product-grid .card .media {
+  position: relative !important;
+  width: 100% !important;
+  height: 100% !important;
+}
+.related-products ul#product-grid .card .media img {
+  position: relative;
+}
+.related-products ul#product-grid .card__media {
+  position: relative !important;
+}
+.related-products ul#product-grid .product-link-cart {
+  display: none;
+}
+.related-products ul#product-grid .card__media img:last-child {
+  position: absolute;
+}
+.related-products__heading.h2 {
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 22px;
+  text-transform: uppercase;
+  color: #1d1f20;
+  margin-bottom: 24px;
+}
+.related-products.collection {
+  padding-top: 83px !important;
+  padding-bottom: 81px !important;
+}
+/* ------------------------------- Related Product CSS Ends --------------------------- */
+
+/* ------------------------------- Product Gallery CSS Starts --------------------------- */
+
+.product_info_block {
+  padding-top: 30px;
+}
+.product_info_block .product__info-wrapper {
+  padding-left: 20px !important ;
+}
+.product-gallery-block {
+  display: flex;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+.product-gallery-block li.product_gallery_img:first-child {
+  max-width: 100% !important;
+}
+.product-gallery-block li.product_gallery_img:first-child .product-media-container {
+  max-width: calc(49% - var(--grid-desktop-horizontal-spacing) / 2) !important;
+}
+.product-gallery-block li.product_gallery_img {
+  width: 100% !important;
+  max-width: calc(49% - var(--grid-desktop-horizontal-spacing) / 2) !important;
+}
+.product-gallery-block li.product_gallery_img .product-media-container {
+  width: 100% !important;
+}
+.product-gallery-block li.product_gallery_img .product__media.media.media--transparent {
+  padding: 0px !important;
+}
+.product-gallery-block li.product_gallery_img .product__media.media.media--transparent img {
+  position: relative !important;
+}
+.product-media-modal {
+  z-index: 999999 !important;
+}
+/* ------------------------------- Product Gallery CSS Ends --------------------------- */
+
+/* /////////////////////////////////////////////////////////////// Product Page CSS Ends ///////////////////////////////////////////////////////////////////*/
