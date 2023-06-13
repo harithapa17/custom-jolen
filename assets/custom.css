@@ -596,6 +596,12 @@ svg.modal__toggle-open.icon.icon-sear path {
     background: #fff;
     z-index: 9999999;
   }
+  aside#main-collection-filters {
+    position: sticky !important;
+    top: 62px;
+    background: #fff;
+    z-index: 9999999;
+  }
   .filter_collection_list {
     padding-top: 20px !important;
   }
