@@ -1456,6 +1456,10 @@ aside#main-collection-filters {
     border-color: rgba(9, 14, 34, 0.12);
     padding-bottom: 10px;
   }
+  aside#main-collection-filters {
+    z-index: 999999999999;
+    position: relative;
+  }
   .sort-by-items ul li {
     text-align: left;
   }
@@ -1598,6 +1602,9 @@ aside#main-collection-filters {
     top: 9px;
     transition: 0.2s ease-in-out;
     flex-wrap: wrap;
+  }
+  .showAnimate .sort_items_inner {
+    width: 90% !important;
   }
   .collection ul#product-grid .grid__item .product-card-wrapper .card__content .variant-option {
     width: 20px;
