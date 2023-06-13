@@ -1714,7 +1714,7 @@ aside#main-collection-filters {
 }
 .product-gallery-block li.product_gallery_img {
   width: 100% !important;
-  max-width: calc(49% - var(--grid-desktop-horizontal-spacing) / 2) !important;
+  max-width: calc(48% - var(--grid-desktop-horizontal-spacing) / 2) !important;
 }
 .product-gallery-block li.product_gallery_img .product-media-container {
   width: 100% !important;
