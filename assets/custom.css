@@ -473,6 +473,9 @@ svg.modal__toggle-open.icon.icon-sear path {
     max-width: 100% !important;
     width: 100% !important;
   }
+  .product-gallery-block li.product_gallery_img {
+    max-width: calc(47% - var(--grid-desktop-horizontal-spacing) / 2)!important;
+}
   .grid--2-col-tablet-down .grid__item {
     width: calc(50% - var(--grid-desktop-horizontal-spacing) / 2) !important;
   }
