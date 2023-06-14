@@ -14,30 +14,64 @@
     cursor: not-allowed;
   }
 </style>
+{% comment %}
+  <div>
+    <form action="/cart/add" method="post" enctype="multipart/form-data">
+      {% for variant in product.variants %}
+        {% if product.variants.size > 1 %}
+          <div
+            class="
+              variant-option
+              {% comment %} {% if variant == product.selected_or_first_available_variant %} selected{% endif %} {% endcomment %}
+              {% if variant.available == false %} disabled{% endif %}
+            "
+          >
+            <input
+              type="radio"
+              name="id"
+              id="variant_{{ variant.id }}"
+              value="{{ variant.id }}"
+
+              {% if variant.available == false %}
+                disabled
+              {% endif %}
+              onchange="this.form.submit()"
+            >
+            <label for="variant_{{ variant.id }}">{{ variant.title }}</label>
+          </div>
+        {% endif %}
+      {% endfor %}
+    </form>
+  </div>
+{% endcomment %}
+
 <div>
   <form action="/cart/add" method="post" enctype="multipart/form-data">
+    {% assign printedSizes = '' %}
     {% for variant in product.variants %}
       {% if product.variants.size > 1 %}
-        <div
-          class="
-            variant-option
-            {% comment %} {% if variant == product.selected_or_first_available_variant %} selected{% endif %} {% endcomment %}
-            {% if variant.available == false %} disabled{% endif %}
-          "
-        >
-          <input
-            type="radio"
-            name="id"
-            id="variant_{{ variant.id }}"
-            value="{{ variant.id }}"
-
-            {% if variant.available == false %}
-              disabled
-            {% endif %}
-            onchange="this.form.submit()"
+        {% unless printedSizes contains variant.option1 %}
+          <div
+            class="
+              variant-option
+              {% comment %} {% if variant == product.selected_or_first_available_variant %} selected{% endif %} {% endcomment %}
+              {% if variant.available == false %} disabled{% endif %}
+            "
           >
-          <label for="variant_{{ variant.id }}">{{ variant.title }}</label>
-        </div>
+            {{ variant.option1 }}
+            <input
+              type="radio"
+              name="id"
+              id="variant_{{ variant.id }}"
+              value="{{ variant.id }}"
+              {% if variant.available == false %}
+                disabled
+              {% endif %}
+              onchange="this.form.submit()"
+            >
+            {% assign printedSizes = printedSizes | append: variant.option1 | append: ' ' %}
+          </div>
+        {% endunless %}
       {% endif %}
     {% endfor %}
   </form>

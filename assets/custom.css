@@ -948,6 +948,18 @@ svg.modal__toggle-open.icon.icon-sear path {
   border: 1px solid #090e22;
   position: relative;
   margin: 0;
+  line-height: 29px;
+  padding: 0;
+  text-align: center;
+  font-weight: 400;
+  font-size: 12px;
+  letter-spacing: -0.04em;
+  color: #090e22;
+  cursor: pointer;
+}
+.collection-list-prd .variant-option:hover {
+  background: #090e22;
+  color: #f3f4f7;
 }
 .collection-list-prd .variant-option input {
   position: absolute;
@@ -957,29 +969,14 @@ svg.modal__toggle-open.icon.icon-sear path {
   height: 30px;
   margin: 0;
   opacity: 0;
-}
-.collection-list-prd .variant-option label {
-  font-weight: 400;
-  font-size: 12px;
-  line-height: 12px;
-  letter-spacing: -0.04em;
-  color: #090e22;
-  position: absolute;
-  left: 0;
-  right: 0;
-  margin: auto;
-  text-align: center;
-  height: 30px;
-  top: 0;
-  line-height: 30px;
   cursor: pointer;
 }
 
-.collection-list-prd .variant-option.selected label {
+/* .collection-list-prd .variant-option.selected label {
   background: #090e22;
   color: #f3f4f7;
-}
-.collection-list-prd .variant-option.disabled label {
+} */
+.collection-list-prd .variant-option.disabled {
   cursor: default;
 }
 .collection-list-prd .variant-option.disabled {
@@ -1012,11 +1009,11 @@ svg.modal__toggle-open.icon.icon-sear path {
 .collection-list-prd:hover .product-data-size {
   display: flex !important;
 }
-.collection-list-prd .variant-option:hover label {
+/* .collection-list-prd .variant-option:hover label {
   background: #090e22;
   color: #f3f4f7;
-}
-.collection-list-prd .variant-option.disabled:hover label {
+} */
+.collection-list-prd .variant-option.disabled:hover {
   background: transparent;
   color: #090e22;
 }
@@ -1036,13 +1033,6 @@ svg.modal__toggle-open.icon.icon-sear path {
 
 /* ------------------------------- Collection Size Chart CSS Ends --------------------------- */
 
-.collection ul#product-grid .grid__item .product-card-wrapper .card__content .variant-option {
-  width: 30px;
-  height: 30px;
-  border: 1px solid #090e22;
-  position: relative;
-  margin: 0;
-}
 .collection ul#product-grid .grid__item .product-card-wrapper .card__content .variant-option input {
   position: absolute;
   left: 0;
@@ -1051,28 +1041,28 @@ svg.modal__toggle-open.icon.icon-sear path {
   height: 30px;
   margin: 0;
   opacity: 0;
-}
-.collection ul#product-grid .grid__item .product-card-wrapper .card__content .variant-option label {
-  font-weight: 400;
-  font-size: 12px;
-  line-height: 12px;
-  letter-spacing: -0.04em;
-  color: #090e22;
-  position: absolute;
-  left: 0;
-  right: 0;
-  margin: auto;
-  text-align: center;
-  height: 30px;
-  top: 0;
-  line-height: 30px;
   cursor: pointer;
 }
-.collection ul#product-grid .grid__item .product-card-wrapper .card__content .variant-option.selected label {
+.collection ul#product-grid .grid__item .product-card-wrapper .card__content .variant-option {
+  width: 30px;
+  height: 30px;
+  border: 1px solid #090e22;
+  position: relative;
+  margin: 0;
+  line-height: 29px;
+  padding: 0;
+  text-align: center;
+  font-weight: 400;
+  font-size: 12px;
+  letter-spacing: -0.04em;
+  color: #090e22;
+  cursor: pointer;
+}
+.collection ul#product-grid .grid__item .product-card-wrapper .card__content .variant-option.selected {
   background: #090e22;
   color: #f3f4f7;
 }
-.collection ul#product-grid .grid__item .product-card-wrapper .card__content .variant-option.disabled label {
+.collection ul#product-grid .grid__item .product-card-wrapper .card__content .variant-option.disabled {
   cursor: default;
 }
 .collection ul#product-grid .grid__item .product-card-wrapper .card__content .variant-option.disabled {
@@ -1118,11 +1108,11 @@ svg.modal__toggle-open.icon.icon-sear path {
 aside#main-collection-filters {
   margin-bottom: 30px;
 }
-.collection ul#product-grid .grid__item .product-card-wrapper .card__content .variant-option:hover label {
+.collection ul#product-grid .grid__item .product-card-wrapper .card__content .variant-option:hover {
   background: #090e22;
   color: #f3f4f7;
 }
-.collection ul#product-grid .grid__item .product-card-wrapper .card__content .variant-option.disabled:hover label {
+.collection ul#product-grid .grid__item .product-card-wrapper .card__content .variant-option.disabled:hover {
   background: transparent;
   color: #090e22;
 }
@@ -1659,6 +1649,31 @@ aside#main-collection-filters {
   color: #090e22;
 }
 
+.product_info_block .product__info-wrapper {
+  padding: 0 100px !important;
+  max-width: 50% !important;
+  width: calc(50% - var(--grid-desktop-horizontal-spacing) / 2) !important;
+}
+.product_info_block .grid__item.product__media-wrapper {
+  max-width: 50% !important;
+  width: calc(50% - var(--grid-desktop-horizontal-spacing) / 2) !important;
+}
+.single_prd_bag {
+  background: #a60017;
+  padding: 16px 12px;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 112%;
+  display: flex;
+  align-items: center;
+  text-transform: uppercase;
+  color: #ffffff;
+  border: 1px solid #a60017;
+}
+.single_prd_bag:after {
+  box-shadow: none;
+}
+
 /* ------------------------------- Related Product CSS Starts --------------------------- */
 
 .related-products ul#product-grid {
@@ -1698,27 +1713,34 @@ aside#main-collection-filters {
 /* ------------------------------- Product Gallery CSS Starts --------------------------- */
 
 .product_info_block {
-  padding-top: 30px;
+  padding-top: 0px;
 }
 .product_info_block .product__info-wrapper {
-  padding-left: 20px !important ;
+  padding-left: 100px !important ;
+}
+.product_info_block .product__info-wrapper .product__column-sticky {
+  top: 133px;
 }
 .product-gallery-block {
   display: flex;
   gap: 30px;
   flex-wrap: wrap;
 }
-.product-gallery-block li.product_gallery_img:first-child {
+.product-gallery-block {
+  background: #f6f6f6;
+}
+.product-gallery-block li.product_gallery_img {
   max-width: 100% !important;
+  position: relative;
 }
 .product-gallery-block li.product_gallery_img:first-child .product-media-container {
-  max-width: calc(49% - var(--grid-desktop-horizontal-spacing) / 2) !important;
+  max-width: calc(100% - var(--grid-desktop-horizontal-spacing) / 2) !important;
 }
 .product-gallery-block li.product_gallery_img {
   width: 100% !important;
-  max-width: calc(48% - var(--grid-desktop-horizontal-spacing) / 2) !important;
+  max-width: calc(100% - var(--grid-desktop-horizontal-spacing) / 2) !important;
 }
-.product-gallery-block li.product_gallery_img .product-media-container {
+/* .product-gallery-block li.product_gallery_img .product-media-container {
   width: 100% !important;
 }
 .product-gallery-block li.product_gallery_img .product__media.media.media--transparent {
@@ -1726,16 +1748,22 @@ aside#main-collection-filters {
 }
 .product-gallery-block li.product_gallery_img .product__media.media.media--transparent img {
   position: relative !important;
-}
+} */
 .product-media-modal {
   z-index: 999999 !important;
+}
+.product_info_block .product__info-container {
+  max-width: 100rem !important;
 }
 /* ------------------------------- Product Gallery CSS Ends --------------------------- */
 
 /* ------------------------------- Breadcrumb CSS Starts --------------------------- */
-
 .breadcrumb {
-  margin-top: 32px;
+  padding: 24px 0;
+  position: sticky;
+  top: 56px;
+  background: #fff;
+  z-index: 999;
 }
 .breadcrumb a,
 .breadcrumb span {
@@ -1758,52 +1786,98 @@ span.arrow_icon {
 
 .product_tabs_flex {
   margin: 0px !important;
-  margin-top: 40px !important;
+  margin-top: 64px !important;
 }
 .tabs_title_prd {
   display: flex;
   align-items: center;
+  border-top: 1px solid #c1c1c1;
+  border-bottom: 1px solid #c1c1c1;
+  padding: 12px 0;
 }
 .product_info_tabs.active_tab a {
-  border-bottom: 2px solid #a60017;
+  text-decoration: underline;
 }
 .product_info_tabs a {
   margin-right: 24px;
   font-weight: 400;
-  font-size: 16px;
-  line-height: 24px;
+  font-size: 14px;
+  line-height: 25px;
   letter-spacing: 0.04em;
-  color: #090e22;
-  text-decoration: none;
-  padding-bottom: 3px;
+  text-decoration-line: none;
+  text-transform: uppercase;
+
+  color: #1d1f20;
 }
 .prd_row_data {
-  margin-top: 20px;
+  margin-top: 24px;
 }
 .product_info_tabs-data {
+  font-style: normal;
   font-weight: 300;
   font-size: 14px;
   line-height: 20px;
-  display: flex;
-  align-items: center;
-  letter-spacing: 0.0125em;
+  letter-spacing: 0.016em;
   color: #090e22;
 }
 
 /* ------------------------------- Product Info Tabs CSS Ends --------------------------- */
-
-.prd-benefits {
-  display: flex;
-  justify-content: space-between;
-  width: 77%;
-  margin: auto;
-  padding: 32px;
-  margin-top: 80px;
+.wash_comp {
+  width: 100%;
+  padding: 72px 0 64px;
+  border-bottom: 1px solid #999999;
 }
+.prd-ben-blck svg {
+  margin-right: 9px;
+}
+.prd-ben-blck h3 {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 140%;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  color: #1d1f20;
+  margin-top: 0;
+  margin-bottom: 12px;
+}
+.prd-ben-blck p {
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 20px;
+  text-align: center;
+  letter-spacing: 0.016em;
+  color: #090e22;
+  margin: 0px;
+}
+.prd-ben-blck {
+  max-width: 36%;
+  text-align: center;
+  margin: auto;
+}
+.prd-benefits {
+  padding: 40px 24px;
+  gap: 40px;
+  width: 368px;
+  background: #f5f5f5;
+  margin-top: 64px;
+  margin-left: auto;
+}
+.wash_comp .prd-ben-blck:last-child {
+  margin-bottom: 0;
+}
+
+.wash_comp .prd-ben-blck {
+  margin-bottom: 40px;
+}
+
 .prd-policy {
   text-align: center;
-  margin: 0px 49px;
+  margin-bottom: 40px;
 }
+.prd-benefits .prd-policy:last-child {
+  margin-bottom: 0;
+}
+
 .prd-policy h3 {
   font-style: italic;
   font-weight: 400;
@@ -1811,7 +1885,7 @@ span.arrow_icon {
   line-height: 24px;
   letter-spacing: -0.04em;
   color: #090e22;
-  margin-bottom: 24px;
+  margin-bottom: 12px;
   margin-top: 0;
 }
 .prd-policy p {
@@ -1820,27 +1894,36 @@ span.arrow_icon {
   line-height: 20px;
   letter-spacing: 0.02em;
   color: #090e22;
-  margin-bottom: 0;
+  margin-bottom: 0px;
 }
 
 @media (max-width: 1440px) {
-  .prd-benefits {
-    width: 100%;
+  .prd-ben-blck {
+    max-width: 47%;
   }
 }
 @media (max-width: 1200px) {
-  .prd-policy {
-    margin: 0px 10px;
+  .prd-ben-blck {
+    max-width: 60%;
   }
 }
 @media (max-width: 991px) and (min-width: 749px) {
   .product-gallery-block li.product_gallery_img {
     max-width: calc(46% - var(--grid-desktop-horizontal-spacing) / 2) !important;
   }
+  .prd-ben-blck {
+    max-width: 80%;
+  }
 }
 @media (max-width: 749px) {
   .product-gallery-block li.product_gallery_img:first-child .product-media-container {
     max-width: calc(100% - var(--grid-desktop-horizontal-spacing) / 2) !important;
+  }
+  .prd-ben-blck {
+    max-width: 100%;
+  }
+  .prd-benefits {
+    width: 100%;
   }
 }
 

@@ -100,6 +100,8 @@
                   price_class: 'price--large'
                 -%}
               </div>
+              
+
               {%- if cart.taxes_included or shop.shipping_policy.body != blank -%}
                 <div class="product__tax caption rte">
                   {%- if cart.taxes_included -%}
@@ -418,24 +420,12 @@
                 {{ block.settings.info_heading1 }}
               </a>
             </li>
+          </div>
             {% endif %}
             
-            {% if block.settings.info_heading2 %}
-                <li class="product_info_tabs">
-                  <a href="#tab3">
-                {{ block.settings.info_heading2 }}
-              </a>
-            </li>
-            {% endif %}
+     
             
-            {% if block.settings.info_heading3 %}
-              <li class="product_info_tabs">
-                <a href="#tab4">
-                {{ block.settings.info_heading3 }}
-              </a>
-            </li>
-            </div>
-            {% endif %}
+           
         
         
               {% if block.settings.product_info_tabs %} 
@@ -449,26 +439,52 @@
                 <div id="tab2" class="product_info_tabs-data">
                   {{ block.settings.product_info_tabs1 }}
                 </div>
+              </div>
               {% endif %}             
         
-              {% if block.settings.product_info_tabs2 %}
-                <div id="tab3" class="product_info_tabs-data">
-                  {{ block.settings.product_info_tabs2 }}
-                </div>
-              {% endif %}
+             
         
-              {% if block.settings.product_info_tabs3 %}
-                <div id="tab4" class="product_info_tabs-data">
-                  {{ block.settings.product_info_tabs3 }}
-                </div>
-              </div>
-              {% endif %}
+              
             
           {% endfor %}
         </div>
-        
-
+      
+    
+</div>
         </product-info>
+        <div class="wash_comp">
+          {%for block in section.blocks%}
+          
+             {% if block.settings.info_heading2 %}
+        <div class="prd-ben-blck">
+                        <h3> <svg width="19" height="14" viewBox="0 0 19 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M18.3728 11.375L10.5415 5.5L12.3743 4.125C12.4521 4.06686 12.5152 3.99141 12.5588 3.90462C12.6023 3.81783 12.625 3.72209 12.6251 3.625C12.6251 2.7962 12.2959 2.00134 11.7098 1.41529C11.1238 0.82924 10.3289 0.5 9.5001 0.5C8.6713 0.5 7.87644 0.82924 7.29039 1.41529C6.70434 2.00134 6.3751 2.7962 6.3751 3.625C6.3751 3.79076 6.44095 3.94973 6.55816 4.06694C6.67537 4.18415 6.83434 4.25 7.0001 4.25C7.16586 4.25 7.32483 4.18415 7.44204 4.06694C7.55925 3.94973 7.6251 3.79076 7.6251 3.625C7.62636 3.15424 7.80467 2.70117 8.12459 2.35582C8.44452 2.01047 8.88265 1.79809 9.35194 1.7609C9.82124 1.7237 10.2874 1.8644 10.6577 2.15504C11.028 2.44568 11.2755 2.865 11.3509 3.32969L9.13604 4.99141L9.11416 5.00781L0.627444 11.375C0.417721 11.5323 0.262758 11.7515 0.184475 12.0017C0.106192 12.2519 0.10855 12.5204 0.191217 12.7692C0.273884 13.018 0.432675 13.2344 0.645129 13.388C0.857584 13.5416 1.11295 13.6245 1.3751 13.625H17.6251C17.8875 13.625 18.1432 13.5425 18.356 13.3891C18.5688 13.2357 18.728 13.0192 18.811 12.7703C18.8939 12.5214 18.8965 12.2527 18.8182 12.0023C18.74 11.7519 18.585 11.5324 18.3751 11.375H18.3728ZM17.6251 12.375H1.3751L9.5001 6.28125L17.6251 12.375Z" fill="black"/>
+                          </svg>
+                          {{ block.settings.info_heading2 }}</h3>
+             {% endif %}
+             {% if block.settings.product_info_tabs2 %}
+                        <p> {{ block.settings.product_info_tabs2 }}</p>
+        </div>
+             {% endif %}
+          
+          {% endfor%}
+        
+          {% for block in section.blocks%}
+        
+             {% if block.settings.info_heading3 %}
+        <div class="prd-ben-blck">
+                     <h3><svg width="19" height="14" viewBox="0 0 19 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M18.3728 11.375L10.5415 5.5L12.3743 4.125C12.4521 4.06686 12.5152 3.99141 12.5588 3.90462C12.6023 3.81783 12.625 3.72209 12.6251 3.625C12.6251 2.7962 12.2959 2.00134 11.7098 1.41529C11.1238 0.82924 10.3289 0.5 9.5001 0.5C8.6713 0.5 7.87644 0.82924 7.29039 1.41529C6.70434 2.00134 6.3751 2.7962 6.3751 3.625C6.3751 3.79076 6.44095 3.94973 6.55816 4.06694C6.67537 4.18415 6.83434 4.25 7.0001 4.25C7.16586 4.25 7.32483 4.18415 7.44204 4.06694C7.55925 3.94973 7.6251 3.79076 7.6251 3.625C7.62636 3.15424 7.80467 2.70117 8.12459 2.35582C8.44452 2.01047 8.88265 1.79809 9.35194 1.7609C9.82124 1.7237 10.2874 1.8644 10.6577 2.15504C11.028 2.44568 11.2755 2.865 11.3509 3.32969L9.13604 4.99141L9.11416 5.00781L0.627444 11.375C0.417721 11.5323 0.262758 11.7515 0.184475 12.0017C0.106192 12.2519 0.10855 12.5204 0.191217 12.7692C0.273884 13.018 0.432675 13.2344 0.645129 13.388C0.857584 13.5416 1.11295 13.6245 1.3751 13.625H17.6251C17.8875 13.625 18.1432 13.5425 18.356 13.3891C18.5688 13.2357 18.728 13.0192 18.811 12.7703C18.8939 12.5214 18.8965 12.2527 18.8182 12.0023C18.74 11.7519 18.585 11.5324 18.3751 11.375H18.3728ZM17.6251 12.375H1.3751L9.5001 6.28125L17.6251 12.375Z" fill="black"/>
+                      </svg>
+                      {{ block.settings.info_heading3 }} </h3>
+              {% endif %}
+              {% if block.settings.product_info_tabs3 %}
+                     <p> {{ block.settings.product_info_tabs3 }}</p>
+          
+        </div>
+               {% endif %}
+           {% endfor%}
+        </div>
     </div>
     <div class="prd-benefits">
       <div class="prd-policy">
@@ -642,7 +658,7 @@
         {
           "type": "text",
           "id": "info_heading1",
-          "default": "Description",
+          "default": "How To Wear",
           "label": "Product Info Tab 2"
          
         },
@@ -655,7 +671,7 @@
         {
           "type": "text",
           "id": "info_heading2",
-          "default": "Description",
+          "default": "Wash & Care",
           "label": "Product Info Tab 3"
          
         },
@@ -668,7 +684,7 @@
         {
           "type": "text",
           "id": "info_heading3",
-          "default": "Description",
+          "default": "Composition",
           "label": "Product Info Tab 4"
          
         },
