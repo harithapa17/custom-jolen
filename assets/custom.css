@@ -1696,13 +1696,15 @@ aside#main-collection-filters {
 .related-products ul#product-grid .card__media img:last-child {
   position: absolute;
 }
-.related-products__heading.h2 {
-  font-weight: 700;
-  font-size: 20px;
-  line-height: 22px;
-  text-transform: uppercase;
-  color: #1d1f20;
-  margin-bottom: 24px;
+  .related-products__heading.h2 {
+    margin-bottom: 24px;
+    font-style: italic;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 112%;
+    text-align: left;
+    text-transform: uppercase;
+    color: #1D1F20;
 }
 .related-products.collection {
   padding-top: 80px !important;
@@ -1925,14 +1927,8 @@ span.arrow_icon {
 }
 @media (min-width:750px){
   .related-products__heading.h2 {
-    margin-bottom: 24px;
-    font-style: italic;
-    font-weight: 400;
-    font-size: 24px;
-    line-height: 112%;
-    text-align: center;
-    text-transform: uppercase;
-    color: #1D1F20;
+    margin-bottom: 16px;
+    text-align: left;
 }
 }
 @media (max-width: 749px) {
