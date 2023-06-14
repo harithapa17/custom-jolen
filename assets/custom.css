@@ -1740,9 +1740,6 @@ aside#main-collection-filters {
   .product-gallery-block li.product_gallery_img:first-child .product-media-container {
     max-width: calc(100% - var(--grid-desktop-horizontal-spacing) / 2)!important;
 }
-  .product-gallery-block li.product_gallery_img:first-child {
-    max-width: calc(46.2% - var(--grid-desktop-horizontal-spacing) / 2)!important;
-}
 }
 
 /* /////////////////////////////////////////////////////////////// Product Page CSS Ends ///////////////////////////////////////////////////////////////////*/
