@@ -47,11 +47,13 @@
         },
         "description": {
           "type": "description",
+          "disabled": true,
           "settings": {
           }
         },
         "collapsible-row-0": {
           "type": "collapsible_tab",
+          "disabled": true,
           "settings": {
             "heading": "Materials",
             "icon": "leather",
@@ -61,6 +63,7 @@
         },
         "collapsible-row-1": {
           "type": "collapsible_tab",
+          "disabled": true,
           "settings": {
             "heading": "Shipping & Returns",
             "icon": "truck",
@@ -70,6 +73,7 @@
         },
         "collapsible-row-2": {
           "type": "collapsible_tab",
+          "disabled": true,
           "settings": {
             "heading": "Dimensions",
             "icon": "ruler",
@@ -79,6 +83,7 @@
         },
         "collapsible-row-3": {
           "type": "collapsible_tab",
+          "disabled": true,
           "settings": {
             "heading": "Care Instructions",
             "icon": "heart",
@@ -88,8 +93,22 @@
         },
         "share": {
           "type": "share",
+          "disabled": true,
           "settings": {
             "share_label": "Share"
+          }
+        },
+        "0f2efdee-3fa2-4c49-8a89-60a0e58a5548": {
+          "type": "text1",
+          "settings": {
+            "info_heading": "Description",
+            "product_info_tabs": "Description",
+            "info_heading1": "How To Wear",
+            "product_info_tabs1": "How To Wear",
+            "info_heading2": "Wash & Care",
+            "product_info_tabs2": "Wash & Care",
+            "info_heading3": "Composition",
+            "product_info_tabs3": "Composition"
           }
         }
       },
@@ -106,7 +125,8 @@
         "collapsible-row-1",
         "collapsible-row-2",
         "collapsible-row-3",
-        "share"
+        "share",
+        "0f2efdee-3fa2-4c49-8a89-60a0e58a5548"
       ],
       "settings": {
         "enable_sticky_info": true,
