@@ -1736,5 +1736,10 @@ aside#main-collection-filters {
     max-width: calc(46% - var(--grid-desktop-horizontal-spacing) / 2)!important;
 }
 }
+@media (max-width:749px){
+  .product-gallery-block li.product_gallery_img:first-child .product-media-container {
+    max-width: calc(100% - var(--grid-desktop-horizontal-spacing) / 2)!important;
+}
+}
 
 /* /////////////////////////////////////////////////////////////// Product Page CSS Ends ///////////////////////////////////////////////////////////////////*/
