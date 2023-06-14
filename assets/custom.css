@@ -1731,7 +1731,7 @@ aside#main-collection-filters {
 }
 /* ------------------------------- Product Gallery CSS Ends --------------------------- */
 
-@media (max-width:991px) and (min-width:768px){
+@media (max-width:991px) and (min-width:749px){
       .product-gallery-block li.product_gallery_img {
     max-width: calc(46% - var(--grid-desktop-horizontal-spacing) / 2)!important;
 }
