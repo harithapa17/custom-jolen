@@ -1733,7 +1733,7 @@ aside#main-collection-filters {
 
 @media (max-width:991px) and (min-width:768px){
       .product-gallery-block li.product_gallery_img {
-    max-width: calc(47% - var(--grid-desktop-horizontal-spacing) / 2)!important;
+    max-width: calc(46% - var(--grid-desktop-horizontal-spacing) / 2)!important;
 }
 }
 
