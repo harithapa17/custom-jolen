@@ -522,7 +522,7 @@ svg.modal__toggle-open.icon.icon-sear path {
     background: #fff;
     position: sticky;
     top: 56px;
-    z-index: 999;
+    z-index: 9999999;
   }
   .filter_collection_list div#sort-dropdown {
     margin-bottom: 0px;
@@ -1690,7 +1690,7 @@ aside#main-collection-filters {
   margin-bottom: 24px;
 }
 .related-products.collection {
-  padding-top: 83px !important;
+  padding-top: 80px !important;
   padding-bottom: 81px !important;
 }
 /* ------------------------------- Related Product CSS Ends --------------------------- */
@@ -1792,6 +1792,47 @@ span.arrow_icon {
 
 /* ------------------------------- Product Info Tabs CSS Ends --------------------------- */
 
+.prd-benefits {
+  display: flex;
+  justify-content: space-between;
+  width: 77%;
+  margin: auto;
+  padding: 32px;
+  margin-top: 80px;
+}
+.prd-policy {
+  text-align: center;
+  margin: 0px 49px;
+}
+.prd-policy h3 {
+  font-style: italic;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 24px;
+  letter-spacing: -0.04em;
+  color: #090e22;
+  margin-bottom: 24px;
+  margin-top: 0;
+}
+.prd-policy p {
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 20px;
+  letter-spacing: 0.02em;
+  color: #090e22;
+  margin-bottom: 0;
+}
+
+@media (max-width: 1440px) {
+  .prd-benefits {
+    width: 100%;
+  }
+}
+@media (max-width: 1200px) {
+  .prd-policy {
+    margin: 0px 10px;
+  }
+}
 @media (max-width: 991px) and (min-width: 749px) {
   .product-gallery-block li.product_gallery_img {
     max-width: calc(46% - var(--grid-desktop-horizontal-spacing) / 2) !important;
