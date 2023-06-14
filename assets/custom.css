@@ -1390,9 +1390,6 @@ aside#main-collection-filters {
   .collection ul#product-grid {
     gap: 20px;
   }
-    .product-gallery-block li.product_gallery_img {
-    max-width: calc(47% - var(--grid-desktop-horizontal-spacing) / 2)!important;
-}
   .filter_collection_list aside#main-collection-filters {
     top: 47px;
   }
@@ -1733,5 +1730,11 @@ aside#main-collection-filters {
   z-index: 999999 !important;
 }
 /* ------------------------------- Product Gallery CSS Ends --------------------------- */
+
+@media (max-width:991px) and (min-width:768px){
+      .product-gallery-block li.product_gallery_img {
+    max-width: calc(47% - var(--grid-desktop-horizontal-spacing) / 2)!important;
+}
+}
 
 /* /////////////////////////////////////////////////////////////// Product Page CSS Ends ///////////////////////////////////////////////////////////////////*/
