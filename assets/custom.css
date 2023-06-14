@@ -199,6 +199,7 @@ nav.header__inline-menu ul li .header__menu-item {
 
 .scrolled-past-header .header {
   background: #fff;
+  transition: background-color 0.4s ease;
 }
 .scrolled-past-header nav.header__inline-menu ul li a {
   color: #090e22;
@@ -1731,15 +1732,75 @@ aside#main-collection-filters {
 }
 /* ------------------------------- Product Gallery CSS Ends --------------------------- */
 
-@media (max-width:991px) and (min-width:749px){
-      .product-gallery-block li.product_gallery_img {
-    max-width: calc(46% - var(--grid-desktop-horizontal-spacing) / 2)!important;
+/* ------------------------------- Breadcrumb CSS Starts --------------------------- */
+
+.breadcrumb {
+  margin-top: 32px;
 }
+.breadcrumb a,
+.breadcrumb span {
+  font-weight: 400;
+  font-size: 10px;
+  line-height: 12px;
+  text-align: center;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: #090e22;
+  text-decoration: none;
 }
-@media (max-width:749px){
+span.arrow_icon {
+  margin: 0 10px;
+}
+
+/* ------------------------------- Breadcrumb CSS Ends --------------------------- */
+
+/* ------------------------------- Product Info Tabs CSS Starts --------------------------- */
+
+.product_tabs_flex {
+  margin: 0px !important;
+  margin-top: 40px !important;
+}
+.tabs_title_prd {
+  display: flex;
+  align-items: center;
+}
+.product_info_tabs.active_tab a {
+  border-bottom: 2px solid #a60017;
+}
+.product_info_tabs a {
+  margin-right: 24px;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 0.04em;
+  color: #090e22;
+  text-decoration: none;
+  padding-bottom: 3px;
+}
+.prd_row_data {
+  margin-top: 20px;
+}
+.product_info_tabs-data {
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 20px;
+  display: flex;
+  align-items: center;
+  letter-spacing: 0.0125em;
+  color: #090e22;
+}
+
+/* ------------------------------- Product Info Tabs CSS Ends --------------------------- */
+
+@media (max-width: 991px) and (min-width: 749px) {
+  .product-gallery-block li.product_gallery_img {
+    max-width: calc(46% - var(--grid-desktop-horizontal-spacing) / 2) !important;
+  }
+}
+@media (max-width: 749px) {
   .product-gallery-block li.product_gallery_img:first-child .product-media-container {
-    max-width: calc(100% - var(--grid-desktop-horizontal-spacing) / 2)!important;
-}
+    max-width: calc(100% - var(--grid-desktop-horizontal-spacing) / 2) !important;
+  }
 }
 
 /* /////////////////////////////////////////////////////////////// Product Page CSS Ends ///////////////////////////////////////////////////////////////////*/

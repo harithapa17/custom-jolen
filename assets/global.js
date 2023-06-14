@@ -1202,3 +1202,14 @@ $(document).ready(function () {
 });
 
 customElements.define('product-recommendations', ProductRecommendations);
+$('#tab-wrapper li:first').addClass('active_tab');
+$('#tab-body > div').hide();
+$('#tab-body > div:first').show();
+$('#tab-wrapper a').click(function () {
+  $('#tab-wrapper li').removeClass('active_tab');
+  $(this).parent().addClass('active_tab');
+  var activeTab = $(this).attr('href');
+  $('#tab-body > div:visible').hide();
+  $(activeTab).show();
+  return false;
+});

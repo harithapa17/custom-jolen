@@ -57,7 +57,7 @@
 
   
 
-  
+  {% render 'breadcrumb'  %}
   <div class="product_info_block product product--{{ section.settings.media_size }} product--{{ section.settings.media_position }} product--{{ section.settings.gallery_layout }} product--mobile-{{ section.settings.mobile_thumbnails }} grid grid--1-col {% if product.media.size > 0 %}grid--2-col-tablet{% else %}product--no-media{% endif %}">
     <div class="grid__item product__media-wrapper{% if section.settings.media_position == 'right' %} medium-hide large-up-hide{% endif %}">
       {% render 'product-media-gallery', variant_images: variant_images %}
@@ -395,7 +395,80 @@
           {{ 'products.product.view_full_details' | t }}
           {% render 'icon-arrow' %}
         </a>
-      </product-info>
+
+
+        
+
+      
+        <div id="tab-outer" class="product_tabs_flex">
+          {% for block in section.blocks %}
+            {% if block.settings.info_heading %}
+              <div id="tab-wrapper" class="tabs_title_prd">
+
+              <li class="product_info_tabs">
+                <a href="#tab1">
+                {{ block.settings.info_heading }}
+                </a>
+              </li>
+            {% endif %}
+          
+            {% if block.settings.info_heading1 %}
+              <li class="product_info_tabs">
+                <a href="#tab2">
+                {{ block.settings.info_heading1 }}
+              </a>
+            </li>
+            {% endif %}
+            
+            {% if block.settings.info_heading2 %}
+                <li class="product_info_tabs">
+                  <a href="#tab3">
+                {{ block.settings.info_heading2 }}
+              </a>
+            </li>
+            {% endif %}
+            
+            {% if block.settings.info_heading3 %}
+              <li class="product_info_tabs">
+                <a href="#tab4">
+                {{ block.settings.info_heading3 }}
+              </a>
+            </li>
+            </div>
+            {% endif %}
+        
+        
+              {% if block.settings.product_info_tabs %} 
+              <div class="prd_row_data"  id="tab-body">
+                <div id="tab1" class="product_info_tabs-data">  
+                  {{ product.description }}
+                </div>
+              {% endif %}
+        
+              {% if block.settings.product_info_tabs1 %}
+                <div id="tab2" class="product_info_tabs-data">
+                  {{ block.settings.product_info_tabs1 }}
+                </div>
+              {% endif %}             
+        
+              {% if block.settings.product_info_tabs2 %}
+                <div id="tab3" class="product_info_tabs-data">
+                  {{ block.settings.product_info_tabs2 }}
+                </div>
+              {% endif %}
+        
+              {% if block.settings.product_info_tabs3 %}
+                <div id="tab4" class="product_info_tabs-data">
+                  {{ block.settings.product_info_tabs3 }}
+                </div>
+              </div>
+              {% endif %}
+            
+          {% endfor %}
+        </div>
+        
+
+        </product-info>
     </div>
     {%- if section.settings.media_position == 'right' -%}
       {% comment %} Duplicate gallery to display after product content on tablet/desktop breakpoint {% endcomment %}
@@ -536,8 +609,67 @@
       "type": "@app"
     },
     {
+      "type": "text1",
+      "name": "Product Info Block",
+      "settings": [
+        {
+          "type": "text",
+          "id": "info_heading",
+          "default": "Description",
+          "label": "Product Info Tab 1"
+         
+        },
+        {
+          "type": "inline_richtext",
+          "id": "product_info_tabs",
+          "default": "Description",
+          "label": "Product Tab Data 1"
+        },
+        {
+          "type": "text",
+          "id": "info_heading1",
+          "default": "Description",
+          "label": "Product Info Tab 2"
+         
+        },
+        {
+          "type": "inline_richtext",
+          "id": "product_info_tabs1",
+          "default": "How To Wear",
+          "label": "Product Tab Data 2"
+        },
+        {
+          "type": "text",
+          "id": "info_heading2",
+          "default": "Description",
+          "label": "Product Info Tab 3"
+         
+        },
+        {
+          "type": "inline_richtext",
+          "id": "product_info_tabs2",
+          "default": "Wash & Care",
+          "label": "Product Tab Data 3"
+        },
+        {
+          "type": "text",
+          "id": "info_heading3",
+          "default": "Description",
+          "label": "Product Info Tab 4"
+         
+        },
+        { 
+          "type": "inline_richtext",
+          "id": "product_info_tabs3",
+          "default": "Composition",
+          "label": "Product Tab Data 4"
+        }
+      ]
+    },
+    {
       "type": "text",
       "name": "t:sections.main-product.blocks.text.name",
+
       "settings": [
         {
           "type": "inline_richtext",
