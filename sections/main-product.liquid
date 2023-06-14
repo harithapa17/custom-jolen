@@ -403,10 +403,9 @@
 
       
         <div id="tab-outer" class="product_tabs_flex">
+          <div id="tab-wrapper" class="tabs_title_prd">
           {% for block in section.blocks %}
             {% if block.settings.info_heading %}
-              <div id="tab-wrapper" class="tabs_title_prd">
-
               <li class="product_info_tabs">
                 <a href="#tab1">
                 {{ block.settings.info_heading }}
@@ -420,16 +419,13 @@
                 {{ block.settings.info_heading1 }}
               </a>
             </li>
-          </div>
             {% endif %}
-            
-     
-            
-           
-        
-        
+          {%endfor%}
+          </div>
+          <div class="prd_row_data"  id="tab-body">
+          {%for block in section.blocks%}
               {% if block.settings.product_info_tabs %} 
-              <div class="prd_row_data"  id="tab-body">
+              
                 <div id="tab1" class="product_info_tabs-data">  
                   {{ product.description }}
                 </div>
@@ -439,14 +435,9 @@
                 <div id="tab2" class="product_info_tabs-data">
                   {{ block.settings.product_info_tabs1 }}
                 </div>
-              </div>
               {% endif %}             
-        
-             
-        
-              
-            
           {% endfor %}
+        </div>
         </div>
       
     

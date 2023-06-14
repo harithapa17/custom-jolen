@@ -1839,6 +1839,9 @@ span.arrow_icon {
   color: #1d1f20;
   margin-top: 0;
   margin-bottom: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .prd-ben-blck p {
   font-weight: 300;
