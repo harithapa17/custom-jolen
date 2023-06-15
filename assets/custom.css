@@ -1728,13 +1728,15 @@ aside#main-collection-filters {
 .product_varient_size fieldset input[type='radio'].disabled + label {
   position: relative;
   text-decoration: none !important;
+  border-color: #5c5c5c !important;
+  color: #5c5c5c !important;
 }
 .product-form__input input[type='radio'].disabled + label:after {
   content: '';
   position: absolute;
   top: 14px;
   left: -6px;
-  background: #000000;
+  background: #5c5c5c;
   width: 40px;
   height: 1px;
   transform: rotateZ(135deg);
@@ -1749,6 +1751,14 @@ aside#main-collection-filters {
   cursor: pointer;
   display: none;
 }
+.product_varient_size fieldset label:hover {
+  color: #6c0210 !important;
+  border-color: #6c0210 !important;
+}
+.product_varient_size fieldset input[type='radio']:checked + label:hover {
+  border-color: #090e22 !important;
+}
+
 .product_varient_size fieldset:first-child .prodcuTs-ze_chart {
   display: flex;
 }
@@ -1991,14 +2001,18 @@ span.arrow_icon {
   display: flex;
 }
 .prd_input_search input {
-  font-weight: 400;
-  font-size: 14px;
-  letter-spacing: 0.02em;
-  color: #848690;
   margin-right: 16px;
   border: 0px;
   border-bottom: 1px solid #000;
   padding-bottom: 8px;
+  border-radius: 0px !important;
+  font-weight: 400;
+  font-size: 14px;
+  letter-spacing: 0.02em;
+  color: #090e22;
+  width: 100%;
+  outline: none !important;
+  box-shadow: none !important;
 }
 .prd_input_search button {
   height: 30px;
