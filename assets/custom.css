@@ -1631,24 +1631,27 @@ aside#main-collection-filters {
 /* /////////////////////////////////////////////////////////////// Product Page CSS Starts ///////////////////////////////////////////////////////////////////*/
 
 .product__info-wrapper .product__title h1 {
+  margin-bottom: 0px;
   font-style: italic;
   font-weight: 400;
-  font-size: 26px;
-  line-height: 32px;
+  font-size: 24px;
+  line-height: 28px;
   letter-spacing: -0.04em;
-  color: #090e22;
-  margin-bottom: 4px;
+  color: #1d1f20;
+}
+.product__info-wrapper .product__title {
+  margin-bottom: 8px !important;
+}
+.product__info-wrapper .single_product_price {
+  margin-top: 0;
 }
 .product__info-wrapper .price {
-  font-weight: 400;
-  font-size: 18px;
-  line-height: 24px;
-  display: flex;
-  align-items: center;
   letter-spacing: -0.04em;
-  color: #090e22;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 112%;
+  color: #1d1f20;
 }
-
 .product_info_block .product__info-wrapper {
   padding: 0 100px !important;
   max-width: 50% !important;
@@ -1670,8 +1673,16 @@ aside#main-collection-filters {
   color: #ffffff;
   border: 1px solid #a60017;
 }
-.single_prd_bag:after {
+.single_prd_bag:hover {
+  border: 1px solid #6c0210;
+  background: #6c0210;
+}
+.single_prd_bag:after,
+.single_prd_bag:before {
   box-shadow: none;
+}
+.single_prd_bag:hover:after {
+  box-shadow: none !important;
 }
 
 /* ------------------------------- Related Product CSS Starts --------------------------- */
