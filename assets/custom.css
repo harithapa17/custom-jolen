@@ -2207,7 +2207,7 @@ span.arrow_icon {
     justify-content: center !important;
     gap: 6px !important;
   }
-  .product_info_block .product__media-wrapper .thumbnail-list .thumbnail-list__item .thumbnail {
+  .product_info_block .product__media-wrapper .thumbnail-list .thumbnail-list__item .thumbnail[aria-current] {
     background: #090e22;
     border-color: #090e22 !important;
   }
