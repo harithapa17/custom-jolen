@@ -2213,6 +2213,9 @@ span.arrow_icon {
     background: #090e22;
     border-color: #090e22 !important;
   }
+  .product_info_block .product__media-wrapper .thumbnail-list .thumbnail-list__item .thumbnail img{
+    display:none;
+  }
   .related-products__heading.h2 {
     margin-bottom: 16px;
     text-align: left;
