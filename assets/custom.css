@@ -1268,7 +1268,40 @@ aside#main-collection-filters {
 }
 
 /* ------------------------------- Filter Block CSS Starts --------------------------- */
-
+.mobile-facets__footer .button--primary {
+  padding: 10px 28px;
+  background: #a60017;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 12px;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: #ffffff;
+  border: 1px solid #a60017;
+}
+.filter_collection_list .mobile-facets__footer {
+  padding: 32px;
+  padding-top: 0;
+  border: 0;
+}
+.mobile-facets__clear-wrapper {
+  justify-content: flex-start !important;
+}
+.filter_collection_list .mobile-facets__header {
+  display: none;
+}
+.mobile-facets__footer .button--primary:after,
+.mobile-facets__footer .button--primary:before {
+  box-shadow: none !important;
+}
+.mobile-facets__clear-wrapper a.mobile-facets__clear {
+  font-size: 14px;
+  line-height: 15px;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: #a60017;
+  text-decoration: none;
+}
 #sort-dropdown,
 #sort-dropdown h2 label {
   cursor: pointer;
@@ -1697,6 +1730,17 @@ aside#main-collection-filters {
   color: #ffffff;
   border: 1px solid #a60017;
 }
+.single_prd_bag[disabled='disabled'] {
+  position: relative;
+  background: #d3d3d3;
+  color: #a0a0a0;
+  border: 1px solid #d3d3d3;
+}
+.single_prd_bag[disabled='disabled']:hover {
+  background: #d3d3d3;
+  color: #a0a0a0;
+  border: 1px solid #d3d3d3;
+}
 .single_prd_bag:hover {
   border: 1px solid #6c0210;
   background: #6c0210;
@@ -1747,6 +1791,7 @@ aside#main-collection-filters {
   text-decoration: none !important;
   border-color: #5c5c5c !important;
   color: #5c5c5c !important;
+  pointer-events: none;
 }
 .product-form__input input[type='radio'].disabled + label:after {
   content: '';
@@ -1790,6 +1835,14 @@ aside#main-collection-filters {
   text-transform: capitalize;
   color: #090e22;
   margin-left: 6px;
+}
+.prd_mrp {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 13px;
+  color: #414547;
+  margin-left: 6px;
+  transform: translateY(-1px);
 }
 /* ------------------------------- Related Product CSS Starts --------------------------- */
 
@@ -2121,14 +2174,42 @@ span.arrow_icon {
     padding-top: 0px !important;
   }
 }
+@media (min-width: 768px) {
+  .ben-status {
+    gap: 25px;
+  }
+}
 @media (max-width: 767px) and (min-width: 750px) {
   .breadcrumb {
     top: 62px;
+  }
+  .ben-status {
+    gap: 25px;
   }
 }
 @media (max-width: 749px) {
   .product-gallery-block li.product_gallery_img:first-child .product-media-container {
     max-width: calc(100% - var(--grid-desktop-horizontal-spacing) / 2) !important;
+  }
+  .prd-ben-blck svg {
+    margin-right: 0px;
+  }
+  .prd_mrp {
+    display: none;
+  }
+  .product_info_block .product__media-wrapper .thumbnail-list .thumbnail-list__item {
+    width: 8px !important;
+    height: 8px;
+    border: 0.8px solid #a9a9a9;
+  }
+  .product_info_block .product__media-wrapper .thumbnail-list {
+    margin-top: -41px !important;
+    justify-content: center !important;
+    gap: 6px !important;
+  }
+  .product_info_block .product__media-wrapper .thumbnail-list .thumbnail-list__item .thumbnail {
+    background: #090e22;
+    border-color: #090e22 !important;
   }
   .related-products__heading.h2 {
     margin-bottom: 16px;
