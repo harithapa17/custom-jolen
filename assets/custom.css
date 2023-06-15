@@ -2206,6 +2206,8 @@ span.arrow_icon {
     margin-top: -41px !important;
     justify-content: center !important;
     gap: 6px !important;
+        position: relative;
+    z-index: 9999999;
   }
   .product_info_block .product__media-wrapper .thumbnail-list .thumbnail-list__item .thumbnail[aria-current] {
     background: #090e22;
