@@ -1780,7 +1780,7 @@ aside#main-collection-filters {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-bottom: 9px !important;
+  margin-bottom: 8px !important;
 }
 .product_varient_size fieldset label {
   margin-top: 0px !important;
@@ -2017,6 +2017,7 @@ span.arrow_icon {
 }
 .product_info_tabs.active_tab a {
   text-decoration: underline;
+  color: #1d1f20;
 }
 .product_info_tabs a {
   margin-right: 24px;
@@ -2026,8 +2027,7 @@ span.arrow_icon {
   letter-spacing: 0.04em;
   text-decoration-line: none;
   text-transform: uppercase;
-
-  color: #1d1f20;
+  color: #414547;
 }
 .prd_row_data {
   margin-top: 24px;
@@ -2383,15 +2383,18 @@ span.arrow_icon {
     width: 54px;
   }
   .product_varient_size fieldset:first-child {
-    padding-bottom: 38px;
+    padding-bottom: 24px;
     margin-bottom: 0 !important;
     border: 0px;
   }
   product-form.product-form {
     margin-top: 0px !important;
   }
-  .product_varient_size fieldset legend {
+  .size_and_chart {
     margin-bottom: 16px !important;
+  }
+  .product_varient_size fieldset .size_and_chart legend {
+    margin-bottom: 0px !important;
   }
   fieldset.variant-fieldset {
     margin-bottom: 44px !important;
