@@ -1,0 +1,55 @@
+<style>
+  .variant-option {
+    display: inline-block;
+    padding: 5px 10px;
+    border: 1px solid #ccc;
+    margin-right: 10px;
+    cursor: pointer;
+  }
+  .variant-option.selected {
+    background-color: #e0e0e0;
+  }
+  .variant-option.disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+</style>
+
+<div>
+  {% assign printedSizes = '' %}
+  {% for variant in product.variants %}
+    {% if product.variants.size > 1 %}
+      {% unless printedSizes contains variant.option2 %}
+        <div
+          class="
+            variant-option
+            {% comment %} {% if variant == product.selected_or_first_available_variant %} selected{% endif %} {% endcomment %}
+            {% if variant.available == false %} disabled{% endif %}
+          "
+        >
+          {{ variant.id }}
+
+          {% assign printedSizes = printedSizes | append: variant.option2 | append: ' ' %}
+        </div>
+        {% comment %} {% break %} {% endcomment %}
+      {% endunless %}
+    {% endif %}
+  {% endfor %}
+</div>
+{% comment %}
+  {% for product in variant %}
+    <div class="uusdf">{{ product.variant }}</div>
+  {% endfor %}
+{% endcomment %}
+
+{% comment %}
+  {% if product.variants.size > 1 %}
+    <div>
+      {% for variant in product.variants %}
+        {% if variant.option1 %}
+          {{ variant.option1 }}
+        {% endif %}
+      {% endfor %}
+    </div>
+  {% endif %}
+{% endcomment %}
