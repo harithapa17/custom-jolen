@@ -400,18 +400,20 @@
 
 
         
-
+  
       
         <div id="tab-outer" class="product_tabs_flex">
           <div id="tab-wrapper" class="tabs_title_prd">
-          {% for block in section.blocks %}
-            {% if block.settings.info_heading %}
-              <li class="product_info_tabs">
-                <a href="#tab1">
-                {{ block.settings.info_heading }}
-                </a>
-              </li>
+          
+            {% if product.description and product.description != "" and product.description != blank%}
+              
+                <li class="product_info_tabs">
+                  <a href="#tab1">Description</a>
+                  </li>
+             
             {% endif %}
+          {% for block in section.blocks %}
+           
           
             {% if block.settings.info_heading1 %}
               <li class="product_info_tabs">
@@ -423,14 +425,17 @@
           {%endfor%}
           </div>
           <div class="prd_row_data"  id="tab-body">
-          {%for block in section.blocks%}
-              {% if block.settings.product_info_tabs %} 
+            {% if product.description and product.description != "" %}
+            <div id="tab1" class="product_info_tabs-data">
               
-                <div id="tab1" class="product_info_tabs-data">  
-                  {{ product.description }}
-                </div>
-              {% endif %}
-        
+              <div>{{ product.description }}</div>
+            
+           
+              </div>
+              {%endif%}
+          {%for block in section.blocks%}
+             
+             
               {% if block.settings.product_info_tabs1 %}
                 <div id="tab2" class="product_info_tabs-data">
                   {{ block.settings.product_info_tabs1 }}
@@ -438,7 +443,8 @@
               {% endif %}             
           {% endfor %}
         </div>
-        </div>
+        </div>  
+      </div>
       
     
 </div>

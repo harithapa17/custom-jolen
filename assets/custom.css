@@ -2007,6 +2007,8 @@ span.arrow_icon {
 .product_tabs_flex {
   margin: 0px !important;
   margin-top: 64px !important;
+  position: relative;
+  padding-bottom: 120px;
 }
 .tabs_title_prd {
   display: flex;
@@ -2039,6 +2041,13 @@ span.arrow_icon {
   line-height: 20px;
   letter-spacing: 0.016em;
   color: #090e22;
+  display: none;
+}
+.product_info_tabs.active_tab + .product_info_tabs-data {
+  display: block;
+  position: absolute;
+  top: 77px;
+  width: 100%;
 }
 
 /* ------------------------------- Product Info Tabs CSS Ends --------------------------- */
@@ -2398,6 +2407,9 @@ span.arrow_icon {
   }
   fieldset.variant-fieldset {
     margin-bottom: 44px !important;
+  }
+  .product_tabs_flex {
+    padding-bottom: 0;
   }
 }
 
