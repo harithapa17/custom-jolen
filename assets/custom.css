@@ -1425,7 +1425,7 @@ aside#main-collection-filters {
     margin-top: 13px;
   }
   .collection ul#product-grid .grid__item {
-    width: calc(33% - 30px) !important;
+    width: calc(27% - 30px) !important;
   }
   .collection-list-single-bg {
     width: 500px !important;
@@ -1617,6 +1617,21 @@ aside#main-collection-filters {
   }
   .collection ul#product-grid .grid__item {
     width: calc(50% - 30px) !important;
+  }
+  .related-products.collection ul#product-grid .grid__item {
+    width: calc(90% - 30px) !important;
+    max-width: calc(80% - var(--grid-mobile-horizontal-spacing) / 2);
+  }
+  .related-products ul#product-grid {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: scroll;
+  }
+  .related-products.collection {
+    padding-right: 0px !important;
+  }
+  .related-products.collection ul#product-grid .grid__item:last-child {
+    margin-right: 16px;
   }
   .collection #product-grid .card__information h3 {
     margin-top: 4px;
@@ -2037,6 +2052,31 @@ span.arrow_icon {
   margin-top: 64px;
   margin-left: auto;
 }
+.error-check {
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 16px;
+  color: #ff1d0d;
+  margin-top: 8px;
+  display: none;
+}
+.estimated-time-check svg {
+  margin: 0px 8px;
+}
+
+.estimated-time-check,
+.coming-soon {
+  background: #f0f0f0;
+  padding: 12px;
+  font-weight: 300;
+  font-size: 14px;
+  color: #090e22;
+  line-height: 16px;
+  display: flex;
+  align-items: center;
+  margin-top: 24px;
+  display: none;
+}
 .ben-status {
   display: flex;
   align-items: center;
@@ -2194,6 +2234,9 @@ span.arrow_icon {
   .prd-ben-blck svg {
     margin-right: 0px;
   }
+  .estimated-time-check {
+    flex-wrap: wrap;
+  }
   .prd_mrp {
     display: none;
   }
@@ -2206,15 +2249,15 @@ span.arrow_icon {
     margin-top: -41px !important;
     justify-content: center !important;
     gap: 6px !important;
-        position: relative;
-    z-index: 9999999;
+    position: relative;
+    z-index: 99999;
   }
   .product_info_block .product__media-wrapper .thumbnail-list .thumbnail-list__item .thumbnail[aria-current] {
     background: #090e22;
     border-color: #090e22 !important;
   }
-  .product_info_block .product__media-wrapper .thumbnail-list .thumbnail-list__item .thumbnail img{
-    display:none;
+  .product_info_block .product__media-wrapper .thumbnail-list .thumbnail-list__item .thumbnail img {
+    display: none;
   }
   .related-products__heading.h2 {
     margin-bottom: 16px;
