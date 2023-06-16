@@ -53,33 +53,7 @@
       {% endif %}
     >
     <label for="{{ section.id }}-{{ option.position }}-{{ forloop.index0 }}">
-      {% if option.name == 'Color' %}
-        {% for variant in product.variants %}
-          {% for image in product.images %}
-            {% if nextVariant.image %}
-              <img src="{{ nextVariant.image | image_url: width:70 }}" alt="{{ image.alt }}">
-              {% break %}
-            {% else %}
-              {% if image.id == variant.featured_image.id %}
-<<<<<<< HEAD
-                <img src="{{ image.src | image_url: width:70 }}" alt="{{ image.alt }}">
-=======
-                <img class="prd-var-img" src="{{ image.src | image_url: width:70 }}" alt="{{ image.alt }}">
->>>>>>> a685a757734dc21d720f13c8b37d58dfdfac2326
-              {% endif %}
-            {% endif %}
-          {% endfor %}
-          {% break %}
-        {% endfor %}
-        {% assign counter = counter | plus: 1 %}
-        {% assign nextVariant = product.variants[counter] %}
-      {% else %}
-        {{ value }}
-      {% endif %}
-<<<<<<< HEAD
-
-=======
->>>>>>> a685a757734dc21d720f13c8b37d58dfdfac2326
+      {{ value -}}
       <span class="visually-hidden">{{ 'products.product.variant_sold_out_or_unavailable' | t }}</span>
     </label>
   {%- elsif block.settings.picker_type == 'dropdown' -%}
