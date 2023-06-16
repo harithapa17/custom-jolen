@@ -171,9 +171,9 @@
       "label": "Media gallery"
     },
     "facets": {
-      "apply": "Apply",
+      "apply": "See Results",
       "clear": "Clear",
-      "clear_all": "Remove all",
+      "clear_all": "Clear",
       "from": "From",
       "filter_and_sort": "Filters",
       "filter_by_label": "Filter:",

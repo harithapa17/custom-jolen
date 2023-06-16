@@ -1182,6 +1182,12 @@ class ProductRecommendations extends HTMLElement {
 }
 
 $(document).ready(function () {
+  var prdVarImages = $('.prd-var-img');
+
+  prdVarImages.each(function () {
+    $(this).parent().parent('fieldset').addClass('variant-fieldset');
+  });
+
   $('#sort-dropdown').click(function () {
     $('.sort-by-items').slideToggle();
     $('body').addClass('showAnimate');

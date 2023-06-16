@@ -1,12 +1,9 @@
 {% comment %}
   Renders product variant options
-
   Accepts:
   - product: {Object} product object.
   - option: {Object} current product_option object.
   - block: {Object} block object.
-
-
   Usage:
   {% render 'product-variant-options',
     product: product,
@@ -19,14 +16,11 @@
   assign variants_option1_arr = product.variants | map: 'option1'
   assign variants_option2_arr = product.variants | map: 'option2'
   assign variants_option3_arr = product.variants | map: 'option3'
-
   assign product_form_id = 'product-form-' | append: section.id
 -%}
-
 {%- for value in option.values -%}
   {%- liquid
     assign option_disabled = true
-
     for option1_name in variants_option1_arr
       case option.position
         when 1
@@ -44,7 +38,6 @@
       endcase
     endfor
   -%}
-
   {%- if block.settings.picker_type == 'button' -%}
     <input
       type="radio"
@@ -68,7 +61,11 @@
               {% break %}
             {% else %}
               {% if image.id == variant.featured_image.id %}
+<<<<<<< HEAD
                 <img src="{{ image.src | image_url: width:70 }}" alt="{{ image.alt }}">
+=======
+                <img class="prd-var-img" src="{{ image.src | image_url: width:70 }}" alt="{{ image.alt }}">
+>>>>>>> a685a757734dc21d720f13c8b37d58dfdfac2326
               {% endif %}
             {% endif %}
           {% endfor %}
@@ -79,7 +76,10 @@
       {% else %}
         {{ value }}
       {% endif %}
+<<<<<<< HEAD
 
+=======
+>>>>>>> a685a757734dc21d720f13c8b37d58dfdfac2326
       <span class="visually-hidden">{{ 'products.product.variant_sold_out_or_unavailable' | t }}</span>
     </label>
   {%- elsif block.settings.picker_type == 'dropdown' -%}
