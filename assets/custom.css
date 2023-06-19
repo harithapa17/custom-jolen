@@ -1892,6 +1892,9 @@ fieldset.variant-fieldset {
 .product_varient_size fieldset legend {
   margin-bottom: 8px !important;
 }
+h1.collection-hero__title {
+  margin-bottom: 0px;
+}
 /* ------------------------------- Related Product CSS Starts --------------------------- */
 
 .related-products ul#product-grid {
@@ -1927,6 +1930,9 @@ fieldset.variant-fieldset {
 .related-products.collection {
   padding-top: 80px !important;
   padding-bottom: 81px !important;
+}
+span.badge.price__badge-sold-out.color-inverse {
+  margin-left: 11px;
 }
 /* ------------------------------- Related Product CSS Ends --------------------------- */
 
