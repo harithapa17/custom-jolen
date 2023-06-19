@@ -1194,10 +1194,8 @@ $(document).ready(function () {
   });
 
   $('.sort-by-items ul li').click(function () {
-    // Remove active class from all li elements
     $('.sort-by-items ul li').removeClass('sort-by-selected');
 
-    // Add active class to the clicked li element
     $(this).addClass('sort-by-selected');
   });
 
