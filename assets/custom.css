@@ -1292,6 +1292,10 @@ aside#main-collection-filters {
   position: absolute;
   left: 0;
   z-index: 9;
+  top: 1px;
+  border: 1px solid #cecfd3;
+}
+.mobile-facets__checkbox:checked + #coloredDiv {
   border: 1px solid #000;
 }
 .mobile-facets__summary.filter-type-style {
@@ -1313,9 +1317,9 @@ aside#main-collection-filters {
 form#FacetFiltersFormMobile .facets__price {
   margin-bottom: 15px;
 }
-.mobile-facets__checkbox:checked + .mobile-facets__highlight {
+/* .mobile-facets__checkbox:checked + .mobile-facets__highlight {
   background-color: transparent !important;
-}
+} */
 /* .overflow-hidden-mobile {
   overflow: hidden;
 } */
