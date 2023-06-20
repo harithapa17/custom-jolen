@@ -1268,7 +1268,10 @@ aside#main-collection-filters {
 }
 
 /* ------------------------------- Filter Block CSS Starts --------------------------- */
-
+.disclosure-has-popup[open] > summary::before {
+  background-color: transparent;
+  opacity: 0.4;
+}
 .js .mobile-facets__submenu {
   position: relative !important;
   top: 0;
@@ -1557,6 +1560,10 @@ li.mobile-facets__item.list-menu__item label span {
     font-size: 16px;
     line-height: 18px;
   }
+  .disclosure-has-popup[open] > summary::before {
+    background-color: #000;
+    opacity: 0.4;
+  }
   #FacetFiltersFormMobile .mobile-facets__list li {
     width: 100%;
   }
@@ -1567,6 +1574,9 @@ li.mobile-facets__item.list-menu__item label span {
   }
   #FacetFiltersFormMobile .mobile-facets__clear-wrapper {
     order: 2;
+  }
+  aside#main-collection-filters .mobile-facets__close {
+    display: none;
   }
   #FacetFiltersFormMobile .mobile-facets__footer > * {
     width: 100%;
@@ -1651,8 +1661,11 @@ li.mobile-facets__item.list-menu__item label span {
   .filter_collection_list .product-block-wrapper {
     padding-bottom: 0px !important;
   }
+  .overflow-hidden-tablet aside#main-collection-filters {
+    z-index: 9;
+  }
   aside#main-collection-filters {
-    z-index: 999999999999;
+    z-index: 999999;
     position: relative;
   }
   .sort-by-items ul li {

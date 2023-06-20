@@ -382,8 +382,8 @@ class MenuDrawer extends HTMLElement {
     // }
 
     if (detailsElement === this.mainDetailsToggle) {
-      // if (isOpen) event.preventDefault();
-      // isOpen ? this.closeMenuDrawer(event, summaryElement) : this.openMenuDrawer(summaryElement);
+      if (isOpen) event.preventDefault();
+      isOpen ? this.closeMenuDrawer(event, summaryElement) : this.openMenuDrawer(summaryElement);
 
       if (window.matchMedia('(max-width: 990px)')) {
         document.documentElement.style.setProperty('--viewport-height', `${window.innerHeight}px`);
