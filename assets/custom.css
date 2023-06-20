@@ -2205,6 +2205,9 @@ span.arrow_icon {
   position: relative;
   padding-bottom: 120px;
 }
+.empty-desc_tabs {
+  display: none;
+}
 .tabs_title_prd {
   display: flex;
   align-items: center;
