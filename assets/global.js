@@ -1182,6 +1182,21 @@ class ProductRecommendations extends HTMLElement {
 }
 
 $(document).ready(function () {
+  // Get all input elements with class mobile-facets__checkbox
+  var inputs = $('.mobile-facets__checkbox');
+
+  // Loop through each input element
+  inputs.each(function () {
+    // Get the value of the current input
+    var inputValue = $(this).val();
+
+    // Convert input value to lowercase
+    var colorVal = inputValue.toLowerCase();
+
+    // Set the background color of the next div to colorVal
+    $(this).next().css('background-color', colorVal);
+  });
+
   var prdVarImages = $('.prd-var-img');
 
   prdVarImages.each(function () {

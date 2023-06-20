@@ -1284,6 +1284,16 @@ aside#main-collection-filters {
   display: flex;
   flex-direction: column;
 }
+#coloredDiv {
+  width: 12px;
+  height: 12px;
+  opacity: 1;
+  visibility: visible;
+  position: absolute;
+  left: 0;
+  z-index: 9;
+  border: 1px solid #000;
+}
 .mobile-facets__summary.filter-type-style {
   font-style: italic;
   font-weight: 400;
@@ -1300,14 +1310,25 @@ aside#main-collection-filters {
   margin-bottom: 16px;
   position: relative;
 }
+form#FacetFiltersFormMobile .facets__price {
+  margin-bottom: 15px;
+}
 .mobile-facets__checkbox:checked + .mobile-facets__highlight {
   background-color: transparent !important;
 }
+/* .overflow-hidden-mobile {
+  overflow: hidden;
+} */
 .mobile-facets__label > svg {
   width: 12px;
   height: 12px;
   margin-right: 10px;
   border: 1px solid #000;
+}
+summary.mobile-facets__open-wrapper.focus-offset {
+  box-shadow: none !important;
+  outline: none !important;
+  background: transparent !important;
 }
 .mobile-facets__header {
   display: none !important;
