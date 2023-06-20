@@ -376,27 +376,27 @@ class MenuDrawer extends HTMLElement {
     const isOpen = detailsElement.hasAttribute('open');
     const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
 
-    function addTrapFocus() {
-      trapFocus(summaryElement.nextElementSibling, detailsElement.querySelector('button'));
-      summaryElement.nextElementSibling.removeEventListener('transitionend', addTrapFocus);
-    }
+    // function addTrapFocus() {
+    //   trapFocus(summaryElement.nextElementSibling, detailsElement.querySelector('button'));
+    //   summaryElement.nextElementSibling.removeEventListener('transitionend', addTrapFocus);
+    // }
 
     if (detailsElement === this.mainDetailsToggle) {
-      if (isOpen) event.preventDefault();
-      isOpen ? this.closeMenuDrawer(event, summaryElement) : this.openMenuDrawer(summaryElement);
+      // if (isOpen) event.preventDefault();
+      // isOpen ? this.closeMenuDrawer(event, summaryElement) : this.openMenuDrawer(summaryElement);
 
       if (window.matchMedia('(max-width: 990px)')) {
         document.documentElement.style.setProperty('--viewport-height', `${window.innerHeight}px`);
       }
     } else {
-      setTimeout(() => {
-        detailsElement.classList.add('menu-opening');
-        summaryElement.setAttribute('aria-expanded', true);
-        parentMenuElement && parentMenuElement.classList.add('submenu-open');
-        !reducedMotion || reducedMotion.matches
-          ? addTrapFocus()
-          : summaryElement.nextElementSibling.addEventListener('transitionend', addTrapFocus);
-      }, 100);
+      // setTimeout(() => {
+      //   detailsElement.classList.add('menu-opening');
+      //   summaryElement.setAttribute('aria-expanded', true);
+      //   parentMenuElement && parentMenuElement.classList.add('submenu-open');
+      //   !reducedMotion || reducedMotion.matches
+      //     ? addTrapFocus()
+      //     : summaryElement.nextElementSibling.addEventListener('transitionend', addTrapFocus);
+      // }, 100);
     }
   }
 
@@ -1197,6 +1197,7 @@ $(document).ready(function () {
     $('.sort-by-items ul li').removeClass('sort-by-selected');
 
     $(this).addClass('sort-by-selected');
+    $(this).closest('.sort-by-items').slideToggle();
   });
 
   $('.close_filter').click(function () {
@@ -1217,3 +1218,13 @@ $('#tab-wrapper a').click(function () {
   $(activeTab).show();
   return false;
 });
+
+var filters = document.querySelectorAll('.js-filter');
+
+function toggleFilterStyle() {
+  this.classList.toggle('filter-icon-style');
+}
+
+for (var i = 0; i < filters.length; i++) {
+  filters[i].addEventListener('click', toggleFilterStyle);
+}
