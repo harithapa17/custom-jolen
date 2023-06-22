@@ -1252,15 +1252,15 @@ rangeInput.forEach((input) => {
     let maxRange = parseInt(rangeInput[1].value);
     if (maxRange - minRange < rangeMin) {
       if (e.target.className === 'mini') {
-        rangeInput[0].value = maxRange - rangeMin;
+        rangeInput[0].value = 'Rs. ' + maxRange - rangeMin;
       } else {
-        rangeInput[1].value = minRange + rangeMin;
+        rangeInput[1].value = 'Rs. ' + minRange + rangeMin;
       }
     } else {
-      rangePrice[0].value = minRange;
-      rangePrice[1].value = maxRange;
-      range.style.left = (minRange / rangeInput[0].max) * 100 + '%';
-      range.style.right = 100 - (maxRange / rangeInput[1].max) * 100 + '%';
+      rangePrice[0].value = 'Rs. ' + minRange;
+      rangePrice[1].value = 'Rs. ' + maxRange;
+      range.style.left = 'Rs. ' + (minRange / rangeInput[0].max) * 100 + '%';
+      range.style.right = 'Rs. ' + 100 - (maxRange / rangeInput[1].max) * 100 + '%';
     }
   });
 });
@@ -1271,11 +1271,11 @@ rangePrice.forEach((input) => {
     let maxPrice = rangePrice[1].value;
     if (maxPrice - minPrice >= rangeMin && maxPrice <= rangeInput[1].max) {
       if (e.target.className === 'mini') {
-        rangeInput[0].value = minPrice;
-        range.style.left = (minPrice / rangeInput[0].max) * 100 + '%';
+        rangeInput[0].value = 'Rs. ' + minPrice;
+        range.style.left = 'Rs. ' + (minPrice / rangeInput[0].max) * 100 + '%';
       } else {
-        rangeInput[1].value = maxPrice;
-        range.style.right = 100 - (maxPrice / rangeInput[1].max) * 100 + '%';
+        rangeInput[1].value = 'Rs. ' + maxPrice;
+        range.style.right = 'Rs. ' + 100 - (maxPrice / rangeInput[1].max) * 100 + '%';
       }
     }
   });
