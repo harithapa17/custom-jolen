@@ -334,7 +334,7 @@ nav.header__inline-menu ul li a {
 .collection .product-grid .grid__item {
   width: 30% !important;
 }
-.collection product-recommendations.collection .product-grid .grid__item,
+product-recommendations.collection .product-grid .grid__item,
 .collection slider-component .product-grid .grid__item {
   width: 23% !important;
 }
