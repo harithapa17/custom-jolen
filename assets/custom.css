@@ -1556,6 +1556,10 @@ li.mobile-facets__item.list-menu__item label span {
     bottom: 0px;
     left: 15px;
   }
+  product-recommendations.collection .product-grid .grid__item,
+  .collection slider-component .product-grid .grid__item {
+    width: 48% !important;
+  }
 }
 @media (max-width: 991px) and (min-width: 768px) {
   .product-grid {
@@ -1821,11 +1825,6 @@ li.mobile-facets__item.list-menu__item label span {
   }
   .collection .product-grid .grid__item {
     width: calc(47% - 30px) !important;
-  }
-  product-recommendations.collection .product-grid .grid__item,
-  .collection slider-component .product-grid .grid__item {
-    width: calc(90% - 30px) !important;
-    max-width: calc(80% - var(--grid-mobile-horizontal-spacing) / 2);
   }
 
   .product-grid .card__information h3 {
@@ -2500,8 +2499,13 @@ span.arrow_icon {
   product-recommendations .product-grid .grid__item:last-child {
     margin-right: 16px;
   }
-  product-recommendations .product-grid,
-  slider-component .product-grid {
+  product-recommendations.collection .product-grid .grid__item,
+  .collection slider-component .product-grid .grid__item {
+    width: calc(90% - 30px) !important;
+    max-width: calc(80% - var(--grid-mobile-horizontal-spacing) / 2);
+  }
+  product-recommendations.collection .product-grid,
+  .collection slider-component .product-grid {
     display: flex;
     flex-wrap: nowrap;
     overflow-x: scroll;
