@@ -398,10 +398,9 @@
           {% render 'icon-arrow' %}
         </a>
   
-
-        <div id="tab-outer" class="product_tabs_flex {% if product.description == "" or product.description == nil and product.metafields.custom.how_to_wear == "" or product.metafields.custom.how_to_wear == nil %}empty-desc_tabs{% endif %}">
-
-        {% comment %} <div id="tab-outer" class="product_tabs_flex"> {% endcomment %}
+         
+        {% if product.description == ""  or product.metafields.custom.how_to_wear == "" %}
+        <div id="tab-outer" class="product_tabs_flex">
           <div id="tab-wrapper" class="tabs_title_prd">
             {% if product.description  and product.description != "" and product.description != blank %}
                 <li class="product_info_tabs">
@@ -428,9 +427,10 @@
             {%endif%}
           </div>
         </div>  
+        {%endif%}
       </div>
 
-           
+         
     
 </div>
         </product-info>
