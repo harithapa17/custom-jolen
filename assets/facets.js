@@ -234,10 +234,10 @@ class PriceRange extends HTMLElement {
     this.setMinAndMaxValues();
   }
 
-  onRangeChange(event) {
-    this.adjustToValidValues(event.currentTarget);
-    this.setMinAndMaxValues();
-  }
+  // onRangeChange(event) {
+  //   this.adjustToValidValues(event.currentTarget);
+  //   this.setMinAndMaxValues();
+  // }
 
   setMinAndMaxValues() {
     const inputs = this.querySelectorAll('input');

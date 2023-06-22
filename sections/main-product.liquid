@@ -399,41 +399,38 @@
         </a>
   
          
-      {% if product.description or product.metafields.custom.how_to_wear %}
+        {% if product.description == ""  or product.metafields.custom.how_to_wear == "" %}
         <div id="tab-outer" class="product_tabs_flex">
           <div id="tab-wrapper" class="tabs_title_prd">
-          
             {% if product.description  and product.description != "" and product.description != blank %}
-              
                 <li class="product_info_tabs">
                   <a href="#tab1">Description</a>
-                  </li>
-             
+                </li>
             {% endif %}
             {% if product.metafields.custom.how_to_wear and product.metafields.custom.how_to_wear != '' %}
               <li class="product_info_tabs">
                 <a href="#tab2">  How To Wear</a>
-            </li>
-          {%endif%}
+              </li>
+            {%endif%}
           </div>
           <div class="prd_row_data"  id="tab-body">
             {% if product.description and product.description != "" %}
-            <div id="tab1" class="product_info_tabs-data">
-              
-              <div>{{ product.description }}</div>
-            
-           
+              <div id="tab1" class="product_info_tabs-data">
+                
+                <div>{{ product.description }}</div>
               </div>
-              {%endif%}
-              {% if product.metafields.custom.how_to_wear and product.metafields.custom.how_to_wear != '' %}
-                <div id="tab2" class="product_info_tabs-data">
-                  {{ product.metafields.custom.how_to_wear }}
-                </div>
             {%endif%}
-        </div>
+            {% if product.metafields.custom.how_to_wear and product.metafields.custom.how_to_wear != '' %}
+              <div id="tab2" class="product_info_tabs-data">
+                {{ product.metafields.custom.how_to_wear }}
+              </div>
+            {%endif%}
+          </div>
         </div>  
+        {%endif%}
       </div>
-          {%endif%}
+
+         
     
 </div>
         </product-info>

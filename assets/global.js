@@ -423,6 +423,7 @@ class MenuDrawer extends HTMLElement {
     document.body.classList.remove(`overflow-hidden-${this.dataset.breakpoint}`);
     removeTrapFocus(elementToFocus);
     this.closeAnimation(this.mainDetailsToggle);
+    document.querySelector('.filter-type-style').classList.remove('filter-icon-style');
 
     if (event instanceof KeyboardEvent) elementToFocus?.setAttribute('aria-expanded', false);
   }
@@ -437,6 +438,7 @@ class MenuDrawer extends HTMLElement {
   onCloseButtonClick(event) {
     const detailsElement = event.currentTarget.closest('details');
     this.closeSubmenu(detailsElement);
+    document.querySelector('.filter-type-style').classList.remove('filter-icon-style');
   }
 
   closeSubmenu(detailsElement) {
@@ -1182,6 +1184,16 @@ class ProductRecommendations extends HTMLElement {
 }
 
 $(document).ready(function () {
+  var inputs = $('.mobile-facets__checkbox');
+
+  inputs.each(function () {
+    var inputValue = $(this).val();
+
+    var colorVal = inputValue.toLowerCase();
+
+    $(this).next().css('background-color', colorVal);
+  });
+
   var prdVarImages = $('.prd-var-img');
 
   prdVarImages.each(function () {
@@ -1219,7 +1231,7 @@ $('#tab-wrapper a').click(function () {
   return false;
 });
 
-var filters = document.querySelectorAll('.js-filter');
+var filters = document.querySelectorAll('.filter-type-style');
 
 function toggleFilterStyle() {
   this.classList.toggle('filter-icon-style');
@@ -1228,3 +1240,65 @@ function toggleFilterStyle() {
 for (var i = 0; i < filters.length; i++) {
   filters[i].addEventListener('click', toggleFilterStyle);
 }
+
+let rangeMin = 100;
+const range = document.querySelector('.range-selected');
+const rangeInput = document.querySelectorAll('.range-input input');
+const rangePrice = document.querySelectorAll('.range-price input');
+
+rangeInput.forEach((input) => {
+  input.addEventListener('input', (e) => {
+    let minRange = parseInt(rangeInput[0].value);
+    let maxRange = parseInt(rangeInput[1].value);
+    if (maxRange - minRange < rangeMin) {
+      if (e.target.className === 'mini') {
+        rangeInput[0].value = maxRange - rangeMin;
+      } else {
+        rangeInput[1].value = minRange + rangeMin;
+      }
+    } else {
+      rangePrice[0].value = minRange;
+      rangePrice[1].value = maxRange;
+      range.style.left = (minRange / rangeInput[0].max) * 100 + '%';
+      range.style.right = 100 - (maxRange / rangeInput[1].max) * 100 + '%';
+    }
+  });
+});
+
+rangePrice.forEach((input) => {
+  input.addEventListener('input', (e) => {
+    let minPrice = rangePrice[0].value;
+    let maxPrice = rangePrice[1].value;
+    if (maxPrice - minPrice >= rangeMin && maxPrice <= rangeInput[1].max) {
+      if (e.target.className === 'mini') {
+        rangeInput[0].value = minPrice;
+        range.style.left = (minPrice / rangeInput[0].max) * 100 + '%';
+      } else {
+        rangeInput[1].value = maxPrice;
+        range.style.right = 100 - (maxPrice / rangeInput[1].max) * 100 + '%';
+      }
+    }
+  });
+});
+
+var filters = document.querySelectorAll('.filter-type-style');
+var body = document.body;
+
+function toggleFilterStyle() {
+  this.classList.toggle('filter-icon-style');
+}
+
+function handleBodyClassChange() {
+  if (!body.classList.contains('overflow-hidden')) {
+    filters.forEach(function (filter) {
+      filter.classList.remove('filter-icon-style');
+    });
+  }
+}
+
+for (var i = 0; i < filters.length; i++) {
+  filters[i].addEventListener('click', toggleFilterStyle);
+}
+
+var observer = new MutationObserver(handleBodyClassChange);
+observer.observe(body, { attributes: true, attributeFilter: ['class'] });
