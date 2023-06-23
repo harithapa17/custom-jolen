@@ -1193,6 +1193,7 @@ class ProductRecommendations extends HTMLElement {
     new IntersectionObserver(handleIntersection.bind(this), { rootMargin: '0px 0px 400px 0px' }).observe(this);
   }
 }
+var newValPrice = document.querySelector('.max.field__input').value;
 
 $(document).ready(function () {
   var prdVarImages = $('.prd-var-img');
@@ -1221,9 +1222,9 @@ $(document).ready(function () {
   $('.mobile-facets__clear').click(function () {
     $('.mobile-facets__checkbox').prop('checked', false);
     $('input.field__input.min').val(0);
-    $('input.field__input.max').val(70555);
+    $('input.field__input.max').val(newValPrice);
     $('#minPriceinput').val('Rs. ' + 0);
-    $('#maxPriceinput').val('Rs. ' + 70555);
+    $('#maxPriceinput').val('Rs. ' + newValPrice);
     $('.range-selected').css({
       left: '0',
       right: '0',
