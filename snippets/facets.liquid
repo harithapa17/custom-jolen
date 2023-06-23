@@ -894,6 +894,7 @@
                             | strip_html
                             | escape
                           -%}
+
                           {% comment %}
                             <p class="mobile-facets__info">
                               {{ 'products.facets.max_price' | t: price: max_price_amount }}
@@ -968,6 +969,7 @@
                                 <input
                                   type="text"
                                   name="min"
+                                  id="minPriceinput"
                                   {%- if filter.min_value.value -%}
                                     {%- if uses_comma_decimals -%}
                                       value="Rs. {{ filter.min_value.value | money_without_currency | replace: ',', '' | split: '.' | first}}"
@@ -983,6 +985,7 @@
                                 <input
                                   type="text"
                                   name="max"
+                                  id="maxPriceinput"
                                   {%- if filter.max_value.value -%}
                                     {%- if uses_comma_decimals -%}
                                       value="Rs. {{ filter.max_value.value | money_without_currency  | replace: ',', '' | split: '.' | first }}"
