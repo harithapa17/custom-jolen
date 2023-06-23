@@ -684,6 +684,7 @@
                         id="Details-Mobile-{{ forloop.index }}-{{ section.id }}"
                         class="mobile-facets__details js-filter"
                         data-index="mobile-{{ forloop.index }}"
+                        open
                       >
                         <summary class="mobile-facets__summary filter-type-style focus-inset">
                           <div>
@@ -759,7 +760,11 @@
                                     {% endif %}
                                   >
 
-                                  <span class="mobile-facets__highlight coloredDiv" id="coloredDiv"></span>
+                                  <span
+                                    class="mobile-facets__highlight coloredDiv"
+                                    id="coloredDiv"
+                                    style="background-color: {{value.value}}"
+                                  ></span>
 
                                   <svg
                                     width="1.6rem"
@@ -826,6 +831,7 @@
                       <details
                         id="Details-Mobile-{{ forloop.index }}-{{ section.id }}"
                         class="mobile-facets__details js-filter"
+                        open
                         data-index="mobile-{{ forloop.index }}"
                       >
                         <summary class="mobile-facets__summary filter-type-style focus-inset">
@@ -882,7 +888,12 @@
                             </button>
                           {% endcomment %}
 
-                          {%- assign max_price_amount = filter.range_max | money | strip_html | escape -%}
+                          {%- assign max_price_amount = filter.range_max
+                            | money
+                            | replace: 'Rs.', ''
+                            | strip_html
+                            | escape
+                          -%}
                           {% comment %}
                             <p class="mobile-facets__info">
                               {{ 'products.facets.max_price' | t: price: max_price_amount }}
@@ -906,7 +917,15 @@
                                   {%- else -%}
                                     max="{{ filter.range_max | money_without_currency | replace: ',', '' }}"
                                   {% endif %}
-                                  value="0"
+                                  {%- if filter.min_value.value -%}
+                                    {%- if uses_comma_decimals -%}
+                                      value="{{ filter.min_value.value | money_without_currency | replace: '.', '' | replace: ',', '.' }}"
+                                    {%- else -%}
+                                      value="{{ filter.min_value.value | money_without_currency | replace: ',', '' }}"
+                                    {%- endif %}
+                                  {% else %}
+                                    value="0"
+                                  {%- endif -%}
                                   step="10"
                                   name="{{ filter.min_value.param_name }}"
                                   id="Mobile-Filter-{{ filter.label | escape }}-GTE"
@@ -949,14 +968,30 @@
                                 <input
                                   type="text"
                                   name="min"
-                                  value="{% if filter.min_value.value==null%}Rs. 0{%else%}Rs. {{filter.min_value.value}}{%endif%}"
+                                  {%- if filter.min_value.value -%}
+                                    {%- if uses_comma_decimals -%}
+                                      value="Rs. {{ filter.min_value.value | money_without_currency | replace: ',', '' | split: '.' | first}}"
+                                    {%- else -%}
+                                      value="Rs. {{ filter.min_value.value | money_without_currency | replace: ',', '' | split: '.' | first }}"
+                                    {%- endif %}
+                                  {% else %}
+                                    value="Rs. 0"
+                                  {%- endif -%}
                                   readonly
                                 >
 
                                 <input
                                   type="text"
                                   name="max"
-                                  value="{% if filter.max_value.value == null %}{{ max_price_amount | split: '.' | slice: 0, 2 | join: '.' }}{% else %}Rs. {{ filter.max_value.value }}{% endif %}"
+                                  {%- if filter.max_value.value -%}
+                                    {%- if uses_comma_decimals -%}
+                                      value="Rs. {{ filter.max_value.value | money_without_currency  | replace: ',', '' | split: '.' | first }}"
+                                    {%- else -%}
+                                      value="Rs. {{ filter.max_value.value | money_without_currency | replace: ',', '' | split: '.' | first }}"
+                                    {%- endif %}
+                                  {% else %}
+                                    value="Rs. {{max_price_amount | replace: ',', ''  | split: '.' | first}}"
+                                  {%- endif -%}
                                   readonly
                                 >
                               </div>
@@ -972,6 +1007,7 @@
                 <div
                   class="mobile-facets__details js-filter{% if filter_type == 'drawer' %} medium-hide large-up-hide{% endif %}"
                   data-index="mobile-{{ forloop.index }}"
+                  open
                 >
                   <div class="mobile-facets__summary filter-type-style">
                     <div class="mobile-facets__sort">
@@ -1214,29 +1250,30 @@
                 </a>
               </facet-remove>
             {%- endfor -%}
-
             {%- if filter.type == 'price_range' -%}
               {%- if filter.min_value.value != null or filter.max_value.value != null -%}
-                <facet-remove>
-                  <a href="{{ filter.url_to_remove }}" class="active-facets__button active-facets__button--light">
-                    <span class="active-facets__button-inner button button--tertiary">
-                      {%- if filter.min_value.value -%}
-                        {{ filter.min_value.value | money }}
-                      {%- else -%}
-                        {{ 0 | money }}
-                      {%- endif -%}
-                      -
-                      {%- if filter.max_value.value -%}
-                        {{ filter.max_value.value | money }}
-                      {%- else -%}
-                        {{ filter.range_max | money }}
-                      {%- endif -%}
-                      {% render 'icon-close-small' %}
-                      <span class="visually-hidden">{{ 'products.facets.clear_filter' | t }}</span>
-                    </span>
-                  </a>
-                </facet-remove>
-              {%- endif -%}
+                {%- if filter.min_value.value > 1 or filter.max_value.value < filter.range_max -%}
+                  <facet-remove>
+                    <a href="{{ filter.url_to_remove }}" class="active-facets__button active-facets__button--light">
+                      <span class="active-facets__button-inner button button--tertiary">
+                        {%- if filter.min_value.value -%}
+                          {{ filter.min_value.value | money }}
+                        {%- else -%}
+                          {{ 0 | money }}
+                        {%- endif -%}
+                        -
+                        {%- if filter.max_value.value -%}
+                          {{ filter.max_value.value | money }}
+                        {%- else -%}
+                          {{ filter.range_max | money }}
+                        {%- endif -%}
+                        {% render 'icon-close-small' %}
+                        <span class="visually-hidden">{{ 'products.facets.clear_filter' | t }}</span>
+                      </span>
+                    </a>
+                  </facet-remove>
+                {%- endif -%}
+              {% endif %}
             {%- endif -%}
           {%- endfor -%}
           <facet-remove class="active-facets__button-wrapper">

@@ -399,7 +399,7 @@
         </a>
   
          
-        {% if product.description == ""  or product.metafields.custom.how_to_wear == "" %}
+        {% if product.description != ""  or product.metafields.custom.how_to_wear != "" %}
         <div id="tab-outer" class="product_tabs_flex">
           <div id="tab-wrapper" class="tabs_title_prd">
             {% if product.description  and product.description != "" and product.description != blank %}

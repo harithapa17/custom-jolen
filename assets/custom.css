@@ -1381,13 +1381,13 @@ summary.mobile-facets__open-wrapper.focus-offset {
   flex-wrap: wrap;
   width: 90%;
 }
-.filter-icon-style svg.icon-plus {
+.filter-icon-style svg.icn-filter-mobile {
   display: none !important;
 }
-.filter-icon-style svg.icn-filter-mobile {
+.filter-icon-style svg.icon-plus {
   display: block;
 }
-.icn-filter-mobile {
+.icon-plus {
   display: none;
 }
 .mobile-facets__details {
@@ -2495,6 +2495,9 @@ span.arrow_icon {
   .product-gallery-block li.product_gallery_img:first-child .product-media-container {
     max-width: calc(100% - var(--grid-desktop-horizontal-spacing) / 2) !important;
   }
+  .product_varient_size .variant-fieldset label {
+    min-width: 60px;
+  }
   slider-component .product-grid .grid__item:last-child,
   product-recommendations .product-grid .grid__item:last-child {
     margin-right: 16px;
@@ -2509,6 +2512,10 @@ span.arrow_icon {
     display: flex;
     flex-wrap: nowrap;
     overflow-x: scroll;
+  }
+  product-recommendations.collection .product-grid,
+  slider-component .product-grid {
+    gap: 16px !important;
   }
   product-recommendations.collection {
     padding-right: 0px !important;
@@ -2625,9 +2632,9 @@ span.arrow_icon {
     margin-top: 25px !important;
   }
   .product_varient_size fieldset label {
-    width: 40px;
-    height: 40px;
-    line-height: 20px !important;
+    width: 31px;
+    height: 31px;
+    line-height: 11px !important;
   }
   .product-form__input input[type='radio'].disabled + label:after {
     top: 19px;
@@ -2642,14 +2649,23 @@ span.arrow_icon {
   product-form.product-form {
     margin-top: 0px !important;
   }
-  .size_and_chart {
+  .variant-fieldset .size_and_chart {
     margin-bottom: 16px !important;
+    position: absolute;
+    top: 0;
   }
   .product_varient_size fieldset .size_and_chart legend {
     margin-bottom: 0px !important;
   }
   fieldset.variant-fieldset {
     margin-bottom: 44px !important;
+    display: flex;
+    overflow: scroll !important;
+    min-width: 305px;
+    padding-top: 35px;
+    position: relative;
+    width: 100%;
+    gap: 10px;
   }
   .product_tabs_flex {
     padding-bottom: 0;

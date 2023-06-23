@@ -152,7 +152,7 @@ function onKeyUpEscape(event) {
   if (!openDetailsElement) return;
 
   const summaryElement = openDetailsElement.querySelector('summary');
-  openDetailsElement.removeAttribute('open');
+  // openDetailsElement.removeAttribute('open');
   summaryElement.setAttribute('aria-expanded', false);
   summaryElement.focus();
 }
@@ -414,7 +414,7 @@ class MenuDrawer extends HTMLElement {
 
     this.mainDetailsToggle.classList.remove('menu-opening');
     this.mainDetailsToggle.querySelectorAll('details').forEach((details) => {
-      details.removeAttribute('open');
+      // details.removeAttribute('open');
       details.classList.remove('menu-opening');
     });
     this.mainDetailsToggle.querySelectorAll('.submenu-open').forEach((submenu) => {
@@ -423,7 +423,7 @@ class MenuDrawer extends HTMLElement {
     document.body.classList.remove(`overflow-hidden-${this.dataset.breakpoint}`);
     removeTrapFocus(elementToFocus);
     this.closeAnimation(this.mainDetailsToggle);
-    document.querySelector('.filter-type-style').classList.remove('filter-icon-style');
+    // document.querySelector('.filter-type-style').classList.remove('filter-icon-style');
 
     if (event instanceof KeyboardEvent) elementToFocus?.setAttribute('aria-expanded', false);
   }
@@ -1184,16 +1184,6 @@ class ProductRecommendations extends HTMLElement {
 }
 
 $(document).ready(function () {
-  var inputs = $('.mobile-facets__checkbox');
-
-  inputs.each(function () {
-    var inputValue = $(this).val();
-
-    var colorVal = inputValue.toLowerCase();
-
-    $(this).next().css('background-color', colorVal);
-  });
-
   var prdVarImages = $('.prd-var-img');
 
   prdVarImages.each(function () {
@@ -1245,60 +1235,36 @@ let rangeMin = 100;
 const range = document.querySelector('.range-selected');
 const rangeInput = document.querySelectorAll('.range-input input');
 const rangePrice = document.querySelectorAll('.range-price input');
+function updateRange() {
+  let minRange = parseInt(rangeInput[0].value);
+  let maxRange = parseInt(rangeInput[1].value);
+  let minPrice = parseInt(rangePrice[0].value);
+  let maxPrice = parseInt(rangePrice[1].value);
+
+  if (maxRange - minRange < rangeMin) {
+    rangeInput[0].value = 'Rs. ' + (maxRange - rangeMin);
+    rangeInput[1].value = 'Rs. ' + (minRange + rangeMin);
+  } else {
+    rangePrice[0].value = 'Rs. ' + minRange;
+    rangePrice[1].value = 'Rs. ' + maxRange;
+    range.style.left = (minRange / rangeInput[0].max) * 100 + '%';
+    range.style.right = 100 - (maxRange / rangeInput[1].max) * 100 + '%';
+  }
+}
 
 rangeInput.forEach((input) => {
   input.addEventListener('input', (e) => {
-    let minRange = parseInt(rangeInput[0].value);
-    let maxRange = parseInt(rangeInput[1].value);
-    if (maxRange - minRange < rangeMin) {
-      if (e.target.className === 'mini') {
-        rangeInput[0].value = 'Rs. ' + maxRange - rangeMin;
-      } else {
-        rangeInput[1].value = 'Rs. ' + minRange + rangeMin;
-      }
-    } else {
-      rangePrice[0].value = 'Rs. ' + minRange;
-      rangePrice[1].value = 'Rs. ' + maxRange;
-      range.style.left = 'Rs. ' + (minRange / rangeInput[0].max) * 100 + '%';
-      range.style.right = 'Rs. ' + 100 - (maxRange / rangeInput[1].max) * 100 + '%';
-    }
+    updateRange();
   });
 });
 
 rangePrice.forEach((input) => {
   input.addEventListener('input', (e) => {
-    let minPrice = rangePrice[0].value;
-    let maxPrice = rangePrice[1].value;
-    if (maxPrice - minPrice >= rangeMin && maxPrice <= rangeInput[1].max) {
-      if (e.target.className === 'mini') {
-        rangeInput[0].value = 'Rs. ' + minPrice;
-        range.style.left = 'Rs. ' + (minPrice / rangeInput[0].max) * 100 + '%';
-      } else {
-        rangeInput[1].value = 'Rs. ' + maxPrice;
-        range.style.right = 'Rs. ' + 100 - (maxPrice / rangeInput[1].max) * 100 + '%';
-      }
-    }
+    updateRange();
   });
 });
 
-var filters = document.querySelectorAll('.filter-type-style');
-var body = document.body;
-
-function toggleFilterStyle() {
-  this.classList.toggle('filter-icon-style');
-}
-
-function handleBodyClassChange() {
-  if (!body.classList.contains('overflow-hidden')) {
-    filters.forEach(function (filter) {
-      filter.classList.remove('filter-icon-style');
-    });
-  }
-}
-
-for (var i = 0; i < filters.length; i++) {
-  filters[i].addEventListener('click', toggleFilterStyle);
-}
-
-var observer = new MutationObserver(handleBodyClassChange);
-observer.observe(body, { attributes: true, attributeFilter: ['class'] });
+// Call updateRange() on page load
+window.addEventListener('load', () => {
+  updateRange();
+});
