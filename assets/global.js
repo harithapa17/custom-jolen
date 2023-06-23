@@ -1242,10 +1242,10 @@ function updateRange() {
   let minPrice = parseInt(rangePrice[0].value);
   let maxPrice = parseInt(rangePrice[1].value);
 
-  if (maxRange - minRange < 4000) {
+  if (maxRange - minRange < 3000) {
     const middleValue = (minRange + maxRange) / 2;
-    const newMinValue = Math.max(0, middleValue - 2000);
-    const newMaxValue = Math.min(rangeInput[1].max, middleValue + 2000);
+    const newMinValue = Math.max(0, middleValue - 1500);
+    const newMaxValue = Math.min(rangeInput[1].max, middleValue + 1500);
 
     rangeInput[0].value = newMinValue;
     rangeInput[1].value = newMaxValue;
