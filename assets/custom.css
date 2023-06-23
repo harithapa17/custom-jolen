@@ -1615,6 +1615,8 @@ li.mobile-facets__item.list-menu__item label span {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    padding-top: 15px !important;
+    z-index: 9999;
   }
   #FacetFiltersFormMobile .mobile-facets__clear-wrapper {
     order: 2;
