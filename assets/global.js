@@ -1242,14 +1242,22 @@ function updateRange() {
   let minPrice = parseInt(rangePrice[0].value);
   let maxPrice = parseInt(rangePrice[1].value);
 
-  if (maxRange - minRange < rangeMin) {
-    rangeInput[0].value = 'Rs. ' + (maxRange - rangeMin);
-    rangeInput[1].value = 'Rs. ' + (minRange + rangeMin);
+  if (maxRange - minRange < 4000) {
+    const middleValue = (minRange + maxRange) / 2;
+    const newMinValue = Math.max(0, middleValue - 2000);
+    const newMaxValue = Math.min(rangeInput[1].max, middleValue + 2000);
+
+    rangeInput[0].value = newMinValue;
+    rangeInput[1].value = newMaxValue;
+    rangePrice[0].value = 'Rs. ' + newMinValue;
+    rangePrice[1].value = 'Rs. ' + newMaxValue;
+    range.style.left = ((newMinValue - rangeInput[0].min) / (rangeInput[0].max - rangeInput[0].min)) * 100 + '%';
+    range.style.right = 100 - ((newMaxValue - rangeInput[1].min) / (rangeInput[1].max - rangeInput[1].min)) * 100 + '%';
   } else {
     rangePrice[0].value = 'Rs. ' + minRange;
     rangePrice[1].value = 'Rs. ' + maxRange;
-    range.style.left = (minRange / rangeInput[0].max) * 100 + '%';
-    range.style.right = 100 - (maxRange / rangeInput[1].max) * 100 + '%';
+    range.style.left = ((minRange - rangeInput[0].min) / (rangeInput[0].max - rangeInput[0].min)) * 100 + '%';
+    range.style.right = 100 - ((maxRange - rangeInput[1].min) / (rangeInput[1].max - rangeInput[1].min)) * 100 + '%';
   }
 }
 
