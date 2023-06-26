@@ -22,7 +22,7 @@
     >
       {% assign counter = 0 %}
       {%- for productMainHeading in product.options_with_values -%}
-        <fieldset class="js product-form__input">
+        <fieldset class="js product-form__input variant-fieldset">
           {% comment %} <legend class="form__label product_size_heading">{{ productMainHeading.name }}</legend> {% endcomment %}
           <div class="size_and_chart">
             <legend class="form__label product_size_heading">{{ productMainHeading.name }}</legend>
