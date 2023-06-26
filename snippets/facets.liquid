@@ -1187,12 +1187,19 @@
                 </svg>
               </div>
             </div>
-            <ul>
-              <li class="sort-by-selected"><span>New Arrivals</span></li>
-              <li><span>Best Sellers</span></li>
-              <li><span>Discount</span></li>
-              <li><span>Price Low to High</span></li>
-              <li><span>Price Hight to low</span></li>
+            <ul id="sort-by" class="styled-select coll-filter">
+              {% for option in collection.sort_options %}
+                <li
+                  {% if option.value == sort_by %}
+                    selected="selected"
+                  {% endif %}
+                  class="{{ option.value }}"
+                >
+                  <a href="/collections/{{ collection.handle }}/{{ tags_for_url }}?sort_by={{ option.value }}">
+                    <span>{{ option.name }}</span>
+                  </a>
+                </li>
+              {% endfor %}
             </ul>
           </div>
         </div>
