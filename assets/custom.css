@@ -2064,7 +2064,7 @@ li.mobile-facets__item.list-menu__item label span {
   margin-left: 6px;
   transform: translateY(-1px);
 }
-.product_varient_size .variant-fieldset label img {
+.product_varient_size fieldset:nth-child(2) label img {
   position: absolute;
   left: 0;
   max-width: 100%;
@@ -2073,24 +2073,24 @@ li.mobile-facets__item.list-menu__item label span {
   width: 100%;
   height: 100%;
 }
-.product_varient_size .variant-fieldset input[type='radio'].disabled + label {
+.product_varient_size fieldset:nth-child(2) input[type='radio'].disabled + label {
   opacity: 0.4;
   border: 1px solid #fff !important;
 }
-.product_varient_size .variant-fieldset input[type='radio'].disabled + label:after {
+.product_varient_size fieldset:nth-child(2) input[type='radio'].disabled + label:after {
   display: none;
 }
-.product_varient_size .variant-fieldset label {
+.product_varient_size fieldset:nth-child(2) label {
   width: 60px !important;
   height: 90px;
   position: relative !important;
   border: 1px solid #fff !important;
   margin-bottom: 0px !important;
 }
-fieldset.variant-fieldset {
+.product_varient_size fieldset:nth-child(2) {
   margin-bottom: 30px !important;
 }
-.product_varient_size .variant-fieldset input[type='radio']:checked + label {
+.product_varient_size fieldset:nth-child(2) input[type='radio']:checked + label {
   background-color: transparent !important;
   border-color: #000 !important;
 }
@@ -2506,7 +2506,7 @@ span.arrow_icon {
   .product-gallery-block li.product_gallery_img:first-child .product-media-container {
     max-width: calc(100% - var(--grid-desktop-horizontal-spacing) / 2) !important;
   }
-  .product_varient_size .variant-fieldset label {
+  .product_varient_size fieldset:nth-child(2) label {
     min-width: 60px;
   }
   slider-component .product-grid .grid__item:last-child,
@@ -2660,7 +2660,7 @@ span.arrow_icon {
   product-form.product-form {
     margin-top: 0px !important;
   }
-  .variant-fieldset .size_and_chart {
+  .product_varient_size fieldset:nth-child(2) .size_and_chart {
     margin-bottom: 16px !important;
     position: absolute;
     top: 0;
@@ -2668,7 +2668,7 @@ span.arrow_icon {
   .product_varient_size fieldset .size_and_chart legend {
     margin-bottom: 0px !important;
   }
-  fieldset.variant-fieldset {
+  .product_varient_size fieldset:nth-child(2) {
     margin-bottom: 44px !important;
     display: flex;
     overflow: scroll !important;
