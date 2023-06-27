@@ -1205,19 +1205,19 @@ $(document).ready(function () {
   $('#sort-dropdown').click(function () {
     $('#sort-by-popup').slideToggle();
     $('body').addClass('showAnimate');
-    $('.sorting_fixed').show(1000);
+    $('.sorting_fixed').show();
   });
 
   $('.sort-by-items ul li').click(function () {
     $('.sort-by-items ul li').removeClass('sort-by-selected');
-    $('.sorting_fixed').hide(1000);
+    $('.sorting_fixed').slideToggle();
 
     $(this).addClass('sort-by-selected');
     $(this).closest('#sort-by-popup').slideToggle();
   });
 
   $('.close_filter').click(function () {
-    $('#sort-by-popup').hide();
+    $('#sort-by-popup').slideToggle();
     $('body').removeClass('showAnimate');
   });
 
