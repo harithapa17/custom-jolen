@@ -1203,19 +1203,21 @@ $(document).ready(function () {
   });
 
   $('#sort-dropdown').click(function () {
-    $('.sort-by-items').slideToggle();
+    $('#sort-by-popup').slideToggle(1000);
     $('body').addClass('showAnimate');
+    $('.sorting_fixed').show(1000);
   });
 
   $('.sort-by-items ul li').click(function () {
     $('.sort-by-items ul li').removeClass('sort-by-selected');
+    $('.sorting_fixed').hide(1000);
 
     $(this).addClass('sort-by-selected');
-    $(this).closest('.sort-by-items').slideToggle();
+    $(this).closest('#sort-by-popup').slideToggle(1000);
   });
 
   $('.close_filter').click(function () {
-    $('.sort-by-items').hide();
+    $('#sort-by-popup').hide();
     $('body').removeClass('showAnimate');
   });
 
