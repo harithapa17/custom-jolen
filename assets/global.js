@@ -1203,7 +1203,7 @@ $(document).ready(function () {
   });
 
   $('#sort-dropdown').click(function () {
-    $('#sort-by-popup').slideToggle(1000);
+    $('#sort-by-popup').slideToggle();
     $('body').addClass('showAnimate');
     $('.sorting_fixed').show(1000);
   });
@@ -1213,7 +1213,7 @@ $(document).ready(function () {
     $('.sorting_fixed').hide(1000);
 
     $(this).addClass('sort-by-selected');
-    $(this).closest('#sort-by-popup').slideToggle(1000);
+    $(this).closest('#sort-by-popup').slideToggle();
   });
 
   $('.close_filter').click(function () {
