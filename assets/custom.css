@@ -1575,7 +1575,7 @@ li.mobile-facets__item.list-menu__item label span {
     justify-content: center;
   }
   .filter_collection_list aside#main-collection-filters {
-    z-index: 99 !important;
+    z-index: 999 !important;
 }
   .collection-single-list-products.grid-2-column .collection-list-prd {
     width: 32%;
