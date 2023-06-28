@@ -1572,6 +1572,9 @@ li.mobile-facets__item.list-menu__item label span {
     display: flex;
     justify-content: center;
   }
+  .filter_collection_list aside#main-collection-filters {
+    z-index: 99;
+}
   .collection-single-list-products.grid-2-column .collection-list-prd {
     width: 32%;
   }
