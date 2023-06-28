@@ -396,31 +396,30 @@
         <a href="{{ product.url }}" class="link product__view-details animate-arrow">
           {{ 'products.product.view_full_details' | t }}
           {% render 'icon-arrow' %}
-        </a>
-  
-         
-        {% if product.description != ""  or product.metafields.custom.how_to_wear != "" %}
-        <div id="tab-outer" class="product_tabs_flex">
+        </a>  
+      
+        {% if product.description != blank  or product.metafields.custom.how_to_wear != "" %}
+        <div id="tab-outer" class="product_tabs_flex" >
           <div id="tab-wrapper" class="tabs_title_prd">
-            {% if product.description  and product.description != "" and product.description != blank %}
+            {% if product.description != blank  %}
                 <li class="product_info_tabs">
                   <a href="#tab1">Description</a>
                 </li>
             {% endif %}
-            {% if product.metafields.custom.how_to_wear and product.metafields.custom.how_to_wear != '' %}
+            {% if product.metafields.custom.how_to_wear != blank and product.metafields.custom.how_to_wear != '' %}
               <li class="product_info_tabs">
                 <a href="#tab2">  How To Wear</a>
               </li>
             {%endif%}
           </div>
           <div class="prd_row_data"  id="tab-body">
-            {% if product.description and product.description != "" %}
+            {% if  product.description != blank %}
               <div id="tab1" class="product_info_tabs-data">
                 
                 <div>{{ product.description }}</div>
               </div>
             {%endif%}
-            {% if product.metafields.custom.how_to_wear and product.metafields.custom.how_to_wear != '' %}
+            {% if product.metafields.custom.how_to_wear or product.metafields.custom.how_to_wear != '' %}
               <div id="tab2" class="product_info_tabs-data">
                 {{ product.metafields.custom.how_to_wear }}
               </div>
@@ -434,7 +433,8 @@
     
 </div>
         </product-info>
-        <div class="wash_comp">
+        {% if product.metafields.custom.wash_and_care or product.metafields.custom.composition %}
+      <div class="wash_comp">
           {% if product.metafields.custom.composition and product.metafields.custom.wash_and_care != '' %}
         <div class="prd-ben-blck">
                         <h3> <svg width="19" height="14" viewBox="0 0 19 14" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -460,7 +460,8 @@
           
         </div>
         {%endif%}
-        </div>
+      </div>
+      {%endif%}
     </div>
     <div class="ben-status">
     <div class="custom_product_detail">

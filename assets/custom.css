@@ -620,7 +620,7 @@ svg.modal__toggle-open.icon.icon-sear path {
     z-index: 9999999;
   }
   .filter_collection_list {
-    padding-top: 20px !important;
+    padding-top: 18px !important;
   }
   .product-block-wrapper .collection-category-block:first-child {
     padding-top: 0px !important;
@@ -1015,6 +1015,7 @@ h2#sort-dropdown svg {
 } */
 .collection-list-prd .variant-option.disabled {
   cursor: default;
+  pointer-events: none !important;
 }
 .collection-list-prd .variant-option.disabled {
   opacity: 1;
@@ -1101,6 +1102,7 @@ h2#sort-dropdown svg {
 }
 .product-grid .grid__item .product-card-wrapper .card__content .variant-option.disabled {
   cursor: default;
+  pointer-events: none !important;
 }
 .product-grid .grid__item .product-card-wrapper .card__content .variant-option.disabled {
   opacity: 1;
@@ -1209,7 +1211,7 @@ aside#main-collection-filters {
   margin-top: 90px;
 }
 .collection-list-single {
-  margin-bottom: 90px;
+  margin-bottom: 95px;
 }
 .product-block-wrapper .collection-category-block:first-child {
   padding-top: 30px;
@@ -1305,10 +1307,11 @@ aside#main-collection-filters {
 }
 
 /* ------------------------------- Filter Block CSS Starts --------------------------- */
-.disclosure-has-popup[open] > summary::before {
+#main-collection-filters .disclosure-has-popup[open] > summary::before {
   background-color: transparent;
   opacity: 0.4;
   z-index: 0 !important;
+  display: none !important;
 }
 .js .mobile-facets__submenu {
   position: relative !important;
@@ -1572,12 +1575,16 @@ li.mobile-facets__item.list-menu__item label span {
     display: flex;
     justify-content: center;
   }
+  .filter_collection_list aside#main-collection-filters {
+    z-index: 999 !important;
+  }
   .collection-single-list-products.grid-2-column .collection-list-prd {
     width: 32%;
   }
-  .product-block-wrapper {
+
+  /* .product-block-wrapper {
     margin-bottom: 30px;
-  }
+  } */
 }
 @media (max-width: 991px) {
   .collection-list-single {
@@ -1635,6 +1642,9 @@ li.mobile-facets__item.list-menu__item label span {
 @media (min-width: 750px) {
   .collection_banner {
     padding-top: 30px !important;
+  }
+  .filter_collection_list {
+    padding: 30px 0 !important;
   }
   .disclosure-has-popup[open] > summary + * {
     z-index: 9999999 !important;
@@ -1741,13 +1751,25 @@ li.mobile-facets__item.list-menu__item label span {
 
 @media (max-width: 767px) {
   aside#main-collection-filters {
-    margin-bottom: 32 px;
+    margin-bottom: 32px;
     border-width: 1px 0px;
     border-style: solid;
     border-color: rgba(9, 14, 34, 0.12);
-    padding-bottom: 10px;
+    padding-top: 8px;
+    padding-bottom: 8px;
   }
-
+  .size_and_chart {
+    margin-bottom: 16px !important;
+  }
+  aside#main-collection-filters .facets-container {
+    padding: 0px !important;
+  }
+  .collection-category-block {
+    margin-top: 56px;
+  }
+  .product-block-wrapper div:last-child .collection-list-single:last-child {
+    margin-bottom: 32px;
+  }
   .collection .product-grid {
     gap: 16px !important;
   }
@@ -1854,7 +1876,7 @@ li.mobile-facets__item.list-menu__item label span {
     padding-bottom: 30px;
   }
   .collection-category-block .collection-list-single:last-child {
-    margin-bottom: 32px;
+    margin-bottom: 56px;
   }
   .collection-list-single {
     margin-bottom: 72px;
@@ -1962,7 +1984,7 @@ li.mobile-facets__item.list-menu__item label span {
   color: #1d1f20;
 }
 .product__info-wrapper .product__title {
-  margin-bottom: 8px !important;
+  margin-bottom: 7px !important;
 }
 .product__info-wrapper .product__text.inline-richtext {
   display: none;
@@ -2054,6 +2076,9 @@ li.mobile-facets__item.list-menu__item label span {
   color: #090e22 !important;
   border: 1px solid #090e22 !important;
   margin-right: 2px !important;
+}
+.product_varient_size fieldset:nth-child(2) label {
+  margin-right: 10px !important;
 }
 .product_varient_size fieldset input[type='radio']:checked + label {
   color: #fff !important;
@@ -2147,7 +2172,7 @@ li.mobile-facets__item.list-menu__item label span {
   border-color: #000 !important;
 }
 .product_varient_size fieldset legend {
-  margin-bottom: 8px !important;
+  margin-bottom: 0px !important;
 }
 h1.collection-hero__title {
   margin-bottom: 0px;
@@ -2260,11 +2285,12 @@ span.badge.price__badge-sold-out.color-inverse {
 
 /* ------------------------------- Breadcrumb CSS Starts --------------------------- */
 .breadcrumb {
-  padding: 24px 0;
+  padding: 24px 0 24px;
   position: sticky;
   top: 56px;
   background: #fff;
   z-index: 999;
+  line-height: 1;
 }
 .breadcrumb a,
 .breadcrumb span {
@@ -2287,7 +2313,7 @@ span.arrow_icon {
 
 .product_tabs_flex {
   margin: 0px !important;
-  margin-top: 64px !important;
+  margin-top: 36px !important;
   position: relative;
   padding-bottom: 120px;
 }
@@ -2325,7 +2351,6 @@ span.arrow_icon {
   line-height: 20px;
   letter-spacing: 0.016em;
   color: #090e22;
-  display: none;
 }
 .product_info_tabs.active_tab + .product_info_tabs-data {
   display: block;
@@ -2574,6 +2599,9 @@ span.arrow_icon {
   product-recommendations .product-grid .grid__item:last-child {
     margin-right: 16px;
   }
+  .product_varient_size fieldset:nth-child(2) label {
+    margin-right: 0px !important;
+  }
   product-recommendations.collection .product-grid .grid__item,
   .collection slider-component .product-grid .grid__item {
     width: calc(90% - 30px) !important;
@@ -2663,7 +2691,7 @@ span.arrow_icon {
     padding-bottom: 24px;
   }
   .wash_comp {
-    padding: 42px 0 48px;
+    padding: 40px 0 48px;
   }
   .ben-status {
     flex-wrap: wrap;
@@ -2730,7 +2758,7 @@ span.arrow_icon {
     margin-bottom: 0px !important;
   }
   .product_varient_size fieldset:nth-child(2) {
-    margin-bottom: 44px !important;
+    margin-bottom: 54px !important;
     display: flex;
     overflow: scroll !important;
     min-width: 305px;
@@ -2847,4 +2875,24 @@ span.arrow_icon {
 .max.field__input {
   padding: 0;
   right: -1px;
+}
+
+.product-form__input .color-name {
+  position: absolute;
+  padding: 2px 4px;
+  font-size: 10px;
+  background: #222;
+  border-radius: 4px;
+  color: #fff;
+  top: -20px;
+  left: 50%;
+  transform: translateX(-50%);
+  line-height: 1;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.25s;
+}
+.product-form__input label:hover .color-name {
+  opacity: 1;
+  visibility: visible;
 }

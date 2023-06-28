@@ -1222,6 +1222,12 @@ $(document).ready(function () {
       left: '0',
       right: '0',
     });
+    // $('.submitBtnFilter').click(function () {
+    //   console.log('working');
+    //   $('.filter-block').addClass('menu-opening');
+    //   $('.filter-block').attr('open', true);
+    //   $('.filter-type-style').addClass('filter-icon-style');
+    // });
   });
 
   if ($('.filter-block').attr('open')) {

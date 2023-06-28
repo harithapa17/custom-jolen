@@ -1057,11 +1057,38 @@
                 </facet-remove>
                 <button
                   type="button"
-                  class="no-js-hidden button button--primary"
-                  onclick="this.closest('.mobile-facets__wrapper').querySelector('summary').click()"
+                  class="no-js-hidden button button--primary submitBtnFilter"
+                  onclick="
+                    this.closest('.mobile-facets__wrapper').querySelector('summary').click(
+                                  $('.filter-block').addClass('menu-opening');
+                    $('.filter-block').attr('open', true);
+                    $('.filter-type-style').addClass('filter-icon-style');
+                                )
+                  "
                 >
                   {{ 'products.facets.apply' | t }}
                 </button>
+                <script>
+                  <button
+                    type="button"
+                    class="no-js-hidden button button--primary submitBtnFilter"
+                    onclick="applyFilters()"
+                  >
+                    Apply Filters
+                  </button>;
+
+                  function applyFilters() {
+                    var mobileFacetsWrapper = this.closest('.mobile-facets__wrapper');
+                    var summary = mobileFacetsWrapper.querySelector('summary');
+                    var filterBlock = $('.filter-block');
+                    var filterTypeStyle = $('.filter-type-style');
+
+                    summary.click();
+                    filterBlock.addClass('menu-opening');
+                    filterBlock.attr('open', true);
+                    filterTypeStyle.addClass('filter-icon-style');
+                  }
+                </script>
                 <noscript
                   ><button class="button button--primary">{{ 'products.facets.apply' | t }}</button></noscript
                 >
@@ -1213,12 +1240,18 @@
                       {% endif %}
                       class="{{ option.value }}"
                     >
-                      <a href="/collections/{{ collection.handle }}/{{ tags_for_url }}?sort_by={{ option.value }}">
+                      <a onclick="onActiveFilterClick('/collections/{{ collection.handle }}/{{ tags_for_url }}?sort_by={{ option.value }}')">
                         <span>{{ option.name }}</span>
                       </a>
                     </li>
                   {% endfor %}
                 </ul>
+
+                <script>
+                  function onActiveFilterClick(url) {
+                    window.history.pushState(null, '', url);
+                  }
+                </script>
               </div>
             </div>
           </div>
