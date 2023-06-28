@@ -1015,6 +1015,7 @@ h2#sort-dropdown svg {
 } */
 .collection-list-prd .variant-option.disabled {
   cursor: default;
+  pointer-events:none;
 }
 .collection-list-prd .variant-option.disabled {
   opacity: 1;
