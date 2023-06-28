@@ -10,6 +10,9 @@ html {
 cart-drawer.drawer.active {
   z-index: 99999999;
 }
+.overflow-hidden-mobile {
+  overflow: visible !important;
+}
 .header.header--middle-left {
   padding-top: 7px;
   padding-bottom: 7px;
@@ -1413,13 +1416,13 @@ summary.mobile-facets__open-wrapper.focus-offset {
   flex-wrap: wrap;
   width: 90%;
 }
-.filter-icon-style svg.icn-filter-mobile {
+.filter-icon-style svg.icon-plus {
   display: none !important;
 }
-.filter-icon-style svg.icon-plus {
+.filter-icon-style svg.icn-filter-mobile {
   display: block;
 }
-.icon-plus {
+.icn-filter-mobile {
   display: none;
 }
 .mobile-facets__details {
@@ -1438,6 +1441,9 @@ li.mobile-facets__item.list-menu__item label span {
 }
 .js .disclosure-has-popup:not(.menu-opening) .mobile-facets__inner {
   transform: translateX(0) !important;
+}
+.js #FacetFiltersFormMobile.mobile-facets .submenu-open {
+  visibility: visible !important;
 }
 
 .mobile-facets__footer .button--primary {
@@ -1654,6 +1660,7 @@ li.mobile-facets__item.list-menu__item label span {
     justify-content: center;
     padding-top: 15px !important;
     z-index: 9999;
+    padding-bottom: 15px !important;
   }
   #FacetFiltersFormMobile .mobile-facets__clear-wrapper {
     order: 2;
@@ -1681,7 +1688,7 @@ li.mobile-facets__item.list-menu__item label span {
     display: none !important;
   }
   #FacetFiltersFormMobile .mobile-facets__main {
-    padding: 8px 18px 18px 18px !important;
+    padding: 8px 18px 0px 18px !important;
   }
   .window-banner-content.mobile-hide {
     display: none;

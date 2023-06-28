@@ -682,7 +682,7 @@
                     {% when 'boolean', 'list' %}
                       <details
                         id="Details-Mobile-{{ forloop.index }}-{{ section.id }}"
-                        class="mobile-facets__details js-filter"
+                        class="mobile-facets__details js-filter menu-opening filter-block"
                         data-index="mobile-{{ forloop.index }}"
                         open
                       >
@@ -830,7 +830,7 @@
                     {% when 'price_range' %}
                       <details
                         id="Details-Mobile-{{ forloop.index }}-{{ section.id }}"
-                        class="mobile-facets__details js-filter"
+                        class="mobile-facets__details js-filter filter-block"
                         open
                         data-index="mobile-{{ forloop.index }}"
                       >
@@ -1205,7 +1205,7 @@
                     </svg>
                   </div>
                 </div>
-                <ul id="sort-by-popup" class="">
+                <ul id="sort-by-popup" class="styled-select coll-filter">
                   {% for option in collection.sort_options %}
                     <li
                       {% if option.value == sort_by %}
