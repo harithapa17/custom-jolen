@@ -1102,6 +1102,7 @@ h2#sort-dropdown svg {
 }
 .product-grid .grid__item .product-card-wrapper .card__content .variant-option.disabled {
   cursor: default;
+   pointer-events: none !important;
 }
 .product-grid .grid__item .product-card-wrapper .card__content .variant-option.disabled {
   opacity: 1;
