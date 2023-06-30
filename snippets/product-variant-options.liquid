@@ -57,11 +57,20 @@
         {% for variant in product.variants %}
           {% for image in product.images %}
             {% if nextVariant.image %}
-              <img src="{{ nextVariant.image | image_url: width:70 }}" alt="{{ image.alt }}">
+              <img
+                title="{{ value | escape }}"
+                src="{{ nextVariant.image | image_url: width:70 }}"
+                alt="{{ image.alt }}"
+              >
               {% break %}
             {% else %}
               {% if image.id == variant.featured_image.id %}
-                <img class="prd-var-img" src="{{ image.src | image_url: width:70 }}" alt="{{ image.alt }}">
+                <img
+                  title="{{ value | escape }}"
+                  class="prd-var-img"
+                  src="{{ image.src | image_url: width:70 }}"
+                  alt="{{ image.alt }}"
+                >
               {% endif %}
             {% endif %}
           {% endfor %}
@@ -69,6 +78,7 @@
         {% endfor %}
         {% assign counter = counter | plus: 1 %}
         {% assign nextVariant = product.variants[counter] %}
+        <span class="color-name">{{ value | escape }}</span>
       {% else %}
         {{ value }}
       {% endif %}
