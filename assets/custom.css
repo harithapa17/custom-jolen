@@ -1863,7 +1863,7 @@ li.mobile-facets__item.list-menu__item label span {
   }
   .collection-list-prd-data-hover form,
   .product-data-size {
-    bottom: -4px;
+    bottom: 7px;
   }
   .hide-wrapper-on-mobile {
     display: none !important;
@@ -1947,6 +1947,19 @@ li.mobile-facets__item.list-menu__item label span {
   }
   .showAnimate .sorting_mobile_bg {
     width: 90% !important;
+  }
+  .collection-list-prd .variant-option {
+    width: 22px !important;
+    height: 22px;
+    line-height: 23px;
+    font-size: 8px;
+    min-width: 20px;
+  }
+  .collection-list-prd .variant-option.disabled:before {
+    top: 10px;
+    left: -5px;
+    width: 29px;
+    height: 1px;
   }
   /* .collection ul#product-grid .grid__item .product-card-wrapper .card__content .variant-option {
     width: 20px;
@@ -3015,5 +3028,65 @@ span.arrow_icon {
   align-items: flex-start;
   margin-top: 0rem;
   position: absolute;
+}
+#CartDrawer h2.cart__empty-text {
+  color: #848690;
+  text-align: center;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 16px;
+  letter-spacing: 0.4px;
+  margin-bottom: 20px;
+}
+#CartDrawer .cart_addedContent p {
+  color: #848690;
+  text-align: center;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 20px;
+  text-transform: capitalize;
+  max-width: 63%;
+  margin: auto;
+}
+.cart_addedContent p span {
+  display: block;
+}
+.empty-cart-class-header h3 {
+  position: absolute;
+  top: 15px;
+  color: #1d1f20;
+  text-align: center;
+  font-size: 24px;
+  font-style: italic;
+  font-weight: 400;
+  text-transform: capitalize;
+  margin: 0;
+}
+
+/* width */
+cart-drawer-items::-webkit-scrollbar {
+  width: 5px !important;
+}
+
+/* Track */
+cart-drawer-items::-webkit-scrollbar-track {
+  background: #f1f1f1 !important;
+}
+
+/* Handle */
+cart-drawer-items::-webkit-scrollbar-thumb {
+  background: #888 !important;
+}
+
+/* Handle on hover */
+cart-drawer-items::-webkit-scrollbar-thumb:hover {
+  background: #555 !important;
+}
+.overflow-cart-hidden {
+  overflow: hidden;
+}
+.cart-drawer__overlay {
+  pointer-events: none;
 }
 /* Cart PopUp CSS Ends */

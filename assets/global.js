@@ -1207,11 +1207,9 @@ $(document).ready(function () {
     $(this).closest('#sort-by-popup').slideToggle();
   });
 
-  $('.close_filter').click(function () {
-    $('#sort-by-popup').slideToggle();
-    $('body').removeClass('showAnimate');
-  });
-
+  if ($('cart-drawer').hasClass('active')) {
+    $('body').addClass('overflow-hidden');
+  }
   $('.mobile-facets__clear').click(function () {
     $('.mobile-facets__checkbox').prop('checked', false);
     $('input.field__input.min').val(0);
