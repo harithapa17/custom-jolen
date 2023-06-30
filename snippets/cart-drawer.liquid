@@ -141,18 +141,21 @@
                                 {{ 'products.product.price.regular_price' | t }}
                               </span>
                               <s class="cart-item__old-price product-option">
-                                {{- item.original_price | money -}}
+                                {{- item.original_price | money | replace: 'Rs.', '' | split: '.' | first -}}
+                                <span class="cart_currency_label">INR</span>
                               </s>
                               <span class="visually-hidden">
                                 {{ 'products.product.price.sale_price' | t }}
                               </span>
                               <strong class="cart-item__final-price product-option">
-                                {{ item.final_price | money }}
+                                {{ item.final_price | money | replace: 'Rs.', '' | split: '.' | last }}
+                                <span class="cart_currency_label">INR</span>
                               </strong>
                             </div>
                           {%- else -%}
                             <div class="product-option">
-                              {{ item.original_price | money }}
+                              {{ item.original_price | money | replace: 'Rs.', '' | split: '.' | first }}
+                              <span class="cart_currency_label">INR</span>
                             </div>
                           {%- endif -%}
 
@@ -236,25 +239,28 @@
                                   {{ 'products.product.price.regular_price' | t }}
                                 </span>
                                 <s class="cart-item__old-price price price--end">
-                                  {{ item.original_line_price | money }}
+                                  {{ item.original_line_price | money | replace: 'Rs.', '' | split: '.' | first }}
+                                  <span class="cart_currency_label">INR</span>
                                 </s>
                                 <span class="visually-hidden">
                                   {{ 'products.product.price.sale_price' | t }}
                                 </span>
                                 <span class="price price--end">
-                                  {{ item.final_line_price | money }}
+                                  {{ item.final_line_price | money | replace: 'Rs.', '' | split: '.' | first }}
+                                  <span class="cart_currency_label">INR</span>
                                 </span>
                               </div>
                             {%- else -%}
                               <span class="price price--end">
-                                {{ item.original_line_price | money }}
+                                {{ item.original_line_price | money | replace: 'Rs.', '' | split: '.' | first }}
+                                <span class="cart_currency_label">INR</span>
                               </span>
                             {%- endif -%}
 
                             {%- if item.variant.available and item.unit_price_measurement -%}
                               <div class="unit-price caption">
                                 <span class="visually-hidden">{{ 'products.product.price.unit_price' | t }}</span>
-                                {{ item.variant.unit_price | money }}
+                                {{ item.variant.unit_price | money | replace: 'Rs.', '' | split: '.' | first }}
                                 <span aria-hidden="true">/</span>
                                 <span class="visually-hidden"
                                   >&nbsp;{{ 'accessibility.unit_price_separator' | t }}&nbsp;</span
@@ -312,7 +318,8 @@
                                 class="button button--tertiary cart-remove-button"
                                 aria-label="{{ 'sections.cart.remove_title' | t: title: item.title }}"
                               >
-                                {% render 'icon-remove' %}
+                                {% comment %} {% render 'icon-remove' %} {% endcomment %}
+                                <span class="cart_remove_btn">Remove</span>
                               </button>
                             </cart-remove-button>
                           </div>
@@ -377,7 +384,10 @@
         <div class="cart-drawer__footer" {{ block.shopify_attributes }}>
           <div class="totals" role="status">
             <h2 class="totals__subtotal">{{ 'sections.cart.subtotal' | t }}</h2>
-            <p class="totals__subtotal-value">{{ cart.total_price | money_with_currency }}</p>
+            <p class="totals__subtotal-value">
+              {{ cart.total_price | money_with_currency | replace: 'Rs.', '' | split: '.' | first }}
+              <span class="cart_currency_label">INR</span>
+            </p>
           </div>
 
           <div>
