@@ -3089,4 +3089,42 @@ cart-drawer-items::-webkit-scrollbar-thumb:hover {
 .cart-drawer__overlay {
   pointer-events: none;
 }
+cart-drawer-items {
+  margin: 0px -15px;
+  padding: 0px 15px;
+}
+.LoadingCart {
+  position: relative;
+}
+.LoadingCart:before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background: rgba(255, 255, 255, 0.5);
+  z-index: 99999;
+}
+.cart-loading-overlay {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  z-index: 999999;
+  width: 26px;
+  height: 20px;
+  transform: translate(-50%, -50%);
+  display: none;
+  opacity: 0.8;
+}
+.LoadingCart .cart-loading-overlay {
+  display: block;
+}
+@media (max-width: 480px) {
+  #CartDrawer td.cart-item__media {
+    height: 104px !important;
+    overflow: hidden;
+    width: 70px !important;
+  }
+}
 /* Cart PopUp CSS Ends */

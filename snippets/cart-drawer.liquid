@@ -312,6 +312,7 @@
                                 id="Drawer-quantity-{{ item.index | plus: 1 }}"
                                 data-index="{{ item.index | plus: 1 }}"
                               >
+
                               <button class="quantity__button no-js-hidden" name="plus" type="button">
                                 <span class="visually-hidden">
                                   {{- 'products.product.quantity.increase' | t: product: item.product.title | escape -}}
@@ -356,9 +357,12 @@
                         </td>
                       </tr>
                     {%- endfor -%}
+
+                    <input hidden type="number" id="cart_qty" value="{{ cart.item_count}}">
                   </tbody>
                 </table>
               </div>
+              <h4>{{ value }}</h4>
             {%- endif -%}
             <p id="CartDrawer-LiveRegionText" class="visually-hidden" role="status"></p>
             <p id="CartDrawer-LineItemStatus" class="visually-hidden" aria-hidden="true" role="status">

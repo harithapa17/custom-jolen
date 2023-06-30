@@ -44,10 +44,15 @@
       {% endif %}
     {% endfor %}
   </form>
+
   <!-- Add to Cart popup message -->
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   <script>
     function addToCart(variantId, qty) {
+      $('body').addClass('LoadingCart');
+      setTimeout(function () {
+        $('body').removeClass('LoadingCart');
+      }, 2200);
       $.ajax({
         url: '/cart/add',
         type: 'POST',

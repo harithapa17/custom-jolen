@@ -1210,6 +1210,11 @@ $(document).ready(function () {
   if ($('cart-drawer').hasClass('active')) {
     $('body').addClass('overflow-hidden');
   }
+  $('.variant-option').on('click', function () {
+    var j = $('#cart_qty').val();
+    $('#valShow').val(j + 1);
+  });
+
   $('.mobile-facets__clear').click(function () {
     $('.mobile-facets__checkbox').prop('checked', false);
     $('input.field__input.min').val(0);
