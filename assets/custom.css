@@ -3140,6 +3140,11 @@ cart-drawer-items {
   gap: 0px !important;
   margin-left: -7px;
 }
+@media (min-width: 750px) {
+  cart-remove-button .cart-remove-button {
+    transform: translateY(10px);
+  }
+}
 @media (max-width: 749px) {
   #CartDrawer .quantity.cart-quantity {
     height: 26px !important;
