@@ -1,0 +1,82 @@
+<style>
+  .variant-option {
+    display: inline-block;
+    padding: 5px 10px;
+    border: 1px solid #ccc;
+    margin-right: 10px;
+    cursor: pointer;
+  }
+  .variant-option.selected {
+    background-color: #e0e0e0;
+  }
+  .variant-option.disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+</style>
+<div>
+  <form action="/cart/add" method="post" enctype="multipart/form-data">
+    {% assign printedSizes = '' %}
+    {% for variant in product.variants %}
+      {% if product.variants.size > 1 %}
+        {% unless printedSizes contains variant.option1 %}
+          <div
+            class="
+              variant-option
+              {% comment %} {% if variant == product.selected_or_first_available_variant %} selected{% endif %} {% endcomment %}
+              {% if variant.available == false %} disabled{% endif %}
+            "
+          >
+            {{ variant.option1 }}
+            <input
+              type="radio"
+              name="id"
+              id="variant_{{ variant.id }}"
+              value="{{ variant.id }}"
+              {% if variant.available == false %}
+                disabled
+              {% endif %}
+              onclick="addToCart('{{ variant.id }}','1')"
+            >
+            {% assign printedSizes = printedSizes | append: variant.option1 | append: ' ' %}
+          </div>
+        {% endunless %}
+      {% endif %}
+    {% endfor %}
+  </form>
+
+  <!-- Add to Cart popup message -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script>
+    function addToCart(variantId, qty) {
+      $('body').addClass('LoadingCart');
+      setTimeout(function () {
+        $('body').removeClass('LoadingCart');
+      }, 2200);
+      $.ajax({
+        url: '/cart/add',
+        type: 'POST',
+        data: {
+          id: variantId,
+          quantity: qty,
+        },
+        success: function (response) {
+          $.ajax({
+            url: '/?section_id=cart-drawer',
+            type: 'GET',
+            dataType: 'html',
+            success: function (carthtml) {
+              $('cart-drawer').html($(carthtml).find('cart-drawer').html());
+              $('.drawer').removeClass('is-empty');
+              $('body').addClass('overflow-cart-hidden overflow-hidden');
+              $('.drawer').addClass('animate active');
+            },
+          });
+        },
+        error: function (error) {
+          console.log('error');
+        },
+      });
+    }
+  </script>
+</div>

@@ -1,12 +1,9 @@
 {% comment %}
   Renders product variant options
-
   Accepts:
   - product: {Object} product object.
   - option: {Object} current product_option object.
   - block: {Object} block object.
-
-
   Usage:
   {% render 'product-variant-options',
     product: product,
@@ -19,14 +16,11 @@
   assign variants_option1_arr = product.variants | map: 'option1'
   assign variants_option2_arr = product.variants | map: 'option2'
   assign variants_option3_arr = product.variants | map: 'option3'
-
   assign product_form_id = 'product-form-' | append: section.id
 -%}
-
 {%- for value in option.values -%}
   {%- liquid
     assign option_disabled = true
-
     for option1_name in variants_option1_arr
       case option.position
         when 1
@@ -44,7 +38,6 @@
       endcase
     endfor
   -%}
-
   {%- if block.settings.picker_type == 'button' -%}
     <input
       type="radio"
@@ -60,7 +53,35 @@
       {% endif %}
     >
     <label for="{{ section.id }}-{{ option.position }}-{{ forloop.index0 }}">
-      {{ value -}}
+      {% if option.name == 'Color' %}
+        {% for variant in product.variants %}
+          {% for image in product.images %}
+            {% if nextVariant.image %}
+              <img
+                title="{{ value | escape }}"
+                src="{{ nextVariant.image | image_url: width:70 }}"
+                alt="{{ image.alt }}"
+              >
+              {% break %}
+            {% else %}
+              {% if image.id == variant.featured_image.id %}
+                <img
+                  title="{{ value | escape }}"
+                  class="prd-var-img"
+                  src="{{ image.src | image_url: width:70 }}"
+                  alt="{{ image.alt }}"
+                >
+              {% endif %}
+            {% endif %}
+          {% endfor %}
+          {% break %}
+        {% endfor %}
+        {% assign counter = counter | plus: 1 %}
+        {% assign nextVariant = product.variants[counter] %}
+        <span class="color-name">{{ value | escape }}</span>
+      {% else %}
+        {{ value }}
+      {% endif %}
       <span class="visually-hidden">{{ 'products.product.variant_sold_out_or_unavailable' | t }}</span>
     </label>
   {%- elsif block.settings.picker_type == 'dropdown' -%}

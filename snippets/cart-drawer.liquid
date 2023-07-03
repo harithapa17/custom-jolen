@@ -27,6 +27,9 @@
         <div class="drawer__inner-empty">
           <div class="cart-drawer__warnings center{% if settings.cart_drawer_collection != blank %} cart-drawer__warnings--has-collection{% endif %}">
             <div class="cart-drawer__empty-content">
+              <div class="empty-cart-class-header">
+                <h3>Your Cart</h3>
+              </div>
               <h2 class="cart__empty-text">{{ 'sections.cart.empty' | t }}</h2>
               <button
                 class="drawer__close"
@@ -36,16 +39,23 @@
               >
                 {% render 'icon-close' %}
               </button>
-              <a href="{{ routes.all_products_collection_url }}" class="button">
-                {{ 'general.continue_shopping' | t }}
-              </a>
+              {% comment %}
+                <a href="{{ routes.all_products_collection_url }}" class="button">
+                  {{ 'general.continue_shopping' | t }}
+                </a>
+              {% endcomment %}
 
-              {%- if shop.customer_accounts_enabled and customer == null -%}
-                <p class="cart__login-title h3">{{ 'sections.cart.login.title' | t }}</p>
-                <p class="cart__login-paragraph">
-                  {{ 'sections.cart.login.paragraph_html' | t: link: routes.account_login_url }}
-                </p>
-              {%- endif -%}
+              {% comment %}
+                {%- if shop.customer_accounts_enabled and customer == null -%}
+                  <p class="cart__login-title h3">{{ 'sections.cart.login.title' | t }}</p>
+                  <p class="cart__login-paragraph">
+                    {{ 'sections.cart.login.paragraph_html' | t: link: routes.account_login_url }}
+                  </p>
+                {%- endif -%}
+              {% endcomment %}
+              <div class="cart_addedContent">
+                <p>“You can have anything you want in life if you dress for it.” <span>– Edith Head</span></p>
+              </div>
             </div>
           </div>
           {%- if settings.cart_drawer_collection != blank -%}
@@ -66,6 +76,7 @@
           {% render 'icon-close' %}
         </button>
       </div>
+
       <cart-drawer-items
         {% if cart == empty %}
           class=" is-empty"
@@ -141,18 +152,21 @@
                                 {{ 'products.product.price.regular_price' | t }}
                               </span>
                               <s class="cart-item__old-price product-option">
-                                {{- item.original_price | money -}}
+                                {{- item.original_price | money | replace: 'Rs.', '' | split: '.' | first -}}
+                                {% comment %} <span class="cart_currency_label">INR</span> {% endcomment %}
                               </s>
                               <span class="visually-hidden">
                                 {{ 'products.product.price.sale_price' | t }}
                               </span>
                               <strong class="cart-item__final-price product-option">
-                                {{ item.final_price | money }}
+                                {{ item.final_price | money | replace: 'Rs.', '' | split: '.' | last }}
+                                {% comment %} <span class="cart_currency_label">INR</span> {% endcomment %}
                               </strong>
                             </div>
                           {%- else -%}
                             <div class="product-option">
-                              {{ item.original_price | money }}
+                              {{ item.original_price | money | replace: 'Rs.', '' | split: '.' | first }}
+                              {% comment %} <span class="cart_currency_label">INR</span> {% endcomment %}
                             </div>
                           {%- endif -%}
 
@@ -236,25 +250,28 @@
                                   {{ 'products.product.price.regular_price' | t }}
                                 </span>
                                 <s class="cart-item__old-price price price--end">
-                                  {{ item.original_line_price | money }}
+                                  {{ item.original_line_price | money | replace: 'Rs.', '' | split: '.' | first }}
+                                  {% comment %} <span class="cart_currency_label">INR</span> {% endcomment %}
                                 </s>
                                 <span class="visually-hidden">
                                   {{ 'products.product.price.sale_price' | t }}
                                 </span>
                                 <span class="price price--end">
-                                  {{ item.final_line_price | money }}
+                                  {{ item.final_line_price | money | replace: 'Rs.', '' | split: '.' | first }}
+                                  {% comment %} <span class="cart_currency_label">INR</span> {% endcomment %}
                                 </span>
                               </div>
                             {%- else -%}
                               <span class="price price--end">
-                                {{ item.original_line_price | money }}
+                                {{ item.original_line_price | money | replace: 'Rs.', '' | split: '.' | first }}
+                                {% comment %} <span class="cart_currency_label">INR</span> {% endcomment %}
                               </span>
                             {%- endif -%}
 
                             {%- if item.variant.available and item.unit_price_measurement -%}
                               <div class="unit-price caption">
                                 <span class="visually-hidden">{{ 'products.product.price.unit_price' | t }}</span>
-                                {{ item.variant.unit_price | money }}
+                                {{ item.variant.unit_price | money | replace: 'Rs.', '' | split: '.' | first }}
                                 <span aria-hidden="true">/</span>
                                 <span class="visually-hidden"
                                   >&nbsp;{{ 'accessibility.unit_price_separator' | t }}&nbsp;</span
@@ -295,6 +312,7 @@
                                 id="Drawer-quantity-{{ item.index | plus: 1 }}"
                                 data-index="{{ item.index | plus: 1 }}"
                               >
+
                               <button class="quantity__button no-js-hidden" name="plus" type="button">
                                 <span class="visually-hidden">
                                   {{- 'products.product.quantity.increase' | t: product: item.product.title | escape -}}
@@ -312,7 +330,8 @@
                                 class="button button--tertiary cart-remove-button"
                                 aria-label="{{ 'sections.cart.remove_title' | t: title: item.title }}"
                               >
-                                {% render 'icon-remove' %}
+                                {% comment %} {% render 'icon-remove' %} {% endcomment %}
+                                <span class="cart_remove_btn">Remove</span>
                               </button>
                             </cart-remove-button>
                           </div>
@@ -338,9 +357,16 @@
                         </td>
                       </tr>
                     {%- endfor -%}
+
+                    <input hidden type="number" id="cart_qty" value="{{ cart.item_count }}">
+                    <script>
+                      var qty = document.getElementById('cart_qty').value;
+                      $('#get_qt').text(qty);
+                    </script>
                   </tbody>
                 </table>
               </div>
+              <h4>{{ value }}</h4>
             {%- endif -%}
             <p id="CartDrawer-LiveRegionText" class="visually-hidden" role="status"></p>
             <p id="CartDrawer-LineItemStatus" class="visually-hidden" aria-hidden="true" role="status">
@@ -377,7 +403,10 @@
         <div class="cart-drawer__footer" {{ block.shopify_attributes }}>
           <div class="totals" role="status">
             <h2 class="totals__subtotal">{{ 'sections.cart.subtotal' | t }}</h2>
-            <p class="totals__subtotal-value">{{ cart.total_price | money_with_currency }}</p>
+            <p class="totals__subtotal-value">
+              {{ cart.total_price | money_with_currency | replace: 'Rs.', '' | split: '.' | first }}
+              {% comment %} <span class="cart_currency_label">INR</span> {% endcomment %}
+            </p>
           </div>
 
           <div>
