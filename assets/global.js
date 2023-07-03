@@ -1214,8 +1214,8 @@ $(document).ready(function () {
     $('.mobile-facets__checkbox').prop('checked', false);
     $('input.field__input.min').val(0);
     $('input.field__input.max').val(newValPrice);
-    $('#minPriceinput').val('Rs. ' + 0);
-    $('#maxPriceinput').val('Rs. ' + newValPrice);
+    $('#minPriceinput').val('$' + 0);
+    $('#maxPriceinput').val('$' + newValPrice);
     $('.range-selected').css({
       left: '0',
       right: '0',
@@ -1260,13 +1260,13 @@ function updateRange() {
 
     rangeInput[0].value = newMinValue;
     rangeInput[1].value = newMaxValue;
-    rangePrice[0].value = 'Rs. ' + newMinValue;
-    rangePrice[1].value = 'Rs. ' + newMaxValue;
+    rangePrice[0].value = '$' + newMinValue;
+    rangePrice[1].value = '$' + newMaxValue;
     range.style.left = ((newMinValue - rangeInput[0].min) / (rangeInput[0].max - rangeInput[0].min)) * 100 + '%';
     range.style.right = 100 - ((newMaxValue - rangeInput[1].min) / (rangeInput[1].max - rangeInput[1].min)) * 100 + '%';
   } else {
-    rangePrice[0].value = 'Rs. ' + minRange;
-    rangePrice[1].value = 'Rs. ' + maxRange;
+    rangePrice[0].value = '$' + minRange;
+    rangePrice[1].value = '$' + maxRange;
     range.style.left = ((minRange - rangeInput[0].min) / (rangeInput[0].max - rangeInput[0].min)) * 100 + '%';
     range.style.right = 100 - ((maxRange - rangeInput[1].min) / (rangeInput[1].max - rangeInput[1].min)) * 100 + '%';
   }

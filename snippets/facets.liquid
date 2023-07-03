@@ -972,12 +972,12 @@
                                   id="minPriceinput"
                                   {%- if filter.min_value.value -%}
                                     {%- if uses_comma_decimals -%}
-                                      value="Rs. {{ filter.min_value.value | money_without_currency | replace: ',', '' | split: '.' | first}}"
+                                      value="${{ filter.min_value.value | money_without_currency | replace: ',', '' | split: '.' | first}}"
                                     {%- else -%}
-                                      value="Rs. {{ filter.min_value.value | money_without_currency | replace: ',', '' | split: '.' | first }}"
+                                      value="${{ filter.min_value.value | money_without_currency | replace: ',', '' | split: '.' | first }}"
                                     {%- endif %}
                                   {% else %}
-                                    value="Rs. 0"
+                                    value="$0"
                                   {%- endif -%}
                                   readonly
                                 >
@@ -988,12 +988,12 @@
                                   id="maxPriceinput"
                                   {%- if filter.max_value.value -%}
                                     {%- if uses_comma_decimals -%}
-                                      value="Rs. {{ filter.max_value.value | money_without_currency  | replace: ',', '' | split: '.' | first }}"
+                                      value="${{ filter.max_value.value | money_without_currency  | replace: ',', '' | split: '.' | first }}"
                                     {%- else -%}
-                                      value="Rs. {{ filter.max_value.value | money_without_currency | replace: ',', '' | split: '.' | first }}"
+                                      value="${{ filter.max_value.value | money_without_currency | replace: ',', '' | split: '.' | first }}"
                                     {%- endif %}
                                   {% else %}
-                                    value="Rs. {{max_price_amount | replace: ',', ''  | split: '.' | first}}"
+                                    value="${{max_price_amount | replace: ',', ''  | split: '.' | first}}"
                                   {%- endif -%}
                                   readonly
                                 >
