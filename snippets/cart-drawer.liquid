@@ -358,7 +358,11 @@
                       </tr>
                     {%- endfor -%}
 
-                    <input hidden type="number" id="cart_qty" value="{{ cart.item_count}}">
+                    <input hidden type="number" id="cart_qty" value="{{ cart.item_count }}">
+                    <script>
+                      var qty = document.getElementById('cart_qty').value;
+                      $('#get_qt').text(qty);
+                    </script>
                   </tbody>
                 </table>
               </div>
