@@ -3150,7 +3150,7 @@ cart-drawer-items {
     max-width: 30px;
   }
   #CartDrawer cart-remove-button {
-    transform: translate(-10px, -6px);
+    transform: translate(0px, -6px);
   }
   #CartDrawer .cart-item__details > dl {
     display: flex;
@@ -3160,6 +3160,7 @@ cart-drawer-items {
   }
   #CartDrawer table.cart-items tr {
     gap: 10px !important;
+    position: relative !important;
   }
   .cart-drawer .cart-item {
     grid-template: repeat(2, auto) / repeat(1, 1fr);
@@ -3167,10 +3168,11 @@ cart-drawer-items {
   }
   .cart-drawer td.cart-item__totals.right {
     position: absolute;
-    right: 15px;
+    right: 0;
+    top: 22px;
   }
   #CartDrawer td.cart-item__details {
-    width: 218px !important;
+    width: 233px !important;
   }
   #CartDrawer .cart-item__quantity-wrapper {
     flex-wrap: wrap;
