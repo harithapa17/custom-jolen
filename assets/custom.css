@@ -3265,7 +3265,7 @@ main-search .field:after {
   gap: 24px;
   width: 100%;
   margin: auto;
-  justify-content: space-between;
+  justify-content: center;
 }
 .empty-search div#ProductGridContainer {
   display: none;
@@ -3337,6 +3337,16 @@ main-search .field:after {
   }
   .search-benefits-prd .prd-policy {
     margin-bottom: 0px;
+  }
+}
+@media (min-width: 1601px) {
+  .template-search .collection .product-grid .grid__item {
+    max-width: 18.9% !important;
+  }
+}
+@media (max-width: 1600px) and (min-width: 1261px) {
+  .template-search .collection .product-grid .grid__item {
+    max-width: 18.4% !important;
   }
 }
 @media (max-width: 1260px) and (min-width: 992px) {
