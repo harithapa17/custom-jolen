@@ -9,54 +9,6 @@
     },
     "product-grid": {
       "type": "inner-product-grid",
-      "blocks": {
-        "2ee749af-6f7b-4e7b-a125-a67051b37461": {
-          "type": "text",
-          "settings": {
-            "product1": "",
-            "product2": "",
-            "product3": "",
-            "product4": "",
-            "product5": "",
-            "product6": "",
-            "product7": "",
-            "product8": ""
-          }
-        },
-        "b3826acd-e64d-4aa6-a698-2d72a303b820": {
-          "type": "text",
-          "settings": {
-            "section_image": "shopify:\/\/shop_images\/2010711832_1_1_1_1_1.png",
-            "product1": "garment-name-15",
-            "product2": "garment-name-16",
-            "product3": "",
-            "product4": "",
-            "product5": "garment-name-17",
-            "product6": "garment-name-18",
-            "product7": "",
-            "product8": ""
-          }
-        },
-        "c603d2d0-35a2-43c5-96ae-a3db31c88284": {
-          "type": "text",
-          "settings": {
-            "section_image": "shopify:\/\/shop_images\/7643498330_2_1_1_4.png",
-            "product1": "garment-name-12",
-            "product2": "garment-name-13",
-            "product3": "",
-            "product4": "",
-            "product5": "",
-            "product6": "",
-            "product7": "",
-            "product8": ""
-          }
-        }
-      },
-      "block_order": [
-        "2ee749af-6f7b-4e7b-a125-a67051b37461",
-        "b3826acd-e64d-4aa6-a698-2d72a303b820",
-        "c603d2d0-35a2-43c5-96ae-a3db31c88284"
-      ],
       "settings": {
         "products_per_page": 16,
         "columns_desktop": 4,
