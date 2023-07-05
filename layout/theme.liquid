@@ -265,12 +265,16 @@
   </head>
 
   <body class="gradient{% if settings.animations_hover_elements != 'none' %} animate--hover-{{ settings.animations_hover_elements }}{% endif %} {% if template == 'index' %} home {% endif %}">
+    <script>
+      var currentURL = window.location.href;
+      if (currentURL == '{{ shop.url }}/cart') {
+        window.location.href = '{{ shop.url }}';
+      }
+    </script>
     <a class="skip-to-content-link button visually-hidden" href="#MainContent">
       {{ 'accessibility.skip_to_text' | t }}
     </a>
-    {{ page.url }}
-    {{ request.url }}
-    {{  shop.url }}
+
     {%- if settings.cart_type == 'drawer' -%}
       {%- render 'cart-drawer' -%}
     {%- endif -%}
