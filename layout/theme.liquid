@@ -272,6 +272,9 @@
    The current page URL is: {{ shop.url }}{{ page.url }}
      <script>
   var currentURL = window.location.href;
+       if(currentURL == "{{ shop.url }}/cart"){
+           window.location.href = "{{ shop.url }}";
+       }
   console.log("The current page URL is: " + currentURL);
 </script>
 
