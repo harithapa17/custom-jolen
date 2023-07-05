@@ -380,7 +380,6 @@ class MenuDrawer extends HTMLElement {
       trapFocus(summaryElement.nextElementSibling, detailsElement.querySelector('button'));
       summaryElement.nextElementSibling.removeEventListener('transitionend', addTrapFocus);
     }
-
     if (detailsElement === this.mainDetailsToggle) {
       if (isOpen) event.preventDefault();
       isOpen ? this.closeMenuDrawer(event, summaryElement) : this.openMenuDrawer(summaryElement);
@@ -388,9 +387,14 @@ class MenuDrawer extends HTMLElement {
       if (window.matchMedia('(max-width: 990px)')) {
         document.documentElement.style.setProperty('--viewport-height', `${window.innerHeight}px`);
       }
+      $('.filter-block').attr('open', true);
+      $('#sort-by-popup').hide();
+
+      $('.sorting_fixed').hide();
     } else {
       setTimeout(() => {
         detailsElement.classList.add('menu-opening');
+        $('.filter-block').attr('open', true);
         summaryElement.setAttribute('aria-expanded', true);
         parentMenuElement && parentMenuElement.classList.add('submenu-open');
         !reducedMotion || reducedMotion.matches
@@ -412,10 +416,10 @@ class MenuDrawer extends HTMLElement {
   closeMenuDrawer(event, elementToFocus = false) {
     if (event === undefined) return;
 
-    this.mainDetailsToggle.classList.remove('menu-opening');
+    // this.mainDetailsToggle.classList.remove('menu-opening');
     this.mainDetailsToggle.querySelectorAll('details').forEach((details) => {
       details.removeAttribute('open');
-      details.classList.remove('menu-opening');
+      // details.classList.remove('menu-opening');
     });
     this.mainDetailsToggle.querySelectorAll('.submenu-open').forEach((submenu) => {
       submenu.classList.remove('submenu-open');
@@ -459,7 +463,7 @@ class MenuDrawer extends HTMLElement {
 
       const elapsedTime = time - animationStart;
 
-      if (elapsedTime < 400) {
+      if (elapsedTime < 0) {
         window.requestAnimationFrame(handleAnimation);
       } else {
         detailsElement.removeAttribute('open');
@@ -1192,11 +1196,14 @@ $(document).ready(function () {
   prdVarImages.each(function () {
     $(this).parent().parent('fieldset').addClass('variant-fieldset');
   });
-
+  $('.close_filter').on('click', function () {
+    $(this).parents('.sorting_fixed').hide();
+    $('#sort-by-popup').hide();
+  });
   $('#sort-dropdown').click(function () {
+    $('.sorting_fixed').show();
     $('#sort-by-popup').slideToggle();
     $('body').addClass('showAnimate');
-    $('.sorting_fixed').show();
   });
 
   $('.sort-by-items ul li').click(function () {
