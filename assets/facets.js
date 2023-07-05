@@ -56,7 +56,7 @@ class FacetFiltersForm extends HTMLElement {
     sections.forEach((section) => {
       const url2 = `${window.location.pathname}&${searchParams}`;
 
-      //console.log(url2, ' URL2 Working');
+      console.log(url2, ' URL2 Working');
       const filterDataUrl = (element) => element.url === url;
 
       // FacetFiltersForm.filterData.some(filterDataUrl)
