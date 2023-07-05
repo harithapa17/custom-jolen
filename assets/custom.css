@@ -1074,9 +1074,23 @@ h2#sort-dropdown svg {
   opacity: 0;
   transform: translateY(-20px);
 }
-
+.collection-list-prd-data .price__container .price__regular {
+  font-weight: 400;
+  font-size: 14px !important;
+  line-height: 16px;
+  letter-spacing: -0.04em;
+  color: #090e22;
+  margin: 0;
+}
 /* ------------------------------- Collection Size Chart CSS Ends --------------------------- */
-
+.collection ul#product-grid {
+  display: flex;
+  flex-wrap: wrap;
+  padding-left: 0;
+}
+ul#product-grid li {
+  list-style: none;
+}
 .product-grid .grid__item .product-card-wrapper .card__content .variant-option input {
   position: absolute;
   left: 0;
@@ -1149,6 +1163,7 @@ h2#sort-dropdown svg {
   font-weight: 400;
   font-size: 14px;
   line-height: 16px;
+  text-decoration: none !important;
 }
 aside#main-collection-filters {
   margin-bottom: 30px;
@@ -2602,6 +2617,10 @@ span.arrow_icon {
   }
   .sort-by-items .close_filter {
     display: none;
+  }
+  .collection .product-grid .grid__item {
+    width: 30% !important;
+    max-width: 32% !important;
   }
 }
 @media (max-width: 767px) and (min-width: 750px) {

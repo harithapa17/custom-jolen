@@ -315,5 +315,11 @@
     {%- if settings.predictive_search_enabled -%}
       <script src="{{ 'predictive-search.js' | asset_url }}" defer="defer"></script>
     {%- endif -%}
+    <script>
+      var currentURL = window.location.href;
+      if (currentURL == '{{ shop.url }}/cart') {
+        window.location.href = '{{ shop.url }}';
+      }
+    </script>
   </body>
 </html>

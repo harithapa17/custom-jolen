@@ -1240,7 +1240,7 @@
                       {% endif %}
                       class="{{ option.value }}"
                     >
-                      <a onclick="onActiveFilterClick('/collections/{{ collection.handle }}/{{ tags_for_url }}?sort_by={{ option.value }}')">
+                      <a onclick="onActiveFilterClick('?sort_by={{ option.value }}' )">
                         <span>{{ option.name }}</span>
                       </a>
                     </li>
@@ -1249,8 +1249,19 @@
 
                 <script>
                   function onActiveFilterClick(url) {
+                    var collectionSingleListProducts = document.querySelectorAll('.collection-single-list-products');
+                    collectionSingleListProducts.forEach(function (element) {
+                      if (element.children.length === 3) {
+                        element.classList.add('grid-3-column');
+                      } else if (element.children.length === 2) {
+                        element.classList.add('grid-2-column');
+                      } else if (element.children.length === 1) {
+                        element.classList.add('grid-1-column');
+                      }
+                    });
                     window.history.pushState(null, '', url);
-                    var sortVal = url.replace('/collections/accessories/?sort_by=', '');
+                    var sortVal = url.replace('?sort_by=', '');
+
                     // window.history.pushState(null, '', url);
                     console.log(FacetFiltersForm.renderPage('sort_by=' + sortVal, ''));
                   }
