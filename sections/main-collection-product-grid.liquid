@@ -26,7 +26,6 @@
     }
   }
 {%- endstyle -%}
-
 <div class="section-{{ section.id }}-padding">
   {%- paginate collection.products by section.settings.products_per_page -%}
     {% comment %} Sort is the first tabbable element when filter type is vertical {% endcomment %}
@@ -193,7 +192,11 @@
     {% render 'mask-arch' %}
   {%- endif -%}
 </div>
-
+<div class="cart-loading-overlay">
+  <svg aria-hidden="true" focusable="false" class="spinner" viewBox="0 0 66 66" xmlns="http://www.w3.org/2000/svg">
+    <circle class="path" fill="none" stroke-width="6" cx="33" cy="33" r="30"></circle>
+  </svg>
+</div>
 {% schema %}
 {
   "name": "t:sections.main-collection-product-grid.name",

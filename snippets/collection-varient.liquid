@@ -22,15 +22,7 @@
           <div
             class="
               variant-option
-<<<<<<< HEAD
-<<<<<<< HEAD
-             {% if variant == product.selected_or_first_available_variant %} selected{% endif %}
-=======
               {% if variant == product.selected_or_first_available_variant %} selected{% endif %}
->>>>>>> a685a757734dc21d720f13c8b37d58dfdfac2326
-=======
-              {% if variant == product.selected_or_first_available_variant %} selected{% endif %}
->>>>>>> a685a757734dc21d720f13c8b37d58dfdfac2326
               {% if variant.available == false %} disabled{% endif %}
             "
           >
@@ -75,7 +67,7 @@
               {% if variant.available == false %}
                 disabled
               {% endif %}
-              onchange="this.form.submit()"
+              onclick="addToCart('{{ variant.id }}','1')"
             >
             {% assign printedSizes = printedSizes | append: variant.option1 | append: ' ' %}
           </div>
@@ -83,4 +75,39 @@
       {% endif %}
     {% endfor %}
   </form>
+
+  <!-- Add to Cart popup message -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script>
+    function addToCart(variantId, qty) {
+      $('body').addClass('LoadingCart');
+      setTimeout(function () {
+        $('body').removeClass('LoadingCart');
+      }, 2200);
+      $.ajax({
+        url: '/cart/add',
+        type: 'POST',
+        data: {
+          id: variantId,
+          quantity: qty,
+        },
+        success: function (response) {
+          $.ajax({
+            url: '/?section_id=cart-drawer',
+            type: 'GET',
+            dataType: 'html',
+            success: function (carthtml) {
+              $('cart-drawer').html($(carthtml).find('cart-drawer').html());
+              $('.drawer').removeClass('is-empty');
+              $('body').addClass('overflow-cart-hidden overflow-hidden');
+              $('.drawer').addClass('animate active');
+            },
+          });
+        },
+        error: function (error) {
+          console.log('error');
+        },
+      });
+    }
+  </script>
 </div>

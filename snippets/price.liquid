@@ -49,7 +49,7 @@
     <div class="price__regular">
       <span class="visually-hidden visually-hidden--inline">{{ 'products.product.price.regular_price' | t }}</span>
       <span class="price-item price-item--regular">
-        {{ money_price }}
+        {{ money_price | split: '.' | first }}
       </span>
     </div>
     <div class="price__sale">
@@ -58,9 +58,9 @@
         <span>
           <s class="price-item price-item--regular">
             {% if settings.currency_code_enabled %}
-              {{ compare_at_price | money_with_currency }}
+              {{ compare_at_price | money_with_currency | split: '.' | first }}
             {% else %}
-              {{ compare_at_price | money }}
+              {{ compare_at_price | money | split: '.' | first }}
             {% endif %}
           </s>
         </span>

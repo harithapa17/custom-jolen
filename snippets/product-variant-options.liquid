@@ -53,7 +53,39 @@
       {% endif %}
     >
     <label for="{{ section.id }}-{{ option.position }}-{{ forloop.index0 }}">
+<<<<<<< HEAD
       {{ value -}}
+=======
+      {% if option.name == 'Color' %}
+        {% for variant in product.variants %}
+          {% for image in product.images %}
+            {% if nextVariant.image %}
+              <img
+                title="{{ value | escape }}"
+                src="{{ nextVariant.image | image_url: width:70 }}"
+                alt="{{ image.alt }}"
+              >
+              {% break %}
+            {% else %}
+              {% if image.id == variant.featured_image.id %}
+                <img
+                  title="{{ value | escape }}"
+                  class="prd-var-img"
+                  src="{{ image.src | image_url: width:70 }}"
+                  alt="{{ image.alt }}"
+                >
+              {% endif %}
+            {% endif %}
+          {% endfor %}
+          {% break %}
+        {% endfor %}
+        {% assign counter = counter | plus: 1 %}
+        {% assign nextVariant = product.variants[counter] %}
+        <span class="color-name">{{ value | escape }}</span>
+      {% else %}
+        {{ value }}
+      {% endif %}
+>>>>>>> c3ed7e3007bca8ad81d2ad1547fefb75a8c9800b
       <span class="visually-hidden">{{ 'products.product.variant_sold_out_or_unavailable' | t }}</span>
     </label>
   {%- elsif block.settings.picker_type == 'dropdown' -%}
