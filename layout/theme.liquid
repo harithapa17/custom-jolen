@@ -270,6 +270,10 @@
     </a>
     {{ page.url }}
    The current page URL is: {{ shop.url }}{{ page.url }}
+     <script>
+  var currentURL = window.location.href;
+  console.log("The current page URL is: " + currentURL);
+</script>
 
     {%- if settings.cart_type == 'drawer' -%}
       {%- render 'cart-drawer' -%}
