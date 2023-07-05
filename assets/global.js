@@ -387,14 +387,14 @@ class MenuDrawer extends HTMLElement {
       if (window.matchMedia('(max-width: 990px)')) {
         document.documentElement.style.setProperty('--viewport-height', `${window.innerHeight}px`);
       }
-      $('.filter-block').attr('open', true);
+      // $('.filter-block').attr('open', true);
       $('#sort-by-popup').hide();
 
       $('.sorting_fixed').hide();
     } else {
       setTimeout(() => {
         detailsElement.classList.add('menu-opening');
-        $('.filter-block').attr('open', true);
+        // $('.filter-block').attr('open', true);
         summaryElement.setAttribute('aria-expanded', true);
         parentMenuElement && parentMenuElement.classList.add('submenu-open');
         !reducedMotion || reducedMotion.matches
@@ -405,6 +405,8 @@ class MenuDrawer extends HTMLElement {
   }
 
   openMenuDrawer(summaryElement) {
+    $('.filter-block').attr('open', true);
+    $('.filter-type-style').addClass('filter-icon-style');
     setTimeout(() => {
       this.mainDetailsToggle.classList.add('menu-opening');
     });
