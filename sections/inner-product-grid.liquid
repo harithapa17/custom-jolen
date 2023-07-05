@@ -171,7 +171,35 @@
                               <img src="{{ block.settings.section_image | image_url }}" alt="Section Image">
                             </div>
                           </div>
-                          <div class="collection-single-list-products">
+                          <div hidden>
+                            {% assign count_elmnt = 0 %}
+                            {% if block.settings.product1 != blank %}
+                              {% assign count_elmnt = 1 %}
+                            {% endif %}
+                            {% if block.settings.product2 != blank %}
+                              {% assign count_elmnt = count_elmnt | plus: 1 %}
+                            {% endif %}
+                            {% if block.settings.product3 != blank %}
+                              {% assign count_elmnt = count_elmnt | plus: 1 %}
+                            {% endif %}
+                            {% if block.settings.product4 != blank %}
+                              {% assign count_elmnt = count_elmnt | plus: 1 %}
+                            {% endif %}
+                            {% if block.settings.product5 != blank %}
+                              {% assign count_elmnt = count_elmnt | plus: 1 %}
+                            {% endif %}
+                            {% if block.settings.product6 != blank %}
+                              {% assign count_elmnt = count_elmnt | plus: 1 %}
+                            {% endif %}
+                            {% if block.settings.product7 != blank %}
+                              {% assign count_elmnt = count_elmnt | plus: 1 %}
+                            {% endif %}
+                            {% if block.settings.product8 != blank %}
+                              {% assign count_elmnt = count_elmnt | plus: 1 %}
+                            {% endif %}
+                            {{ count_elmnt }}
+                          </div>
+                          <div class="collection-single-list-products grid-{{ count_elmnt }}-column">
                             {% if block.settings.product1 != blank %}
                               <div class="collection-list-prd">
                                 <a
@@ -421,7 +449,35 @@
                           <img src="{{ block.settings.section_image | image_url }}" alt="Section Image">
                         </div>
                       </div>
-                      <div class="collection-single-list-products">
+                      <div hidden>
+                        {% assign count_elmnt = 0 %}
+                        {% if block.settings.product1 != blank %}
+                          {% assign count_elmnt = 1 %}
+                        {% endif %}
+                        {% if block.settings.product2 != blank %}
+                          {% assign count_elmnt = count_elmnt | plus: 1 %}
+                        {% endif %}
+                        {% if block.settings.product3 != blank %}
+                          {% assign count_elmnt = count_elmnt | plus: 1 %}
+                        {% endif %}
+                        {% if block.settings.product4 != blank %}
+                          {% assign count_elmnt = count_elmnt | plus: 1 %}
+                        {% endif %}
+                        {% if block.settings.product5 != blank %}
+                          {% assign count_elmnt = count_elmnt | plus: 1 %}
+                        {% endif %}
+                        {% if block.settings.product6 != blank %}
+                          {% assign count_elmnt = count_elmnt | plus: 1 %}
+                        {% endif %}
+                        {% if block.settings.product7 != blank %}
+                          {% assign count_elmnt = count_elmnt | plus: 1 %}
+                        {% endif %}
+                        {% if block.settings.product8 != blank %}
+                          {% assign count_elmnt = count_elmnt | plus: 1 %}
+                        {% endif %}
+                        {{ count_elmnt }}
+                      </div>
+                      <div class="collection-single-list-products grid-{{ count_elmnt }}-column">
                         {% if block.settings.product1 != blank %}
                           <div class="collection-list-prd">
                             <a

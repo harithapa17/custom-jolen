@@ -1209,6 +1209,18 @@ $(document).ready(function () {
   });
 
   $('.sort-by-items ul li').click(function () {
+    var collectionSingleListProducts = $('.collection-single-list-products');
+    collectionSingleListProducts.each(function () {
+      var element = $(this);
+      if (element.children().length === 3) {
+        element.addClass('grid-3-column');
+      } else if (element.children().length === 2) {
+        element.addClass('grid-2-column');
+      } else if (element.children().length === 1) {
+        element.addClass('grid-1-column');
+      }
+    });
+
     $('.sort-by-items ul li').removeClass('sort-by-selected');
     $('.sorting_fixed').slideToggle();
 
