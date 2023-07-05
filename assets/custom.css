@@ -150,9 +150,14 @@ nav.header__inline-menu ul li .header__menu-item {
   cursor: pointer;
 }
 .header nav.header__inline-menu ul li .header__menu-item span {
-  color: #090e22;
   padding: 0;
   text-decoration-color: #a60017 !important;
+  color: #090e22;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: -0.56px;
 }
 .home-header nav.header__inline-menu ul li .header__menu-item span {
   color: #f3f4f7;
@@ -3424,5 +3429,29 @@ main-search .field:after {
 
 .scroll-trigger.animate--slide-in {
   transform: translateY(0rem) !important;
+}
+ul.search_btn {
+  margin: 0;
+  line-height: 1;
+  padding-left: 10px;
+  line-height: 40px;
+  margin-right: 5px;
+}
+ul.search_btn li {
+  list-style: none;
+}
+ul.search_btn li a {
+  color: #090e22;
+  padding: 0;
+  text-decoration-color: #a60017 !important;
+  font-size: 14px;
+  list-style: none;
+  display: flex;
+  align-items: center;
+  font-weight: 400;
+  letter-spacing: -0.56px;
+}
+ul.search_btn svg {
+  margin-left: 10px;
 }
 /* Search Page CSS Ends */
