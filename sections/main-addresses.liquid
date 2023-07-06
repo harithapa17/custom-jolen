@@ -36,6 +36,7 @@
             <h2>{{ 'customer.addresses.default' | t }}</h2>
           {%- endif -%}
           {{ address | format_address }}
+        {{ customer.name }}
           <button
             type="button"
             id="EditFormButton_{{ address.id }}"
