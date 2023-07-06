@@ -760,3 +760,24 @@ h2.order_title {
   line-height: 112%;
   margin-bottom: 40px !important;
 }
+.customer.addresses {
+    max-width: 541px !IMPORTANT;
+}
+.add-address button:before, .add-address button:after {
+    border: 0px solid #A60017 !IMPORTANT;
+    outline: none !important;
+    box-shadow: none !IMPORTANT;
+}
+.add-address button {
+    border: 1px solid #A60017;
+    width: 100%;
+    padding: 12px !IMPORTANT;
+    color: #A60017;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 112%;
+    letter-spacing: 0.56px;
+    text-transform: uppercase;
+    background: transparent !IMPORTANT;
+}
