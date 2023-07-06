@@ -34,6 +34,7 @@
         <li data-address>
           {%- if address == customer.default_address -%}
             <h2>{{ 'customer.addresses.default' | t }}</h2>
+            {{  customer.default_address }}
           {%- endif -%}
           {{ address | format_address }}
         {{ customer.name }}
