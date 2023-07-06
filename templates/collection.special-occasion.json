@@ -3,7 +3,7 @@
     "inner-banner": {
       "type": "special-occassion-banner",
       "settings": {
-        "image": "shopify:\/\/shop_images\/0222548631_9_1_1_1_1.png",
+        "image": "shopify:\/\/shop_images\/Screenshot_2023-05-08_at_1.05_1.png",
         "image_2": "shopify:\/\/shop_images\/Screenshot_2023-05-08_at_1.05_1.png",
         "image_overlay_opacity": 0,
         "image_height": "medium"
@@ -21,7 +21,7 @@
         "show_rating": false,
         "enable_quick_add": false,
         "enable_filtering": true,
-        "filter_type": "horizontal",
+        "filter_type": "drawer",
         "enable_sorting": true,
         "columns_mobile": "2",
         "padding_top": 36,
