@@ -867,3 +867,6 @@ ul.saved_address_admin li h2 {
     margin-top: 0;
     text-transform: uppercase;
 }
+ul.saved_address_admin li h2 svg {
+    transform: translateY(2px);
+}
