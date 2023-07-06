@@ -14,6 +14,7 @@
     cursor: not-allowed;
   }
 </style>
+<<<<<<< HEAD
 {% comment %}
   <div>
     <form action="/cart/add" method="post" enctype="multipart/form-data">
@@ -45,6 +46,8 @@
   </div>
 {% endcomment %}
 
+=======
+>>>>>>> 2ca5e5c58c878673e1b80dfe2dc066d5fcba33e5
 <div>
   <form action="/cart/add" method="post" enctype="multipart/form-data">
     {% assign printedSizes = '' %}
@@ -67,7 +70,7 @@
               {% if variant.available == false %}
                 disabled
               {% endif %}
-              onchange="this.form.submit()"
+              onclick="addToCart('{{ variant.id }}','1')"
             >
             {% assign printedSizes = printedSizes | append: variant.option1 | append: ' ' %}
           </div>
@@ -75,4 +78,39 @@
       {% endif %}
     {% endfor %}
   </form>
+
+  <!-- Add to Cart popup message -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script>
+    function addToCart(variantId, qty) {
+      $('body').addClass('LoadingCart');
+      setTimeout(function () {
+        $('body').removeClass('LoadingCart');
+      }, 2200);
+      $.ajax({
+        url: '/cart/add',
+        type: 'POST',
+        data: {
+          id: variantId,
+          quantity: qty,
+        },
+        success: function (response) {
+          $.ajax({
+            url: '/?section_id=cart-drawer',
+            type: 'GET',
+            dataType: 'html',
+            success: function (carthtml) {
+              $('cart-drawer').html($(carthtml).find('cart-drawer').html());
+              $('.drawer').removeClass('is-empty');
+              $('body').addClass('overflow-cart-hidden overflow-hidden');
+              $('.drawer').addClass('animate active');
+            },
+          });
+        },
+        error: function (error) {
+          console.log('error');
+        },
+      });
+    }
+  </script>
 </div>
