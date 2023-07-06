@@ -796,3 +796,7 @@ h1.saved_address-title {
     line-height: 112%;
     margin-bottom: 40px;
 }
+ul.saved_address_admin li {
+    border-bottom: 1px solid #DADADA;
+    padding-bottom: 20px;
+}
