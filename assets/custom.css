@@ -1607,7 +1607,8 @@ li.mobile-facets__item.list-menu__item label span {
     display: flex;
     justify-content: center;
   }
-  .overflow-hidden-mobile aside#main-collection-filters {
+    .overflow-hidden-mobile aside#main-collection-filters,
+  .overflow-hidden-mobile aside#main-search-filters {
     z-index: 999999 !important;
   }
   .collection-single-list-products.grid-2-column .collection-list-prd {
