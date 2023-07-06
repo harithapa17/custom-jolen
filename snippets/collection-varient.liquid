@@ -14,40 +14,6 @@
     cursor: not-allowed;
   }
 </style>
-<<<<<<< HEAD
-{% comment %}
-  <div>
-    <form action="/cart/add" method="post" enctype="multipart/form-data">
-      {% for variant in product.variants %}
-        {% if product.variants.size > 1 %}
-          <div
-            class="
-              variant-option
-             {% if variant == product.selected_or_first_available_variant %} selected{% endif %}
-              {% if variant.available == false %} disabled{% endif %}
-            "
-          >
-            <input
-              type="radio"
-              name="id"
-              id="variant_{{ variant.id }}"
-              value="{{ variant.id }}"
-
-              {% if variant.available == false %}
-                disabled
-              {% endif %}
-              onchange="this.form.submit()"
-            >
-            <label for="variant_{{ variant.id }}">{{ variant.title }}</label>
-          </div>
-        {% endif %}
-      {% endfor %}
-    </form>
-  </div>
-{% endcomment %}
-
-=======
->>>>>>> 2ca5e5c58c878673e1b80dfe2dc066d5fcba33e5
 <div>
   <form action="/cart/add" method="post" enctype="multipart/form-data">
     {% assign printedSizes = '' %}

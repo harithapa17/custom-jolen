@@ -352,18 +352,9 @@
       <div class="data-before-search">
         <div class="trending-products">
           <h3>in trend</h3>
-          {% comment %}
-            {% assign trendingProducts = collections.all.products %}
-            {% for product in trendingProducts limit: 6 %}
-              <div class="trend-prd-data">
-                <a href="{{ product.url }}">
-                  <img src="{{ product.featured_image | img_url: 'medium'  }}" alt="{{ product.title }}">
-                  <h3>{{ product.title }}</h3>
-                  <p>{{ product.price | money }}</p>
-                </a>
-              </div>
-            {% endfor %}
-          {% endcomment %}
+          <div class="trend-prd-data">
+            {% comment %} {% render 'card-collection' %} {% endcomment %}
+          </div>
         </div>
       </div>
     {%- endif -%}

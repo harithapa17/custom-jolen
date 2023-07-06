@@ -57,13 +57,6 @@
         {% for variant in product.variants %}
           {% for image in product.images %}
             {% if nextVariant.image %}
-<<<<<<< HEAD
-              <img src="{{ nextVariant.image | image_url: width:70 }}" alt="{{ image.alt }}">
-              {% break %}
-            {% else %}
-              {% if image.id == variant.featured_image.id %}
-                <img src="{{ image.src | image_url: width:70 }}" alt="{{ image.alt }}">
-=======
               <img
                 title="{{ value | escape }}"
                 src="{{ nextVariant.image | image_url: width:70 }}"
@@ -78,7 +71,6 @@
                   src="{{ image.src | image_url: width:70 }}"
                   alt="{{ image.alt }}"
                 >
->>>>>>> 2ca5e5c58c878673e1b80dfe2dc066d5fcba33e5
               {% endif %}
             {% endif %}
           {% endfor %}
@@ -86,17 +78,10 @@
         {% endfor %}
         {% assign counter = counter | plus: 1 %}
         {% assign nextVariant = product.variants[counter] %}
-<<<<<<< HEAD
-      {% else %}
-        {{ value }}
-      {% endif %}
-
-=======
         <span class="color-name">{{ value | escape }}</span>
       {% else %}
         {{ value }}
       {% endif %}
->>>>>>> 2ca5e5c58c878673e1b80dfe2dc066d5fcba33e5
       <span class="visually-hidden">{{ 'products.product.variant_sold_out_or_unavailable' | t }}</span>
     </label>
   {%- elsif block.settings.picker_type == 'dropdown' -%}
