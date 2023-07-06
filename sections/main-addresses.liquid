@@ -36,10 +36,11 @@
             <h2>{{ 'customer.addresses.default' | t }}</h2>
             {{  address }}
           {%- endif -%}
+        <h4 class="custmer_name">
+          {{ customer.name }}
+        </div>
           {{ address | format_address }}
-        {{ customer.name }}
-        {{ address.addresses }}
-        {{ customer.address.default }}
+        
         
           <button
             type="button"
