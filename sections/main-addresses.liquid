@@ -35,12 +35,14 @@
           {%- if address == customer.default_address -%}
             <h2>{{ 'customer.addresses.default' | t }}</h2>
           {%- endif -%}
-        <h4 class="custmer_name">
+        <div class="customer_saved_address">
+          <h4 class="custmer_name">
           {{ customer.name }}
         </h4>
+        <h5 class="customer_address">{{ address.address1 }}</h5>
+        </div>
           {{ address | format_address }}
-         {{ customer.street }} {{ customer.state }}
-        {{ address.address1 }}
+        
         
           <button
             type="button"
