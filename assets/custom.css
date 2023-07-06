@@ -827,6 +827,7 @@ ul.saved_address_admin button:before, ul.saved_address_admin button:after {
     text-align: left !important;
 }
 ul.saved_address_admin button {
-    margin: 0px !important;
-    margin-right: 8px !IMPORTANT;
+    margin: 16px 8px 0 0!important;
+    height: 0 !IMPORTANT;
+    min-height: auto !IMPORTANT;
 }
