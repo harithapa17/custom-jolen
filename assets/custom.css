@@ -762,6 +762,7 @@ h2.order_title {
 }
 .customer.addresses {
     max-width: 541px !IMPORTANT;
+    text-align: left !important;
 }
 .add-address button:before, .add-address button:after {
     border: 0px solid #A60017 !IMPORTANT;
@@ -818,4 +819,9 @@ ul.saved_address_admin button:before, ul.saved_address_admin button:after {
     border: 0px !IMPORTANT;
     outline: none !IMPORTANT;
     box-shadow: none !IMPORTANT;
+}
+.addresses ul {
+    list-style: none;
+    padding-left: 0;
+    text-align: left !important;
 }
