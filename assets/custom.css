@@ -781,6 +781,7 @@ h2.order_title {
     letter-spacing: 0.56px;
     text-transform: uppercase;
     background: transparent !IMPORTANT;
+  margin-top:0px !important;
 }
 ul.saved_address_admin li p {
     color: #090E22;
