@@ -1339,8 +1339,7 @@ aside#main-collection-filters {
   padding-bottom: 0px !important;
 }
 /* ------------------------------- Filter Block CSS Starts --------------------------- */
-/* #main-collection-filters .disclosure-has-popup[open] > summary::before { */
-aside .disclosure-has-popup[open] > summary::before {
+  #main-collection-filters .disclosure-has-popup[open] > summary::before, #main-search-filters .disclosure-has-popup[open] > summary::before {
   background-color: #000;
   opacity: 0.4;
   z-index: 9 !important;
