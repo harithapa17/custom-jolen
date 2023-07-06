@@ -758,5 +758,5 @@ h2.order_title {
   font-style: italic;
   font-weight: 400;
   line-height: 112%;
-  margin-bottom: 40px;
+  margin-bottom: 40px !important;
 }
