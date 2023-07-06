@@ -542,7 +542,8 @@ svg.modal__toggle-open.icon.icon-sear path {
   .filter_collection_list menu-drawer.mobile-facets__wrapper {
     padding: 0px 0 0px;
   }
-  aside#main-collection-filters {
+  aside#main-collection-filters,
+  aside#main-search-filters {
     margin-bottom: 0px !important;
     background: #fff;
     position: sticky;
