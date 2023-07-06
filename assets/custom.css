@@ -803,6 +803,7 @@ ul.saved_address_admin li {
     border-bottom: 1px solid #DADADA;
     padding-bottom: 20px;
     margin-top: 32px !IMPORTANT;
+    position:relative;
 }
 ul.saved_address_admin button {
     color: #090E22;
@@ -853,4 +854,16 @@ h5.customer_address {
     line-height: 16px;
     text-align: left;
     margin-bottom:2px;
+}
+ul.saved_address_admin li h2 {
+    color: #090E22;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 16px;
+    letter-spacing: 0.24px;
+    position: absolute;
+    bottom: 17px;
+    margin-top: 0;
+    text-transform: uppercase;
 }
