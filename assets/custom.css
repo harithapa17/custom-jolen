@@ -789,6 +789,7 @@ ul.saved_address_admin li p {
     font-style: normal;
     font-weight: 300;
     line-height: 16px;
+      text-align: left;
 }
 h1.saved_address-title {
     color: #090E22;
@@ -825,7 +826,7 @@ ul.saved_address_admin button:before, ul.saved_address_admin button:after {
 .addresses ul {
     list-style: none;
     padding-left: 0;
-    text-align: left !important;
+    text-align: right !important;
 }
 ul.saved_address_admin button {
     margin: 16px 8px 0 0!important;
