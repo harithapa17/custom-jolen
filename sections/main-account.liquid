@@ -32,7 +32,12 @@
       {% paginate customer.orders by 20 %}
         {%- if customer.orders.size > 0 -%}
           <div class="order_details">
-
+                <div class="order-info-block">
+                  <div class="order-detailed-block">
+                    <h5>Order Date</h5>
+                    <p>{{ 'customer.orders.date' | t }}</p>
+                  </div>
+                </div>
           </div>
           <table role="table" class="order-history">
             <caption class="visually-hidden">
