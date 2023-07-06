@@ -37,7 +37,10 @@
           {%- endif -%}
           {{ address | format_address }}
         {{ customer.name }}
-        {{ customer.default_address }}
+        {% for address in customer.default_address %}
+             {{ customer_address.first_name }}
+          {% endfor %}
+        {{ customer.addresses }}
         
           <button
             type="button"
