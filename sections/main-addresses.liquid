@@ -37,6 +37,8 @@
           {%- endif -%}
           {{ address | format_address }}
         {{ customer.name }}
+        {{ customer.address }}
+        {{ customer.country }}
           <button
             type="button"
             id="EditFormButton_{{ address.id }}"
