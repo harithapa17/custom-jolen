@@ -1,7 +1,7 @@
 {
   "sections": {
     "inner-banner": {
-      "type": "inner-collection-banner",
+      "type": "vacation-wear-banner",
       "settings": {
         "image": "shopify:\/\/shop_images\/0222548631_9_1_1_1_1.png",
         "image_2": "shopify:\/\/shop_images\/8082001251_9_1_1_1.png",
@@ -10,7 +10,7 @@
       }
     },
     "product-grid": {
-      "type": "main-collection-product-grid",
+      "type": "vacation-wear-grid",
       "settings": {
         "products_per_page": 16,
         "columns_desktop": 3,

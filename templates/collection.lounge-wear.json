@@ -1,7 +1,7 @@
 {
   "sections": {
     "inner-banner": {
-      "type": "inner-collection-banner",
+      "type": "lounge-wear-banner",
       "settings": {
         "image": "shopify:\/\/shop_images\/0222548631_9_1_1_1_1.png",
         "image_2": "shopify:\/\/shop_images\/1667303670-A03610_XS22_21_P_L_1.png",
@@ -10,7 +10,7 @@
       }
     },
     "product-grid": {
-      "type": "main-collection-product-grid",
+      "type": "lounge-wear-grid",
       "settings": {
         "products_per_page": 16,
         "columns_desktop": 3,

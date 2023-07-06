@@ -542,7 +542,8 @@ svg.modal__toggle-open.icon.icon-sear path {
   .filter_collection_list menu-drawer.mobile-facets__wrapper {
     padding: 0px 0 0px;
   }
-  aside#main-collection-filters {
+  aside#main-collection-filters,
+  aside#main-search-filters {
     margin-bottom: 0px !important;
     background: #fff;
     position: sticky;
@@ -1338,7 +1339,9 @@ aside#main-collection-filters {
   padding-bottom: 0px !important;
 }
 /* ------------------------------- Filter Block CSS Starts --------------------------- */
-#main-collection-filters .disclosure-has-popup[open] > summary::before {
+/* #main-collection-filters .disclosure-has-popup[open] > summary::before { */
+#main-collection-filters .disclosure-has-popup[open] > summary::before,
+#main-search-filters .disclosure-has-popup[open] > summary::before {
   background-color: #000;
   opacity: 0.4;
   z-index: 9 !important;
@@ -1606,7 +1609,8 @@ li.mobile-facets__item.list-menu__item label span {
     display: flex;
     justify-content: center;
   }
-  .overflow-hidden-mobile aside#main-collection-filters {
+  .overflow-hidden-mobile aside#main-collection-filters,
+  .overflow-hidden-mobile aside#main-search-filters {
     z-index: 999999 !important;
   }
   .collection-single-list-products.grid-2-column .collection-list-prd {
