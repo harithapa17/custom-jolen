@@ -43,7 +43,8 @@
         <h5 class="customer_address">{{ address.city }} {{ address.zip }}</h5>
         <h5 class="customer_address">{{ address.country }}</h5>
         </div>
-          {{ address | format_address }}
+        
+         {% comment %}} {{ address | format_address }} {% endcomment %}}
         
         
           <button
