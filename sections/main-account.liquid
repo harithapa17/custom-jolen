@@ -31,14 +31,14 @@
       <h2 class="order_title">Online Purchases</h2>
       {% paginate customer.orders by 20 %}
         {%- if customer.orders.size > 0 -%}
-          {comment}<div class="order_details">
+          {% comment %}<div class="order_details">
                 <div class="order-info-block">
                   <div class="order-detailed-block">
                     <h5>Order Date</h5>
                     <h6 id="ColumnDate">{{ 'customer.orders.date' | t }}</h6>
                   </div>
                 </div>
-          </div> {endcomment}
+          </div> {% endcomment %}
           <table role="table" class="order-history">
             <caption class="visually-hidden">
               {{ 'customer.orders.title' | t }}
