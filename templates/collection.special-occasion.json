@@ -25,10 +25,25 @@
             "product7": "",
             "product8": ""
           }
+        },
+        "1f0ac9a5-c5f3-4836-9b62-3ab3058895f6": {
+          "type": "text",
+          "settings": {
+            "section_image": "shopify:\/\/shop_images\/7643498330_2_1_1_4.png",
+            "product1": "garment-name-18",
+            "product2": "garment-name-15",
+            "product3": "",
+            "product4": "",
+            "product5": "",
+            "product6": "",
+            "product7": "",
+            "product8": ""
+          }
         }
       },
       "block_order": [
-        "48c1abc6-970c-4cfb-835d-11afe7573aee"
+        "48c1abc6-970c-4cfb-835d-11afe7573aee",
+        "1f0ac9a5-c5f3-4836-9b62-3ab3058895f6"
       ],
       "settings": {
         "products_per_page": 16,
