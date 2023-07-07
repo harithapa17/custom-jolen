@@ -1270,7 +1270,7 @@ h2.order-total-price {
     display: flex;
     gap: 40px;
 }
-.order-info-links {
+.order-info-links a {
     display: flex;
     align-items: center;
     gap: 8px;
