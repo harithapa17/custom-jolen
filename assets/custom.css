@@ -1306,3 +1306,6 @@ h2.order-total-price {
     text-transform: uppercase;
     margin: 0px;
 }
+.sidebar-call-action {
+    margin-top: 16px;
+}
