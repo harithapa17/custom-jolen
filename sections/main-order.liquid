@@ -48,6 +48,14 @@
           </div>
           <div class="order-del-address">
             <h3>Delivery Address & Contact</h3>
+            <div class="order-address-block">
+              <h4 class="custmer_name">
+                {{ customer.name }}
+              </h4>
+              <h5 class="customer_address">{{ address.address1 }}</h5>
+              <h5 class="customer_address">{{ address.city }} {{ address.zip }}</h5>
+              <h5 class="customer_address">{{ address.country }}</h5>
+            </div>
           </div>
         </div>
         <div class="abt-ordered-prd">
