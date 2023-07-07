@@ -1233,3 +1233,9 @@ h2.order-total-price {
     max-height: 381px;
     overflow-y: scroll;
 }
+.admin-flex_row .customer.order {
+    width: calc(100% - 280px);
+    margin-right: inherit;
+    padding-left: 100px;
+    padding-right: 100px;
+}
