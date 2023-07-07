@@ -68,7 +68,7 @@
             <div class="order-address-block">
               <h4 class="custmer_name">
                 {{ customer.name }}
-                {{ order.shipping.address }}
+                 {{ order.shipping_address | format_address }}
                  
               </h4>
                <h3>{{ order.phone }}</h3>
