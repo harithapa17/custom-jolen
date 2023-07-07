@@ -1175,3 +1175,13 @@ h2.order-total-price {
     overflow: hidden;
     position: relative;
 }
+.ord-single-prd-info h4 {
+    color: #000;
+    font-size: 16px;
+    font-style: italic;
+    font-weight: 400;
+    line-height: 19.2px;
+    letter-spacing: -0.1px;
+    margin-top: 0;
+    margin-bottom: 8px;
+}
