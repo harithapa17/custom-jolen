@@ -917,19 +917,19 @@ button#cancel-update-address {
     outline: none !important;
     border-radius: 0px !IMPORTANT;
 }
-#address_form_new .field input {
+.customer_edit_address .field input {
     order: 1 !IMPORTANT;
 }
-#address_form_new .field {
+.customer_edit_address .field {
     border-bottom: 1px solid #848690!important;
     box-shadow: none!important;
     outline: none!important;
     flex-wrap: wrap;
 }
-#address_form_new .field label {
+.customer_edit_address .field label {
     left:0 !important;
 }
-#address_form_new labels {
+.customer_edit_address labels {
     color: #090E22;
     font-size: 12px;
     font-style: normal;
@@ -937,12 +937,12 @@ button#cancel-update-address {
     line-height: 16px;
     margin-bottom: 12px;
 }
-#address_form_new .select:before, #address_form_new .select:after {
+.customer_edit_address .select:before, .customer_edit_address .select:after {
     border: 0px outset;
     outline: none !important;
     box-shadow: none !important;
 }
-#address_form_new .select select {
+.customer_edit_address .select select {
     padding: 0;
     border-bottom: 1px solid #848690!important;
     outline: none!important;
@@ -957,7 +957,7 @@ button#cancel-update-address {
     min-height: 20px !IMPORTANT;
     height: 31px;
 }
-#address_form_new .field input {
+.customer_edit_address .field input {
     box-shadow: none!important;
     outline: none!important;
     height: 40px;
