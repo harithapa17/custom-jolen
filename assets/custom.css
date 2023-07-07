@@ -1199,6 +1199,10 @@ h2.order-total-price {
     flex-direction: column;
     justify-content: space-between;
 }
+.qty-ord {
+    display: flex;
+    gap: 3px;
+}
 .qty-ord h4 {
     color: #090E22;
     font-size: 14px;
@@ -1206,4 +1210,16 @@ h2.order-total-price {
     font-weight: 300;
     line-height: 16px;
     margin: 0px;
+}
+.qty-ord h5 {
+    color: #090E22;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 16px;
+    letter-spacing: -0.56px;
+}
+.qty-ord {
+    display: flex;
+    gap: 8px;
 }
