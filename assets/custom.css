@@ -1149,6 +1149,7 @@ h2.order-total-price {
 }
 .ord-single-prd {
     padding: 20px 0;
+    border-bottom: 1px solid #CECFD3;
 }
 .abt-ordered-prd h3 {
     color: #090E22;
