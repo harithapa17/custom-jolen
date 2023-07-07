@@ -1040,6 +1040,7 @@ button#cancel-update-address {
   border: 0;
   display: block;
   margin-bottom: 16px;
+  text-decoration:none;
 }
 
 .sidebar-items .sidebar-btn:last-child {
