@@ -28,7 +28,7 @@
 
   <div>
     <div>
-      {% comment %}} <h2>{{ 'customer.order.title' | t: name: order.name }}</h2> {% endcomment %}}
+      {% comment %} <h2>{{ 'customer.order.title' | t: name: order.name }}</h2> {% endcomment %}
      <h2 class="order_title">Online Purchases</h2>
       {%- assign order_date = order.created_at | time_tag: format: 'date_at_time' -%}
       <p>{{ 'customer.order.date_html' | t: date: order_date }}</p>
