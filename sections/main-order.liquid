@@ -13,7 +13,23 @@
     }
   }
 {%- endstyle -%}
-
+  <div class="admin-flex_row">
+  <div class="sidebar-admin">
+              <h2>Hey Medha</h2>
+              <div class="sidebar-items">
+                <h3>my purchases</h3>
+                <button class="sidebar-btn" id="online-tab"><a href="{{ routes.account_url }}">Online</a></button>
+              </div>
+              <div class="sidebar-items">
+                <h3>My account</h3>
+                <button class="sidebar-btn" id="online-tab">Profile</button>
+                <button class="sidebar-btn" id="online-tab"><a href="{{ routes.account_addresses_url }}">Addresses</a></button>
+              </div>
+              <div class="sidebar-items help-block">
+                <h3>Need help</h3>
+                <button class="sidebar-btn" id="online-tab">FAQ</button>
+              </div>
+            </div>
 <div class="customer order section-{{ section.id }}-padding">
   <svg style="display:none">
     <symbol id="icon-discount" viewBox="0 0 12 12">
@@ -462,6 +478,7 @@
     </div>
   </div>  {% endcomment %}
 </div>
+                        </div>
 
 {% schema %}
 {
