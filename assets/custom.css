@@ -1244,10 +1244,10 @@ h2.order-total-price {
     gap: 24px;
 }
 .order-address-block p {
-    color: #090E22;
-    font-size: 12px;
+    color: #090e22;
+    font-size: 12px !important;
     font-style: normal;
     font-weight: 300;
-    line-height: 16px;
-    margin-top: 4px;
+    line-height: 19px;
+    margin: 0px !important;
 }
