@@ -3338,9 +3338,40 @@ main-search .field:after {
 .data-before-search {
   border-top: 1px solid #ebebeb !important;
   padding-top: 40px;
+  padding-bottom: 40px;
+}
+.trending-products {
+  width: 92%;
+  margin: auto;
 }
 .template-search .mobile-facets__open-label {
   text-transform: uppercase;
+}
+.trending-product h3 {
+  color: #090e22;
+  font-size: 16px;
+  font-style: italic;
+  border: 0 !important;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: -0.64px;
+  text-transform: capitalize;
+  margin-top: 8px !important;
+  margin-bottom: 4px !important;
+}
+.trending-product a {
+  text-decoration: none !important;
+  display: block;
+}
+.trending-product p {
+  margin-bottom: 0;
+  color: #090e22;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 16px;
+  letter-spacing: -0.56px;
+  margin-top: 0 !important;
 }
 @media (min-width: 750px) {
   .empty-search .template-search__header {
@@ -3455,4 +3486,24 @@ ul.search_btn li a {
 ul.search_btn svg {
   margin-left: 10px;
 }
+.trend-prd-data {
+  display: flex;
+  justify-content: space-between;
+  gap: 24px;
+}
+.trending-product img,
+.trending-product {
+  width: 100%;
+}
 /* Search Page CSS Ends */
+
+/* Account Pages */
+
+h2.order_title {
+  color: #090e22;
+  font-size: 20px;
+  font-style: italic;
+  font-weight: 400;
+  line-height: 112%;
+  margin-bottom: 40px !important;
+}
