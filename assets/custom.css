@@ -879,7 +879,7 @@ ul.saved_address_admin li h2 svg {
     margin-bottom: 40px;
     margin-top: 49px;
 }
-.add-address button#add-new-address-btn {
+.add-address-action-btn button#add-new-address-btn {
     background: #A60017 !important;
     padding: 12px 20px !important;
     color: #FFF;
