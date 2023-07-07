@@ -870,3 +870,11 @@ ul.saved_address_admin li h2 {
 ul.saved_address_admin li h2 svg {
     transform: translateY(2px);
 }
+#AddressNewHeading {
+    color: #090e22;
+    font-size: 20px;
+    font-style: italic;
+    font-weight: 400;
+    line-height: 112%;
+    margin-bottom: 40px;
+}
