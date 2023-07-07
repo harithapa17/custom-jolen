@@ -17,6 +17,23 @@
 {%- endstyle -%}
 
 {%- paginate customer.addresses by 5 -%}
+  <div class="admin-flex_row">
+  <div class="sidebar-admin">
+              <h2>Hey Medha</h2>
+              <div class="sidebar-items">
+                <h3>my purchases</h3>
+                <button class="sidebar-btn" id="online-tab">Online</button>
+              </div>
+              <div class="sidebar-items">
+                <h3>My account</h3>
+                <button class="sidebar-btn" id="online-tab">Profile</button>
+                <button class="sidebar-btn" id="online-tab">Addresses</button>
+              </div>
+              <div class="sidebar-items help-block">
+                <h3>Need help</h3>
+                <button class="sidebar-btn" id="online-tab">FAQ</button>
+              </div>
+            </div>
   <div class="customer addresses section-{{ section.id }}-padding" data-customer-addresses>
     <svg style="display: none">
       <symbol id="icon-caret" viewBox="0 0 10 6">
@@ -400,6 +417,7 @@
       {%- endif -%}
     {%- endif -%}
   </div>
+                    </div>
 {%- endpaginate -%}
 
 <script>
