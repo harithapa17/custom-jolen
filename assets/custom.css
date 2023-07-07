@@ -1066,6 +1066,8 @@ button#cancel-update-address {
     background: #F8F8F8;
     padding: 24px;
     border-radius: 2px;
+    display: flex;
+    justify-content: space-between;
 }
 .prd-detail-block h3 {
     color: #090E22;
