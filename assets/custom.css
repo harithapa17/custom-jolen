@@ -1029,7 +1029,7 @@ button#cancel-update-address {
   text-transform: uppercase;
   margin-bottom: 24px;
 }
-.sidebar-items .sidebar-btn {
+.sidebar-items .sidebar-btn, .sidebar-items .sidebar-btn a {
   color: #090e22;
   font-size: 14px;
   font-style: normal;
