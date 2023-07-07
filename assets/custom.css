@@ -917,10 +917,14 @@ button#cancel-update-address {
     outline: none !important;
     border-radius: 0px !IMPORTANT;
 }
+#address_form_new .field input {
+    order: 1 !IMPORTANT;
+}
 #address_form_new .field {
-    border-bottom: 1px solid #848690 !important;
-    box-shadow: none !important;
-    outline: none !important;
+    border-bottom: 1px solid #848690!important;
+    box-shadow: none!important;
+    outline: none!important;
+    flex-wrap: wrap;
 }
 #address_form_new .field input {
     box-shadow: none !important;
