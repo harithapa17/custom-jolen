@@ -1061,3 +1061,9 @@ button#cancel-update-address {
     margin-right: inherit !important;
     padding: 40px 100px !important;
 }
+
+.order-detailed-box {
+    background: #F8F8F8;
+    padding: 24px;
+    border-radius: 2px;
+}
