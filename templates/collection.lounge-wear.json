@@ -1,7 +1,7 @@
 {
   "sections": {
     "inner-banner": {
-      "type": "inner-collection-banner",
+      "type": "lounge-wear-banner",
       "settings": {
         "image": "shopify:\/\/shop_images\/0222548631_9_1_1_1_1.png",
         "image_2": "shopify:\/\/shop_images\/1667303670-A03610_XS22_21_P_L_1.png",
@@ -10,7 +10,41 @@
       }
     },
     "product-grid": {
-      "type": "main-collection-product-grid",
+      "type": "lounge-wear-grid",
+      "blocks": {
+        "0be5fbb2-05a1-4749-b0f9-f6ebb3e72171": {
+          "type": "text",
+          "settings": {
+            "section_image": "shopify:\/\/shop_images\/2010711832_1_1_1_1_1.png",
+            "product1": "garment-name-18",
+            "product2": "garment-name-15",
+            "product3": "",
+            "product4": "",
+            "product5": "",
+            "product6": "",
+            "product7": "",
+            "product8": ""
+          }
+        },
+        "d2704000-a5ef-4636-9927-6957230b2f61": {
+          "type": "text",
+          "settings": {
+            "section_image": "shopify:\/\/shop_images\/7643498330_2_1_1_4.png",
+            "product1": "garment-name-12",
+            "product2": "garment-name-13",
+            "product3": "garment-name-14",
+            "product4": "",
+            "product5": "",
+            "product6": "",
+            "product7": "",
+            "product8": ""
+          }
+        }
+      },
+      "block_order": [
+        "0be5fbb2-05a1-4749-b0f9-f6ebb3e72171",
+        "d2704000-a5ef-4636-9927-6957230b2f61"
+      ],
       "settings": {
         "products_per_page": 16,
         "columns_desktop": 3,
@@ -21,7 +55,7 @@
         "show_rating": false,
         "enable_quick_add": false,
         "enable_filtering": true,
-        "filter_type": "horizontal",
+        "filter_type": "drawer",
         "enable_sorting": true,
         "columns_mobile": "2",
         "padding_top": 36,

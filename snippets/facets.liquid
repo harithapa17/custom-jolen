@@ -1233,18 +1233,33 @@
                   </div>
                 </div>
                 <ul id="sort-by-popup" class="styled-select coll-filter">
-                  {% for option in collection.sort_options %}
-                    <li
-                      {% if option.value == sort_by %}
-                        selected="selected"
-                      {% endif %}
-                      class="{{ option.value }}"
-                    >
-                      <a onclick="onActiveFilterClick('?sort_by={{ option.value }}' )">
-                        <span>{{ option.name }}</span>
-                      </a>
-                    </li>
-                  {% endfor %}
+                  {% if collection.sort_options %}
+                    {% for option in collection.sort_options %}
+                      <li
+                        {% if option.value == sort_by %}
+                          selected="selected"
+                        {% endif %}
+                        class="{{ option.value }}"
+                      >
+                        <a onclick="onActiveFilterClick('?sort_by={{ option.value }}' )">
+                          <span>{{ option.name }}</span>
+                        </a>
+                      </li>
+                    {% endfor %}
+                  {% else %}
+                    {% for option in results.sort_options %}
+                      <li
+                        {% if option.value == sort_by %}
+                          selected="selected"
+                        {% endif %}
+                        class="{{ option.value }}"
+                      >
+                        <a onclick="onActiveFilterClick('?sort_by={{ option.value }}' )">
+                          <span>{{ option.name }}</span>
+                        </a>
+                      </li>
+                    {% endfor %}
+                  {% endif %}
                 </ul>
 
                 <script>
