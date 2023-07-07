@@ -996,9 +996,11 @@ button#cancel-update-address {
 
 .sidebar-admin {
     width: 280px;
+    position: sticky;
     border-right: 1px solid #dadada;
     top: 57px;
     padding: 15px 30px;
+    height: 100vh;
 }
 .admin-section {
   padding: 46px 0 0;
