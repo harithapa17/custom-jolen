@@ -1243,3 +1243,11 @@ h2.order-total-price {
     display: flex;
     gap: 24px;
 }
+h4.custmer_name p {
+    color: #090E22;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 16px;
+    margin-top: 4px;
+}
