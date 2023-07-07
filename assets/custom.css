@@ -1084,3 +1084,6 @@ button#cancel-update-address {
     line-height: 16px;
     letter-spacing: 0.56px;
 }
+.prd-detail-block {
+    margin-bottom: 20px;
+}
