@@ -1062,7 +1062,17 @@ button#cancel-update-address {
     margin-right: inherit !important;
     padding: 40px 100px !important;
 }
-
+.logged-out {
+    margin-top: 54px;
+}
+.logged-out a {
+    color: rgba(9, 14, 34, 0.60);
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 16px;
+    text-decoration: none;
+}
 .order-detailed-box {
     background: #F8F8F8;
     padding: 24px;
