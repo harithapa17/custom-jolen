@@ -76,7 +76,9 @@
           <div class="ord-prd-admin">
             <div class="ord-single-prd">
               <div class="ord-prd-img">
+                {%- for line_item in order.line_items -%}
                 <img src="//1df768.myshopify.com/cdn/shop/{{ line_item.image }}">
+                {%- endfor -%}
               </div>
             </div>
           </div>
