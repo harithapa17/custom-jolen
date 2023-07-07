@@ -60,7 +60,7 @@
             <h3>Total Order Price</h3>
             <div class="order-address-block">
               <h2 class="order-total-price">
-               {{ 'customer.order.total' | t }}
+                {{ order.total_net_amount | money_with_currency }}
                  
               </h2>
                <h3>{{ order.phone }}</h3>
