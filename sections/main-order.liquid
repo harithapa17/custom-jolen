@@ -90,6 +90,9 @@
         </div>
         <div class="abt-ordered-prd">
           <h3>Includes 2 Items</h3>
+            {%- for line_item in order.line_items -%}
+             {{ line_item }}
+          {% endfor %}
           <div class="ord-prd-admin">
             {%- for line_item in order.line_items -%}
             <div class="ord-single-prd">
