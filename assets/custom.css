@@ -1124,3 +1124,17 @@ h2.order-total-price {
     letter-spacing: 0.28px;
     text-transform: capitalize;
 }
+.ordered-pymnt-mthd h3 {
+    color: #414547;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 20px;
+    letter-spacing: 0.28px;
+    background: #fff;
+    display: inline;
+    padding: 6px 24px;
+}
+.ordered-pymnt-mthd {
+    margin-top: 16px;
+}
