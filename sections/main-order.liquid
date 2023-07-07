@@ -472,7 +472,7 @@
         </tfoot>
       </table>
     </div>
-    <div>
+   {% comment %} <div>
       <div>
         <h2>{{ 'customer.order.billing_address' | t }}</h2>
         <p>
@@ -490,7 +490,7 @@
         {{ order.shipping_address | format_address }}
       </div>
     </div>
-  </div>  
+  </div>  {% endcomment %}
 </div>
                         </div>
 
