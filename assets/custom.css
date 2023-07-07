@@ -920,3 +920,6 @@ button#cancel-update-address {
 #address_form_new .field {
     border-bottom: 1px solid #848690 !important;
 }
+#address_form_new .field label {
+    left:0 !important;
+}
