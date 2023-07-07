@@ -934,3 +934,11 @@ button#cancel-update-address {
 #address_form_new .field label {
     left:0 !important;
 }
+#address_form_new .field labels {
+    color: #090E22;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 16px;
+    margin-bottom: 12px;
+}
