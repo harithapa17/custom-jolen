@@ -62,7 +62,12 @@
                 {{ order.total_net_amount | money_with_currency }}
                  
               </h2>
+               {%- for address in customer.addresses -%}
+                 <h5 class="customer_address">{{ address.address1 }}</h5>
+                  <h5 class="customer_address">{{ address.city }} {{ address.zip }}</h5>
+                <h5 class="customer_address">{{ address.country }}</h5>
                <h3>{{ order.phone }}</h3>
+            {% endfor %}
             <div class="price_breakup">
               <a href="#">View Breakup</a>
             </div>
