@@ -67,7 +67,7 @@
                   <h5 class="customer_address">{{ address.city }} {{ address.zip }}</h5>
                 <h5 class="customer_address">{{ address.country }}</h5>
                <h3>{{ order.phone }}</h3>
-            {{ address }}
+            {{ order.shipping_address }}
             {% break %}
             {% endfor %}
             <div class="price_breakup">
