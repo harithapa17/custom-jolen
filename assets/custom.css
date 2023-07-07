@@ -929,7 +929,7 @@ button#cancel-update-address {
 #address_form_new .field label {
     left:0 !important;
 }
-#address_form_new .field labels {
+#address_form_new labels {
     color: #090E22;
     font-size: 12px;
     font-style: normal;
