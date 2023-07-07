@@ -31,7 +31,20 @@
       {% comment %} <h2>{{ 'customer.order.title' | t: name: order.name }}</h2> {% endcomment %}
      <h2 class="order_title">Online Purchases</h2>
       <div class="order-detailed-box">
+        <div class="order-text-info">
+          <div class="prd-detail-block">
+            {%- assign order_date = order.created_at | time_tag: format: 'date_at_time' -%}
+      <h3>{{ 'customer.order.date_html' | t: date: order_date }}</h3>
+      {%- if order.cancelled -%}
+        {%- assign cancelled_at = order.cancelled_at | time_tag: format: 'date_at_time' -%}
+        <h3>{{ 'customer.order.cancelled_html' | t: date: cancelled_at }}</h3>
+        <h3>{{ 'customer.order.cancelled_reason' | t: reason: order.cancel_reason_label }}</h3>
+      {%- endif -%}
+          </div>
+        </div>
+        <div class="abt-ordered-prd">
 
+        </div>
       </div>
       {%- assign order_date = order.created_at | time_tag: format: 'date_at_time' -%}
       <p>{{ 'customer.order.date_html' | t: date: order_date }}</p>
