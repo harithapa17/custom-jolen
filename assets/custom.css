@@ -880,14 +880,18 @@ ul.saved_address_admin li h2 svg {
     margin-top: 49px;
 }
 .add-address-action-btn button#add-new-address-btn {
-    background: #A60017 !important;
-    padding: 12px 20px !important;
-    color: #FFF;
+    background: #A60017!important;
+    padding: 12px 20px!important;
+    color: #fff;
     font-size: 14px;
     font-weight: 400;
     line-height: 112%;
-    letter-spacing: 0.56px;
+    letter-spacing: .56px;
     text-transform: uppercase;
+    margin: 0px;
+    min-height: inherit !important;
+    height: inherit !important;
+    text-decoration: none;
 }
 button#cancel-update-address {
     color: #A60017;
