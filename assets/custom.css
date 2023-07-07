@@ -1140,6 +1140,9 @@ h2.order-total-price {
 .ordered-pymnt-mthd {
     margin-top: 16px;
 }
+.abt-ordered-prd {
+    width: 50%;
+}
 .abt-ordered-prd h3 {
     color: #090E22;
     font-size: 20px;
