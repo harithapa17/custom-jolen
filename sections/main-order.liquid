@@ -33,12 +33,13 @@
       <div class="order-detailed-box">
         <div class="order-text-info">
           <div class="prd-detail-block">
+            <h3>Order Date</h3>
             {%- assign order_date = order.created_at | time_tag: format: 'date_at_time' -%}
-      <h3>{{ 'customer.order.date_html' | t: date: order_date }}</h3>
+      <p>{{ 'customer.order.date_html' | t: date: order_date }}</p>
       {%- if order.cancelled -%}
         {%- assign cancelled_at = order.cancelled_at | time_tag: format: 'date_at_time' -%}
-        <h3>{{ 'customer.order.cancelled_html' | t: date: cancelled_at }}</h3>
-        <h3>{{ 'customer.order.cancelled_reason' | t: reason: order.cancel_reason_label }}</h3>
+        <p>{{ 'customer.order.cancelled_html' | t: date: cancelled_at }}</p>
+        <p>{{ 'customer.order.cancelled_reason' | t: reason: order.cancel_reason_label }}</p>
       {%- endif -%}
           </div>
         </div>
