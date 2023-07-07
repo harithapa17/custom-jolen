@@ -906,3 +906,7 @@ button#cancel-update-address {
     display: flex;
     margin: 0 !IMPORTANT;
 }
+.add-address-action-btn {
+    display: flex;
+    align-items: center;
+}
