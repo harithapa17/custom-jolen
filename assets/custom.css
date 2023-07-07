@@ -1286,3 +1286,23 @@ h2.order-total-price {
     margin: 0px !important;
     text-decoration: underline;
 }
+.sidebar-call-action h4 {
+    color: #090E22;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 16px;
+    text-transform: uppercase;
+    margin: 0px;
+    margin-bottom: 3px;
+}
+.sidebar-call-action p {
+    color: #090E22;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 16px;
+    letter-spacing: 0.28px;
+    text-transform: uppercase;
+    margin: 0px;
+}
