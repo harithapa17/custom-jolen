@@ -1284,5 +1284,5 @@ h2.order-total-price {
     letter-spacing: 0.48px;
     text-transform: capitalize;
     margin: 0px !important;
-    text-decoration: none;
+    text-decoration: underline;
 }
