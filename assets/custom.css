@@ -945,8 +945,17 @@ button#cancel-update-address {
 #address_form_new .select select {
     padding: 0;
     border-bottom: 1px solid #848690!important;
-    outline: none !important;
-    box-shadow: none !important;
+    outline: none!important;
+    box-shadow: none!important;
+    padding: 0 0 8px!important;
+    color: #090e22;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 16px;
+    letter-spacing: .28px;
+    min-height: 20px !IMPORTANT;
+    height: 31px;
 }
 #address_form_new .field input {
     box-shadow: none!important;
