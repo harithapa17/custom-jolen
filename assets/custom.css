@@ -1318,3 +1318,6 @@ h2.order-total-price {
 .sidebar-call-action {
     margin-top: 16px;
 }
+.admin-flex_row {
+    display: flex;
+}
