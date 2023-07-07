@@ -972,3 +972,14 @@ button#cancel-update-address {
     line-height: 16px;
     letter-spacing: 0.28px;
 }
+.customer_edit_address h2 {
+    position: relative !important;
+    top: 0;
+    color: #090E22 indianred;
+    font-size: 20px !important;
+    font-style: italic !important;
+    font-weight: 400 !important;
+    line-height: 112% !important;
+    text-transform: capitalize !IMPORTANT;
+    margin-top: 60px !important;
+}
