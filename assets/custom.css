@@ -1143,6 +1143,10 @@ h2.order-total-price {
 .abt-ordered-prd {
     width: 50%;
 }
+.ord-prd-admin {
+    background: #fff;
+    padding: 0px 16px;
+}
 .abt-ordered-prd h3 {
     color: #090E22;
     font-size: 20px;
