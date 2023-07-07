@@ -89,9 +89,10 @@
           </div>
         </div>
         <div class="abt-ordered-prd">
+             {% assign count = 0 %}
           <h3>Includes 2 Items</h3>
             {%- for line_item in order.line_items -%}
-             {{ line_item }}
+              {{  count | plus:1 }} }}
           {% endfor %}
           <div class="ord-prd-admin">
             {%- for line_item in order.line_items -%}
