@@ -926,11 +926,6 @@ button#cancel-update-address {
     outline: none!important;
     flex-wrap: wrap;
 }
-#address_form_new .field input {
-    box-shadow: none !important;
-    outline: none !important;
-  padding-left:0px !important;
-}
 #address_form_new .field label {
     left:0 !important;
 }
@@ -941,4 +936,19 @@ button#cancel-update-address {
     font-weight: 300;
     line-height: 16px;
     margin-bottom: 12px;
+}
+#address_form_new .field input {
+    box-shadow: none!important;
+    outline: none!important;
+    height: 40px;
+    min-height: 20px !IMPORTANT;
+    max-height: 20px;
+    padding: 0px !IMPORTANT;
+    padding-bottom: 8px !IMPORTANT;
+    color: #090E22;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 16px;
+    letter-spacing: 0.28px;
 }
