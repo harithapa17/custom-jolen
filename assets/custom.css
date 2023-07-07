@@ -922,6 +922,10 @@ button#cancel-update-address {
     box-shadow: none !important;
     outline: none !important;
 }
+#address_form_new .field input {
+    box-shadow: none !important;
+    outline: none !important;
+}
 #address_form_new .field label {
     left:0 !important;
 }
