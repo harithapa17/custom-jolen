@@ -473,7 +473,7 @@
           <strong>{{ 'customer.order.fulfillment_status' | t }}:</strong>
           {{ order.fulfillment_status_label }}
         </p>
-        {{ shipping_address | format_address }}
+        {{ order.shipping_address | format_address }}
       </div>
     </div>
   </div>  
