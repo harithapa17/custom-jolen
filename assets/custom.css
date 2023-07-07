@@ -1193,3 +1193,9 @@ h2.order-total-price {
     line-height: 16px;
     margin: 0;
 }
+.ord-single-prd-info {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: space-between;
+}
