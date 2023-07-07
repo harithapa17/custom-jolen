@@ -911,7 +911,7 @@ button#cancel-update-address {
     align-items: center;
     margin-top: 40px;
 }
-#address_form_new .field:before, #address_form_new .field:after {
+#address_form_new .field:before, #address_form_new .field:after, .customer_edit_address .field:before, .customer_edit_address .field:after {
     border: 0px !IMPORTANT;
     box-shadow: none !IMPORTANT;
     outline: none !important;
