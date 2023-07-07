@@ -901,3 +901,8 @@ button#cancel-update-address {
     text-underline-offset: 2px;
     border: 0;
 }
+.add-address-action-btn button {
+    width: auto;
+    display: flex;
+    margin: 0 !IMPORTANT;
+}
