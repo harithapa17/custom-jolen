@@ -1275,7 +1275,7 @@ h2.order-total-price {
     align-items: center;
     gap: 8px;
 }
-.order-info-links h4 {
+.order-info-links a h4 {
     color: #090E22;
     font-size: 12px;
     font-style: normal;
