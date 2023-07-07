@@ -1078,7 +1078,7 @@ button#cancel-update-address {
 }
 .prd-detail-block p {
     color: #414547;
-    font-size: 14px;
+    font-size: 14px !important;
     font-style: normal;
     font-weight: 500;
     line-height: 16px;
