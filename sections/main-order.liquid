@@ -80,7 +80,8 @@
                 <img src="//1df768.myshopify.com/cdn/shop/{{ line_item.image }}">              
               </div>
               <div class="ord-single-prd-info">
-                <h4>{{ line_item.title }}</h4>
+                <div class="ord-single-top">
+                  <h4>{{ line_item.title }}</h4>
                 <h5>
                   {%- if line_item.original_price != line_item.final_price or line_item.unit_price_measurement -%}
                   <dl>
@@ -132,6 +133,12 @@
                   <span>{{ line_item.final_price | money }}</span>
                 {%- endif -%}
                 </h5>
+                </div>
+                <div class="ord-single-bottom">
+                  <div class="qty-ord">
+                    <h4>Qty</h4>
+                  </div>
+                </div>
               </div>
             </div>
              {%- endfor -%}
