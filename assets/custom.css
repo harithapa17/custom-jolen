@@ -892,6 +892,7 @@ ul.saved_address_admin li h2 svg {
     min-height: inherit !important;
     height: inherit !important;
     text-decoration: none;
+    margin-right: 0px !important;
 }
 button#cancel-update-address {
     color: #A60017;
@@ -917,7 +918,7 @@ button#cancel-update-address {
     display: flex;
     align-items: center;
     margin-top: 40px;
-    gap: 15px;
+    gap: 24px;
 }
 #address_form_new .field:before, #address_form_new .field:after, .customer_edit_address .field:before, .customer_edit_address .field:after {
     border: 0px !IMPORTANT;
