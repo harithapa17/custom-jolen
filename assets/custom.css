@@ -915,6 +915,8 @@ button#cancel-update-address {
     border: 0px !IMPORTANT;
     box-shadow: none !IMPORTANT;
     outline: none !important;
-    border-bottom: 1px solid #848690 !important;
     border-radius: 0px !IMPORTANT;
+}
+#address_form_new .field {
+    border-bottom: 1px solid #848690 !important;
 }
