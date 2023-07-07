@@ -1223,3 +1223,6 @@ h2.order-total-price {
     display: flex;
     gap: 8px;
 }
+.ord-prd-admin .ord-single-prd:last-child {
+    border-bottom: 0;
+}
