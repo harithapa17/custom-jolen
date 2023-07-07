@@ -1265,3 +1265,7 @@ h2.order-total-price {
     letter-spacing: 0.64px;
     text-transform: uppercase;
 }
+.order-aciton {
+    display: flex;
+    gap: 40px;
+}
