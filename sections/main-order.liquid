@@ -74,13 +74,13 @@
         <div class="abt-ordered-prd">
           <h3>Includes 2 Items</h3>
           <div class="ord-prd-admin">
+            {%- for line_item in order.line_items -%}
             <div class="ord-single-prd">
-              <div class="ord-prd-img">
-                {%- for line_item in order.line_items -%}
-                <img src="//1df768.myshopify.com/cdn/shop/{{ line_item.image }}">
-                {%- endfor -%}
+              <div class="ord-prd-img">               
+                <img src="//1df768.myshopify.com/cdn/shop/{{ line_item.image }}">              
               </div>
             </div>
+             {%- endfor -%}
           </div>
         </div>
       </div>
