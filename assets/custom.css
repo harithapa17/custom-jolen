@@ -1041,6 +1041,7 @@ button#cancel-update-address {
   display: block;
   margin-bottom: 16px;
   text-decoration:none;
+  padding:0px !important;
 }
 
 .sidebar-items .sidebar-btn:last-child {
