@@ -1115,3 +1115,12 @@ h2.order-total-price {
     line-height: 16px;
     letter-spacing: 0.28px;
 }
+.price_breakup a {
+    color: #A60017;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 16px;
+    letter-spacing: 0.28px;
+    text-transform: capitalize;
+}
