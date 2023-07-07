@@ -904,6 +904,9 @@ button#cancel-update-address {
     text-transform: capitalize;
     text-underline-offset: 2px;
     border: 0;
+    padding: 0!important;
+    max-width: 100%!important;
+    min-width: inherit!important;
 }
 .add-address-action-btn button {
     width: auto;
