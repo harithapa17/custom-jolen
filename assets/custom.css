@@ -1226,3 +1226,10 @@ h2.order-total-price {
 .ord-prd-admin .ord-single-prd:last-child {
     border-bottom: 0;
 }
+
+.ord-prd-admin {
+    background: #fff;
+    padding: 0 16px;
+    max-height: 381px;
+    overflow-y: scroll;
+}
