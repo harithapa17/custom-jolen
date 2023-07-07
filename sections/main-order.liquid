@@ -160,6 +160,8 @@
                     <h4>Size</h4>
                     <h5>{{ line_item.title  | split: '/' | first | split: '-' | last }}</h5>
                     <h5>{{ line_item.title  | split: '/' | first }}</h5>
+                            {% assign k = line_item.title  | split: '/' | first %}
+                    {{ k }}
                   </div>
                 </div>
               </div>
