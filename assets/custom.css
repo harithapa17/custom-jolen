@@ -1251,3 +1251,8 @@ h2.order-total-price {
     line-height: 19px;
     margin: 0px !important;
 }
+.order-info {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 16px;
+}
