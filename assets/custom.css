@@ -1096,3 +1096,6 @@ button#cancel-update-address {
     margin-top: 0px;
     margin-bottom: 16px;
 }
+.order-del-address {
+    margin-top: 40px;
+}
