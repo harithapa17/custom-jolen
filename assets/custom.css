@@ -937,6 +937,11 @@ button#cancel-update-address {
     line-height: 16px;
     margin-bottom: 12px;
 }
+#address_form_new .select:before, #address_form_new .select:after {
+    border: 0px outset;
+    outline: none !important;
+    box-shadow: none !important;
+}
 #address_form_new .field input {
     box-shadow: none!important;
     outline: none!important;
