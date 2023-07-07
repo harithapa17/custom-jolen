@@ -126,7 +126,7 @@
                           {{ line_item.selling_plan_allocation.selling_plan.name }}
                         </span>
                       {%- endunless -%}
-                     {% comment %} {%- if property_size != 0 -%}
+                      {%- if property_size != 0 -%}
                         {%- for property in line_item.properties -%}
                           {% assign property_first_char = property.first | slice: 0 %}
                           {%- if property.last != blank and property_first_char != '_' -%}
@@ -140,7 +140,7 @@
                             </span>
                           {%- endif -%}
                         {%- endfor -%}
-                      {%- endif -%} {% endcomment %}
+                      {%- endif -%} 
                     </div>
                   {%- endunless -%}
 
