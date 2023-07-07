@@ -180,6 +180,7 @@
           </div>
         </div>
       </div>
+      {% comment %}
       {%- assign order_date = order.created_at | time_tag: format: 'date_at_time' -%}
       <p>{{ 'customer.order.date_html' | t: date: order_date }}</p>
       {%- if order.cancelled -%}
@@ -474,8 +475,7 @@
           </tr>
         </tfoot>
       </table>
-    </div>
-   {% comment %} <div>
+    </div> <div>
       <div>
         <h2>{{ 'customer.order.billing_address' | t }}</h2>
         <p>
