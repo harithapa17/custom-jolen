@@ -1151,7 +1151,6 @@ h2.order-total-price {
     padding: 20px 0;
     border-bottom: 1px solid #CECFD3;
     display: flex;
-    justify-content: space-between;
     gap: 16px;
 }
 .abt-ordered-prd h3 {
