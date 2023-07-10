@@ -1324,3 +1324,6 @@ h2.order-total-price {
 .admin-flex_row {
     display: flex;
 }
+.active_account_tab a {
+    color: #A60017 !important;
+}
