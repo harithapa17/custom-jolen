@@ -18,6 +18,15 @@
 
 {%- paginate customer.addresses by 5 -%}
   <p>{{ shop.url }}/account/addresses</p>
+  <script>
+    window.onload = function() {
+      // Check if the current URL matches the desired URL
+      if (window.location.href === '{{ shop.url }}/account/addresses') {
+        // Add the class to the body element
+        document.body.classList.add('address_page');
+      }
+    };
+  </script>
   <div class="admin-flex_row">
   <div class="sidebar-admin">
               <h2>Hey Medha</h2>
