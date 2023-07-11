@@ -1241,7 +1241,7 @@
                         {% endif %}
                         class="{{ option.value }}"
                       >
-                        <a onclick="onActiveFilterClick('?sort_by={{ option.value }}' )">
+                        <a onclick="onActiveFilterClick('{{ option.value }}' )">
                           <span>{{ option.name }}</span>
                         </a>
                       </li>
@@ -1254,7 +1254,7 @@
                         {% endif %}
                         class="{{ option.value }}"
                       >
-                        <a onclick="onActiveFilterClick('?sort_by={{ option.value }}' )">
+                        <a onclick="onActiveFilterClick('{{ option.value }}' )">
                           <span>{{ option.name }}</span>
                         </a>
                       </li>
@@ -1263,13 +1263,32 @@
                 </ul>
 
                 <script>
-                  function onActiveFilterClick(url) {
-                    window.history.pushState(null, '', url);
-                    var sortVal = url.replace('?sort_by=', '');
+                  function onActiveFilterClick(sortVal) {
+                    var currentURL = window.location.href;
+                    var only_sorting = '?sort_by=';
+                    var filter_with_sorting = '&sort_by=';
 
-                    // window.history.pushState(null, '', url);
+                    if (currentURL.includes(filter_with_sorting)) {
+                      var main = window.location.href;
+                      var filter_with_sort = main.split('&sort_by=');
+                      var mainurl = filter_with_sort[0] + '&sort_by=' + sortVal;
+                      mainurl = mainurl.split('?');
+                      //   console.log(mainurl);
 
-                    console.log(FacetFiltersForm.renderPage('sort_by=' + sortVal, ''));
+                      //  main = main.split('?');
+                      //  var featureURL = main[1].split('&sort_by=');
+                      //  var mainurl = featureURL[0] + '&sort_by=' + sortVal;
+                      FacetFiltersForm.renderPage(mainurl[1]);
+                    } else {
+                      if (currentURL.includes(only_sorting)) {
+                        sortValue = currentURL.split(only_sorting);
+                        var sortValue = sortValue[0] + only_sorting;
+                        console.log(FacetFiltersForm.renderPage('sort_by=' + sortVal, ''));
+                      } else {
+                        // window.history.pushState(null, '', url);
+                        console.log(FacetFiltersForm.renderPage('sort_by=' + sortVal, ''));
+                      }
+                    }
                   }
                 </script>
               </div>
