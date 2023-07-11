@@ -137,7 +137,7 @@
               </div>
               <div class="ord-single-prd-info">
                 <div class="ord-single-top">
-                  <h4>{{ line_item.title }}</h4>
+                  <h4>{{ line_item.title  | split: '-' | first}}</h4>
                 <h5>
                   {%- if line_item.original_price != line_item.final_price or line_item.unit_price_measurement -%}
                   <dl>
