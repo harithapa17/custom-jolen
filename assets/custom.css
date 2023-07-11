@@ -4085,3 +4085,14 @@ h2.order-total-price {
 .active_account_tab a {
     color: #A60017 !important;
 }
+.overflow-hidden-mobile aside .icon-close {
+    display: none;
+}
+.template-search aside.page-width {
+    padding-left: 0!important;
+    padding-right: 0!important;
+}
+.overflow-hidden-mobile aside {
+    position: relative;
+    z-index: 999999;
+}
