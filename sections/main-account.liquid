@@ -13,7 +13,34 @@
     }
   }
 {%- endstyle -%}
-
+<div class="admin-flex_row">
+  <div class="sidebar-admin">
+              <h2>Hey Medha</h2>
+              <div class="sidebar-items">
+                <h3>my purchases</h3>
+                <button class="sidebar-btn active_account_tab" id="online-tab"><a href="{{ routes.account_url }}">Online</a></button>
+              </div>
+              <div class="sidebar-items">
+                <h3>My account</h3>
+                <button class="sidebar-btn" id="online-tab">Profile</button>
+                <button class="sidebar-btn" id="online-tab"><a href="{{ routes.account_addresses_url }}">Addresses</a></button>
+              </div>
+              <div class="sidebar-items help-block">
+                <h3>Need help</h3>
+                <button class="sidebar-btn" id="online-tab">FAQ</button>
+              </div>
+              <div class="sidebar-call-action">
+                <h4>CALL</h4>
+                <p>88000778809907</p>
+              </div>
+              <div class="sidebar-call-action">
+                <h4>EMAIL</h4>
+                <p><a href="mailto:Jolenesupport@gmail.com">Jolenesupport@gmail.com</a></p>
+              </div>
+              <div class="logged-out">
+                <a href=" {{ routes.account_logout_url }}">Sign Out</a>
+              </div>
+            </div>
 <div class="customer account section-{{ section.id }}-padding">
   <div>
     <h1 class="customer__title">{{ 'customer.account.title' | t }}</h1>
@@ -148,7 +175,7 @@
     </div>
   </div>
 </div>
-
+</div>
 {% schema %}
 {
   "name": "t:sections.main-account.name",
