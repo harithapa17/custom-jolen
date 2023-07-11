@@ -4024,8 +4024,6 @@ h2.order-total-price {
     justify-content: space-between;
     margin-bottom: 16px;
     margin-top:24px;
-    border-top: 1px solid #DADADA;
-    padding-top: 24px;
 }
 .order-status h3 {
     color: #67A35D;
