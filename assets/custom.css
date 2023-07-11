@@ -4035,10 +4035,17 @@ h2.order-total-price {
   margin: 0px !important;
 }
 .order-info {
+<<<<<<< HEAD
   display: flex;
   justify-content: space-between;
   margin-bottom: 16px;
   margin-top: 24px;
+=======
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 16px;
+    margin-top:24px;
+>>>>>>> ad2d9e59da06b25d7e6d7bd58a5acc246f4ef077
 }
 .order-status h3 {
   color: #67a35d;
@@ -4080,6 +4087,7 @@ h2.order-total-price {
   margin: 0px;
   margin-bottom: 3px;
 }
+<<<<<<< HEAD
 .sidebar-call-action p,
 .sidebar-call-action p a {
   color: #090e22;
@@ -4091,6 +4099,18 @@ h2.order-total-price {
   text-transform: uppercase;
   margin: 0px;
   text-decoration: none;
+=======
+.sidebar-call-action p, .sidebar-call-action p a {
+    color: #090E22;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 16px;
+    letter-spacing: 0.28px;
+    text-transform: uppercase;
+    margin: 0px;
+    text-decoration:none;
+>>>>>>> ad2d9e59da06b25d7e6d7bd58a5acc246f4ef077
 }
 .sidebar-call-action {
   margin-top: 16px;
@@ -4111,4 +4131,15 @@ h2.order-total-price {
 .overflow-hidden-mobile aside {
   position: relative;
   z-index: 999999;
+}
+.overflow-hidden-mobile aside .icon-close {
+    display: none;
+}
+.template-search aside.page-width {
+    padding-left: 0!important;
+    padding-right: 0!important;
+}
+.overflow-hidden-mobile aside {
+    position: relative;
+    z-index: 999999;
 }
