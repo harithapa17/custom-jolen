@@ -79,7 +79,7 @@
         <div class="order-text-info">
           <div class="prd-detail-block">
             <h3>Order Date</h3>
-            {%- assign order_date = order.created_at | time_tag: format: 'date_at_time' -%}
+            {%- assign order_date = order.created_at | time_tag: format: 'date' -%}
             {{ order.created_at | time_tag: format: 'date' }}
             <p>{{ order.created_at | time_tag: format: 'date' }}</p>
             {%- if order.cancelled -%}
