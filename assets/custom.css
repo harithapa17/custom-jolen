@@ -4073,6 +4073,7 @@ h2.order-total-price {
     letter-spacing: 0.28px;
     text-transform: uppercase;
     margin: 0px;
+    text-decoration:none;
 }
 .sidebar-call-action {
     margin-top: 16px;
