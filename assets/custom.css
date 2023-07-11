@@ -4064,7 +4064,7 @@ h2.order-total-price {
     margin: 0px;
     margin-bottom: 3px;
 }
-.sidebar-call-action p {
+.sidebar-call-action p, .sidebar-call-action p a {
     color: #090E22;
     font-size: 14px;
     font-style: normal;
