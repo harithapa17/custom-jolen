@@ -35,7 +35,7 @@
               </div>
               <div class="sidebar-call-action">
                 <h4>EMAIL</h4>
-                <p><a href="mailto:Jolenesupport@gmail.com">Jolenesupport@gmail.com</a></p>
+                <p><a href="mailto:Jolenesupport@gmail.com">{{ order.email }}</a></p>
               </div>
               <div class="logged-out">
                 <a href=" {{ routes.account_logout_url }}">Sign Out</a>
@@ -88,7 +88,6 @@
             <h3>Order Date</h3>
             {%- assign order_date = order.created_at | time_tag: format: 'date_at_time' -%}
             <p>{{ order.created_at | time_tag: format: 'date' }}</p>
-            {{ order.email }}
             {%- if order.cancelled -%}
               {%- assign cancelled_at = order.cancelled_at | time_tag: format: 'date_at_time' -%}
               <p>{{ 'customer.order.cancelled_html' | t: date: cancelled_at }}</p>
