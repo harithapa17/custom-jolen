@@ -218,7 +218,13 @@
           <div class="ord-divider"></div>
         {% endfor %}
 </div>
-
+<script>
+  $(document).ready(function() {
+  if($('.ord-prd-admin .ord-single-prd').length > 2){
+    $('body').addClass('scroll');
+  }
+  });
+</script>
 {% schema %}
 {
   "name": "t:sections.main-order.name",
