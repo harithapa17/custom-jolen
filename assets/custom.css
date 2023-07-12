@@ -3627,7 +3627,7 @@ h5.customer_address {
 }
 .ord-divider {
   display: block !important;
-  border-top: 1px solid #ddd;
+  border-top: 1px solid #dadada;
   margin-top: 24px;
   margin-bottom: 24px;
 }
