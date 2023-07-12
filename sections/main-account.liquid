@@ -35,7 +35,7 @@
               </div>
               <div class="sidebar-call-action">
                 <h4>EMAIL</h4>
-                <p><a href="mailto:Jolenesupport@gmail.com">{%- for order in customer.orders -%}{{ shop.email }}{% endfor %}</a></p>
+                <p><a href="mailto:Jolenesupport@gmail.com">{%- for order in customer.orders -%}{{ checkout.email }}{% endfor %}</a></p>
               </div>
               <div class="logged-out">
                 <a href=" {{ routes.account_logout_url }}">Sign Out</a>
