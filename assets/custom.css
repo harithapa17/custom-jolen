@@ -4032,7 +4032,9 @@ h2.order-total-price {
   background: #fff;
   padding: 0 16px;
   max-height: 381px;
-  overflow-y: scroll;
+}
+.ord-prd-admin.scrollabe_div {
+    overflow-y: scroll;
 }
 .admin-flex_row .customer.order {
   width: calc(100% - 280px);
