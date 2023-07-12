@@ -3410,6 +3410,17 @@ ul.search_btn svg {
 .trending-product {
   width: 100%;
 }
+input#Search-In-Template::placeholder {
+  display: block !important;
+  opacity: 1;
+  z-index: 99;
+  color: #848690;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 16px;
+  letter-spacing: 0.4px;
+}
 @media (min-width: 750px) {
   .empty-search .template-search__header {
     margin-bottom: 80px;
@@ -3804,7 +3815,7 @@ button#cancel-update-address {
   line-height: 32px;
   border-bottom: 1px solid #dadada;
   padding-bottom: 20px;
-  width: 153px;
+  width: 90%;
 }
 .sidebar-items {
   margin-top: 50px;
@@ -4034,7 +4045,7 @@ h2.order-total-price {
   max-height: 381px;
 }
 .ord-prd-admin.scrollabe_div {
-    overflow-y: scroll;
+  overflow-y: scroll;
 }
 .admin-flex_row .customer.order {
   width: calc(100% - 280px);

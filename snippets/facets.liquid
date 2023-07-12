@@ -63,7 +63,7 @@
                       {{ 'products.facets.filter_by_label' | t }}
                     </h2>
                   {%- endunless -%}
-                  <facet-remove class="active-facets__button-wrapper">
+                  <facet-remove class="clear_filter_list active-facets__button-wrapper">
                     <a href="{{ results_url }}" class="active-facets__button-remove underlined-link">
                       <span>{{ 'products.facets.clear_all' | t }}</span>
                     </a>
@@ -465,7 +465,7 @@
                   {%- endif -%}
                 {% endif %}
               {%- endfor -%}
-              <facet-remove class="active-facets__button-wrapper">
+              <facet-remove class="clear_filter_list active-facets__button-wrapper">
                 <a href="{{ results_url }}" class="active-facets__button-remove underlined-link">
                   <span>{{ 'products.facets.clear_all' | t }}</span>
                 </a>
@@ -1050,7 +1050,7 @@
               {%- endif -%}
 
               <div class="mobile-facets__footer">
-                <facet-remove class="mobile-facets__clear-wrapper">
+                <facet-remove class="clear_filter_list mobile-facets__clear-wrapper">
                   <a href="{{ results_url }}" class="mobile-facets__clear underlined-link">
                     {{- 'products.facets.clear_all' | t -}}
                   </a>
@@ -1147,7 +1147,7 @@
         {%- endif -%}
       {%- endif -%}
     {%- endfor -%}
-    <facet-remove class="active-facets__button-wrapper">
+    <facet-remove class="clear_filter_list active-facets__button-wrapper">
       <a href="{{ results_url }}" class="active-facets__button-remove underlined-link">
         <span>{{ 'products.facets.clear_all' | t }}</span>
       </a>
@@ -1367,7 +1367,11 @@
           {%- for filter in results.filters -%}
             {%- for value in filter.active_values -%}
               <facet-remove>
-                <a href="{{ value.url_to_remove }}" class="active-facets__button active-facets__button--light">
+                <a
+                  href="{{ value.url_to_remove }}"
+                  class="active-facets__button active-facets__button--light"
+                  data-id="{{ value.label }}"
+                >
                   <span class="active-facets__button-inner button button--tertiary">
                     {{ filter.label }}: {{ value.label | escape }}
                     {% render 'icon-close-small' %}
@@ -1402,13 +1406,18 @@
               {% endif %}
             {%- endif -%}
           {%- endfor -%}
-          <facet-remove class="active-facets__button-wrapper">
-            <a href="{{ results_url }}" class="active-facets__button-remove underlined-link">
+          <facet-remove class=" active-facets__button-wrapper">
+            <a href="{{ results_url }}" class="clear_filter_list active-facets__button-remove underlined-link">
               <span>{{ 'products.facets.clear_all' | t }}</span>
             </a>
           </facet-remove>
         </div>
       </form>
+      <script>
+        function handleActiveFacets(value) {
+          console.log(value, '999999999999');
+        }
+      </script>
     </facet-filters-form>
   {%- endif -%}
 </div>

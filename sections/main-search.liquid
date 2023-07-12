@@ -86,7 +86,7 @@
                 type="search"
                 name="q"
                 value="{{ search.terms | escape }}"
-                placeholder="{{ 'general.search.search' | t }}"
+                placeholder="Search"
                 {%- if settings.predictive_search_enabled -%}
                   role="combobox"
                   aria-expanded="false"
@@ -98,11 +98,11 @@
                   autocomplete="off"
                   autocapitalize="off"
                   spellcheck="false"
-                  placeholder=""
+                  placeholder="Search"
                 {%- endif -%}
               >
-              <label class="field__label" for="Search-In-Template">{{ 'general.search.search' | t }}</label>
-              <input name="options[prefix]" type="hidden" value="last">
+              {% comment %} <label class="field__label" for="Search-In-Template">{{ 'general.search.search' | t }}</label> {% endcomment %}
+              <input name="options[prefix]" type="hidden" value="last" placeholder="Search">
 
               {%- if settings.predictive_search_enabled -%}
                 <div class="predictive-search predictive-search--search-template" tabindex="-1" data-predictive-search>

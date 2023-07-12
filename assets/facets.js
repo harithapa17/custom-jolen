@@ -279,8 +279,10 @@ class FacetRemove extends HTMLElement {
   constructor() {
     super();
     const facetLink = this.querySelector('a');
+    const facetLinkEnd = this.querySelector('.clear_filter_list');
     facetLink.setAttribute('role', 'button');
     facetLink.addEventListener('click', this.closeFilter.bind(this));
+    facetLinkEnd.addEventListener('click', this.closeFilter2.bind(this));
     facetLink.addEventListener('keyup', (event) => {
       event.preventDefault();
       if (event.code.toUpperCase() === 'SPACE') this.closeFilter(event);
@@ -291,6 +293,21 @@ class FacetRemove extends HTMLElement {
     event.preventDefault();
     const form = this.closest('facet-filters-form') || document.querySelector('facet-filters-form');
     form.onActiveFilterClick(event);
+  }
+
+  closeFilter2(event) {
+    event.preventDefault();
+    const form = this.closest('facet-filters-form') || document.querySelector('facet-filters-form');
+    form.onActiveFilterClick(event);
+    $('.mobile-facets__checkbox').prop('checked', false);
+    $('input.field__input.min').val(0);
+    $('input.field__input.max').val(newValPrice);
+    $('#minPriceinput').val('$' + 0);
+    $('#maxPriceinput').val('$' + newValPrice);
+    $('.range-selected').css({
+      left: '0',
+      right: '0',
+    });
   }
 }
 
