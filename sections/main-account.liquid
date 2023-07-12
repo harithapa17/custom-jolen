@@ -218,7 +218,15 @@
       <div class="ord-divider"></div>
                   {% endfor %}
 </div>
-
+<script>
+  $(document).ready(function() {
+    var ordSinglePrdCount = $('.ord-single-prd').length;
+    if (ordSinglePrdCount > 2) {
+      $('.ord-prd-admin').addClass('your-class-name');
+    }
+  });
+  
+</script>
 {% schema %}
 {
   "name": "t:sections.main-order.name",
