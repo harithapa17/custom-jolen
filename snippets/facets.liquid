@@ -1254,7 +1254,7 @@
                         {% endif %}
                         class="{{ option.value }}"
                       >
-                        <a onclick="onActiveFilterClick('{{ option.value }}' )">
+                        <a onclick="onActiveSearchFilterClick('{{ option.value }}' )">
                           <span>{{ option.name }}</span>
                         </a>
                       </li>
@@ -1283,6 +1283,35 @@
                       } else {
                         console.log(FacetFiltersForm.renderPage('sort_by=' + sortVal, ''));
                       }
+                    }
+                  }
+                  function onActiveSearchFilterClick(searchVal) {
+                    var currentURL = window.location.href;
+                    var sorting = '&sort_by=';
+                    var searchq = '?q=';
+                    var search_and_q = '&q=';
+                    var main = window.location.href;
+                    if (currentURL.includes(sorting)) {
+                      if (currentURL.includes(searchq)) {
+                        var q_search = currentURL.split(searchq);
+                        var q_search = q_search[1];
+                        var q_split = q_search.split(sorting);
+                        var q_split = 'q=' + q_split[0] + sorting + searchVal;
+                        console.log(FacetFiltersForm.renderPage(q_split));
+                      } else {
+                        var q_sear_filt = currentURL.split(search_and_q); //
+                        var search_3 = search_and_q + q_sear_filt[1];
+                        var search_2 = sorting + searchVal;
+                        var search_filter = currentURL.split('?');
+                        var sear_filter = search_filter[1].split(sorting);
+                        var search_1 = sear_filter[0];
+                        var search_url = search_1 + search_2 + search_3;
+                        console.log(FacetFiltersForm.renderPage(search_url));
+                      }
+                    } else {
+                      currentURL = currentURL.split('search?');
+                      var resultUrl = currentURL[1] + '&sort_by=' + searchVal;
+                      console.log(FacetFiltersForm.renderPage(resultUrl));
                     }
                   }
                 </script>
