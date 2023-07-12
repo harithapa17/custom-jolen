@@ -219,9 +219,11 @@
                   {% endfor %}
 </div>
 <script>
-   $(document).ready(function(){
-    if($('.ord-prd-admin').children('.ord-single-prd').length > 2){
-      $('.ord-prd-admin').addClass('scrollable_div');
+     window.addEventListener('DOMContentLoaded', function() {
+    var ordSinglePrdCount = document.querySelectorAll('.ord-single-prd').length;
+    if (ordSinglePrdCount > 2) {
+      var scrollableDiv = document.querySelector('.ord-prd-admin');
+      scrollableDiv.classList.add('your-class-name');
     }
   });
 </script>
