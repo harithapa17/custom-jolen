@@ -134,7 +134,7 @@
               {% endfor %}
               <h3>Includes {{ count }} Items</h3>
                         
-              <div class="ord-prd-admin">
+              <div class="ord-prd-admin {% if count > 2 %} scrollabe_div {% endif %}" >
                 {%- for line_item in order.line_items -%}
                 <div class="ord-single-prd">
                   <div class="ord-prd-img">               
@@ -218,13 +218,7 @@
           <div class="ord-divider"></div>
         {% endfor %}
 </div>
-<script>
-  $(document).ready(function() {
-  if($('.ord-prd-admin .ord-single-prd').length > 2){
-    $('body').addClass('scroll');
-  }
-  });
-</script>
+
 {% schema %}
 {
   "name": "t:sections.main-order.name",
