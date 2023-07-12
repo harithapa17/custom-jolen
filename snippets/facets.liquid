@@ -1018,7 +1018,7 @@
                       <div class="select">
                         <select
                           name="sort_by"
-                          class="select__select"
+                          class="select__select SortBy-mobile-override"
                           id="SortBy-mobile"
                           aria-describedby="a11y-refresh-page-message"
                         >
@@ -1267,25 +1267,20 @@
                     var currentURL = window.location.href;
                     var only_sorting = '?sort_by=';
                     var filter_with_sorting = '&sort_by=';
-
                     if (currentURL.includes(filter_with_sorting)) {
                       var main = window.location.href;
                       var filter_with_sort = main.split('&sort_by=');
                       var mainurl = filter_with_sort[0] + '&sort_by=' + sortVal;
                       mainurl = mainurl.split('?');
-                      //   console.log(mainurl);
-
-                      //  main = main.split('?');
-                      //  var featureURL = main[1].split('&sort_by=');
-                      //  var mainurl = featureURL[0] + '&sort_by=' + sortVal;
+                      var selectElement = document.querySelector('.SortBy-mobile-override');
+                      var selectedValue = selectElement.value;
+                      selectElement.value = sortVal;
                       FacetFiltersForm.renderPage(mainurl[1]);
                     } else {
                       if (currentURL.includes(only_sorting)) {
-                        sortValue = currentURL.split(only_sorting);
-                        var sortValue = sortValue[0] + only_sorting;
+                        var sortValue = currentURL.split(only_sorting)[0] + only_sorting;
                         console.log(FacetFiltersForm.renderPage('sort_by=' + sortVal, ''));
                       } else {
-                        // window.history.pushState(null, '', url);
                         console.log(FacetFiltersForm.renderPage('sort_by=' + sortVal, ''));
                       }
                     }

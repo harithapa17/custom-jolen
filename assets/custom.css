@@ -196,7 +196,7 @@ nav.header__inline-menu ul li .header__menu-item {
   text-decoration: none;
 }
 .header {
-  border-bottom: 1px solid rgba(166, 0, 23, 0.15);
+  border-bottom: 1px solid #fff;
 }
 .home-header {
   border-bottom: 0px solid rgba(166, 0, 23, 0.15);
@@ -3373,6 +3373,43 @@ main-search .field:after {
   letter-spacing: -0.56px;
   margin-top: 0 !important;
 }
+
+.scroll-trigger.animate--slide-in {
+  transform: translateY(0rem) !important;
+}
+ul.search_btn {
+  margin: 0;
+  line-height: 1;
+  padding-left: 10px;
+  line-height: 40px;
+  margin-right: 5px;
+}
+ul.search_btn li {
+  list-style: none;
+}
+ul.search_btn li a {
+  color: #090e22;
+  padding: 0;
+  text-decoration-color: #a60017 !important;
+  font-size: 14px;
+  list-style: none;
+  display: flex;
+  align-items: center;
+  font-weight: 400;
+  letter-spacing: -0.56px;
+}
+ul.search_btn svg {
+  margin-left: 10px;
+}
+.trend-prd-data {
+  display: flex;
+  justify-content: space-between;
+  gap: 24px;
+}
+.trending-product img,
+.trending-product {
+  width: 100%;
+}
 @media (min-width: 750px) {
   .empty-search .template-search__header {
     margin-bottom: 80px;
@@ -3457,44 +3494,19 @@ main-search .field:after {
   .template-search__search .search {
     margin-top: 6px;
   }
+  .scrollable_div {
+    width: calc(100% + 30px);
+    overflow-x: scroll;
+  }
+  .trend-prd-data {
+    gap: 16px !important;
+    width: 840px;
+  }
+  .trend-prd-data .trending-product:last-child {
+    padding-right: 25px;
+  }
 }
 
-.scroll-trigger.animate--slide-in {
-  transform: translateY(0rem) !important;
-}
-ul.search_btn {
-  margin: 0;
-  line-height: 1;
-  padding-left: 10px;
-  line-height: 40px;
-  margin-right: 5px;
-}
-ul.search_btn li {
-  list-style: none;
-}
-ul.search_btn li a {
-  color: #090e22;
-  padding: 0;
-  text-decoration-color: #a60017 !important;
-  font-size: 14px;
-  list-style: none;
-  display: flex;
-  align-items: center;
-  font-weight: 400;
-  letter-spacing: -0.56px;
-}
-ul.search_btn svg {
-  margin-left: 10px;
-}
-.trend-prd-data {
-  display: flex;
-  justify-content: space-between;
-  gap: 24px;
-}
-.trending-product img,
-.trending-product {
-  width: 100%;
-}
 /* Search Page CSS Ends */
 
 /* Account Pages */
@@ -3612,6 +3624,12 @@ h5.customer_address {
   line-height: 16px;
   text-align: left;
   margin-bottom: 2px;
+}
+.ord-divider {
+  display: block !important;
+  border-top: 1px solid #ddd;
+  margin-top: 24px;
+  margin-bottom: 24px;
 }
 ul.saved_address_admin li h2 {
   color: #090e22;
