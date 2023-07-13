@@ -4134,7 +4134,7 @@ h2.order-total-price {
   color: #a60017 !important;
 }
 
-@media (max-width:749px){
+@media (max-width:991px){
   .admin-flex_row .customer.order {
     width: calc(100% - 0px);
     padding-left: 15px;
