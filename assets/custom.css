@@ -4137,6 +4137,11 @@ h2.order-total-price {
   .sidebar-admin {
     display: block !important;
 }
+  .admin-flex_row .customer.order {
+    width: calc(100% - 280px);
+    padding-left: 100px !important;
+    padding-right: 100px !important;
+}
 }
 @media (max-width:991px){
   .admin-flex_row .customer.order {
