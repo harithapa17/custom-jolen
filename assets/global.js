@@ -1338,6 +1338,7 @@ for (var i = 0; i < filters.length; i++) {
   function changeTab(tabButton) {
     // Remove active_tab class from all tabs
     var tabs = document.getElementsByClassName("product_info_tabs");
+    tabs.classList.add('default_active')
     for (var i = 0; i < tabs.length; i++) {
       tabs[i].classList.remove("active_tab");
     }
