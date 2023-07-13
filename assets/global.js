@@ -1328,21 +1328,26 @@ $('#tab-wrapper a').click(function () {
 // function toggleFilterStyle() {
 //   this.classList.toggle('filter-icon-style');
 // }
-
-function changeTab(tabButton) {
-  // Remove active_tab class from all tabs
-  $(".product_info_tabs").removeClass("active_tab");
-
-  // Add active_tab class to the clicked tab
-  var tab = $(tabButton).parent();
-  tab.addClass("active_tab");
+for (var i = 0; i < filters.length; i++) {
+  filters[i].addEventListener('click', toggleFilterStyle);
 }
 
-// Set the first tab as active on page load
-$(document).ready(function() {
-  var firstTabButton = $("#tab-wrapper .product_info_tabs:first-child button");
-  $(firstTabButton).addClass('active_tab')
-
-});
 
 
+  function changeTab(tabButton) {
+    // Remove active_tab class from all tabs
+    var tabs = document.getElementsByClassName("product_info_tabs");
+    for (var i = 0; i < tabs.length; i++) {
+      tabs[i].classList.remove("active_tab");
+    }
+
+    // Add active_tab class to the clicked tab
+    var tab = tabButton.parentNode;
+    tab.classList.add("active_tab");
+  }
+
+  // Set the first tab as active on page load
+  window.onload = function() {
+    var firstTabButton = document.getElementById("description_tab");
+    changeTab(firstTabButton);
+  };
