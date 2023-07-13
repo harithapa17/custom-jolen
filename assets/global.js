@@ -5,7 +5,7 @@ function getFocusableElements(container) {
     )
   );
 }
-  $('.tabs_title_prd li.product_info_tabs').addClass('Mew')
+  $('.tabs_title_prd li.product_info_tabs').addClass('active_tab')
 
 var currentURL = window.location.href;
 var inputValue = document.querySelector('#inputUrl').value;
