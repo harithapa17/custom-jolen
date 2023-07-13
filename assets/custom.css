@@ -4133,7 +4133,11 @@ h2.order-total-price {
 .active_account_tab a {
   color: #a60017 !important;
 }
-
+@media (max-width:991px) and (min-width:768px){
+  .sidebar-admin {
+    display: block;
+}
+}
 @media (max-width:991px){
   .admin-flex_row .customer.order {
     width: calc(100% - 0px);
