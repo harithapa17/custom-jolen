@@ -1350,7 +1350,7 @@ for (var i = 0; i < filters.length; i++) {
   }
 
 $(document).ready(function () {
-  $('#tab-wrapper').addClass('Mew')
+  $('.tabs_title_prd').addClass('Mew')
 });
 
 
