@@ -1346,7 +1346,7 @@ for (var i = 0; i < filters.length; i++) {
     tab.classList.add("active_tab");
   }
 
-  $('.tabs_title_prd').addClass('sdlfj');
+  $('.tabs_title_prd').removeClass('tabs_title_prd');
 
   // Set the first tab as active on page load
 
