@@ -4159,6 +4159,6 @@ h2.order-total-price {
 	width: 50%;
 	margin: auto;
 }
-.faq-width {
+.faq-width.page-width  {
 	padding-top: 50px !important;
 }
