@@ -1348,3 +1348,9 @@ for (var i = 0; i < filters.length; i++) {
     var tab = tabButton.parentNode;
     tab.classList.add("active_tab");
   }
+
+$(document).ready(function () {
+  $('#tab-wrapper').addClass('Mew')
+});
+
+
