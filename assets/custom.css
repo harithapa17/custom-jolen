@@ -4248,3 +4248,13 @@ ul#product-grid .collection-category-block:first-child {
 }
 }
 
+form#FacetFiltersPillsForm .active-facets__button {
+    margin-right: 5px;
+}
+form#FacetFiltersPillsForm .active-facets__button span.active-facets__button-inner.button.button--tertiary {
+    font-size: 12px;
+    border: 1px solid #dddddd6e;
+    box-shadow: none !important;
+} {
+    margin-right: 5px;
+}
