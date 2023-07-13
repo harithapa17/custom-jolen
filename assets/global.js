@@ -1329,25 +1329,24 @@ $('#tab-wrapper a').click(function () {
 //   this.classList.toggle('filter-icon-style');
 // }
 
-// Add active_tab class to the clicked tab
 function changeTab(tabButton) {
   // Remove active_tab class from all tabs
-  var tabs = document.getElementsByClassName("product_info_tabs");
-  for (var i = 0; i < tabs.length; i++) {
-    tabs[i].classList.remove("active_tab");
-  }
+  $(".product_info_tabs").removeClass("active_tab");
 
   // Add active_tab class to the clicked tab
-  var tab = tabButton.parentNode;
-  tab.classList.add("active_tab");
+  var tab = $(tabButton).parent();
+  tab.addClass("active_tab");
 }
 
 // Set the first tab as active on page load
-window.onload = function() {
-  var tabWrapper = document.getElementById("tab-wrapper");
-  var firstTabButton = tabWrapper.querySelector(".product_info_tabs:first-child button");
+$(document).ready(function() {
+  var firstTabButton = $("#tab-wrapper .product_info_tabs:first-child button");
   
   // Trigger click event on the first tab button
+  firstTabButton.click(function() {
+    changeTab(this);
+  });
   firstTabButton.click();
-};
+});
+
 
