@@ -4162,3 +4162,17 @@ h2.order-total-price {
 .faq-width.page-width  {
 	padding-top: 50px !important;
 }
+.product_info_tabs button {
+	margin-right: 24px;
+	font-weight: 400;
+	font-size: 14px;
+	line-height: 25px;
+	letter-spacing: .04em;
+	text-decoration-line: none;
+	text-transform: uppercase;
+	color: #414547;
+	outline: none;
+	border: 0;
+	background: transparent;
+	padding: 0px;
+}
