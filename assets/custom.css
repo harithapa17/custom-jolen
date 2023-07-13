@@ -4183,3 +4183,6 @@ h2.order-total-price {
 	offset-anchor: ;
 	text-underline-offset: 3px;
 }
+.active_tab_data {
+    display: block;
+}
