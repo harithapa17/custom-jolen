@@ -1335,6 +1335,12 @@ for (var i = 0; i < filters.length; i++) {
 }
 
 
+  // Set the first tab as active on page load
+  window.onload = function() {
+    var firstTabButton = document.getElementById("description_tab");
+    changeTab(firstTabButton);
+  };
+
   function changeTab(tabButton) {
     // Remove active_tab class from all tabs
     var tabs = document.getElementsByClassName("product_info_tabs");
@@ -1347,5 +1353,3 @@ for (var i = 0; i < filters.length; i++) {
     var tab = tabButton.parentNode;
     tab.classList.add("active_tab");
   }
-
-
