@@ -1340,7 +1340,7 @@ function changeTab(tabButton) {
 
 // Set the first tab as active on page load
 $(document).ready(function() {
-  var firstTabButton = $("#tab-wrapper .product_info_tabs:first-child");
+  var firstTabButton = $("#tab-wrapper .product_info_tabs:first-child button");
   $(firstTabButton).addClass('active_tab')
 
 });
