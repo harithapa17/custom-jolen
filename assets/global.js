@@ -7,10 +7,6 @@ function getFocusableElements(container) {
 }
   $('.tabs_title_prd li.product_info_tabs:first-child').addClass('active_tab')
 
-if($('.description_tab').hasClass('active_tab'){
-  alert('hello')
-  $('.prd_row_data .description_tab').addClass('active_tab_data');
-})
 
 var currentURL = window.location.href;
 var inputValue = document.querySelector('#inputUrl').value;
