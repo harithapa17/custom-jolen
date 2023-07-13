@@ -1346,9 +1346,8 @@ for (var i = 0; i < filters.length; i++) {
     tab.classList.add("active_tab");
   }
 
-$(document).ready(function () {
   $('.tabs_title_prd').addClass('sdlfj');
-});
+
   // Set the first tab as active on page load
 
 
