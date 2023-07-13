@@ -4151,6 +4151,5 @@ h2.order-total-price {
   padding-right: 0 !important;
 }
 .overflow-hidden-mobile aside {
-  position: relative;
-  z-index: 999999;
+  z-index: 999999 !important;
 }
