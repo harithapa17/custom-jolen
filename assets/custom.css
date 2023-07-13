@@ -4151,6 +4151,7 @@ h2.order-total-price {
 }
   .order-detailed-box {
     padding: 10px;
+    flex-wrap: wrap;
 }
   .order-text-info {
     margin-bottom: 40px;
