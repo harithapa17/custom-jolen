@@ -10,7 +10,7 @@ function getFocusableElements(container) {
 if($('.tabs_title_prd li.description_tab').hasClass('active_tab')){
   $('.prd_row_data .description_tab').addClass('active_tab_data')
 };
-  if( !$('#tab-wrapper').html().length ) {
+if ($('#tab-wrapper').children().length > 0) {
     $('#tab-wrapper').css({'display' : 'none'});
 };
 
