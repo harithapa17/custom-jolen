@@ -1336,6 +1336,7 @@ for (var i = 0; i < filters.length; i++) {
 
 
 $(document).ready(function(){
+  console.log('Hello')
  $('#tab-wrapper').addClass('expand');
 });
 
