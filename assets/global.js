@@ -1345,6 +1345,6 @@ for (var i = 0; i < filters.length; i++) {
     }
 
     // Add active_tab class to the clicked tab
-    var tab = tabButton;
+    var tab = tabButton.parentNode;
     tab.classList.add("active_tab");
   }
