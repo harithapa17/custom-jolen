@@ -402,12 +402,12 @@
         <div id="tab-outer" class="product_tabs_flex" >
           <div id="tab-wrapper" class="tabs_title_prd">
             {% if product.description != blank  %}
-                <li id="description_tab" class="product_info_tabs">
+                <li class="product_info_tabs description_tab">
                   <button onclick="changeTab(this)">  Description</button>
                 </li>
             {% endif %}
             {% if product.metafields.custom.how_to_wear != blank and product.metafields.custom.how_to_wear != '' %}
-              <li id="how_wear_tab" class="product_info_tabs">
+              <li  class="product_info_tabs how_wear_tab">
                 <button onclick="changeTab(this)">  How To Wear</button>
               </li>
             {%endif%}
