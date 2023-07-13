@@ -1329,29 +1329,25 @@ $('#tab-wrapper a').click(function () {
 //   this.classList.toggle('filter-icon-style');
 // }
 
-for (var i = 0; i < filters.length; i++) {
-  filters[i].addEventListener('click', toggleFilterStyle);
-}
-
-
-
-  function changeTab(tabButton) {
-    // Remove active_tab class from all tabs
-    var tabs = document.getElementsByClassName("product_info_tabs");
-    for (var i = 0; i < tabs.length; i++) {
-      tabs[i].classList.remove("active_tab");
-    }
-
-    // Add active_tab class to the clicked tab
-    var tab = tabButton.parentNode;
-    tab.classList.add("active_tab");
+// Add active_tab class to the clicked tab
+function changeTab(tabButton) {
+  // Remove active_tab class from all tabs
+  var tabs = document.getElementsByClassName("product_info_tabs");
+  for (var i = 0; i < tabs.length; i++) {
+    tabs[i].classList.remove("active_tab");
   }
 
-  // Set the first tab as active on page load
+  // Add active_tab class to the clicked tab
+  var tab = tabButton.parentNode;
+  tab.classList.add("active_tab");
+}
+
+// Set the first tab as active on page load
 window.onload = function() {
   var tabWrapper = document.getElementById("tab-wrapper");
   var firstTabButton = tabWrapper.querySelector(".product_info_tabs:first-child button");
-  firstTabButton.classList.add("active_tab");
-  changeTab(firstTabButton);
+  
+  // Trigger click event on the first tab button
+  firstTabButton.click();
 };
 
