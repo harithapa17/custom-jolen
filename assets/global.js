@@ -1347,8 +1347,15 @@ for (var i = 0; i < filters.length; i++) {
   }
 
   // Set the first tab as active on page load
-  window.onload = function() {
-    console.log('Loading')
-    var firstTabButton = document.getElementsByClassName("product_info_tabs li:first-child");
+
+
+document.addEventListener('DOMContentLoaded', function() {
+  console.log('Loading');
+  var firstTabButton = document.querySelector('.product_info_tabs li:first-child');
+  if (firstTabButton) {
     alert(firstTabButton);
-  };
+  } else {
+    console.log('No matching element found.');
+  }
+});
+
