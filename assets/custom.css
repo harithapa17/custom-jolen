@@ -4176,3 +4176,8 @@ h2.order-total-price {
 	background: transparent;
 	padding: 0px;
 }
+.product_info_tabs.active_tab button {
+	text-decoration: underline;
+	offset-anchor: ;
+	text-underline-offset: 3px;
+}
