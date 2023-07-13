@@ -403,12 +403,12 @@
           <div id="tab-wrapper" class="tabs_title_prd">
             {% if product.description != blank  %}
                 <li class="product_info_tabs">
-                  <a href="#tab1">Description</a>
+                  <button id="description_tab">  Description</button>
                 </li>
             {% endif %}
             {% if product.metafields.custom.how_to_wear != blank and product.metafields.custom.how_to_wear != '' %}
               <li class="product_info_tabs">
-                <a href="#tab2">  How To Wear</a>
+                <button id="how_wear_tab">  How To Wear</button>
               </li>
             {%endif%}
           </div>
