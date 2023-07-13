@@ -1350,7 +1350,7 @@ for (var i = 0; i < filters.length; i++) {
   }
 
 
-  $('.tabs_title_prd li.product_info_tabs:first-child').addClass('Mew')
+  $('.tabs_title_prd li.product_info_tabs').addClass('Mew')
 
 
 
