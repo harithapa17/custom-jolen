@@ -4139,8 +4139,8 @@ h2.order-total-price {
 }
   .admin-flex_row .customer.order {
     width: calc(100% - 280px) !important;
-    padding-left: 100px !important;
-    padding-right: 100px !important;
+    padding-left: 50px !important;
+    padding-right: 50px !important;
 }
 }
 @media (max-width:991px){
