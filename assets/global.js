@@ -7,7 +7,7 @@ function getFocusableElements(container) {
 }
   $('.tabs_title_prd li.product_info_tabs:first-child').addClass('active_tab')
 
-if($('#description_tab').hasClass('active_tab'){
+if($('.tabs_title_prd #description_tab').hasClass('active_tab'){
   $('.prd_row_data .description_tab').addClass('active_tab_data');
 })
 
