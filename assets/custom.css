@@ -2396,6 +2396,7 @@ span.arrow_icon {
   line-height: 20px;
   letter-spacing: 0.016em;
   color: #090e22;
+  display:none;
 }
 .product_info_tabs.active_tab + .product_info_tabs-data {
   display: block;
