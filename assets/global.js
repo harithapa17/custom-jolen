@@ -1346,16 +1346,11 @@ for (var i = 0; i < filters.length; i++) {
     tab.classList.add("active_tab");
   }
 
+$(document).ready(function () {
+  $('.product_info_tabs li:first-child').addClass('sdlfj');
+});
   // Set the first tab as active on page load
 
 
-document.addEventListener('DOMContentLoaded', function() {
-  console.log('Loading');
-  var firstTabButton = document.querySelector('.product_info_tabs li:first-child');
-  if (firstTabButton) {
-    alert(firstTabButton);
-  } else {
-    console.log('No matching element found.');
-  }
-});
+
 
