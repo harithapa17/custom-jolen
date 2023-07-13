@@ -1348,9 +1348,4 @@ for (var i = 0; i < filters.length; i++) {
     tab.classList.add("active_tab");
   }
 
-  // Set the first tab as active on page load
-  window.onload = function() {
-    alert('hello')
-    var firstTabButton = document.getElementById("description_tab");
-    changeTab(firstTabButton);
-  };
+
