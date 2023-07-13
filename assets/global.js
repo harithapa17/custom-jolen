@@ -1347,7 +1347,7 @@ for (var i = 0; i < filters.length; i++) {
   }
 
 $(document).ready(function () {
-  $('.product_info_tabs li:first-child').addClass('sdlfj');
+  $('.tabs_title_prd li:first-child').addClass('sdlfj');
 });
   // Set the first tab as active on page load
 
