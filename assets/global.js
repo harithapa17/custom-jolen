@@ -1348,6 +1348,6 @@ for (var i = 0; i < filters.length; i++) {
 
   // Set the first tab as active on page load
   window.onload = function() {
-    var firstTabButton = document.getElementById("description_tab");
+    var firstTabButton = document.getElementByClassName("product_info_tabs");
     changeTab(firstTabButton);
   };
