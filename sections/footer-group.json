@@ -9,21 +9,21 @@
           "type": "text",
           "settings": {
             "heading": "<em>Shopping with us<\/em>",
-            "subtext": "<p><a href=\"https:\/\/jolenefashion.myshopify.com\/?#\" title=\"#\">Create An Account<\/a><\/p><p><a href=\"https:\/\/jolenefashion.myshopify.com\/?#\" title=\"#\">Payments and Offers<\/a><\/p><p><a href=\"https:\/\/jolenefashion.myshopify.com\/?#\" title=\"#\">Size Guides<\/a><\/p><p><a href=\"https:\/\/jolenefashion.myshopify.com\/?#\" title=\"#\">Site Map<\/a><\/p>"
+            "subtext": "<p><a href=\"#\" title=\"#\">Create An Account<\/a><\/p><p><a href=\"#\" title=\"#\">Payments and Offers<\/a><\/p><p><a href=\"#\" title=\"#\">Size Guides<\/a><\/p><p><a href=\"#\" title=\"#\">Site Map<\/a><\/p>"
           }
         },
         "5225a475-94d8-4661-a4fd-1f6af6ba598f": {
           "type": "text",
           "settings": {
             "heading": "<em>Here to help<\/em>",
-            "subtext": "<p><a href=\"https:\/\/jolenefashion.myshopify.com\/?#\" title=\"#\">Delivery<\/a><\/p><p><a href=\"https:\/\/jolenefashion.myshopify.com\/?#\" title=\"#\">Track My Order<\/a><\/p><p><a href=\"https:\/\/jolenefashion.myshopify.com\/?#\" title=\"#\">Returns & Funds<\/a><\/p><p><a href=\"https:\/\/jolenefashion.myshopify.com\/?#\" title=\"#\">Help & Contact Us<\/a><\/p>"
+            "subtext": "<p><a href=\"#\" title=\"#\">Delivery<\/a><\/p><p><a href=\"#\" title=\"#\">Track My Order<\/a><\/p><p><a href=\"#\" title=\"#\">Returns & Funds<\/a><\/p><p><a href=\"#\" title=\"#\">Help & Contact Us<\/a><\/p>"
           }
         },
         "8209d5ae-df54-4c9b-b08a-f033545a9740": {
           "type": "text",
           "settings": {
             "heading": "<em>Legal<\/em>",
-            "subtext": "<p><a href=\"https:\/\/jolenefashion.myshopify.com\/?#\" title=\"#\">Terms & Conditions<\/a><\/p><p><a href=\"https:\/\/jolenefashion.myshopify.com\/?#\" title=\"#\">Privacy & Cookies<\/a><\/p><p><a href=\"https:\/\/jolenefashion.myshopify.com\/?#\" title=\"#\">Returns & Funds<\/a><\/p><p><a href=\"https:\/\/jolenefashion.myshopify.com\/?#\" title=\"#\">Certificates & Licences<\/a><\/p>"
+            "subtext": "<p><a href=\"#\" title=\"#\">Terms & Conditions<\/a><\/p><p><a href=\"#\" title=\"#\">Privacy & Cookies<\/a><\/p><p><a href=\"#\" title=\"#\">Returns & Funds<\/a><\/p><p><a href=\"#\" title=\"#\">Certificates & Licences<\/a><\/p>"
           }
         }
       },
@@ -33,7 +33,6 @@
         "8209d5ae-df54-4c9b-b08a-f033545a9740"
       ],
       "settings": {
-        "color_scheme": "background-1",
         "newsletter_enable": false,
         "newsletter_heading": "Subscribe to our emails",
         "enable_follow_on_shop": true,
