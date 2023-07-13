@@ -1342,7 +1342,6 @@ for (var i = 0; i < filters.length; i++) {
     for (var i = 0; i < tabs.length; i++) {
       tabs[i].classList.remove("active_tab");
     }
-    tabs.classList.add('default_active');
 
     // Add active_tab class to the clicked tab
     var tab = tabButton.parentNode;
