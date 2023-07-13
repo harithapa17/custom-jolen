@@ -4239,6 +4239,9 @@ h2.order-total-price {
 .active_tab_data {
     display: block;
 }
+ul#product-grid .collection-category-block:first-child {
+    margin-top: 0px;
+}
 @media(max-width:749px){
   .overflow-hidden-mobile, .overflow-hidden-tablet, .overflow-hidden-desktop {
     overflow: visible !important;
