@@ -1354,9 +1354,6 @@ for (var i = 0; i < filters.length; i++) {
     var tab = tabButton.parentNode;
     tab.classList.add("active_tab");
 
-    if($('.tabs_title_prd li.description_tab').hasClass('active_tab')){
-  $('.prd_row_data .description_tab').addClass('active_tab_data')
-};
   }
 
 
