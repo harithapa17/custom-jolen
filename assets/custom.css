@@ -4133,6 +4133,43 @@ h2.order-total-price {
 .active_account_tab a {
   color: #a60017 !important;
 }
+
+@media (max-width:749px){
+  .admin-flex_row .customer.order {
+    width: calc(100% - 0px);
+    padding-left: 15px;
+    padding-right: 15px;
+}
+  .order-status h3 {
+    font-size: 13px;
+}
+  .order-aciton {
+    gap: 10px;
+}
+  .order-info-links a {
+    gap: 2px;
+}
+  .order-detailed-box {
+    padding: 10px;
+}
+  .order-text-info {
+    margin-bottom: 40px;
+}
+  .abt-ordered-prd {
+    width: 100%;
+}
+  .ord-single-prd-info {
+    flex-wrap: wrap;
+}
+  .ord-single-bottom {
+    gap: 6px;
+    flex-wrap: wrap;
+}
+  .qty-ord {
+    gap: 8px;
+    width: 100%;
+}
+}
 .overflow-hidden-mobile aside .icon-close {
   display: none;
 }
@@ -4186,3 +4223,4 @@ h2.order-total-price {
 .active_tab_data {
     display: block;
 }
+
