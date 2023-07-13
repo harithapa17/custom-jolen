@@ -5,7 +5,14 @@ function getFocusableElements(container) {
     )
   );
 }
+  $('.tabs_title_prd li.product_info_tabs:first-child').addClass('active_tab')
 
+if($('.tabs_title_prd li.description_tab').hasClass('active_tab')){
+  $('.prd_row_data .description_tab').addClass('active_tab_data')
+};
+if($('.tabs_title_prd li.how_wear_tab').hasClass('active_tab')){
+  $('.prd_row_data .how_wear_tab').addClass('active_tab_data')
+};
 if ($('.product_tabs_flex').children('.tabs_title_prd').length == 0) {
     $('#tab-wrapper').hide();
 }
@@ -1368,24 +1375,6 @@ for (var i = 0; i < filters.length; i++) {
 
   }
 
-function changeTab(tabButton) {
-  // Remove active_tab class from all tabs
-  var tabs = document.getElementsByClassName("product_info_tabs");
-
-  for (var i = 0; i < tabs.length; i++) {
-    tabs[i].classList.remove("active_tab");
-  }
-
-  // Add active_tab class to the clicked tab
-  var tab = tabButton.parentNode;
-  tab.classList.add("active_tab");
-
-  // Modify tab content based on active tab
-  var activeTabClass = tab.classList.contains("how_wear_tab") ? "how_wear_tab" : "description_tab";
-  var tabContent = document.getElementsByClassName("prd_row_data")[0];
-  tabContent.getElementsByClassName("active_tab_data")[0].classList.remove("active_tab_data");
-  tabContent.getElementsByClassName(activeTabClass)[0].classList.add("active_tab_data");
-}
 
 
 
