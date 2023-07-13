@@ -5,6 +5,7 @@ function getFocusableElements(container) {
     )
   );
 }
+  $('.tabs_title_prd li.product_info_tabs').addClass('Mew')
 
 var currentURL = window.location.href;
 var inputValue = document.querySelector('#inputUrl').value;
@@ -1350,7 +1351,7 @@ for (var i = 0; i < filters.length; i++) {
   }
 
 
-  $('.tabs_title_prd li.product_info_tabs').addClass('Mew')
+
 
 
 
