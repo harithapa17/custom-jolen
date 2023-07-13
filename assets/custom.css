@@ -4156,4 +4156,6 @@ h2.order-total-price {
 .coming-soon-media {
 	display: flex;
 	justify-content: center;
+	width: 50%;
+	margin: auto;
 }
