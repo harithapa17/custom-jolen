@@ -1349,8 +1349,8 @@ for (var i = 0; i < filters.length; i++) {
     tab.classList.add("active_tab");
   }
 
-$(document).ready(function () {
-  $('.tabs_title_prd').addClass('Mew')
-});
+
+  $('.tabs_title_prd li:first-child').addClass('Mew')
+
 
 
