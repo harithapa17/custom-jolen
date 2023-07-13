@@ -414,13 +414,13 @@
           </div>
           <div class="prd_row_data"  id="tab-body">
             {% if  product.description != blank %}
-              <div id="tab1" class="product_info_tabs-data">
+              <div id="description_tab" class="product_info_tabs-data">
                 
                 <div>{{ product.description }}</div>
               </div>
             {%endif%}
             {% if product.metafields.custom.how_to_wear or product.metafields.custom.how_to_wear != '' %}
-              <div id="tab2" class="product_info_tabs-data">
+              <div id="description_tab" class="product_info_tabs-data">
                 {{ product.metafields.custom.how_to_wear }}
               </div>
             {%endif%}
