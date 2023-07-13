@@ -2396,7 +2396,7 @@ span.arrow_icon {
   line-height: 20px;
   letter-spacing: 0.016em;
   color: #090e22;
-  display:none;
+  display: none;
 }
 .product_info_tabs.active_tab + .product_info_tabs-data {
   display: block;
@@ -4133,59 +4133,6 @@ h2.order-total-price {
 .active_account_tab a {
   color: #a60017 !important;
 }
-@media (max-width:1199px) and (min-width:768px){
-  .sidebar-admin {
-    display: block !important;
-}
-  .admin-flex_row .customer.order {
-    width: calc(100% - 280px) !important;
-    padding-left: 50px !important;
-    padding-right: 50px !important;
-}
-}
-@media (max-width:991px){
-  .admin-flex_row .customer.order {
-    width: calc(100% - 0px);
-    padding-left: 15px;
-    padding-right: 15px;
-}
-  .order-status h3 {
-    font-size: 13px;
-}
-  .order-aciton {
-    gap: 10px;
-}
-  .order-info-links a {
-    gap: 2px;
-}
-  .order-detailed-box {
-    padding: 10px;
-    flex-wrap: wrap;
-}
-  .sidebar-admin {
-    display: none;
-}
-  .order-text-info {
-    margin-bottom: 40px;
-}
-  .abt-ordered-prd {
-    width: 100%;
-}
-  .ord-single-prd-info {
-    flex-wrap: wrap;
-}
-  .ord-single-bottom {
-    gap: 6px;
-    flex-wrap: wrap;
-}
-  .qty-ord {
-    gap: 8px;
-    width: 100%;
-}
-  .customer.addresses.address-inner-wd {
-    padding: 40px 15px!important;
-}
-}
 .overflow-hidden-mobile aside .icon-close {
   display: none;
 }
@@ -4208,43 +4155,44 @@ h2.order-total-price {
   z-index: 999999 !important;
 }
 .coming-soon-media {
-	display: flex;
-	justify-content: center;
-	width: 50%;
-	margin: auto;
+  display: flex;
+  justify-content: center;
+  width: 50%;
+  margin: auto;
 }
-.faq-width.page-width  {
-	padding-top: 50px !important;
+.faq-width.page-width {
+  padding-top: 50px !important;
 }
 .product_info_tabs button {
-	margin-right: 24px;
-	font-weight: 400;
-	font-size: 14px;
-	line-height: 25px;
-	letter-spacing: .04em;
-	text-decoration-line: none;
-	text-transform: uppercase;
-	color: #414547;
-	outline: none;
-	border: 0;
-	background: transparent;
-	padding: 0px;
-  cursor:pointer;
+  margin-right: 24px;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 25px;
+  letter-spacing: 0.04em;
+  text-decoration-line: none;
+  text-transform: uppercase;
+  color: #414547;
+  outline: none;
+  border: 0;
+  background: transparent;
+  padding: 0px;
+  cursor: pointer;
 }
 .product_info_tabs.active_tab button {
-	text-decoration: underline;
-	offset-anchor: ;
-	text-underline-offset: 3px;
+  text-decoration: underline;
+  offset-anchor: ;
+  text-underline-offset: 3px;
 }
 .active_tab_data {
-    display: block;
+  display: block;
 }
 ul#product-grid .collection-category-block:first-child {
-    margin-top: 0px;
+  margin-top: 0px;
 }
-@media(max-width:749px){
-  .overflow-hidden-mobile, .overflow-hidden-tablet, .overflow-hidden-desktop {
+@media (max-width: 749px) {
+  .overflow-hidden-mobile,
+  .overflow-hidden-tablet,
+  .overflow-hidden-desktop {
     overflow: visible !important;
+  }
 }
-}
-

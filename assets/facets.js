@@ -292,6 +292,26 @@ class FacetRemove extends HTMLElement {
   closeFilter(event) {
     event.preventDefault();
     const form = this.closest('facet-filters-form') || document.querySelector('facet-filters-form');
+    const optionVal = event.explicitOriginalTarget.parentNode.attributes[2].nodeValue;
+    console.log(optionVal);
+    if (optionVal == 'button') {
+      $('input.field__input.min').val(0);
+      $('input.field__input.max').val(newValPrice);
+      $('#minPriceinput').val('$' + 0);
+      $('#maxPriceinput').val('$' + newValPrice);
+      $('.range-selected').css({
+        left: '0',
+        right: '0',
+      });
+    } else {
+      const checkboxes = document.querySelectorAll('input[type="checkbox"]:checked');
+      checkboxes.forEach((checkbox) => {
+        const checkboxValue = checkbox.value;
+        if (checkboxValue === optionVal) {
+          checkbox.checked = false;
+        }
+      });
+    }
     form.onActiveFilterClick(event);
   }
 
