@@ -4173,6 +4173,9 @@ h2.order-total-price {
     gap: 8px;
     width: 100%;
 }
+  .customer.addresses.address-inner-wd {
+    padding: 40px 15px!important;
+}
 }
 .overflow-hidden-mobile aside .icon-close {
   display: none;
