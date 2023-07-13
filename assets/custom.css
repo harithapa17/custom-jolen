@@ -4153,3 +4153,7 @@ h2.order-total-price {
 .overflow-hidden-mobile aside {
   z-index: 999999 !important;
 }
+.coming-soon-media {
+	display: flex;
+	justify-content: center;
+}
