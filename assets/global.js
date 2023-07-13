@@ -1193,6 +1193,7 @@ customElements.define('product-recommendations', ProductRecommendations);
 var newValPrice = document.querySelector('.max.field__input').value;
 
 $(document).ready(function () {
+   $('.tabs_title_prd').removeClass('tabs_title_prd');
   var prdVarImages = $('.prd-var-img');
 
   prdVarImages.each(function () {
@@ -1346,7 +1347,7 @@ for (var i = 0; i < filters.length; i++) {
     tab.classList.add("active_tab");
   }
 
-  $('.tabs_title_prd').removeClass('tabs_title_prd');
+ 
 
   // Set the first tab as active on page load
 
