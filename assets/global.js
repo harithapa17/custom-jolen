@@ -10,6 +10,9 @@ function getFocusableElements(container) {
 if($('.tabs_title_prd li.description_tab').hasClass('active_tab')){
   $('.prd_row_data .description_tab').addClass('active_tab_data')
 };
+if($('.tabs_title_prd li.how_wear_tab ').hasClass('active_tab')){
+  $('.prd_row_data .how_wear_tab ').addClass('active_tab_data')
+};
 
 
 var currentURL = window.location.href;
