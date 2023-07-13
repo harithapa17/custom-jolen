@@ -11,8 +11,10 @@ if($('.tabs_title_prd li.description_tab').hasClass('active_tab')){
   $('.prd_row_data .description_tab').addClass('active_tab_data')
 };
 if ($('.product_tabs_flex').children('.tabs_title_prd').length > 0) {
-    $('#tab-wrapper').css({'display' : 'none'});
-};
+    // Hide the '#tab-wrapper' element
+    $('#tab-wrapper').hide();
+}
+
 
 
 var currentURL = window.location.href;
