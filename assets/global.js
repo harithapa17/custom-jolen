@@ -1348,8 +1348,11 @@ for (var i = 0; i < filters.length; i++) {
   }
 
   // Set the first tab as active on page load
-  window.onload = function() {
-    var firstTabButton = document.getElementById("tab-wrapper .product_info_tabs:first-child");
-    firstTabButton.classList.add('active_tab')
-    changeTab(firstTabButton);
-  };
+
+window.onload = function() {
+  var tabWrapper = document.getElementById("tab-wrapper");
+  var firstTabButton = tabWrapper.querySelector(".product_info_tabs:first-child");
+  firstTabButton.classList.add("active_tab");
+  changeTab(firstTabButton);
+};
+
