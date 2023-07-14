@@ -42,7 +42,7 @@ class CustomerAddresses {
       });
       this.elements.countrySelects.forEach((select) => {
         const formId = select.dataset.formId;
-        console.log(formId, 'kjjk');
+        
         // eslint-disable-next-line no-new
         new Shopify.CountryProvinceSelector(`AddressCountry_${formId}`, `AddressProvince_${formId}`, {
           hideElement: `AddressProvinceContainer_${formId}`,
@@ -53,7 +53,8 @@ class CustomerAddresses {
 
   _setupEventListeners() {
     this.elements.toggleButtons.forEach((element) => {
-      element.addEventListener('click', this._handleAddEditButtonClick);
+      var  showval = element.addEventListener('click', this._handleAddEditButtonClick);
+      console.log(showval, 'show value');
     });
     this.elements.cancelButtons.forEach((element) => {
       element.addEventListener('click', this._handleCancelButtonClick);
