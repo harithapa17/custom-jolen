@@ -4316,6 +4316,7 @@ form#FacetFiltersPillsForm .active-facets__button span.active-facets__button-inn
 }
 .flex_box_menu {
     text-align: center;
+    position:relative;
 }
 .flex_box_menu h3 {
     margin: 0;
