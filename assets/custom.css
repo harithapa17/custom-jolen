@@ -619,6 +619,10 @@ svg.modal__toggle-open.icon.icon-sear path {
     max-width: 100%;
     margin-top: 4px;
   }
+  .active-facets__button, .active-facets__button-remove {
+    margin: 0;
+    padding: 6px 3px 6px;
+}
   aside#main-collection-filters {
     position: sticky;
     top: 62px;
