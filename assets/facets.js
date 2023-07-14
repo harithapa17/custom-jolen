@@ -292,7 +292,7 @@ class FacetRemove extends HTMLElement {
   closeFilter(event) {
     event.preventDefault();
     const form = this.closest('facet-filters-form') || document.querySelector('facet-filters-form');
-    const optionVal = event.explicitOriginalTarget.parentNode.attributes[2].nodeValue;
+    const optionVal = event.target.parentNode.attributes[2].nodeValue;
     console.log(optionVal);
     if (optionVal == 'button') {
       $('input.field__input.min').val(0);
