@@ -1885,6 +1885,7 @@ li.mobile-facets__item.list-menu__item label span {
   .mobile_flex_row {
     display: flex;
     align-items: center;
+        justify-content: flex-end;
   }
   .mobile_sortDropdown {
     display: block !important;
