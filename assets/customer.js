@@ -69,13 +69,11 @@ class CustomerAddresses {
 
   _handleAddEditButtonClick = ({ currentTarget }) => {
     this._toggleExpanded(currentTarget);
-    console.log('Add')
     
   };
 
   _handleCancelButtonClick = ({ currentTarget }) => {
     this._toggleExpanded(currentTarget.closest(selectors.addressContainer).querySelector(`[${attributes.expanded}]`));
-    console.log('Cancel')
   };
 
   _handleDeleteButtonClick = ({ currentTarget }) => {
