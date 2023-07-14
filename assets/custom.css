@@ -4318,8 +4318,8 @@ ul#product-grid .collection-category-block:first-child {
   .active-facets {
     margin: 0 -1.2rem -1.2rem;
     width: 100%;
-    margin-bottom: 1px;
-    margin-top: 5px;
+    margin-bottom: 1px !important;
+    margin-top: 5px  !important;
 }
 }
 
