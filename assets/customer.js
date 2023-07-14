@@ -53,7 +53,7 @@ class CustomerAddresses {
 
   _setupEventListeners() {
     this.elements.toggleButtons.forEach((element) => {
-      var  showval = element.addEventListener('click', this._handleAddEditButtonClick);
+      element.addEventListener('click', this._handleAddEditButtonClick);
       console.log(showval, 'show value');
     });
     this.elements.cancelButtons.forEach((element) => {
