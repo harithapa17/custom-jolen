@@ -846,6 +846,9 @@ svg.modal__toggle-open.icon.icon-sear path {
     background: transparent;
     padding: 5px 15px;
     border-top: 0.6px solid #090e22;
+        position: absolute;
+    bottom: 0;
+    width: 100%;
   }
   .menu-drawer__utility-links a {
     font-weight: 300;
