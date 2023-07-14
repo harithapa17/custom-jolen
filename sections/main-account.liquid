@@ -31,7 +31,7 @@
               </div>
               <div class="sidebar-call-action">
                 <h4>CALL</h4>
-                <p>{%- for order in customer.orders -%}{{ order.shipping_address.phone }}{% endfor %}</p>
+                <p>{%- for order in customer.orders -%}{{ customer.phone }}{% endfor %}</p>
               </div>
               <div class="sidebar-call-action">
                 <h4>EMAIL</h4>
