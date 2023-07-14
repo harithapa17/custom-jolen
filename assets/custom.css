@@ -1849,6 +1849,9 @@ li.mobile-facets__item.list-menu__item label span {
     z-index: 999999 !important;
     position: relative;
 }
+  product-recommendations .product-grid .product-card-wrapper .card {
+    padding-bottom: 13px;
+}
   .sorting_mobile_bg {
     position: absolute;
     right: 0;
