@@ -13,7 +13,7 @@ if($('.tabs_title_prd li.description_tab').hasClass('active_tab')){
 if($('.tabs_title_prd li.how_wear_tab').hasClass('active_tab')){
   $('.prd_row_data .how_wear_tab').addClass('active_tab_data')
 };
-if ($('.product_tabs_flex').children('.tabs_title_prd').length == 0) {
+if ($('.product_tabs_flex').children('.tabs_title_prd').children().length == 0) {
     $('#tab-wrapper').hide();
 }
 else{
