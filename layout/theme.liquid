@@ -273,7 +273,7 @@
   <body class="gradient{% if settings.animations_hover_elements != 'none' %} animate--hover-{{ settings.animations_hover_elements }}{% endif %} {% if template == 'index' %} home {% endif %}">
    <script>
       var currentURL = window.location.href;
-      if ((currentURL == '{{ shop.url }}/cart') or (currentURL == '{{ shop.url }}/cart?logged_in=true')) {
+      if ((currentURL == '{{ shop.url }}/cart') ) {
         window.location.href = '{{ shop.url }}';
       }
     </script>
