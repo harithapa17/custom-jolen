@@ -309,7 +309,8 @@
                 name="address[address2]"
                 value="{{ form.address2 }}"
                 autocomplete="address-line2"
-                placeholder="{{ 'customer.addresses.address2' | t }}"
+                {% comment %}placeholder="{{ 'customer.addresses.address2' | t }}"{% endcomment %}
+                placeholder="Landmark, Street Name"
               >
               <labels for="AddressAddress2New">{{ 'customer.addresses.address2' | t }}</labels>
             </div>
