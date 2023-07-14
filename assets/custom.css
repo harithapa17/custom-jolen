@@ -4350,3 +4350,6 @@ form#FacetFiltersPillsForm .active-facets__button span.active-facets__button-inn
 .flex_row_acc .flex_box_menu:last-child:after {
     opacity: 0;
 }
+iframe#admin-bar-iframe {
+    display: none;
+}
