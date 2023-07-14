@@ -4322,7 +4322,7 @@ h2.order-total-price {
 }
 ul#product-grid .collection-category-block:first-child {
   margin-top: 0px;
-}
+}}
 @media (max-width: 749px) {
   .overflow-hidden-mobile,
   .overflow-hidden-tablet,
@@ -4391,4 +4391,9 @@ form#FacetFiltersPillsForm .active-facets__button span.active-facets__button-inn
 }
 iframe#admin-bar-iframe {
     display: none;
+}
+@media (min-width:768px){
+  .mobile_topbar {
+    display: none;
+}
 }
