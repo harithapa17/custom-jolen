@@ -143,10 +143,13 @@
           </predictive-search>
         {%- endif -%}
               {%- assign total_results = search.results.size -%}
-  
-  <div class="show-searched-result">
+  {% if total_results > 0 %}
+    <div class="show-searched-result">
     Showing  {{ total_results }} dresses
   </div>
+{% else %}
+{% endif %}
+
       </div>
       {%- if search.performed -%}
         {%- unless section.settings.enable_filtering or section.settings.enable_sorting -%}
