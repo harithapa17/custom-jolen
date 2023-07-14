@@ -142,8 +142,9 @@
         {%- if settings.predictive_search_enabled -%}
           </predictive-search>
         {%- endif -%}
+              {%- assign total_results = search.results.size -%}
   <div class="show-searched-result">
-    Showing 280 dresses
+    Showing  {{ total_results }} dresses
   </div>
       </div>
       {%- if search.performed -%}
@@ -283,8 +284,6 @@
                 class="grid product-grid  grid--{{ section.settings.columns_mobile }}-col-tablet-down grid--{{ section.settings.columns_desktop }}-col-desktop"
                 role="list"
               >
-            {%- assign total_results = search.results.size -%}
-<p>Total Results: {{ total_results }}</p>
                 {%- for item in search.results -%}
                   {% assign lazy_load = false %}
                   {%- if forloop.index > 2 -%}
