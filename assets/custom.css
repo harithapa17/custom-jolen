@@ -4366,7 +4366,7 @@ form#FacetFiltersPillsForm .active-facets__button span.active-facets__button-inn
     display: block;
     margin-bottom: 0;
     text-decoration: none;
-    padding: 0!important;
+    padding: 22px 11px 13px !important;
 }
 .flex_box_menu:after {
     content: "";
