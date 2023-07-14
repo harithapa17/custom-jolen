@@ -4163,6 +4163,14 @@ h2.order-total-price {
     line-height: 16px;
     letter-spacing: 0.28px;
 }
+.show-searched-result {
+    color: #090E22;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 124%;
+    margin-top: 4px;
+}
 @media (max-width: 1199px) and (min-width: 768px) {
   .sidebar-admin {
     display: block !important;
