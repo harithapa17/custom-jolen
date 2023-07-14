@@ -290,17 +290,7 @@
               >
               <labels for="AddressLastNameNew">{{ 'customer.addresses.last_name' | t }}</labels>
             </div>
-            <div class="field">
-              <input
-                type="text"
-                id="AddressCompanyNew"
-                name="address[company]"
-                value="{{ form.company }}"
-                autocomplete="organization"
-                placeholder="{{ 'customer.addresses.company' | t }}"
-              >
-              <labels for="AddressCompanyNew">{{ 'customer.addresses.company' | t }}</labels>
-            </div>
+            
             <div class="field">
               <input
                 type="text"
@@ -322,6 +312,17 @@
                 placeholder="{{ 'customer.addresses.address2' | t }}"
               >
               <labels for="AddressAddress2New">{{ 'customer.addresses.address2' | t }}</labels>
+            </div>
+          <div class="field">
+              <input
+                type="text"
+                id="AddressCompanyNew"
+                name="address[company]"
+                value="{{ form.company }}"
+                autocomplete="organization"
+                placeholder="{{ 'customer.addresses.company' | t }}"
+              >
+              <labels for="AddressCompanyNew">{{ 'customer.addresses.company' | t }}</labels>
             </div>
             <div class="field">
               <input
