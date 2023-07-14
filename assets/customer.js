@@ -53,9 +53,7 @@ class CustomerAddresses {
 
   _setupEventListeners() {
     this.elements.toggleButtons.forEach((element) => {
-      element.addEventListener('click', this._handleAddEditButtonClick(){
-        console.log('Working')
-      });
+      element.addEventListener('click', this._handleAddEditButtonClick);
     });
     this.elements.cancelButtons.forEach((element) => {
       element.addEventListener('click', this._handleCancelButtonClick);
@@ -71,6 +69,7 @@ class CustomerAddresses {
 
   _handleAddEditButtonClick = ({ currentTarget }) => {
     this._toggleExpanded(currentTarget);
+    console.log('Working')
   };
 
   _handleCancelButtonClick = ({ currentTarget }) => {
