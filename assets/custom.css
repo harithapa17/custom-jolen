@@ -621,7 +621,7 @@ svg.modal__toggle-open.icon.icon-sear path {
   }
   .active-facets__button, .active-facets__button-remove {
     margin: 0;
-    padding: 6px 3px 6px;
+    padding: 6px 3px 6px !important;
 }
   aside#main-collection-filters {
     position: sticky;
