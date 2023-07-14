@@ -3200,7 +3200,7 @@ cart-drawer-items {
   #CartDrawer .quantity.cart-quantity {
     height: 26px !important;
     min-height: 26px !important;
-    max-width: 79px;
+    max-width: 90px;
   }
   #CartDrawer .quantity.cart-quantity .quantity__button {
     max-width: 30px;
