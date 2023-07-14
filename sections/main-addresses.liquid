@@ -333,7 +333,8 @@
                 name="address[city]"
                 value="{{ form.city }}"
                 autocomplete="address-level2"
-                placeholder="{{ 'customer.addresses.city' | t }}"
+                {% comment %}placeholder="{{ 'customer.addresses.city' | t }}"{% endcomment %}
+                placeholder="City name"
               >
               <labels for="AddressCityNew">{{ 'customer.addresses.city' | t }}</labels>
             </div>
