@@ -2671,6 +2671,7 @@ span.arrow_icon {
   product-recommendations.collection .product-grid,
   slider-component .product-grid {
     gap: 16px !important;
+    flex-wrap: nowrap !IMPORTANT;
   }
   product-recommendations.collection {
     padding-right: 0px !important;
