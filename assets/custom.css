@@ -4137,6 +4137,9 @@ h2.order-total-price {
     margin-right: 2rem;
 }
 
+#address_form_new .field, .customer_edit_address .field {
+    flex-basis: calc(50% - 1rem);
+}
 @media (max-width: 1199px) and (min-width: 768px) {
   .sidebar-admin {
     display: block !important;
