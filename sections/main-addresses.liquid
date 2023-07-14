@@ -34,7 +34,7 @@
         </div>
         <div class="flex_box_menu">
           <h3>my account</h3>
-          <div><a href="{{ routes.account_addresses_url }}">Addresses</a></div>
+          <div class="active_account_tab"><a href="{{ routes.account_addresses_url }}">Addresses</a></div>
         </div>
         <div class="flex_box_menu">
           <h3>Need Helo?</h3>
@@ -395,7 +395,7 @@
                 autocapitalize="characters"
                 autocomplete="postal-code"
                 {% comment %}placeholder="{{ 'customer.addresses.zip' | t }}" {% endcomment %}
-                placeholder="Name of google identified place"
+                placeholder="Area pincode/zipcode"
               >
               <labels for="AddressZipNew">{{ 'customer.addresses.zip' | t }}</labels>
             </div>
