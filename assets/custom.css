@@ -1696,6 +1696,12 @@ li.mobile-facets__item.list-menu__item label span {
     font-size: 16px;
     line-height: 18px;
   }
+  .s_icon {
+    width: 0;
+    opacity: 0;
+    z-index: -99;
+    position: relative;
+}
   .disclosure-has-popup[open] > summary::before {
     background-color: #000;
     opacity: 0.4;
