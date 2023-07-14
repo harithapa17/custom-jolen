@@ -4206,7 +4206,6 @@ h2.order-total-price {
   }
   .ord-single-bottom {
     gap: 6px;
-    flex-wrap: wrap;
   }
   .qty-ord {
     gap: 8px;
