@@ -3,7 +3,7 @@
     "9a150da2-4084-489a-85ca-ea1e64c6ded0": {
       "type": "custom-liquid",
       "settings": {
-        "custom_liquid": "<video data-lazy-video=\"\" data-video-autoplay=\"\" playsinline=\"\" autoplay=\"\" loop=\"\" muted=\"\" title=\"\">\n            <source src=\"https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/db93ea43a8724ed6823cb95203cc01f2.mp4\" data-src=\"https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/db93ea43a8724ed6823cb95203cc01f2.mp4\">\n        <\/video>",
+        "custom_liquid": "",
         "color_scheme": "",
         "padding_top": 40,
         "padding_bottom": 52
@@ -11,7 +11,6 @@
     },
     "image_banner": {
       "type": "image-banner",
-      "disabled": true,
       "blocks": {
         "heading": {
           "type": "heading",
