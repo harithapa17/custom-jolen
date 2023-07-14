@@ -4133,6 +4133,10 @@ h2.order-total-price {
 .active_account_tab a {
   color: #a60017 !important;
 }
+.addresses form>div:nth-of-type(2n+1) {
+    margin-right: 2rem;
+}
+
 @media (max-width: 1199px) and (min-width: 768px) {
   .sidebar-admin {
     display: block !important;
