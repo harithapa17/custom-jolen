@@ -4242,6 +4242,13 @@ h2.order-total-price {
     padding: 40px 15px !important;
   }
 }
+@media (max-width:749px){
+  #address_form_new .field input, .customer_edit_address .field input {
+    font-size: 12px;
+}
+  #address_form_new .field input::placeholder, .customer_edit_address .field input::placeholder {
+    font-size: 12px;
+}
 .overflow-hidden-mobile aside .icon-close {
   display: none;
 }
