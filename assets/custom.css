@@ -4154,6 +4154,15 @@ h2.order-total-price {
 .addresses form .customer .field {
     margin: 24px 0 0 !important;
 }
+#address_form_new .field input::placeholder, .customer_edit_address .field input::placeholder {
+    opacity: 1 !important;
+    color: #848690;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 16px;
+    letter-spacing: 0.28px;
+}
 @media (max-width: 1199px) and (min-width: 768px) {
   .sidebar-admin {
     display: block !important;
