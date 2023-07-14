@@ -836,9 +836,9 @@ svg.modal__toggle-open.icon.icon-sear path {
   svg.icon.icon-arrow path {
     fill: #000 !important;
   }
-  /* .menu-drawer__navigation-container {
-    height: calc(100vh - 60px) !important;
-  }*/
+   .menu-drawer__navigation-container {
+    height: calc(100vh - 49px) !important;
+  }
   .menu-drawer__utility-links {
     display: flex;
     align-items: center;
