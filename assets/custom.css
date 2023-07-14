@@ -3194,7 +3194,7 @@ cart-drawer-items {
   #CartDrawer .cart-item__details > dl {
     display: flex;
     justify-content: space-between;
-    width: 100%;
+    width: 67%;
     margin-top: 0 !important;
   }
   #CartDrawer table.cart-items tr {
