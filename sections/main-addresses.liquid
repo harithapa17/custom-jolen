@@ -375,7 +375,8 @@
                 value="{{ form.zip }}"
                 autocapitalize="characters"
                 autocomplete="postal-code"
-                placeholder="{{ 'customer.addresses.zip' | t }}"
+                {% comment %}placeholder="{{ 'customer.addresses.zip' | t }}" {% endcomment %}
+                placeholder="Name of google identified place"
               >
               <labels for="AddressZipNew">{{ 'customer.addresses.zip' | t }}</labels>
             </div>
