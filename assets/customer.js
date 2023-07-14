@@ -53,8 +53,9 @@ class CustomerAddresses {
 
   _setupEventListeners() {
     this.elements.toggleButtons.forEach((element) => {
-      element.addEventListener('click', this._handleAddEditButtonClick);
-      console.log(element, 'show value');
+      element.addEventListener('click', this._handleAddEditButtonClick(){
+        console.log('Working')
+      });
     });
     this.elements.cancelButtons.forEach((element) => {
       element.addEventListener('click', this._handleCancelButtonClick);
