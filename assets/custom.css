@@ -4249,6 +4249,10 @@ h2.order-total-price {
   #address_form_new .field input::placeholder, .customer_edit_address .field input::placeholder {
     font-size: 11px;
 }
+  .customer .field:first-of-type {
+    margin-top: 0;
+    margin-right: 20px;
+}
 .overflow-hidden-mobile aside .icon-close {
   display: none;
 }
