@@ -623,9 +623,6 @@ svg.modal__toggle-open.icon.icon-sear path {
     margin: 0;
     padding: 6px 3px 6px !important;
 }
-  facet-remove.clear_filter_list {
-    transform: translateY(-7px) !important;
-}
   aside#main-collection-filters {
     position: sticky;
     top: 62px;
