@@ -138,17 +138,7 @@
                   >
                   <labels for="AddressLastName_{{ form.id }}">{{ 'customer.addresses.last_name' | t }}</labels>
                 </div>
-                <div class="field">
-                  <input
-                    type="text"
-                    id="AddressCompany_{{ form.id }}"
-                    name="address[company]"
-                    value="{{ form.company }}"
-                    autocomplete="organization"
-                    placeholder="{{ 'customer.addresses.company' | t }}"
-                  >
-                  <labels for="AddressCompany_{{ form.id }}">{{ 'customer.addresses.company' | t }}</labels>
-                </div>
+                
                 <div class="field">
                   <input
                     type="text"
@@ -171,6 +161,17 @@
                   >
                   <labels for="AddressAddress2_{{ form.id }}">{{ 'customer.addresses.address2' | t }}</labels>
                 </div>
+              <div class="field">
+                  <input
+                    type="text"
+                    id="AddressCompany_{{ form.id }}"
+                    name="address[company]"
+                    value="{{ form.company }}"
+                    autocomplete="organization"
+                    placeholder="{{ 'customer.addresses.company' | t }}"
+                  >
+                  <labels for="AddressCompany_{{ form.id }}">{{ 'customer.addresses.company' | t }}</labels>
+                </div>
                 <div class="field">
                   <input
                     type="text"
@@ -182,7 +183,7 @@
                   >
                   <labels for="AddressCity_{{ form.id }}">{{ 'customer.addresses.city' | t }}</labels>
                 </div>
-                <div>
+                <div class="field">
                   <labels for="AddressCountry_{{ form.id }}">
                     {{ 'customer.addresses.country' | t }}
                   </labels>
@@ -202,7 +203,7 @@
                     </svg>
                   </div>
                 </div>
-                <div id="AddressProvinceContainer_{{ form.id }}" style="display:none;">
+                <div class="field" id="AddressProvinceContainer_{{ form.id }}">
                   <labels for="AddressProvince_{{ form.id }}">
                     {{ 'customer.addresses.province' | t }}
                   </labels>
@@ -217,7 +218,7 @@
                       <use href="#icon-caret" />
                     </svg>
                   </div>
-                </div>
+                </div> 
                 <div class="field">
                   <input
                     type="text"

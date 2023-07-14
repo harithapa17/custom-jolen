@@ -4179,6 +4179,9 @@ h2.order-total-price {
     line-height: 16px;
     margin-top: 12px;
 }
+.customer_edit_address .field .select select {
+    border: 0px !IMPORTANT;
+}
 @media (max-width: 1199px) and (min-width: 768px) {
   .sidebar-admin {
     display: block !important;
