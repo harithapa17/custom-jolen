@@ -4315,6 +4315,12 @@ ul#product-grid .collection-category-block:first-child {
   .overflow-hidden-desktop {
     overflow: visible !important;
   }
+  .active-facets {
+    margin: 0 -1.2rem -1.2rem;
+    width: 100%;
+    margin-bottom: 1px;
+    margin-top: 5px;
+}
 }
 
 form#FacetFiltersPillsForm .active-facets__button {
