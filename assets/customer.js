@@ -42,7 +42,7 @@ class CustomerAddresses {
       });
       this.elements.countrySelects.forEach((select) => {
         const formId = select.dataset.formId;
-        console.log(formId);
+        console.log(formId, 'kjjk');
         // eslint-disable-next-line no-new
         new Shopify.CountryProvinceSelector(`AddressCountry_${formId}`, `AddressProvince_${formId}`, {
           hideElement: `AddressProvinceContainer_${formId}`,
