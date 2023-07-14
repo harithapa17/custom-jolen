@@ -4247,7 +4247,7 @@ h2.order-total-price {
     font-size: 12px;
 }
   #address_form_new .field input::placeholder, .customer_edit_address .field input::placeholder {
-    font-size: 12px;
+    font-size: 11px;
 }
 .overflow-hidden-mobile aside .icon-close {
   display: none;
