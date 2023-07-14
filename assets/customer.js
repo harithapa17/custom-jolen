@@ -69,6 +69,7 @@ class CustomerAddresses {
 
   _handleAddEditButtonClick = ({ currentTarget }) => {
     this._toggleExpanded(currentTarget);
+    console.log('Add')
     
   };
 
