@@ -3840,7 +3840,7 @@ button#cancel-update-address {
   background: transparent;
   border: 0;
   display: block;
-  margin-bottom: 16px;
+  margin-bottom: 0px;
   text-decoration: none;
   padding: 0px !important;
 }
