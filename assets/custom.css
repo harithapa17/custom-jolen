@@ -1845,7 +1845,10 @@ li.mobile-facets__item.list-menu__item label span {
     transition: 0s !important;
         z-index: 9999;
   }
-
+.showAnimate aside {
+    z-index: 999999 !important;
+    position: relative;
+}
   .sorting_mobile_bg {
     position: absolute;
     right: 0;
