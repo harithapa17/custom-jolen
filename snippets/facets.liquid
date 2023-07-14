@@ -1288,41 +1288,6 @@
                   function onActiveSearchFilterClick(searchVal) {
                     var currentURL = window.location.href;
                     var sorting = '&sort_by=';
-                    var main = window.location.href;
-                    if (currentURL.includes(sorting)) {
-                    if (currentURL.includes('?filter')) {
-                      var searResult1 = currentURL.split('?');
-                      var searResult2 = searResult1[1].split(sorting);
-                      var get_sear = searResult2[0];
-                      var searResult2q = searResult2[1].split('&q');
-                   //   console.log(searResult2q[1]);
-                      if (searResult2q[1] != undefined){
-                          var finale_res1 = get_sear + sorting + searchVal + '&q' + searResult2q[1];
-                          console.log(FacetFiltersForm.renderPage(finale_res1));
-                      } else {
-                        var finale_res2 = get_sear + sorting + searchVal;
-                        console.log(FacetFiltersForm.renderPage(finale_res2));
-                      }
-                    }else if('?option'){
-                      var result1 = currentURL.split('?');
-                      var result1_split = result1[1].split(sorting);
-                      var result2 = result1_split[0] + sorting + searchVal;
-                      console.log(FacetFiltersForm.renderPage(result2));
-                    }else if('?q'){
-                      currentURL = currentURL.split('?');
-                      var resultUrl = currentURL[1] + '&sort_by=' + searchVal;
-                      console.log(FacetFiltersForm.renderPage(resultUrl));
-                    }else{
-                    }
-                    }else{
-                      currentURL = currentURL.split('search?');
-                      var resultUrl = currentURL[1] + '&sort_by=' + searchVal;
-                      console.log(FacetFiltersForm.renderPage(resultUrl));
-                    }
-                  }
-                  {% comment %} function onActiveSearchFilterClick(searchVal) {
-                    var currentURL = window.location.href;
-                    var sorting = '&sort_by=';
                     var searchq = '?q=';
                     var search_and_q = '&q=';
                     var main = window.location.href;
@@ -1332,17 +1297,35 @@
                         var q_search = q_search[1];
                         var q_split = q_search.split(sorting);
                         var q_split = 'q=' + q_split[0] + sorting + searchVal;
-                        console.log(FacetFiltersForm.renderPage(q_split));
+                        var selectElement = document.querySelector('.SortBy-mobile-override');
+                        var selectedValue = selectElement.value;
+                        selectElement.value = searchVal;
+                        FacetFiltersForm.renderPage(q_split);
                       } else if (currentURL.includes('?options')) {
                         var result1 = currentURL.split('?');
                         var result1_split = result1[1].split(sorting);
                         var result2 = result1_split[0] + sorting + searchVal;
-                        console.log(FacetFiltersForm.renderPage(result2));
+                        var selectElement = document.querySelector('.SortBy-mobile-override');
+                        var selectedValue = selectElement.value;
+                        selectElement.value = searchVal;
+                        FacetFiltersForm.renderPage(result2);
                       } else if (currentURL.includes('?filter')) {
                         var searResult1 = currentURL.split('?');
                         var searResult2 = searResult1[1].split(sorting);
-                        var result2_split = searResult2[0] + sorting + searchVal;
-                        console.log(FacetFiltersForm.renderPage(result2_split));
+                        if (searResult2[1].includes(search_and_q)) {
+                          var searResultq = searResult1[1].split(search_and_q);
+                          var result2_split = searResult2[0] + sorting + searchVal + search_and_q + searResultq[1];
+                          var selectElement = document.querySelector('.SortBy-mobile-override');
+                          var selectedValue = selectElement.value;
+                          selectElement.value = searchVal;
+                          FacetFiltersForm.renderPage(result2_split);
+                        } else {
+                          var result2_split = searResult2[0] + sorting + searchVal;
+                          var selectElement = document.querySelector('.SortBy-mobile-override');
+                          var selectedValue = selectElement.value;
+                          selectElement.value = searchVal;
+                          FacetFiltersForm.renderPage(result2_split);
+                        }
                       } else {
                         var q_sear_filt = currentURL.split(search_and_q);
                         var search_3 = search_and_q + q_sear_filt[1];
@@ -1351,16 +1334,14 @@
                         var sear_filter = search_filter[1].split(sorting);
                         var search_1 = sear_filter[0];
                         var search_url = search_1 + search_2 + search_3;
-                        console.log(FacetFiltersForm.renderPage(search_url));
+                        FacetFiltersForm.renderPage(search_url);
                       }
                     } else {
                       currentURL = currentURL.split('search?');
                       var resultUrl = currentURL[1] + '&sort_by=' + searchVal;
-                      console.log(FacetFiltersForm.renderPage(resultUrl));
+                      FacetFiltersForm.renderPage(resultUrl);
                     }
-                  } {% endcomment %}
-                  //?filter.v.price.gte=0&filter.v.price.lte=70555.00&options[prefix]=last&q=garment&sort_by=relevance
-                  // ?filter.v.price.gte=0&filter.v.price.lte=70555.00&options[prefix]=last&q=garment&sort_by=relevance
+                  }
                 </script>
               </div>
             </div>

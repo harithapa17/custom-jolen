@@ -44,8 +44,6 @@ class FacetFiltersForm extends HTMLElement {
 
     sections.forEach((section) => {
       const url = `${window.location.pathname}?section_id=${section.section}&${searchParams}`;
-      // console.log(url, 'Working');
-      // console.log(searchParams, 'Params Working');
       const filterDataUrl = (element) => element.url === url;
 
       FacetFiltersForm.filterData.some(filterDataUrl)
@@ -56,7 +54,6 @@ class FacetFiltersForm extends HTMLElement {
     sections.forEach((section) => {
       const url2 = `${window.location.pathname}&${searchParams}`;
 
-      console.log(url2, ' URL2 Working');
       const filterDataUrl = (element) => element.url === url;
 
       // FacetFiltersForm.filterData.some(filterDataUrl)
@@ -293,7 +290,6 @@ class FacetRemove extends HTMLElement {
     event.preventDefault();
     const form = this.closest('facet-filters-form') || document.querySelector('facet-filters-form');
     const optionVal = event.target.parentNode.attributes[2].nodeValue;
-    console.log(optionVal);
     if (optionVal == 'button') {
       $('input.field__input.min').val(0);
       $('input.field__input.max').val(newValPrice);
