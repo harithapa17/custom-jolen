@@ -203,7 +203,7 @@
                     </svg>
                   </div>
                 </div>
-                <div class="field" id="AddressProvinceContainer_{{ form.id }}" style="display:none;">
+                {% comment %}<div class="field" id="AddressProvinceContainer_{{ form.id }}" style="display:none;">
                   <labels for="AddressProvince_{{ form.id }}">
                     {{ 'customer.addresses.province' | t }}
                   </labels>
@@ -218,7 +218,7 @@
                       <use href="#icon-caret" />
                     </svg>
                   </div>
-                </div>
+                </div> {% endcomment %}
                 <div class="field">
                   <input
                     type="text"
