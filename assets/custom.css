@@ -4363,7 +4363,7 @@ form#FacetFiltersPillsForm .active-facets__button span.active-facets__button-inn
     font-weight: 400;
     line-height: 16px;
     letter-spacing: .28px;
-    display: block;
+    display: inline;
     margin-bottom: 0;
     text-decoration: none;
     padding: 22px 11px 13px !important;
