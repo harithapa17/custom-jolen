@@ -138,17 +138,7 @@
                   >
                   <labels for="AddressLastName_{{ form.id }}">{{ 'customer.addresses.last_name' | t }}</labels>
                 </div>
-                <div class="field">
-                  <input
-                    type="text"
-                    id="AddressCompany_{{ form.id }}"
-                    name="address[company]"
-                    value="{{ form.company }}"
-                    autocomplete="organization"
-                    placeholder="{{ 'customer.addresses.company' | t }}"
-                  >
-                  <labels for="AddressCompany_{{ form.id }}">{{ 'customer.addresses.company' | t }}</labels>
-                </div>
+                
                 <div class="field">
                   <input
                     type="text"
@@ -170,6 +160,17 @@
                     placeholder="{{ 'customer.addresses.address2' | t }}"
                   >
                   <labels for="AddressAddress2_{{ form.id }}">{{ 'customer.addresses.address2' | t }}</labels>
+                </div>
+              <div class="field">
+                  <input
+                    type="text"
+                    id="AddressCompany_{{ form.id }}"
+                    name="address[company]"
+                    value="{{ form.company }}"
+                    autocomplete="organization"
+                    placeholder="{{ 'customer.addresses.company' | t }}"
+                  >
+                  <labels for="AddressCompany_{{ form.id }}">{{ 'customer.addresses.company' | t }}</labels>
                 </div>
                 <div class="field">
                   <input
