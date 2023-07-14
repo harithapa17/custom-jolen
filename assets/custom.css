@@ -4353,3 +4353,8 @@ form#FacetFiltersPillsForm .active-facets__button span.active-facets__button-inn
 iframe#admin-bar-iframe {
     display: none;
 }
+@media (min-width:768px){
+  .mobile_topbar {
+    display: none;
+}
+}
